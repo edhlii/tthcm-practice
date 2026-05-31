@@ -1,3791 +1,4699 @@
 const QUESTIONS = [
   {
-    num: 1,
-    q: "Nhà nước do giai cấp thống trị lập nên để bảo vệ quyền và lợi ích của giai cấp mình là quan điểm của học thuyết?",
-    a: "Mác - Lênin",
-    b: "Thần học",
-    c: "Gia trưởng",
-    d: "Khế ước xã hội",
-    ans: "a"
-  },
-  {
-    num: 2,
-    q: "Theo quan điểm của chủ nghĩa Mác-Lênin thì nguyên nhân chủ yếu làm xuất hiện Nhà nước là?",
-    a: "Do có sự phân hóa lao động trong xã hội",
-    b: "Do có sự phân hóa giai cấp và đấu tranh giai cấp trong xã hội",
-    c: "Do địa hình, khí hậu không thuận lợi nên con người phải hợp sức lại để phát triển sản xuất",
-    d: "Do các thành viên trong xã hội lập ra",
-    ans: "b"
-  },
-  {
-    num: 3,
-    q: "Nhà nước chưa ra đời trong hình thái kinh tế - xã hội nào sau đây?",
-    a: "Hình thái kinh tế - xã hội Công xã nguyên thủy",
-    b: "Hình thái kinh tế - xã hội Cộng sản nguyên thủy",
-    c: "Hình thái kinh tế - xã hội Cộng sản chủ nghĩa",
-    d: "Hình thái kinh tế - xã hội Chiếm hữu nô lệ",
-    ans: "b"
-  },
-  {
-    num: 4,
-    q: "Nước nào sau đây có hình thức cấu trúc nhà nước liên bang?",
-    a: "Việt Nam",
-    b: "Pháp",
-    c: "Nga",
-    d: "Xingapo",
-    ans: "c"
-  },
-  {
-    num: 5,
-    q: "Nhà nước nào sau đây có hình thức cấu trúc là nhà nước đơn nhất?",
-    a: "Mêxicô",
-    b: "Thụy Sĩ",
-    c: "Việt Nam",
-    d: "Nga",
-    ans: "c"
-  },
-  {
-    num: 6,
-    q: "Nhà nước CHXHCN Việt Nam có hình thức cấu trúc là?",
-    a: "Nhà nước đơn nhất",
-    b: "Nhà nước liên bang",
-    c: "Nhà nước liên minh",
-    d: "Nhà nước độc tài",
-    ans: "a"
-  },
-  {
-    num: 7,
-    q: "Nhà nước nào sau đây có hình thức chính thể cộng hòa tổng thống?",
-    a: "Đức",
-    b: "Ấn Độ",
-    c: "Anh",
-    d: "Tất cả đều sai",
-    ans: "d"
-  },
-  {
-    num: 8,
-    q: "Nhà nước là hiện tượng xã hội mang tính lịch sử, đây là khẳng định về nguồn gốc của nhà nước theo quan điểm của…?",
-    a: "Aristote",
-    b: "J.J.Rousseau",
-    c: "Plato",
-    d: "Chủ nghĩa Mác-Lênin",
-    ans: "d"
-  },
-  {
-    num: 9,
-    q: "Tổ chức thị tộc trong xã hội Cộng sản nguyên thủy là?",
-    a: "Một tổ chức kinh tế",
-    b: "Một tập đoàn người có cùng quan hệ huyết thống",
-    c: "Một xã hội độc lập",
-    d: "Một đơn vị độc lập",
-    ans: "b"
-  },
-  {
-    num: 10,
-    q: "Kiểu nhà nước đầu tiên trong lịch sử xã hội loài người là?",
-    a: "Nhà nước cộng sản nguyên thủy",
-    b: "Nhà nước phong kiến",
-    c: "Nhà nước chủ nô",
-    d: "Nhà nước tư sản",
-    ans: "c"
-  },
-  {
-    num: 11,
-    q: "Quyền hành pháp được hiểu là?",
-    a: "Quyền ban hành và triển khai thực hiện pháp luật",
-    b: "Quyền ban hành pháp luật",
-    c: "Quyền tổ chức thực hiện pháp luật",
-    d: "Quyền bảo vệ pháp luật",
-    ans: "c"
-  },
-  {
-    num: 12,
-    q: "Tổ chức nào có quyền phân chia lãnh thổ thành các đơn vị hành chính?",
-    a: "Đảng cộng sản",
-    b: "Mặt trận Tổ quốc",
-    c: "Công đoàn",
-    d: "Nhà nước",
-    ans: "d"
-  },
-  {
-    num: 13,
-    q: "Kiểu nhà nước mà trong đó giai cấp thống trị chiếm đa số trong xã hội là…",
-    a: "Chủ nô",
-    b: "Phong kiến",
-    c: "Tư sản",
-    d: "Xã hội chủ nghĩa",
-    ans: "d"
-  },
-  {
-    num: 14,
-    q: "Cách thức và trình tự thành lập ra các cơ quan quyền lực tối cao của nhà nước, đó là",
-    a: "Hình thức chính thể",
-    b: "Hình thức cấu trúc nhà nước",
-    c: "Chế độ chính trị",
-    d: "Hình thức nhà nước",
-    ans: "a"
-  },
-  {
-    num: 15,
-    q: "Người ở độ tuổi phải chịu trách nhiệm hình sự về tội phạm rất nghiêm trọng do cố ý hoặc tội phạm đặc biệt nghiêm trọng là…",
-    a: "từ đủ 14 đến dưới 16",
-    b: "từ 14 đến đủ 16",
-    c: "từ đủ 16 đến dưới 18",
-    d: "từ 16 đến đủ 18",
-    ans: "a"
-  },
-  {
-    num: 16,
-    q: "Trách nhiệm pháp lý được áp dụng đối với người vi phạm pháp luật nhằm…",
-    a: "giáo dục, răn đe, hành hạ",
-    b: "buộc chủ thể vi phạm pháp luật chấm dứt hành vi trái pháp luật",
-    c: "xử phạt hành chính",
-    d: "phạt tù hoặc tử hình",
-    ans: "b"
-  },
-  {
-    num: 17,
-    q: "Vi phạm pháp luật hành chính là hành vi vi phạm pháp luật, xâm phạm tới…",
-    a: "quan hệ xã hội và quan hệ kinh tế",
-    b: "các quy tắc quản lý nhà nước",
-    c: "các điều luật và các quan hệ hành chính",
-    d: "quan hệ xã hội và quan hệ hành chính",
-    ans: "b"
-  },
-  {
-    num: 18,
-    q: "Nhà nước nào sau đây có chính thể cộng hòa đại nghị?",
-    a: "Đức",
-    b: "Bồ Đào Nha",
-    c: "Hoa Kỳ",
-    d: "Việt Nam",
-    ans: "a"
-  },
-  {
-    num: 19,
-    q: "Nhà nước quân chủ hạn chế (quân chủ lập hiến) là nhà nước…? theo phương thức thừa kế thức thừa kế và một cơ quan nhà nước khác",
-    a: "Quyền lực nhà nước tối cao thuộc về một cơ quan tập thể và được hình thành",
-    b: "Quyền lực nhà nước tối cao thuộc về một cơ quan tập thể do bầu cử mà ra",
-    c: "Quyền lực nhà nước được phân chia cho người đứng đầu nhà nước",
-    d: "Quyền lực nhà nước thuộc về một tập thể gồm những người quý tộc và được hình thành do thừa kế",
-    ans: "c"
-  },
-  {
-    num: 20,
-    q: "Trong nhà nước quân chủ chuyên chế thì…",
-    a: "Quyền lực nhà nước tối cao thuộc về một một cơ quan tập thể và do bầu cử mà ra",
-    b: "Quyền lực nhà nước tối cao thuộc về một người và được hình thành do bầu cử",
-    c: "Quyền lực nhà nước thuộc về một người và được hình thành theo phương thức thừa kế",
-    d: "Quyền lực nhà nước thuộc về một tập thể, được hình thành theo phương thức thừa kế",
-    ans: "c"
-  },
-  {
-    num: 21,
-    q: "Nhà nước quân chủ là nhà nước…",
-    a: "Quyền lực nhà nước tối cao tập trung vào người đứng đầu nhà nước và được hình thành do bầu cử",
-    b: "Quyền lực nhà nước tối cao thuộc về người đứng đầu nhà nước hay thuộc về một tập thể, và được hình thành do bầu cử",
-    c: "Quyền lực nhà nước tối cao tập trung toàn bộ hay một phần chủ yếu vào tay người đứng đầu nhà nước theo nguyên tắc thừa kế",
-    d: "Tất cả đều sai",
-    ans: "c"
-  },
-  {
-    num: 22,
-    q: "Hình thức cấu trúc nhà nước đơn nhất có đặc điểm…",
-    a: "Một hệ thống pháp luật",
-    b: "Hai hệ thống cơ quan Nhà nước",
-    c: "Lãnh thổ có chủ quyền riêng",
-    d: "Hai hệ thống pháp luật",
-    ans: "a"
-  },
-  {
-    num: 23,
-    q: "Khi nghiên cứu về tổ chức thị tộc thì khẳng định nào sau đây là đúng?",
-    a: "Thị tộc là nhà nước trong xã hội Cộng sản nguyên thủy",
-    b: "Trong thị tộc đã có sự phân công lao động chuyên môn hóa ngành nghề",
-    c: "Thị tộc là đơn vị kinh tế đầu tiên của xã hội cộng sản nguyên thủy",
-    d: "Tổ chức thị tộc gắn liền xã hội có giai cấp",
-    ans: "c"
-  },
-  {
-    num: 24,
-    q: "Chọn phương án đúng nhất: Tính giai cấp của nhà nước thể hiện ở phương diện nào?",
-    a: "kinh tế, chính trị, xã hội",
-    b: "kinh tế, chính trị, tư tưởng",
-    c: "kinh tế, văn hóa, xã hội.",
-    d: "kinh tế, chính trị, văn hóa",
-    ans: "b"
-  },
-  {
-    num: 25,
-    q: "Chọn phương án đúng nhất: Pháp luật là…",
-    a: "các quy tắc xử sự chung, do nhà nước ban hành hoặc thừa nhận",
-    b: "các hệ thống chuẩn mực, được quy định trong Hiến pháp, do Nhà nước thừa nhận",
-    c: "các quy tắc xử sự chung, do nhà nước thừa nhận trên những chuẩn mực của đời sống",
-    d: "các quy tắc xử sự chung của mọi người, do nhà nước ban hành, được áp dụng ở phạm vi nhất định",
-    ans: "a"
-  },
-  {
-    num: 26,
-    q: "Theo quan điểm của chủ nghĩa Mác - Lênin về nhà nước thì…",
-    a: "Nhà nước là hiện tượng tự nhiên",
-    b: "Nhà nước là hiện tượng xã hội mang tính lịch sử",
-    c: "Nhà nước là hiện tượng xã hội tồn tại vĩnh viễn",
-    d: "Nhà nước là hiện tượng xuất hiện và tồn tại cùng với sự xuất hiện, tồn tại của lịch sử xã hội loài người",
-    ans: "b"
-  },
-  {
-    num: 27,
-    q: "Hành vi vi phạm các quy tắc, quy chế được xác lập trong một tổ chức, cơ quan, đơn vị là…",
-    a: "vi phạm hành chính",
-    b: "vi phạm dân sự",
-    c: "vi phạm kỷ luật",
-    d: "vi phạm hình sự",
-    ans: "c"
-  },
-  {
-    num: 28,
-    q: "Hình phạt trong pháp luật hình sự của các nước thể hiện “hậu quả pháp lý” nặng nề nhất mà chủ thể phải gánh chịu do hành vi vi phạm pháp luật gây ra thể hiện đặc trưng…",
-    a: "Tính xác định chặt chẽ về mặt hình thức",
-    b: "Tính quyền lực, bắt buộc chung",
-    c: "Tính chủ quan, quy phạm phổ biến",
-    d: "Tính ý chí chủ quan",
-    ans: "b"
-  },
-  {
-    num: 29,
-    q: "Chọn phương án đúng nhất: Bản chất của pháp luật Việt Nam thể hiện ở…",
-    a: "Tính giai cấp và tính xã hội",
-    b: "Tính giai cấp và tính chính trị",
-    c: "Tính xã hội và tính kinh tế",
-    d: "Tính kinh tế và tính xã hội",
-    ans: "a"
-  },
-  {
-    num: 30,
-    q: "Pháp luật mang bản chất của xã hội vì…",
-    a: "pháp luật là cơ sở đảm bảo an toàn trật tự xã hội",
-    b: "pháp luật bắt nguồn từ thực tiễn đời sống xã hội",
-    c: "pháp luật góp phần hoàn chỉnh hệ thống xã hội",
-    d: "pháp luật đem đến một hệ thống chính trị hoàn chỉnh",
-    ans: "b"
-  },
-  {
-    num: 31,
-    q: "Khi giải thích về nguồn gốc nhà nước, xem nhà nước là hiện tượng siêu nhiên, vĩnh cửu, đó là quan điểm của…",
-    a: "Thuyết Thần học",
-    b: "Thuyết Gia trưởng",
-    c: "Thuyết Khế ước xã hội",
-    d: "Thuyết Bạo lực",
-    ans: "a"
-  },
-  {
-    num: 32,
-    q: "Khi nghiên cứu về tổ chức thị tộc thì khẳng định nào sau đây là SAI?",
-    a: "Thị tộc là đơn vị kinh tế đầu tiên của xã hội cộng sản nguyên thủy",
-    b: "Trong thị tộc đã hình thành hội đồng thị tộc",
-    c: "Trong thị tộc đã hình thành các giai cấp khác nhau",
-    d: "Thị tộc tồn tại gắn liền với nền kinh tế tự nhiên",
-    ans: "c"
-  },
-  {
-    num: 33,
-    q: "Chọn phương án đúng nhất: Những quy phạm xã hội tồn tại trong xã hội cộng sản nguyên thủy là?",
-    a: "Đạo đức, tập quán, pháp luật",
-    b: "Tập quán, tín điều tôn giáo, luật pháp",
-    c: "Tín điều tôn giáo, tập quán pháp",
-    d: "Đạo đức, tập quán, tín điều tôn giáo",
-    ans: "d"
-  },
-  {
-    num: 34,
-    q: "Hình thức chính thể nào sau đây không tồn tại chức danh Thủ tướng",
-    a: "Cộng hòa đại nghị",
-    b: "Quân chủ lập hiến",
-    c: "Cộng hòa Tổng thống",
-    d: "Cộng hòa lưỡng tính (hỗn hợp)",
-    ans: "c"
-  },
-  {
-    num: 35,
-    q: "Hình thức chính thể cộng hòa dân chủ nhân dân là hình thức chính thể của quốc gia nào sau đây?",
-    a: "Việt Nam",
-    b: "Pháp",
-    c: "Đức",
-    d: "Nhật",
-    ans: "a"
-  },
-  {
-    num: 36,
-    q: "Chọn phương án đúng nhất: Nhà nước Việt Nam đại diện cho lợi ích của…",
-    a: "giai cấp công nhân và nhân dân lao động",
-    b: "giai cấp công dân",
-    c: "các tầng lớp bị áp bức",
-    d: "nhân dân lao động",
-    ans: "a"
-  },
-  {
-    num: 37,
-    q: "Con cái chửi, mắng cha, mẹ thì sẽ bị…",
-    a: "dư luận lên án",
-    b: "vi phạm pháp luật hành chính",
-    c: "vi phạm pháp luật dân sự",
-    d: "vi phạm pháp luật hình sự",
-    ans: "a"
-  },
-  {
-    num: 38,
-    q: "Hình thức cấu trúc của Nhà nước Việt Nam là…",
-    a: "Nhà nước đơn nhất",
-    b: "Nhà nước liên bang",
-    c: "Nhà nước liên minh",
-    d: "Tất cả đều đúng",
-    ans: "a"
-  },
-  {
-    num: 39,
-    q: "Quy định pháp luật về bầu cử của Việt Nam, ngoài các điều kiện khác, muốn tham gia ứng cử, phải:",
-    a: "Từ đủ 15 tuổi",
-    b: "Từ đủ 18 tuổi",
-    c: "Từ đủ 21 tuổi",
-    d: "Từ đủ 25 tuổi",
-    ans: "c"
-  },
-  {
-    num: 40,
-    q: "Chọn phương án đúng nhất: Kiểu nhà nước nào sử dụng phương pháp thuyết phục là chủ yếu để cai trị và quản lý xã hội:",
-    a: "Nhà nước XHCN",
-    b: "Nhà nước tư sản",
-    c: "Nhà nước phong kiến",
-    d: "Nhà nước chủ nô",
-    ans: "a"
-  },
-  {
-    num: 41,
-    q: "Văn bản nào sau đây có hiệu lực cao nhất trong hệ thống pháp luật của Việt Nam?",
-    a: "Pháp lệnh",
-    b: "Luật",
-    c: "Hiến pháp",
-    d: "Nghị quyết",
-    ans: "c"
-  },
-  {
-    num: 42,
-    q: "Chức năng nào dưới đây KHÔNG phải là chức năng chính của Quốc hội?",
-    a: "Chức năng lập pháp",
-    b: "Chức năng giám sát tối cao",
-    c: "Chức năng quyết định các vấn đề quan trọng của đất nước",
-    d: "Chức năng công tố",
-    ans: "d"
-  },
-  {
-    num: 43,
-    q: "Ở Việt Nam, cơ quan thường trực của Quốc hội là:",
-    a: "Chính phủ",
-    b: "Uỷ ban thường vụ Quốc hội",
-    c: "Hội đồng nhân dân các cấp",
-    d: "Uỷ ban nhân dân các cấp",
-    ans: "b"
-  },
-  {
-    num: 44,
-    q: "Nhận định nào SAI khi nói về vai trò của pháp luật?",
-    a: "Pháp luật là cơ sở để thiết lập, củng cố và tăng cường quyền lực nhà nước",
-    b: "Pháp luật là phương tiện để nhà nước quản lí kinh tế, xã hội",
-    c: "Pháp luật tạo ra môi trường ổn định cho việc thiết lập mối quan hệ giữa các nước",
-    d: "Pháp luật là phương tiện để nhân dân bảo vệ quyền chính đáng của mình",
-    ans: "c"
-  },
-  {
-    num: 45,
-    q: "Chọn phương án đúng nhất: Pháp luật là…",
-    a: "Hệ thống các văn bản và nghị định do các cấp ban hành và thực hiện",
-    b: "Những luật và điều luật cụ thể trong thực tế đời sống",
-    c: "Hệ thống các quy tắc xử sự chung do nhà nước ban hành và được bảo đảm thực hiện bằng quyền lực nhà nước",
-    d: "Hệ thống các quy tắc xử sự được hình thành theo điều kiện cụ thể của từng địa phương",
-    ans: "c"
-  },
-  {
-    num: 46,
-    q: "Trong Tuyên ngôn của Đảng Cộng sản, C.Mác và Ph.Ăngghen đã viết: “Pháp luật của các ông chỉ là ý chí của giai cấp các ông được đề lên thành luật, cái ý chí mà nội dung là do các điều kiện sinh hoạt vật chất của giai cấp các ông quyết định”. Đại từ nhân xưng “các ông” trong câu nói trên muốn chỉ ai?",
-    a: "Các nhà làm luật",
-    b: "Quốc hội, nghị viện",
-    c: "Nhà nước, giai cấp thống trị",
-    d: "Chính phủ",
-    ans: "c"
-  },
-  {
-    num: 47,
-    q: "Ưu thế vượt trội của pháp luật so với các quy phạm xã hội khác là?",
-    a: "Tính cưỡng chế",
-    b: "Tính rộng rãi",
-    c: "Tính xã hội",
-    d: "Tồn tại trong thời gian dài",
-    ans: "a"
-  },
-  {
-    num: 48,
-    q: "Cơ quan nào sau đây có thẩm quyền quyết định việc chia, tách đơn vị hành chính cấp tỉnh?",
-    a: "Quốc hội",
-    b: "Chính phủ",
-    c: "Chủ tịch nước",
-    d: "Bộ Chính trị",
-    ans: "a"
-  },
-  {
-    num: 49,
-    q: "Pháp luật có đặc điểm là…",
-    a: "Bắt nguồn từ thực tiễn đời sống xã hội",
-    b: "Vì sự phát triển của xã hội",
-    c: "Pháp luật có tính quy phạm phổ biến; mang tính quyền lực, bắt buộc chung; có tính xác định chặt chẽ về mặt hình thức",
-    d: "Mang bản chất giai cấp và bản chất xã hội",
-    ans: "c"
-  },
-  {
-    num: 50,
-    q: "Bản chất xã hội của pháp luật thể hiện ở…",
-    a: "Pháp luật được ban hành vì sự phát triển của xã hội",
-    b: "Pháp luật phản ánh những nhu cầu, lợi ích của các tầng lớp trong xã hội",
-    c: "Pháp luật bảo vệ quyền tự do, dân chủ rộng rãi cho nhân dân lao động",
-    d: "Pháp luật bắt nguồn từ xã hội, do các thành viên của xã hội thực hiện, vì sự phát triển của xã hội",
-    ans: "d"
-  },
-  {
-    num: 51,
-    q: "Nội dung cơ bản của pháp luật bao gồm…",
-    a: "Các chuẩn mực thuộc về đời sống tinh thần, tình cảm của con người",
-    b: "Quy định các hành vi không được làm",
-    c: "Quy định các bổn phận của công dân",
-    d: "Các quy tắc xử sự (việc được làm, việc phải làm, việc không được làm)",
-    ans: "d"
-  },
-  {
-    num: 52,
-    q: "Trong các quan điểm phi mácxít về nguồn gốc nhà nước thì quan điểm nào được coi là tiến bộ nhất?",
-    a: "Quan điểm của thuyết Thần học",
-    b: "Quan điểm của thuyết Gia trưởng",
-    c: "Quan điểm của thuyết Khế ước xã hội",
-    d: "Quan điểm của thuyết Bạo lực",
-    ans: "c"
-  },
-  {
-    num: 53,
-    q: "Điền từ vào chỗ trống: C.Mác và Ph.Ăngghen đã khái quát hóa quá trình tồn tại, phát triển, thay đổi của xã hội loài người trong thời đại nguyên thủy trải qua..... lần phân công lao động?",
-    a: "Hai",
-    b: "Ba",
-    c: "Bốn",
-    d: "Năm",
-    ans: "b"
-  },
-  {
-    num: 54,
-    q: "Ở Việt Nam, cơ quan nào sau đây có thẩm quyền quyết định đại xá?",
-    a: "Quốc hội",
-    b: "Chính phủ",
-    c: "Chủ tịch nước",
-    d: "Thủ tướng Chính phủ",
-    ans: "a"
-  },
-  {
-    num: 55,
-    q: "Pháp luật công khai quy định về chế độ bóc lột nô lệ, thể hiện sự bất bình đẳng giữa chủ nô và nô lệ, đây là đặc điểm của kiểu pháp luật nào?",
-    a: "Pháp luật xã hội chủ nghĩa",
-    b: "Pháp luật phong kiến",
-    c: "Pháp luật tư sản",
-    d: "Pháp luật chủ nô",
-    ans: "d"
-  },
-  {
-    num: 56,
-    q: "Nhà nước ban hành luật giao thông đường bộ và bắt buộc tất cả mọi người phải tuân theo, không được làm trái. Thể hiện đặc trưng…?",
-    a: "Tính quy phạm, phổ biến",
-    b: "Tính quy định, bắt buộc chung",
-    c: "Tính xác định chặt chẽ về mặt hình thức",
-    d: "Tính nhân dân",
-    ans: "b"
-  },
-  {
-    num: 57,
-    q: "Pháp luật là công cụ bảo vệ lợi ích của….?",
-    a: "Tổ chức tôn giáo",
-    b: "Giai cấp thống trị",
-    c: "Nhà nước và xã hội",
-    d: "Nhân dân",
-    ans: "b"
-  },
-  {
-    num: 58,
-    q: "Tính quy phạm phổ biến là đặc tính của:",
-    a: "Pháp luật",
-    b: "Đạo đức",
-    c: "Tôn giáo",
-    d: "Tổ chức xã hội",
-    ans: "a"
-  },
-  {
-    num: 59,
-    q: "Hình thức pháp luật chủ yếu được áp dụng ở Việt Nam hiện nay là:",
-    a: "Văn bản quy phạm pháp luật",
-    b: "Tập quán pháp",
-    c: "Án lệ pháp",
-    d: "Tiền lệ pháp",
-    ans: "a"
-  },
-  {
-    num: 60,
-    q: "Pháp luật phát sinh và tồn tại trong xã hội:",
-    a: "Có nhà nước",
-    b: "Không có giai cấp",
-    c: "Không có nhà nước",
-    d: "Nguyên thủy",
-    ans: "a"
-  },
-  {
-    num: 61,
-    q: "Pháp luật có thể tác động vào kinh tế theo xu hướng:",
-    a: "Tác động tiêu cực",
-    b: "Tác động tích cực",
-    c: "Tích cực hoặc tiêu cực",
-    d: "Tất cả đều sai",
-    ans: "c"
-  },
-  {
-    num: 62,
-    q: "Pháp luật ghi nhận các quan hệ xã hội chủ yếu và xác định quyền, nghĩa vụ pháp lý của các chủ thể trong quan hệ đó, thể hiện?",
-    a: "Chức năng của pháp luật",
-    b: "Chức năng điều chỉnh các quan hệ xã hội của pháp luật",
-    c: "Chức năng giáo dục của pháp luật",
-    d: "Nhiệm vụ của pháp luật",
-    ans: "b"
-  },
-  {
-    num: 63,
-    q: "Đề cập đến quá trình phát triển, thay đổi của xã hội loài người, nhận định nào sau đây là SAI?",
-    a: "Lần phân công lao động thứ nhất: ngành chăn nuôi ra đời",
-    b: "Lần phân công lao động thứ hai: ngành tiểu thủ công nghiệp ra đời",
-    c: "Lần phân công lao động thứ ba: ngành thương nghiệp ra đời",
-    d: "Lần phân công lao động thứ tư: Nhà nước ra đời",
-    ans: "d"
-  },
-  {
-    num: 64,
-    q: "Pháp luật quy định đẳng cấp trong xã hội và đặc quyền, đặc lợi của địa chủ phong kiến. Đây là đặc trưng của kiểu pháp luật nào?",
-    a: "Pháp luật chủ nô",
-    b: "Pháp luật XHCN",
-    c: "Pháp luật tư sản",
-    d: "Pháp luật phong kiến",
-    ans: "d"
-  },
-  {
-    num: 65,
-    q: "Nội dung nào sau đây phù hợp với tính quy phạm và phổ biến của pháp luật?",
-    a: "Phạm vi tác động của quy phạm xã hội rộng hơn so với pháp luật",
-    b: "Ai cũng cần phải thực hiện theo các tín điều tôn giáo được ban hành",
-    c: "Cơ quan có quyền ban hành pháp luật thì cũng có quyền không thực hiện pháp luật",
-    d: "Phạm vi tác động của pháp luật rộng lớn cả về không gian, thời gian và đối tượng áp dụng",
-    ans: "d"
-  },
-  {
-    num: 66,
-    q: "Chọn phương án đúng nhất: Hình thức nhà nước thừa nhận một số tập quán lưu truyền trong xã hội và quy định thành cách xử sự chung là hình thức pháp luật nào sau đây?",
-    a: "Tập quán pháp",
-    b: "Văn bản quy phạm pháp luật",
-    c: "Tiền lệ pháp",
-    d: "Tiền lệ pháp và tập quán pháp",
-    ans: "a"
-  },
-  {
-    num: 67,
-    q: "Điền vào chỗ trống, Hồ Chí Minh: “Pháp luật của ta là pháp luật thật sự dân chủ vì nó bảo vệ....... rộng rãi cho nhân dân lao động”.",
-    a: "Lợi ích chính đáng",
-    b: "Quyền và nghĩa vụ",
-    c: "Quyền tự do, dân chủ",
-    d: "Quyền và nghĩa vụ cơ bản",
-    ans: "c"
-  },
-  {
-    num: 68,
-    q: "Bản chất giai cấp của Pháp luật Việt Nam là…",
-    a: "Đảm bảo lợi ích của giai cấp công nhân và nhân dân lao động Việt Nam",
-    b: "Đảm bảo lợi ích của giai cấp lãnh đạo, nhưng giai cấp công nhân và nông dân được tự do dân chủ",
-    c: "Pháp luật là điều kiện để nhà nước ràng buộc mọi công dân",
-    d: "Tất cả đều đúng",
-    ans: "a"
-  },
-  {
-    num: 69,
-    q: "Quy phạm pháp luật là những quy tắc xử sự mang tính bắt buộc thể hiện ý chí của:",
-    a: "Nhà nước",
-    b: "Tổ chức xã hội",
-    c: "Tổ chức chính trị - xã hội",
-    d: "Tổ chức kinh tế",
-    ans: "a"
-  },
-  {
-    num: 70,
-    q: "Nhận định nào sau đây là SAI?",
-    a: "Tập quán pháp là hình thức Nhà nước thừa nhận một số tập quán lưu truyền trong xã hội và quy định thành cách xử sự chung, được Nhà nước bảo đảm thực hiện",
-    b: "Hình thức tập quán pháp được sử dụng nhiều trong Nhà nước xã hội chủ nghĩa",
-    c: "Văn bản quy phạm pháp luật là hình thức pháp luật tiến bộ nhất",
-    d: "Hình thức tiền lệ pháp còn gọi là án lệ pháp",
-    ans: "b"
-  },
-  {
-    num: 71,
-    q: "Trong các hành vi sau đây, hành vi nào phải chịu trách nhiệm về mặt hình sự?",
-    a: "Vượt đèn đỏ, gây tai nạn chết người",
-    b: "Đi ngược chiều",
-    c: "Tụ tập và gây gối trật tự công cộng",
-    d: "Cắt trộm cáp điện",
-    ans: "a"
-  },
-  {
-    num: 72,
-    q: "Nghị định là văn bản quy phạm pháp luật do cơ quan Nhà nước có thẩm quyền ban hành là:",
-    a: "Chính phủ",
-    b: "Uỷ ban thường vụ quốc hội",
-    c: "Thủ tướng chính phủ",
-    d: "Chủ tịch nước",
-    ans: "a"
-  },
-  {
-    num: 73,
-    q: "Bộ phận nào của quy phạm pháp luật nêu lên cách thức xử sự cho chủ thể được làm, không được làm, phải làm:",
-    a: "Giả định",
-    b: "Quy định",
-    c: "Chế tài",
-    d: "Tất cả đều sai",
-    ans: "b"
-  },
-  {
-    num: 74,
-    q: "Trong các nghĩa vụ sau đây nghĩa vụ nào KHÔNG phải là nghĩa vụ pháp lý?",
-    a: "Đoàn viên thanh niên phải chấp hành điều lệ của Đoàn",
-    b: "Người kinh doanh phải thực hiện nghĩa vụ nộp thuế",
-    c: "Thanh niên đủ 18 tuổi phải thực hiện nghĩa vụ quân sự",
-    d: "Con cái có nghĩa vụ phụng dưỡng cha mẹ già",
-    ans: "a"
-  },
-  {
-    num: 75,
-    q: "Hình thức pháp luật này ngày càng được sử dụng rộng rãi ở các quốc gia vì nó khắc phục được những hạn chế của các hình thức pháp luật khác và có tính rõ ràng, cụ thể, được ban hành theo trình tự, thủ tục nhất định, đó là?",
-    a: "Tiền lệ pháp",
-    b: "Tập quán pháp",
-    c: "Văn bản luật",
-    d: "Văn bản quy phạm pháp luật",
-    ans: "d"
-  },
-  {
-    num: 76,
-    q: "Anh A lái xe máy và lưu thông đúng luật. Chị B đi xe đạp không quan sát và bất ngờ băng ngang qua đường làm anh A bị thương (giám định là 10%). Theo bạn trường hợp này xử phạt như thế nào?",
-    a: "Cảnh cáo và buộc chị B phải bồi thường thiệt hại cho gia đình anh A",
-    b: "Cảnh cáo phạt tiền chị B",
-    c: "Không xử lý chị B vì chị B là người đi xe đạp",
-    d: "Phạt tù chị B",
-    ans: "a"
-  },
-  {
-    num: 77,
-    q: "Chọn phương án đúng nhất: Một trong những đặc điểm để phân biệt pháp luật với quy phạm đạo đức là:",
-    a: "Pháp luật có tính quyền lực, bắt buộc chung",
-    b: "Pháp luật có tính quyền lực",
-    c: "Pháp luật có tính bắt buộc chung",
-    d: "Pháp luật có tính quy phạm",
-    ans: "a"
-  },
-  {
-    num: 78,
-    q: "Pháp luật là phương tiện để công dân:",
-    a: "Sống tự do, dân chủ",
-    b: "Thực hiện và bảo vệ quyền, lợi ích hợp pháp của mình",
-    c: "Quyền con người được tôn trọng và bảo vệ",
-    d: "Công dân phát triển toàn diện",
-    ans: "b"
-  },
-  {
-    num: 79,
-    q: "Quản lí bằng pháp luật là phương pháp quản lí…",
-    a: "hữu hiệu và phức tạp nhất.",
-    b: "dân chủ và hiệu quả nhất",
-    c: "hiệu quả và khó khăn nhất",
-    d: "dân chủ và cứng rắn nhất",
-    ans: "b"
-  },
-  {
-    num: 80,
-    q: "Bộ phận đảm bảo cho quy phạm pháp luật được thực hiện nghiêm chỉnh là…?",
-    a: "Quy định",
-    b: "Giả định",
-    c: "Chế tài",
-    d: "Quy cách",
-    ans: "c"
-  },
-  {
-    num: 81,
-    q: "Thời điểm năng lực pháp lụât và năng lực hành vi của pháp nhân được nhà nước công nhận là:",
-    a: "Cùng một thời điểm",
-    b: "Năng lực pháp luật được công nhận trước năng lực hành vi",
-    c: "Năng lực hành vi được công nhận trước năng lực pháp luật",
-    d: "Tất cả đều đúng",
-    ans: "a"
-  },
-  {
-    num: 82,
-    q: "Nội dung của quan hệ pháp luật là:",
-    a: "Quyền và nghĩa vụ của các chủ thể trong quan hệ pháp luật",
-    b: "Những giá trị mà các chủ thể quan hệ pháp luật muốn đạt được",
-    c: "Là các bên tham gia vào quan hệ pháp luật",
-    d: "Là đối tượng mà các chủ thể quan tâm khi tham gia vào quan hệ pháp luật",
-    ans: "a"
-  },
-  {
-    num: 83,
-    q: "Khi nào pháp nhân có năng lực chủ thể:",
-    a: "Khi nhà nước cho phép hoặc công nhận sự thành lập của pháp nhân",
-    b: "Khi tổ chức có đủ số thành viên",
-    c: "Khi các thành viên thỏa thuận thành lập pháp nhân",
-    d: "Khi một tổ chức có đủ vốn",
-    ans: "a"
-  },
-  {
-    num: 84,
-    q: "Khả năng của chủ thể bằng chính hành vi của mình thực hiện được các quyền và nghĩa vụ mà pháp luật quy định, đó là:",
-    a: "Năng lực pháp luật",
-    b: "Năng lực hành vi",
-    c: "Năng lực chủ thể",
-    d: "Tất cả đều đúng",
-    ans: "b"
-  },
-  {
-    num: 85,
-    q: "Điền từ vào chỗ trống: Pháp luật là hệ thống các quy tắc xử sự chung do ……… ban hành và đảm bảo thực hiện bằng quyền lực nhà nước.",
-    a: "Đảng",
-    b: "Chính phủ",
-    c: "Tổ chức xã hội",
-    d: "Nhà nước",
-    ans: "d"
-  },
-  {
-    num: 86,
-    q: "Các quy tắc xử sự (việc được làm, việc phải làm, việc không được làm) thể hiện vấn đề nào của pháp luật?",
-    a: "Phương thức tác động",
-    b: "Nội dung",
-    c: "Nguồn gốc",
-    d: "Hình thức thể hiện",
-    ans: "a"
-  },
-  {
-    num: 87,
-    q: "Chọn phương án đúng nhất: Nhà nước Việt Nam điều hành đất nước bằng…",
-    a: "Văn hoá, giáo dục, chính trị",
-    b: "Kế hoạch phát triển kinh tế",
-    c: "Quân đội và chính quyền",
-    d: "Hiến pháp và pháp luật",
-    ans: "d"
-  },
-  {
-    num: 88,
-    q: "Tiêu chuẩn xác định một hệ thống pháp luật hoàn thiện là?",
-    a: "Tính toàn diện, tính đồng bộ",
-    b: "Tính phù hợp",
-    c: "Trình độ kỹ thuật pháp lý cao",
-    d: "Tất cả đều đúng",
-    ans: "d"
-  },
-  {
-    num: 89,
-    q: "Chọn phương án đúng nhất: Năng lực hành vi của cá nhân chỉ xuất hiện khi?",
-    a: "Cá nhân đủ 18 tuổi, không mắc bệnh tâm thần",
-    b: "Cá nhân đủ 16 tuổi, có trí óc bình thường",
-    c: "Cá nhân đã đến độ tuổi nhất định và có những điều kiện nhất định",
-    d: "Được nhà nước quy định",
-    ans: "c"
-  },
-  {
-    num: 90,
-    q: "Một tổ chức có tư cách pháp nhân khi có điều kiện?",
-    a: "Được thành lập hợp pháp, có cơ cấu tổ chức chặt chẽ",
-    b: "Có tài sản độc lập với cá nhân, tổ chức khác",
-    c: "Nhân danh mình tham gia các quan hệ pháp luật một cách độc lập",
-    d: "Tất cả đều đúng",
-    ans: "d"
-  },
-  {
-    num: 91,
-    q: "Các quy phạm pháp luật bắt nguồn từ đâu?",
-    a: "Từ tư duy trừu tượng của con người",
-    b: "Từ quyền lực của giai cấp thống trị",
-    c: "Từ thực tiễn đời sống xã hội, do thực tiễn cuộc sống đòi hỏi",
-    d: "Từ ý thức của các cá nhân trong xã hội",
-    ans: "c"
-  },
-  {
-    num: 92,
-    q: "“Pháp luật là của ai, do ai và vì ai?” Đề cập đến vấn đề nào của pháp luật?",
-    a: "Nội dung của pháp luật.",
-    b: "Hình thức thể hiện của pháp luật",
-    c: "Khái niệm cơ bản của pháp luật.",
-    d: "Bản chất của pháp luật",
-    ans: "d"
-  },
-  {
-    num: 93,
-    q: "Cá nhân có năng lực hành vi đầy đủ khi:",
-    a: "Từ đủ 15 tuổi trở lên",
-    b: "Từ đủ 21 tuổi trở lên",
-    c: "Từ đủ 18 tuổi trở lên",
-    d: "Từ đủ 6 tuổi trở lên",
-    ans: "c"
-  },
-  {
-    num: 94,
-    q: "Quan hệ xã hội nào sau đây không phải là quan hệ pháp luật?",
-    a: "Quan hệ vợ – chồng",
-    b: "Quan hệ mua – bán",
-    c: "Quan hệ cha mẹ – con",
-    d: "Quan hệ tình yêu nam – nữ",
-    ans: "d"
-  },
-  {
-    num: 95,
-    q: "Tổ chức được thành lập hợp pháp được gọi là:",
-    a: "Pháp nhân",
-    b: "Thể nhân",
-    c: "Cá nhân",
-    d: "Tất cả đều sai",
-    ans: "a"
-  },
-  {
-    num: 96,
-    q: "Kết hôn là:",
-    a: "Hành vi pháp lý",
-    b: "Sự biến pháp lý",
-    c: "Sự kiện thông thường",
-    d: "Năng lực hành vi",
-    ans: "a"
-  },
-  {
-    num: 97,
-    q: "Chủ thể thực hiện vi phạm hình sự có thể là…",
-    a: "Cá nhân có năng lực trách nhiệm hình sự",
-    b: "Tổ chức là pháp nhân",
-    c: "Tổ chức không là pháp nhân",
-    d: "Người tâm thần",
-    ans: "a"
-  },
-  {
-    num: 98,
-    q: "Điền từ vào chỗ trống: “Pháp luật là hệ thống quy tắc xử sự mang tính ............., do............ ban hành và bảo đảm thực hiện, thể hiện ................. của giai cấp thống trị và phụ thuộc vào các điều kiện ..............., là nhân tố điều chỉnh các quan hệ xã hội”.",
-    a: "Bắt buộc – quốc hội – ý chí – chính trị",
-    b: "Bắt buộc chung – nhà nước – lý tưởng – chính trị",
-    c: "Bắt buộc – quốc hội – lý tưởng – kinh tế xã hội",
-    d: "Bắt buộc chung – nhà nước – ý chí – kinh tế xã hội",
-    ans: "d"
-  },
-  {
-    num: 99,
-    q: "Chọn phương án đúng nhất: Nói đến vai trò của pháp luật đối với sự phát triển bền vững của đất nước là nói đến sự tác động của pháp luật đối với…",
-    a: "Các lĩnh vực của đời sống xã hội",
-    b: "Lĩnh vực bảo vệ môi trường",
-    c: "Việc xây dựng và bảo vệ đất nước",
-    d: "Phát triển kinh tế đất nước",
-    ans: "a"
-  },
-  {
-    num: 100,
-    q: "Hành vi tổ chức đánh bạc của công chức, viên chức nhà nước bị công an bắt quả tang được xác định là hành vi:",
-    a: "Vi phạm hình sự",
-    b: "Vi phạm công vụ",
-    c: "Vi phạm kỷ luật",
-    d: "Vi phạm dân sự",
-    ans: "a"
-  },
-  {
-    num: 101,
-    q: "Xác định phương án SAI: Khi phát sinh tranh chấp về quyền và nghĩa vụ giữa các chủ thể thì…",
-    a: "Các chủ thể không có quyền tự giải quyết tranh chấp",
-    b: "Các chủ thể có thể nhờ người hòa giải",
-    c: "Các chủ thể có thể thỏa thuận với nhau về cách giải quyết tranh chấp",
-    d: "Các chủ thể có quyền yêu cầu nhà nước giải quyết",
-    ans: "a"
-  },
-  {
-    num: 102,
-    q: "Lịch sử xã hội loài người đã và đang trải qua mấy kiểu pháp luật?",
-    a: "2 kiểu pháp luật",
-    b: "4 kiểu pháp luật",
-    c: "5 kiểu pháp luật",
-    d: "6 kiểu pháp luật",
-    ans: "b"
-  },
-  {
-    num: 103,
-    q: "Ông B tổ chức buôn ma túy, hỏi ông B phải chịu trách nhiệm pháp lý nào?",
-    a: "Trách nhiệm hành chính",
-    b: "Trách nhiệm hình sự",
-    c: "Trách nhiệm dân sự",
-    d: "Trách nhiệm kỷ luật",
-    ans: "b"
-  },
-  {
-    num: 104,
-    q: "Chế tài nào sau đây chỉ do Tòa án áp dụng:",
-    a: "Chế tài hành chính",
-    b: "Chế tài hình sự",
-    c: "Chế tài kỷ luật",
-    d: "Chế tài công vụ",
-    ans: "b"
-  },
-  {
-    num: 105,
-    q: "Bồi thường thiệt hại là chế tài:",
-    a: "Dân sự",
-    b: "Hình sự",
-    c: "Hành chính",
-    d: "Kỷ luật",
-    ans: "a"
-  },
-  {
-    num: 106,
-    q: "Điền vào chỗ trống: Chủ thể vi phạm pháp luật là cá nhân hoặc tổ chức có ...... đã thực hiện hành vi vi phạm pháp luật?",
-    a: "Khả năng",
-    b: "Năng lực hành vi",
-    c: "Năng lực trách nhiệm pháp lý",
-    d: "Năng lực pháp luật",
-    ans: "d"
-  },
-  {
-    num: 107,
-    q: "Trường hợp nào sau đây thì mới được bắt, giam, giữ người",
-    a: "Bắt người khi đang bị tình nghi có hành vi vi phạm pháp luật",
-    b: "Bắt người phạm tội quả tang hoặc đang bị truy nã",
-    c: "Bắt, giam, giữ người khi người này đang nghiện ma tuý",
-    d: "Bắt giam người khi người này có người thân phạm pháp luật",
-    ans: "b"
-  },
-  {
-    num: 108,
-    q: "Ở Việt Nam, cứ đến ngày Quốc khánh (2/9) người nào cải tạo tốt, biết hối cải thì được Chủ tịch nước ân xá cho ra tù trước thời hạn. Thể hiện bản chất nào của pháp luật?",
-    a: "Bản chất giai cấp",
-    b: "Bản chất xã hội",
-    c: "Bản chất nhân đạo sâu sắc pháp luật xã hội chủ nghĩa",
-    d: "Bản chất nhân dân",
-    ans: "c"
-  },
-  {
-    num: 109,
-    q: "Chọn phương án đúng nhất: Phương thức tác động của nhà nước lên quan hệ pháp luật là…",
-    a: "giáo dục, thuyết phục và cưỡng chế",
-    b: "giáo dục, cưỡng chế",
-    c: "Cưỡng chế",
-    d: "giáo dục",
-    ans: "a"
-  },
-  {
-    num: 110,
-    q: "Lệnh là văn bản quy phạm pháp luật do cơ quan nào sau đây ban hành?",
-    a: "Thủ tướng Chính phủ",
-    b: "Chủ tịch Quốc hội",
-    c: "Tổng Bí thư",
-    d: "Chủ tịch nước",
-    ans: "d"
-  },
-  {
-    num: 111,
-    q: "Khẳng định nào SAI khi nghiên cứu về mặt chủ quan của vi phạm pháp luật?",
-    a: "Động cơ là cái thúc đẩy chủ thể thực hiện hành vi vi phạm pháp luật",
-    b: "Lỗi là một trong những căn cứ để xác định mức độ trách nhiệm pháp lý đối với chủ thể vi phạm pháp luật",
-    c: "Lỗi là thái độ tâm lý của chủ thể đối với hành vi trái pháp luật mà mình đã thực hiện và hậu quả do hành vi gây ra",
-    d: "Chỉ khi nào hành vi trái pháp luật được chủ thể thực hiện một cách cố ý thì mới có thể là hành vi vi phạm pháp luật",
-    ans: "d"
-  },
-  {
-    num: 112,
-    q: "Những biểu hiện, diễn biến tâm lý bên trong của chủ thể vi phạm pháp luật gọi là?",
-    a: "Mặt chủ quan của vi phạm pháp luật",
-    b: "Nhận thức, thái độ của chủ thể",
-    c: "Chủ thể vi phạm pháp luật",
-    d: "Tất cả đều đúng",
-    ans: "a"
-  },
-  {
-    num: 113,
-    q: "Khi nghiên cứu về chủ thể quan hệ pháp luật thì khẳng định nào sau đây là đúng?",
-    a: "Tất cả mọi cá nhân đều có thể trở thành chủ thể của quan hệ pháp luật",
-    b: "Tất cả mọi tổ chức đều có thể trở thành chủ thể của quan hệ pháp luật",
-    c: "Tất cả mọi cá nhân và tổ chức có đủ những điều kiện do pháp luật quy định đều có thể trở thành chủ thể của quan hệ pháp luật",
-    d: "Tất cả các cơ quan, đơn vị, tổ chức và cá nhân trong xã hội đều có thể trở thành chủ thể của quan hệ pháp luật",
-    ans: "c"
-  },
-  {
-    num: 114,
-    q: "A đánh B gây thương tích 15%, theo bạn, Bộ luật hình sự năm 2015 sửa đổi bổ sung năm 2017 thì A phải chịu hình phạt nào?",
-    a: "Răn đe, giáo dục",
-    b: "Bồi thường thiệt hại",
-    c: "Phạt tù",
-    d: "Tạm giữ để giáo dục",
-    ans: "c"
-  },
-  {
-    num: 115,
-    q: "Các quyền và nghĩa vụ pháp lý cơ bản của công dân được qui định trong…",
-    a: "Luật hành chính",
-    b: "Luật hôn nhân - gia đình",
-    c: "Luật dân sự",
-    d: "Hiến pháp",
-    ans: "d"
-  },
-  {
-    num: 116,
-    q: "Chủ thể có năng lực trách nhiệm pháp lý khi có đủ điều kiện sau?",
-    a: "Từ 18 tuổi trở lên và có trí óc bình thường",
-    b: "Đạt độ tuổi do pháp luật quy định, có năng lực pháp luật",
-    c: "Có năng lực pháp luật và năng lực hành vi",
-    d: "Đạt độ tuổi do pháp luật quy định, có khả năng nhận thức và điều khiển hành vi",
-    ans: "d"
-  },
-  {
-    num: 117,
-    q: "Khi nghiên cứu về quyền chủ thể trong quan hệ pháp luật, thì khẳng định nào sau đây là ĐÚNG?",
-    a: "Khả năng được lựa chọn những xử sự theo ý muốn chủ quan của mình",
-    b: "Khả năng yêu cầu các chủ thể khác thực hiện nghĩa vụ để bảo đảm việc thực hiện quyền của mình",
-    c: "Khả năng yêu cầu cơ quan Nhà nước có thẩm quyền bảo vệ quyền của mình khi bị phía chủ thể bên kia vi phạm",
-    d: "Tất cả đều đúng",
-    ans: "d"
-  },
-  {
-    num: 118,
-    q: "Nhận định nào sau đây SAI khi nói đến vai trò của pháp luật…",
-    a: "Pháp luật là phương tiện để Nhà nước quản lý mọi mặt đời sống xã hội",
-    b: "Pháp luật là phương tiện thực hiện và bảo vệ quyền, lợi ích hợp pháp của mỗi công dân",
-    c: "Pháp luật là công cụ thực hiện đường lối chính sách của Đảng",
-    d: "Pháp luật là công cụ bảo vệ mọi quyền và lợi ích của mọi công dân",
-    ans: "d"
-  },
-  {
-    num: 119,
-    q: "Nghĩa vụ pháp lý của chủ thể gồm có?",
-    a: "Chủ thể phải tiến hành một số hành vi nhất định do pháp luật quy định",
-    b: "Chủ thể phải tự kiềm chế, không được thực hiện một số hành vi nhất định",
-    c: "Chủ thể phải chịu trách nhiệm pháp lý khi không thực hiện theo cách xử sự bắt buộc mà pháp luật đã quy định",
-    d: "Tất cả đều đúng",
-    ans: "d"
-  },
-  {
-    num: 120,
-    q: "Trong các yếu tố cấu thành hệ thống pháp luật, yếu tố được xem là đơn vị cơ bản nhỏ nhất trong hệ thống pháp luật là:",
-    a: "Quy phạm pháp luật",
-    b: "Chế định pháp luật",
-    c: "Ngành luật",
-    d: "Tất cả đếu đúng",
-    ans: "a"
-  },
-  {
-    num: 121,
-    q: "Các quy phạm pháp luật có đặc điểm chung giống nhau để điều chỉnh một nhóm quan hệ xã hội tương ứng, đó chính là:",
-    a: "Quy phạm pháp luật",
-    b: "Chế định pháp luật",
-    c: "Ngành luật",
-    d: "Hệ thống pháp luật",
-    ans: "b"
-  },
-  {
-    num: 122,
-    q: "Tổng hợp các quy phạm pháp luật điều chỉnh một lĩnh vực nhất định của đời sống xã hội, đó chính là:",
-    a: "Quy phạm pháp luật",
-    b: "Chế định pháp luật",
-    c: "Ngành luật",
-    d: "Hệ thống pháp luật",
-    ans: "c"
-  },
-  {
-    num: 123,
-    q: "Chọn phương án đúng nhất: Pháp luật là công cụ bảo vệ lợi ích của…?",
-    a: "Tổ chức tôn giáo",
-    b: "Giai cấp thống trị",
-    c: "Nhà nước và xã hội",
-    d: "Nhân dân",
-    ans: "c"
-  },
-  {
-    num: 124,
-    q: "Tính cưỡng chế của pháp luật được thể hiện:",
-    a: "Những hành vi vi phạm pháp luật đều bị xử phạt hành chính",
-    b: "Những hành vi vi phạm pháp luật đều bị áp dụng hình phạt",
-    c: "Những hành vi vi phạm pháp luật đều có thể bị áp dụng biện pháp chế tài",
-    d: "Những hành vi vi phạm pháp luật đều bị xử lý kỷ luật",
-    ans: "c"
-  },
-  {
-    num: 125,
-    q: "Pháp luật và đạo đức là hai hiện tượng…",
-    a: "Đều mang tính quy phạm",
-    b: "Đều mang tính quy phạm bắt buộc chung",
-    c: "Đều là quy phạm tồn tại ở dạng thành văn",
-    d: "Đều do nhà nước đặt ra hoặc thừa nhận",
-    ans: "a"
-  },
-  {
-    num: 126,
-    q: "Vi phạm hình sự ở mức độ tội phạm nghiêm trọng, khung hình cao nhất là…",
-    a: "7 năm",
-    b: "5 năm",
-    c: "3 năm",
-    d: "8 năm",
-    ans: "a"
-  },
-  {
-    num: 127,
-    q: "Đạo luật nào dưới đây quy định một cách cơ bản về chế độ chính trị, chế độ kinh tế, văn hóa, xã hội và tổ chức bộ máy nhà nước.",
-    a: "Luật tổ chức Quốc hội",
-    b: "Luật tổ chức Chính phủ",
-    c: "Luật tổ chức Hội đồng nhân dân và UBND",
-    d: "Hiến pháp",
-    ans: "d"
-  },
-  {
-    num: 128,
-    q: "Thừa kế là chế định quan trọng của ngành luật nào sau đây?",
-    a: "Luật Tố tụng dân sự",
-    b: "Luật Hình sự",
-    c: "Luật đất đai",
-    d: "Luật Dân sự",
-    ans: "d"
-  },
-  {
-    num: 129,
-    q: "A và B đua xe, lạng lách đánh võng trên đường và bị cảnh sát giao thông xử lý. Theo em, A và B phải chịu trách nhiệm pháp lý nào?",
-    a: "Cảnh cáo, phạt tiền, giam xe",
-    b: "Cảnh cáo, phạt tiền",
-    c: "Cảnh cáo, giam xe",
-    d: "Phạt tiền, giam xe",
-    ans: "a"
-  },
-  {
-    num: 130,
-    q: "Cảnh sát giao thông xử phạt người chở hang cồng kềnh khi tham gia giao thông là biểu hiện của hình thức thực hiện pháp luật nào dưới đây?",
-    a: "Sử dụng pháp luật",
-    b: "Thi hành pháp luật",
-    c: "uân thủ pháp luật",
-    d: "Áp dụng pháp luật",
-    ans: "d"
-  },
-  {
-    num: 131,
-    q: "Các hình thức thực hiện pháp luật theo thứ tự là:",
-    a: "Sử dụng pháp luật, thi hành pháp luật, áp dụng pháp luật và tuân thủ pháp luật",
-    b: "Tuân thủ pháp luật, thi hành pháp luật, sử dụng pháp luật và áp dụng pháp luật",
-    c: "Sử dụng pháp luật, thi hành pháp luật, tuân thủ pháp luật và áp dụng pháp luật",
-    d: "Tuân thủ pháp luật, sử dụng pháp luật, thi hành pháp luật và áp dụng pháp luật",
-    ans: "b"
-  },
-  {
-    num: 132,
-    q: "Các trường hợp chiếm hữu nào sau đây là chiếm hữu không có căn cứ pháp luật:",
-    a: "Chiếm hữu vật đánh rơi không khai báo",
-    b: "Chiếm hữu của chủ sở hữu vật",
-    c: "Chiếm hữu do chủ sở hữu vật uỷ quyền",
-    d: "Chiếm hữu thông qua việc thuê vật của chủ sở hữu",
-    ans: "a"
-  },
-  {
-    num: 133,
-    q: "Các trường hợp quyền định đoạt tài sản của chủ sở hữu bị hạn chế:",
-    a: "Bán vật là di tích lịch sử",
-    b: "Bán vật đang thế chấp",
-    c: "Bán vật đang cầm cố",
-    d: "Tất cả đều đúng",
-    ans: "d"
-  },
-  {
-    num: 134,
-    q: "Chọn phương án đúng nhất: Hàng thừa kế thứ nhất theo quy định pháp luật về thừa kế:",
-    a: "Con nuôi của người chết",
-    b: "Con đẻ của người chết",
-    c: "Em ruột của người chết",
-    d: "Vợ, chồng, cha đẻ, mẹ đẻ, cha nuôi, mẹ nuôi, con đẻ, con nuôi của người chết",
-    ans: "d"
-  },
-  {
-    num: 135,
-    q: "Hành vi không lạng lách, đánh võng khi đi xe máy trên đường của anh A là biểu hiện hình thức thự hiện pháp luật nào dưới đây?",
-    a: "Sử dụng pháp luật",
-    b: "Tuân thủ pháp luật",
-    c: "Thi hành pháp luật",
-    d: "Áp dụng pháp luật",
-    ans: "b"
-  },
-  {
-    num: 136,
-    q: "Ông B đi vào đường ngược chiều, chưa gây tai nạn cho ai nhưng cảnh sát giao thông đã xử phạt với việc xử phạt đó nhằm mục đích gì?",
-    a: "Ngăn chặn không để gây tai nạn cho chính ông B",
-    b: "Chấm dứt hành vi vi phạm pháp luật (đi ngược chiều)",
-    c: "Ngăn chặn không để gây tai nạn cho người khác",
-    d: "Tất cả đều đúng",
-    ans: "d"
-  },
-  {
-    num: 137,
-    q: "Trong các hành vi dưới đây hành vi nào thể hiện công dân sử dụng pháp luật?",
-    a: "Người kinh doanh trốn thế phải nộp phạt",
-    b: "Anh A và chị B đến UBND phường đăng ký kết hôn",
-    c: "Các bên tranh chấp phải thực hiện các quyền và nghĩa vụ của mình theo qui định của pháp luật",
-    d: "Công ty X thực hiện nghĩa vụ đóng thuế theo quy định pháp luật",
-    ans: "b"
-  },
-  {
-    num: 138,
-    q: "Anh A sử dụng điện thoại di động khi đang điều khiển xe máy. Công an đã xử phạt hành chính anh A. Việc làm của công an là biểu hiện của hình thức thực hiện pháp luật nào dưới đây?",
-    a: "Tuân thủ pháp luật",
-    b: "Sử dụng pháp luật",
-    c: "Thi hành pháp luật",
-    d: "Áp dụng pháp luật",
-    ans: "d"
-  },
-  {
-    num: 139,
-    q: "Thực hiện trách nhiệm pháp lý đối với người từ đủ 14 đến dưới 18 tuổi là…",
-    a: "Giáo dục, răn đe là chính",
-    b: "Có thể bị phạt tù",
-    c: "Buộc phải cách li với xã hội và không có điều kiện tái hòa nhập cộng đồng",
-    d: "Chủ yếu là đưa ra lời khuyên",
-    ans: "a"
-  },
-  {
-    num: 140,
-    q: "Quan hệ xã hội nào dưới đây không phải là quan hệ pháp luật…",
-    a: "Anh A và chị B làm thủ tục đăng ký kết hôn",
-    b: "Chị G ra chợ mua rau",
-    c: "Quan hệ lao động",
-    d: "Quan hệ cha mẹ – con",
-    ans: "b"
-  },
-  {
-    num: 141,
-    q: "Hành vi phạm tội nào sau đây không bị xem là tội phạm:",
-    a: "Không đăng ký tạm trú, tạm vắng",
-    b: "Trộm cắp tài sản công dân",
-    c: "Đua xe trái phép gây hậu quả nghiêm trọng",
-    d: "Lừa đảo chiếm đoạt tài sản",
-    ans: "a"
-  },
-  {
-    num: 142,
-    q: "Tòa án huyện A tuyên bố bị cáo B mức phạt 2 năm tù vì tội hiếp dâm, là…",
-    a: "Sử dụng pháp luật",
-    b: "Áp dụng pháp luật",
-    c: "Thi hành pháp luật",
-    d: "Tuân thủ pháp luật",
-    ans: "b"
-  },
-  {
-    num: 143,
-    q: "Các tổ chức, cá nhân chủ động thực hiện quyền (những việc được làm) là:",
-    a: "Sử dụng pháp luật",
-    b: "Thi hành pháp luật",
-    c: "Tuân thủ pháp luật",
-    d: "Áp dụng pháp luật",
-    ans: "a"
-  },
-  {
-    num: 144,
-    q: "Các tổ chức cá nhân chủ động thực hiện nghĩa vụ (những việc phải làm) là…",
-    a: "Sử dụng pháp luật",
-    b: "Thi hành pháp luật",
-    c: "Tuân thủ pháp luật",
-    d: "Áp dụng pháp luật",
-    ans: "b"
-  },
-  {
-    num: 145,
-    q: "Độ tuổi tối thiểu chịu trách nhiệm hình sự là từ đủ:",
-    a: "12 tuổi",
-    b: "14 tuổi",
-    c: "16 tuổi",
-    d: "18 tuổi",
-    ans: "b"
-  },
-  {
-    num: 146,
-    q: "Chọn phương án đúng nhất: Sự kiện pháp lý là những sự kiện xảy ra…?",
-    a: "Từ hành vi xử sự của con người",
-    b: "Từ thực tiễn đời sống xã hội",
-    c: "Trong thực tiễn đời sống mà sự xuất hiện hay mất đi của nó được pháp luật gắn với việc hình thành, thay đổi hay chấm dứt quan hệ pháp luật",
-    d: "Tất cả đều sai",
-    ans: "c"
-  },
-  {
-    num: 147,
-    q: "Khi nghiên cứu về chủ thể quan hệ pháp luật thì khẳng định nào sau đây là đúng?",
-    a: "Mọi cá nhân đều có năng lực hành vi như nhau",
-    b: "Mọi cá nhân đạt độ tuổi do luật định được tham gia vào tất cả quan hệ pháp luật",
-    c: "Mọi tổ chức đều được tham gia vào tất cả quan hệ pháp luật",
-    d: "Mọi chủ thể tham gia vào quan hệ pháp luật đều có quyền và nghĩa vụ nhất định",
-    ans: "d"
-  },
-  {
-    num: 148,
-    q: "Khi nghiên cứu về đặc điểm của quan hệ pháp luật thì khẳng định nào sau đây là sai?",
-    a: "Quan hệ pháp luật là loại quan hệ có ý chí",
-    b: "Quan hệ pháp luật xuất hiện dựa trên cơ sở quy phạm pháp luật",
-    c: "Quan hệ pháp luật do nhà nước quy định",
-    d: "Quan hệ pháp luật luôn gắn liền với sự kiện pháp lý",
-    ans: "c"
-  },
-  {
-    num: 149,
-    q: "Các tổ chức cá nhân không làm những việc bị cấm là:",
-    a: "Sử dụng pháp luật",
-    b: "Thi hành pháp luật",
-    c: "Tuân thủ pháp luật",
-    d: "Áp dụng pháp luật",
-    ans: "c"
-  },
-  {
-    num: 150,
-    q: "Quyền lao động của công dân chỉ bắt đầu được thực hiện khi nào?",
-    a: "Phải có người có nhu cầu sử dụng lao động (thuê mướn)",
-    b: "Công dân phải tìm được vịêc làm",
-    c: "Người lao động và người sử dụng lao động xác lập một quan hệ pháp luật lao động cụ thể",
-    d: "Tất cả đều đúng",
-    ans: "d"
-  },
-  {
-    num: 151,
-    q: "Quá trình thực hiện pháp luật chỉ đạt hiệu quả khi các chủ thể tham gia quan hệ pháp luật thực hiện…",
-    a: "Đúng đắn các quyền của mình theo Hiến pháp và pháp luật",
-    b: "Đầy đủ các quyền và nghĩa vụ của mình theo Hiến pháp và pháp luật",
-    c: "Đầy đủ nghĩa vụ của mình theo Hiến pháp và pháp luật",
-    d: "Đúng đắn các quyền và nghĩa vụ của mình theo Hiến pháp và pháp luật",
-    ans: "d"
-  },
-  {
-    num: 152,
-    q: "Xác định phương án SAI: Trong một quan hệ pháp luật…",
-    a: "Không có chủ thể nào chỉ có quyền mà không có nghĩa vụ",
-    b: "Quyền và nghĩa vụ của các chủ thể không tách rời nhau",
-    c: "Không có chủ thể nào chỉ có nghĩa vụ mà không có quyền",
-    d: "Quyền của cá nhân, tổ chức này không liên quan đến nghĩa vụ của cá nhân, tổ chức khác",
-    ans: "d"
-  },
-  {
-    num: 153,
-    q: "Dấu hiệu cơ bản của vi phạm pháp luật là",
-    a: "Là hành vi trái pháp luật",
-    b: "Do người có năng lực trách nhiệm pháp lý thực hiện",
-    c: "Vi phạm pháp luật phải có lỗi",
-    d: "Tất cả đều đúng",
-    ans: "d"
-  },
-  {
-    num: 154,
-    q: "Nhà nước đưa ra trách nhiệm pháp lý là nhằm:",
-    a: "Phạt tiền người vi phạm",
-    b: "Buộc chủ thể vi phạm chấm dứt hành vi trái pháp luật, phải chịu những thiệt hại nhất định; giáo dục răn đe những người khác",
-    c: "Lập lại trật tự xã hội",
-    d: "Ngăn chặn người vi phạm có thể có vi phạm mới",
-    ans: "b"
-  },
-  {
-    num: 155,
-    q: "Khả năng chủ thể có quyền hoặc có nghĩa vụ pháp lý do Nhà nước quy định, gọi là?",
-    a: "Khả năng pháp lý",
-    b: "Năng lực pháp luật",
-    c: "Năng lực hành vi",
-    d: "Năng lực đạo đức",
-    ans: "b"
-  },
-  {
-    num: 156,
-    q: "Chọn phương án đúng nhất: Quan hệ pháp luật hình sự là:",
-    a: "Quan hệ phát sinh khi có hành vi phạm tội",
-    b: "Quan hệ phát sinh giữa người phạm tội với người bị hại",
-    c: "Quan hệ phát sinh giữa nhà nước và người phạm tội khi có một tội phạm xảy ra",
-    d: "Tất cả đều sai",
-    ans: "c"
-  },
-  {
-    num: 157,
-    q: "Bạn A (17 tuổi) vì mâu thuẫn cá nhân với anh B (hàng xóm) nên đã rủ một bạn mang theo hung khí đến anh B, khiến anh B tử vong. Hành vi của bạn A thuộc loại vi phạm pháp luật nào dưới đây?",
-    a: "Vi phạm hình sự",
-    b: "Vi phạm dân sự",
-    c: "Vi phạm hành chính",
-    d: "Vi phạm kỉ luật",
-    ans: "a"
-  },
-  {
-    num: 158,
-    q: "Các cá nhân, tổ chức sử dụng đúng đắn các quyền của mình, làm những gì mà pháp luật cho phép làm là nội dung của hình thức thực hiện pháp luật nào dưới đây?",
-    a: "Sử dụng pháp luật",
-    b: "Thi hành pháp luật",
-    c: "Tuân thủ pháp luật",
-    d: "Áp dụng pháp luật",
-    ans: "a"
-  },
-  {
-    num: 159,
-    q: "Nguyên nhân cốt lõi của sự ra đời nhà nước là:",
-    a: "Kết quả của ba lần phân công lao động trong lịch sử",
-    b: "Kết quả của nền sản xuất hàng hoá cùng những hoạt động thương nghiệp",
-    c: "Nhu cầu về sự cần thiết phải có một tổ chức để dập tắt xung đột giai cấp",
-    d: "Nhu cầu về sự cần thiết phải có một tổ chức thay thế thị tộc - bộ lạc",
-    ans: "c"
-  },
-  {
-    num: 160,
-    q: "Tính giai cấp của nhà nước thể hiện ở chỗ:",
-    a: "Nhà nước là một bộ máy trấn áp giai cấp",
-    b: "Nhà nước là một bộ máy của giai cấp này thống trị giai cấp khác",
-    c: "Nhà nước ra đời là sản phẩm của xã hội có giai cấp",
-    d: "Tất cả đều đúng",
-    ans: "d"
-  },
-  {
-    num: 161,
-    q: "Chủ quyền quốc gia là:",
-    a: "Quyền độc lập tự quyết của quốc gia trong lĩnh vực đối nội",
-    b: "Quyền độc lập tự quyết của quốc gia trong lĩnh vực đối ngoại",
-    c: "Quyền ban hành văn bản pháp luật",
-    d: "Tất cả đều đúng",
-    ans: "d"
-  },
-  {
-    num: 162,
-    q: "Công dân khi tham gia các quan hệ xã hội đều thực hiện cách xử sự phù hợp với quy định của pháp luật là biểu hiện của…",
-    a: "Ban hành pháp luật",
-    b: "Xây dựng pháp luật",
-    c: "Thực hiện pháp luật",
-    d: "Phổ biến pháp luật",
-    ans: "c"
-  },
-  {
-    num: 163,
-    q: "Lịch sử xã hội loài người đã tồn tại ...... kiểu nhà nước, bao gồm các kiểu nhà nước là .............",
-    a: "4 – chủ nô – phong kiến – tư hữu – XHCN",
-    b: "4 – chủ nô – phong kiến – tư sản – XHCN",
-    c: "4 – chủ nô – chiếm hữu nô lệ – tư bản - XHCN",
-    d: "4 – địa chủ – nông nô, phong kiến – tư bản – XHCN",
-    ans: "b"
-  },
-  {
-    num: 164,
-    q: "Trong các hành vi dưới đây hành vi nào thể hiện công dân áp dụng pháp luật?",
-    a: "Người tham gia giao thông không vượt qua ngã tư khi có tín hiệu đèn đỏ",
-    b: "Công dân A gửi đơn khiếu nại lên cơ quan nhà nước",
-    c: "Cảnh sát giao thông xử phạt người không đội mũ bảo hiểm",
-    d: "Anh A và chị B đến UBND phường đăng ký kết hôn",
-    ans: "c"
-  },
-  {
-    num: 165,
-    q: "Chọn phương án đúng nhất: Thế nào là người có năng lực trách nhiệm pháp lý?",
-    a: "Là người đạt một độ tuổi nhất định theo qui định của pháp luật, có thể nhận thức và điều khiển hành vi của mình",
-    b: "Là người không mắc bệnh tâm thần hoặc một bệnh khác làm mất khả năng nhận thức",
-    c: "Là người tự quyết định cách xử sự của mình và độc lập chịu trách nhiệm về hành vi đã thực hiện",
-    d: "Là người đạt một độ tuổi nhất định theo qui định của pháp luật",
-    ans: "a"
-  },
-  {
-    num: 166,
-    q: "Tuân thủ pháp luật là hình thức thực hiện pháp luật, trong đó các cá nhân, tổ chức không làm những điều mà pháp luật…",
-    a: "cho phép làm",
-    b: "quy định phải làm",
-    c: "không bắt buộc",
-    d: "quy định cấm",
-    ans: "d"
-  },
-  {
-    num: 167,
-    q: "Tính giai cấp của pháp luật thể hiện ở chỗ….",
-    a: "Pháp luật là sản phẩm của xã hội có giai cấp",
-    b: "Pháp luật là ý chí của giai cấp thống trị",
-    c: "Pháp luật là công cụ để điều chỉnh các mối quan hệ giai cấp",
-    d: "Tất cả đều đúng",
-    ans: "d"
-  },
-  {
-    num: 168,
-    q: "Nhà nước là:",
-    a: "Một tổ chức trong xã hội có giai cấp",
-    b: "Một tổ chức xã hội có chủ quyền quốc gia",
-    c: "Một tổ chức xã hội có luật lệ",
-    d: "Tất cả đều đúng",
-    ans: "d"
-  },
-  {
-    num: 169,
-    q: "Chọn phương án đúng nhất: Hình thức nhà nước là cách tổ chức bộ máy quyền lực nhà nước và phương pháp thực hiện quyền lực nhà nước. Hình thức nhà nước được thể hiện chủ yếu ở ............ khía cạnh; đó là ...................",
-    a: "3 – hình thức chính thể, hình thức cấu trúc nhà nước và chế độ KT – XH",
-    b: "3 – hình thức chính thể, hình thức cấu trúc và chế độ chính trị",
-    c: "3 – hình thức chuyên chính, hình thức cấu trúc nhà nước và chế độ KT – XH",
-    d: "3 – hình thức chuyên chính, hình thức cấu trúc nhà nước và chế độ chính trị",
-    ans: "b"
-  },
-  {
-    num: 170,
-    q: "Người thuê nhà tự sửa chữa, cải tạo nhà mà không hỏi ý kiến của chủ nhà là hành vi…:",
-    a: "vi phạm hình sự",
-    b: "vi phạm hành chính",
-    c: "vi phạm dân sự",
-    d: "vi phạm kỉ luật",
-    ans: "c"
-  },
-  {
-    num: 171,
-    q: "Khả năng nhà nước thừa nhận cho chủ thể bằng hành vi của mình có thể xác lập và thực hiện quyền hoặc nghĩa vụ pháp lý, gọi là?",
-    a: "Khả năng hành vi",
-    b: "Năng lực pháp luật",
-    c: "Năng lực hành vi",
-    d: "Năng lực pháp lý",
-    ans: "c"
-  },
-  {
-    num: 172,
-    q: "Năng lực pháp luật và năng lực hành vi là những thuộc tính không tách rời của mỗi cá nhân, đều do nhà nước thừa nhận cho họ nên gọi là?",
-    a: "Thuộc tính tự nhiên",
-    b: "Năng lực pháp lý",
-    c: "Thuộc tính pháp lý",
-    d: "Tất cả đều đúng",
-    ans: "c"
-  },
-  {
-    num: 173,
-    q: "Khẳng định nào sau đây là SAI?",
-    a: "Năng lực pháp luật là tiền đề của năng lực hành vi",
-    b: "Năng lực hành vi đầy đủ chỉ có ở những chủ thể đáp ứng đầy đủ các điều kiện do pháp luật quy định",
-    c: "Năng lực pháp luật và năng lực hành vi là những thuộc tính tự nhiên của mỗi cá nhân, có sẵn khi cá nhân sinh ra",
-    d: "Năng lực chủ thể pháp luật luôn mang tính giai cấp",
-    ans: "c"
-  },
-  {
-    num: 174,
-    q: "Chọn phương án đùng nhất: Cấu thành của vi phạm pháp luật bao gồm:",
-    a: "Giả định, quy định, chế tài",
-    b: "Chủ thể, khách thể",
-    c: "Mặt chủ quan, mặt khách quan",
-    d: "Chủ thể, khách thể, mặt chủ quan, mặt khách quan",
-    ans: "d"
-  },
-  {
-    num: 175,
-    q: "“Pháp luật là hệ thống quy tắc xử sự mang tính ....................., do .................. ban hành và bảo đảm thực hiện, thể hiện ....................... của giai cấp thống trị và phụ thuộc vào các điều kiện .................. là nhân tố điều chỉnh các quan hệ xã hội”.",
-    a: "Bắt buộc – quốc hội – ý chí – chính trị",
-    b: "Bắt buộc chung – nhà nước – lý tưởng – chính trị",
-    c: "Bắt buộc – quốc hội – lý tưởng – kinh tế xã hội",
-    d: "Bắt buộc chung – nhà nước – ý chí – kinh tế xã hội",
-    ans: "d"
-  },
-  {
-    num: 176,
-    q: "Chọn phương án đúng nhất: Hình thức pháp luật là cách thức mà giai cấp thống trị sử dụng để nâng ý chí của giai cấp mình lên thành pháp luật. Trong lịch sử loài người đã có ............ hình thức pháp luật, đó là ..................",
-    a: "4 – tập quán pháp, tiền lệ pháp, điều lệ pháp và Văn bản quy phạm pháp luật",
-    b: "3 – tập quán pháp, tiền lệ pháp, văn bản quy phạm pháp luật",
-    c: "2 – tập quán pháp và văn bản quy phạm pháp luật",
-    d: "1 – văn bản quy phạm pháp luật",
-    ans: "b"
-  },
-  {
-    num: 177,
-    q: "Chọn phương án đúng nhất: Quy phạm pháp luật là quy tắc xử sự mang tính .................... do ................... ban hành và bảo đảm thực hiện, thể hiện ý chí và bảo vệ lợi ích của giai cấp thống trị để điều chỉnh các ...........................",
-    a: "Bắt buộc chung – nhà nước – quan hệ pháp luật",
-    b: "Bắt buộc – nhà nước – quan hệ xã hội",
-    c: "Bắt buộc chung – quốc hội – quan hệ xã hội",
-    d: "Bắt buộc chung – nhà nước – quan hệ xã hội",
-    ans: "d"
-  },
-  {
-    num: 178,
-    q: "Chọn phương án đúng nhất: Chế tài có các loại nào sau đây?",
-    a: "Chế tài hình sự và chế tài hành chính",
-    b: "Chế tài hình sự, chế tài hành chính và chế tài dân sự",
-    c: "Chế tài hình sự, chế tài hành chính, chế tài kỷ luật và chế tài dân sự",
-    d: "Chế tài hình sự, chế tài hành chính, chế tài kỷ luật, chế tài dân sự và chế tài bắt buộc",
-    ans: "c"
-  },
-  {
-    num: 179,
-    q: "Tập quán pháp là:",
-    a: "Biến đổi những tục lệ, tập quán có sẵn thành pháp luật",
-    b: "Biến đổi những thói quen hành xử của con người trong lịch sử thành pháp luật",
-    c: "Biến đổi những quy phạm tôn giáo thành quy phạm pháp luật",
-    d: "Tất cả đều sai",
-    ans: "a"
-  },
-  {
-    num: 180,
-    q: "Pháp luật được hiểu là?",
-    a: "quy định chung",
-    b: "quy tắc xử sự chung",
-    c: "quy tắc xử sự riêng",
-    d: "quy định riêng",
-    ans: "b"
-  },
-  {
-    num: 181,
-    q: "Người chưa thành niên, theo qui định pháp luật Việt Nam là người chưa đủ…",
-    a: "18 tuổi",
-    b: "16 tuổi",
-    c: "15 tuổi",
-    d: "17 tuổi",
-    ans: "a"
-  },
-  {
-    num: 182,
-    q: "Cơ quan thường trực của Quốc hội là:",
-    a: "Hội đồng dân tộc",
-    b: "Ủy ban Quốc hội",
-    c: "Ủy ban thường vụ Quốc hội",
-    d: "Ủy ban nhân dân",
-    ans: "c"
-  },
-  {
-    num: 183,
-    q: "Ông A vận chuyển gia cầm bị bệnh, bị cơ quan có thẩm quyền phát hiện và buộc phải tiêu hủy hết số gia cầm bị bệnh này. Đây là biện pháp chế tài:",
-    a: "Dân sự",
-    b: "Hình sự",
-    c: "Kỷ luật",
-    d: "Hành chính",
-    ans: "d"
-  },
-  {
-    num: 184,
-    q: "“Người nào quảng cáo gian dối về hàng hóa, dịch vụ gây hậu quả nghiêm trọng đã bị xử phạt hành chính về hành vi này hoặc đã bị kết án về tội này, chưa được xóa án tích mà còn vi phạm thì bị phạt tiền từ 10 triệu đến 100 triệu đồng, cải tạo không giam giữ đến 3 năm hoặc bị phạt tù từ 6 tháng đến 3 năm”. Bộ phận giả định là…",
-    a: "Người nào quảng cáo gian dối về hàng hóa về dịch vụ",
-    b: "Người nào quảng cáo gian dối về hàng hóa dịch vụ gây hậu quả nghiêm trọng",
-    c: "Người nào quảng cáo gian dối về hàng hóa dịch vụ gây hậu quả nghiêm trọng đã bị xử phạt hành chính về hành vi này",
-    d: "Người nào quảng cáo gian dối về hàng hóa, dịch vụ gây hậu quả nghiêm trọng đã bị xử phạt hành chính về hành vi này hoặc đã bị kết án về tội này, chưa được xóa án tích mà còn vi phạm",
-    ans: "d"
-  },
-  {
-    num: 185,
-    q: "Nhận định nào sau đây SAI khi đề cập đến chức năng của pháp luật?",
-    a: "Pháp luật bảo vệ tất cả các quan hệ xã hội",
-    b: "Pháp luật tác động đến các quan hệ xã hội chủ yếu, tạo hành lang pháp lý an toàn cho quan hệ xã hội đó tồn tại, phát triển",
-    c: "Chức năng giáo dục của pháp luật thể hiện tính răn đe đối với hành vi vi phạm pháp luật và phòng ngừa chung cho toàn xã hội",
-    d: "Không đáp án nào sai",
-    ans: "a"
-  },
-  {
-    num: 186,
-    q: "Người lao động đình công theo quy định pháp luật đòi tăng lương, giảm giờ làm, thể hiện vai trò nào sau đây của pháp luật?",
-    a: "Pháp luật làm ổn định những quan hệ mới",
-    b: "Pháp luật là phương tiện để Nhà nước quản lý mọi mặt đời sống xã hội",
-    c: "Pháp luật là phương tiện để bảo vệ các quyền, lợi ích hợp pháp của công dân",
-    d: "Pháp luật là cơ sở để tạo lập mối quan hệ đối ngoại",
-    ans: "c"
-  },
-  {
-    num: 187,
-    q: "Năng lực của chủ thể bao gồm:",
-    a: "Năng lực pháp luật và năng lực hành vi",
-    b: "Năng lực pháp luật và năng lực công dân",
-    c: "Năng lực hành vi và năng lực nhận thức",
-    d: "Năng lực hành vi và năng lực nhận thức",
-    ans: "a"
-  },
-  {
-    num: 188,
-    q: "Cá nhân, tổ chức thi hành pháp luật tức là thực hiện đầy đủ những nghĩa vụ, chủ động làm những gì mà pháp luật…",
-    a: "quy định làm",
-    b: "quy định phải làm",
-    c: "cho phép làm",
-    d: "không cấm",
-    ans: "b"
-  },
-  {
-    num: 189,
-    q: "Anh B săn bắt động vật quý hiếm trong rừng. Trong trường hợp này anh B đã…",
-    a: "không thi hành pháp luật",
-    b: "không sử dụng pháp luật",
-    c: "không áp dụng pháp luật",
-    d: "không tuân thủ pháp luật",
-    ans: "d"
-  },
-  {
-    num: 190,
-    q: "Qua kiểm tra cơ quan của anh C phát hiện anh C thường xuyên đi làm muộn và nhiều lần tự ý nghỉ việc không có lí do. Trong trường hợp này, anh C đã…",
-    a: "vi phạm dân sự",
-    b: "vi phạm hành chính",
-    c: "vi phạm kỉ luật",
-    d: "vi phạm hình sự",
-    ans: "c"
-  },
-  {
-    num: 191,
-    q: "Những quy tắc xử sự chung, được áp dụng nhiều lần, ở nhiều nơi, đối với tất cả mọi người, trong mọi lĩnh vực của đời sống xã hội là nội dung đặc trưng nào dưới đây của pháp luật?",
-    a: "Tính bắt buộc chung",
-    b: "Tính quyền lực",
-    c: "Tính chặt chẽ về hình thức",
-    d: "Tính quy phạm phổ biến",
-    ans: "d"
-  },
-  {
-    num: 192,
-    q: "Sự xuất hiện của nhà nước cổ đại nào sau đây có nguyên nhân là do mâu thuẫn giai cấp gay gắt đến mức không thể điều hòa được:",
-    a: "Nhà nước Đại Việt",
-    b: "Nhà nước Rôma",
-    c: "Nhà nước Chămpa",
-    d: "Các nhà nước phương Đông",
-    ans: "b"
-  },
-  {
-    num: 193,
-    q: "Theo học thuyết Mác – Lênin, nhận định nào sau đây là đúng: thay đổi qua các kiểu nhà nước khác nhau nhà nước khác nhau kiểu nhà nước khác nhau nước là không đổi qua các kiểu nhà nước khác nhau",
-    a: "Tính chất giai cấp của nhà nước không đổi nhưng bản chất của nhà nước thì",
-    b: "Tính chất giai cấp và bản chất của nhà nước không thay đổi qua các kiểu",
-    c: "Tính chất giai cấp và bản chất của nhà nước luôn luôn thay đổi qua các",
-    d: "Tính chất giai cấp của nhà nước luôn luôn thay đổi, còn bản chất của nhà",
-    ans: "b"
-  },
-  {
-    num: 194,
-    q: "Một công ty xã chất thải ra sông làm cá chết hàng loạt, gây ô nhiễm nặng môi trường. Trách nhiệm pháp lý áp dụng đối với công ty này là:",
-    a: "Trách nhiệm hành chính",
-    b: "Trách nhiệm hình sự",
-    c: "Trách nhiệm hành chính và trách nhiệm dân sự",
-    d: "Trách nhiệm hình sự và trách nhiệm dân sự",
-    ans: "c"
-  },
-  {
-    num: 195,
-    q: "Chọn nhận định SAI:",
-    a: "Phó thủ tướng không nhất thiết phải là đại biểu Quốc hội",
-    b: "Năng lực pháp luật xuất hiện từ khi con người được sinh ra",
-    c: "Năng lực lao động xuất hiện từ khi công dân đủ 16 tuổi",
-    d: "Năng lực pháp luật là tiền đề của năng lực hành vi",
-    ans: "c"
-  },
-  {
-    num: 196,
-    q: "Để truy cứu trách nhiệm pháp lý cần xác định?",
-    a: "Lỗi của chủ thể vi phạm pháp luật",
-    b: "Hành vi trái pháp luật của chủ thể",
-    c: "Hậu quả gây thiệt hại cho xã hội",
-    d: "Có hành vi vi phạm pháp luật xảy ra, còn thời hiệu truy cứu trách nhiệm pháp lý",
-    ans: "d"
-  },
-  {
-    num: 197,
-    q: "Quy định thường gặp trong pháp luật hành chính:",
-    a: "Quy định dứt khoát",
-    b: "Quy định không dứt khoát",
-    c: "Quy định giao quyền",
-    d: "Tất cả đều sai",
-    ans: "a"
-  },
-  {
-    num: 198,
-    q: "Hình thức thể hiện của pháp luật là các văn bản có chứa…",
-    a: "quy chế chung",
-    b: "quy định bắt buộc",
-    c: "chuẩn mực chung",
-    d: "quy phạm pháp luật",
-    ans: "c"
-  },
-  {
-    num: 199,
-    q: "Vi phạm hình sự là…",
-    a: "Hành vi rất nguy hiểm cho xã hội",
-    b: "Hành vi nguy hiểm cho xã hội",
-    c: "Hành vi tương đối nguy hiểm cho xã hội",
-    d: "Hành vi đặc biệt nguy hiểm cho xã hội",
-    ans: "b"
-  },
-  {
-    num: 200,
-    q: "Nội dung của văn bản quy phạm pháp luật đòi hỏi phải được diễn đạt…",
-    a: "chính xác, một nghĩa",
-    b: "chính xác, đa nghĩa",
-    c: "tương đối chính xác, một nghĩa",
-    d: "tương đối chính xác, đa nghĩa",
-    ans: "a"
-  },
-  {
-    num: 201,
-    q: "Người nào tuy có điều kiện mà không cứu giúp người đang ở trong tình trạng nguy hiểm đến tính mạng, dẫn đến hậu quả người đó chết, thì…",
-    a: "vi phạm pháp luật dân sự",
-    b: "phải chịu trách nhiệm hình sự",
-    c: "vi phạm pháp luật hành chính",
-    d: "bị xử phạt hành chính",
-    ans: "b"
-  },
-  {
-    num: 202,
-    q: "Ông B lừa chị C bằng cách mượn của chị 10 triệu đồng nhưng đến ngày hẹn ông B đã không chịu trả cho chị C số tiền trên. Chị C đã làm đơn kiện ông B ra tòa. Việc chị C kiện ông B là hành vi…",
-    a: "áp dụng pháp luật",
-    b: "tuân thủ pháp luật",
-    c: "thi hành pháp luật",
-    d: "sử dụng pháp luật",
-    ans: "d"
-  },
-  {
-    num: 203,
-    q: "Chọn phương án đúng nhất: Các hình thức thực hiện pháp luật bao gồm:",
-    a: "Tuân thủ pháp luật và thực thi pháp luật",
-    b: "Tuân thủ pháp luật và sử dụng pháp luật",
-    c: "Áp dụng pháp luật và thực thi pháp luật",
-    d: "Sử dụng pháp luật, tuân thủ pháp luật, thực thi pháp luật và áp dụng pháp luật",
-    ans: "d"
-  },
-  {
-    num: 204,
-    q: "Hành vi nào sau đây là vi phạm pháp luật dân sự?",
-    a: "Kinh doanh sai ngành nghề đã đăng ký",
-    b: "Buôn bán phụ nữ",
-    c: "Tuyên truyền văn hóa phẩm đồi trụy",
-    d: "Không trả tiền thuê nhà",
-    ans: "d"
-  },
-  {
-    num: 205,
-    q: "Thành phố nào sau đây của Việt Nam không phải là thành phố trực thuộc trung ương:",
-    a: "Thành phố Huế",
-    b: "Thành phố Cần Thơ",
-    c: "Thành phố Đà Nẵng",
-    d: "Thành phố Hải Phòng",
-    ans: "a"
-  },
-  {
-    num: 206,
-    q: "Phương hướng chính để đề phòng và hạn chế những hành vi vi phạm pháp luật là…",
-    a: "xử lý nghiêm minh các hành vi vi phạm pháp luật",
-    b: "hoàn chỉnh cơ chế thực thi pháp luật một cách có hiệu quả",
-    c: "xây dựng và hoàn chỉnh hệ thống pháp luật",
-    d: "đẩy mạnh phát triển kinh tế song song với chính sách xã hội, xóa đói giảm nghèo, nâng cao dân trí",
-    ans: "c"
-  },
-  {
-    num: 207,
-    q: "So với pháp luật thì đạo đức có phạm vi điều chỉnh…",
-    a: "rộng hơn",
-    b: "hẹp hơn",
-    c: "như nhau",
-    d: "bằng nhau",
-    ans: "a"
-  },
-  {
-    num: 208,
-    q: "Chọn phương án đúng nhất: Mặt chủ quan của vi phạm pháp luật gồm?",
-    a: "Lỗi cố ý và lỗi vô ý",
-    b: "Cố ý trực tiếp và cố ý gián tiếp; vô ý vì quá tự tin và vô ý vì quá cẩu thả",
-    c: "Hành vi trái pháp luật và hậu quả nguy hiểm cho xã hội",
-    d: "Lỗi; động cơ; mục đích",
-    ans: "d"
-  },
-  {
-    num: 209,
-    q: "Quyền công tố trước tòa là:",
-    a: "Quyền truy tố cá nhân, tổ chức ra trước pháp luật",
-    b: "Quyền khiếu nại, tố cáo của công dân",
-    c: "Quyền xác định tội phạm",
-    d: "Tất cả đều đúng",
-    ans: "a"
-  },
-  {
-    num: 210,
-    q: "Người phải chịu trách nhiệm hành chính do mọi vi phạm hành chính mà mình gây ra theo quy định của pháp luật có độ tuổi là…",
-    a: "Từ đủ 18 tuổi trở lên",
-    b: "Từ 18 tuổi trở lên",
-    c: "Từ đủ 16 tuổi trở lên",
-    d: "Từ đủ 14 tuổi trở lên",
-    ans: "c"
-  },
-  {
-    num: 211,
-    q: "Vi phạm dân sự là hành vi vi phạm pháp luật, xâm phạm tới…",
-    a: "Các quy tắc quản lý nhà nước",
-    b: "Các quan hệ tài sản và quan hệ nhân thân",
-    c: "Các quan hệ lao động, công vụ nhà nước",
-    d: "Tất cả đều sai",
-    ans: "b"
-  },
-  {
-    num: 212,
-    q: "Người phải chịu trách nhiệm hình sự về mọi tội phạm do mình gây ra có độ tuổi theo quy định của pháp luật là người…",
-    a: "từ đủ 14 tuổi trở lên",
-    b: "từ đủ 16 tuổi trở lên",
-    c: "từ 18 tuổi trở lên",
-    d: "từ đủ 18 tuổi trở lên",
-    ans: "b"
-  },
-  {
-    num: 213,
-    q: "Cơ sở để truy cứu trách nhiệm pháp lý là…",
-    a: "hành vi vi phạm pháp luật",
-    b: "tính chất phạm tội",
-    c: "mức độ gây thiệt hại của hành vi",
-    d: "khả năng nhận thức của chủ thể",
-    ans: "a"
-  },
-  {
-    num: 214,
-    q: "Pháp luật là một trong những phương tiện để nhà nước thực hiện vai trò nào dưới đây?",
-    a: "bảo vệ các giai cấp",
-    b: "quản lý xã hội",
-    c: "bảo vệ công dân",
-    d: "quản lý văn hóa",
-    ans: "b"
-  },
-  {
-    num: 215,
-    q: "Đâu là nguyên nhân chính dẫn đến vi phạm pháp luật?",
-    a: "Có sự yếu kém trong công tác quản lý xã hội, đôi chỗ còn buông lỏng kỉ cương; giám sát còn mang tính hình thức",
-    b: "Mặt trái của nền kinh tế thị trường tác động vào một bộ phận người dân, đặc biệt là giới trẻ",
-    c: "Thông qua các chiêu bài diễn biến hòa bình, các thế lực thù địch vẫn trực tiếp hoặc gián tiếp tìm cách chống phá Nhà nước ta",
-    d: "Do ảnh hưởng ít nhiều của tàn dư chế độ cũ để lại và ảnh hưởng của lối sống không lành mạnh",
-    ans: "a"
-  },
-  {
-    num: 216,
-    q: "Đảng lãnh đạo nhà nước thông qua:",
-    a: "Đường lối, chủ trương, chính sách của Đảng trong từng thời kỳ",
-    b: "Tổ chức Đảng trong các cơ quan nhà nước",
-    c: "Đào tạo và giới thiệu những Đảng viên vào cơ quan nhà nước",
-    d: "Tất cả đều đúng",
-    ans: "d"
-  },
-  {
-    num: 217,
-    q: "Số lượng tỉnh, thành phố trực thuộc trung ương hiện nay của nước CHXHCN Việt Nam là",
-    a: "62",
-    b: "63",
-    c: "64",
-    d: "65",
-    ans: "b"
-  },
-  {
-    num: 218,
-    q: "Quyền lực và hệ thống tổ chức quyền lực trong xã hội cộng sản nguyên thủy…",
-    a: "Hòa nhập vào xã hội và phục vụ lợi ích cho các thành viên trong xã hội",
-    b: "Đứng trên xã hội, tách khỏi xã hội và phục vụ lợi ích cho Hội đồng thị tộc, tù trưởng, các thủ lĩnh tôn giáo",
-    c: "Đứng trên xã hội, tách khỏi xã hội và phục vụ lợi ích cho các thành viên trong xã hội",
-    d: "Hòa nhập vào xã hội và phục vụ cho lợi ích của Hội đồng thị tộc, tù trưởng, các thủ lĩnh tôn giáo",
-    ans: "a"
-  },
-  {
-    num: 219,
-    q: "Công dân bình đẳng về trách nhiệm pháp lý là…",
-    a: "Công dân ở bất kỳ độ tuổi nào vi phạm pháp luật đều bị xử lý như nhau",
-    b: "Công dân nào vi phạm quy định của cơ quan, đơn vị, đều phải chịu trách nhiệm kỷ luật",
-    c: "Công dân nào vi phạm pháp luật cũng bị xử lý theo quy định của pháp luật",
-    d: "Công dân nào do thiếu hiểu biết về pháp luật mà vi phạm pháp luật thì không phải chịu trách nhiệm pháp lý",
-    ans: "c"
-  },
-  {
-    num: 220,
-    q: "Người bị bệnh tâm thần có hành vi trái pháp luật có được xem là vi phạm pháp luật không?",
-    a: "Có",
-    b: "Không",
-    c: "Tùy từng trường hợp",
-    d: "Tất cả đều sai",
-    ans: "b"
-  },
-  {
-    num: 221,
-    q: "Trường hợp nào sau đây thì mới được bắt, giam, giữ người…",
-    a: "Bắt người khi đang bị tình nghi có hành vi vi phạm pháp luật",
-    b: "Bắt, giam, giữ người khi người này có dấu hiệu nghiện ma tuý",
-    c: "Bắt người phạm tội quả tang hoặc đang bị truy nã",
-    d: "Bắt giam người khi người này có người thân phạm pháp luật",
-    ans: "c"
-  },
-  {
-    num: 222,
-    q: "Trách nhiệm pháp lý là trách nhiệm của:",
-    a: "Mọi người",
-    b: "Chủ thể vi phạm pháp luật",
-    c: "Chỉ những người có đủ 18 tuổi trở lên",
-    d: "Người có hành vi không hợp đạo đức",
-    ans: "b"
-  },
-  {
-    num: 223,
-    q: "Hộ sản xuất – kinh doanh chủ động đăng kí khai thuế và nộp thuế là",
-    a: "tuân thủ pháp luật",
-    b: "thi hành pháp luật",
-    c: "sử dụng pháp luật",
-    d: "áp dụng pháp luật",
-    ans: "b"
-  },
-  {
-    num: 224,
-    q: "Chọn phương án đúng nhất: Đối tượng của vi phạm hành chính là…",
-    a: "cá nhân",
-    b: "tổ chức",
-    c: "cá nhân và tổ chức",
-    d: "Cơ quan hành chính",
-    ans: "c"
-  },
-  {
-    num: 225,
-    q: "Luật Hiến pháp là một ngành luật chủ đạo trong hệ thống pháp luật Việt Nam vì….",
-    a: "Do Quốc hội - cơ quan quyền lực Nhà nước cao nhất ban hành",
-    b: "Quy định về những vấn đề cơ bản nhất, quan trọng nhất của Nhà nước",
-    c: "Có giá trị pháp lý cao nhất",
-    d: "Tất cả đều đúng",
-    ans: "d"
-  },
-  {
-    num: 226,
-    q: "Độ tuổi được ứng cử vào Quốc hội và Hội đồng nhân dân các cấp theo quy định của pháp luật ở nước ta là?",
-    a: "Đủ 18 tuổi trở lên",
-    b: "Đủ 19 tuổi trở lên",
-    c: "Đủ 20 tuổi trở lên",
-    d: "Đủ 21 tuổi trở lên",
-    ans: "d"
-  },
-  {
-    num: 227,
-    q: "Hiến pháp có những đặc trưng khác với các văn bản pháp luật khác ở chỗ nào?",
-    a: "Hiến pháp chỉ quy định những vấn đề cơ bản nhất, quan trọng nhất của một Nhà nước, một xã hội làm cơ sở nền tảng cho hệ thống pháp luật",
-    b: "Hiến pháp có một phạm vi điều chỉnh rất rộng, trên tất cả các lĩnh vực, các văn bản pháp luật khác có phạm vi điều chỉnh hẹp hơn",
-    c: "Hiến pháp có hiệu lực pháp lý cao nhất và có thủ tục làm mới và sửa đổi đặc biệt là thủ tục lập Hiến",
-    d: "Tất cả đều đúng",
-    ans: "d"
-  },
-  {
-    num: 228,
-    q: "Pháp luật Việt Nam quy định người nào có quyền bầu cử ra cơ quan Quốc hội và Hội đồng nhân dân các cấp?",
-    a: "Tất cả công dân Việt Nam",
-    b: "Công dân Việt Nam 18 từ tuổi trở lên",
-    c: "Công dân Việt Nam 16 từ tuổi trở lên",
-    d: "Công dân Việt Nam 21 từ tuổi trở lên",
-    ans: "b"
-  },
-  {
-    num: 229,
-    q: "Văn bản pháp luật nào quy định về quyền và nghĩa vụ cơ bản của công dân?",
-    a: "Luật Hành chính",
-    b: "Luật Dân sự",
-    c: "Luật Lao động",
-    d: "Luật Hiến pháp",
-    ans: "d"
-  },
-  {
-    num: 230,
-    q: "Những quyền và nghĩa vụ của công dân được quy định trong?",
-    a: "Rất nhiều văn bản pháp luật khác nhau",
-    b: "Luật Dân sự",
-    c: "Luật Lao động",
-    d: "Hiến pháp",
-    ans: "a"
-  },
-  {
-    num: 231,
-    q: "Hiến pháp Nhà nước Việt Nam quy định: Công dân đủ 21 tuổi trở lên có quyền ứng cử vào cơ quan nào sau đây?",
-    a: "Chính phủ",
-    b: "Quốc hội và Hội đồng nhân dân các cấp",
-    c: "Ủy ban nhân dân các cấp",
-    d: "Ủy ban nhân dân cấp tỉnh và tương đương",
-    ans: "b"
-  },
-  {
-    num: 232,
-    q: "Hiến pháp 1992 đã được thay thế bằng Hiến pháp năm nào?",
-    a: "Năm 1996",
-    b: "Năm 1998",
-    c: "Năm 2013",
-    d: "Năm 2021",
-    ans: "c"
-  },
-  {
-    num: 233,
-    q: "Hiến pháp được thông qua khi ít nhất có…",
-    a: "Một phần hai tổng số đại biểu Quốc hội biểu quyết tán thành",
-    b: "Hai phần ba tổng số đại biểu Quốc hội biểu quyết tán thành",
-    c: "Ba phần tư tổng số đại biểu Quốc hội biểu quyết tán thành",
-    d: "Một trăm phần trăm tổng số đại biểu Quốc hội biểu quyết tán thành",
-    ans: "b"
-  },
-  {
-    num: 234,
-    q: "Những chức danh nào sau đây bắt buộc phải là đại biểu Quốc hội?",
-    a: "Phó Thủ tướng Chính phủ",
-    b: "Thủ tướng Chính phủ",
-    c: "Bộ trưởng",
-    d: "Chủ tịch UBND tỉnh, thành phố trực thuộc Trung ương",
-    ans: "b"
-  },
-  {
-    num: 235,
-    q: "Chọn phương án đúng nhất: Cơ cấu bộ máy Nhà nước Cộng hòa XHCN Việt Nam bao gồm?",
-    a: "Quốc hội, Chính phủ, Ủy ban nhân dân các cấp",
-    b: "Quốc hội, Viện Kiểm sát nhân dân, Tòa án nhân dân các cấp",
-    c: "Hệ thống cơ quan quyền lực, hệ thống cơ quan quản lý Nhà nước, hệ thống cơ quan kiểm sát, hệ thống cơ quan xét xử",
-    d: "Đảng Cộng sản Việt Nam, Quốc hội, chính phủ",
-    ans: "c"
-  },
-  {
-    num: 236,
-    q: "Hệ thống cơ quan quyền lực Nhà nước bao gồm?",
-    a: "Quốc hội, Chính phủ",
-    b: "Quốc hội, Ủy ban nhân dân các cấp",
-    c: "Chính phủ, Ủy ban nhân dân các cấp",
-    d: "Quốc hội, Hội đồng nhân dân các cấp",
-    ans: "d"
-  },
-  {
-    num: 237,
-    q: "Phương tiện nào dưới đây của nhà nước được xem là hiệu quả để quản lý xã hội?",
-    a: "Giáo dục",
-    b: "Phong tục",
-    c: "Nội quy",
-    d: "Pháp luật",
-    ans: "d"
-  },
-  {
-    num: 238,
-    q: "Chính phủ nước Cộng hòa XHCN Việt Nam…",
-    a: "Là cơ quan trung tâm của Nhà nước, có thẩm quyền trong cả 3 lĩnh vực lập pháp, hành pháp, tư pháp",
-    b: "Là cơ quan Hành chính Nhà nước cao nhất, thực hiện quyền hành pháp, tư pháp",
-    c: "Là cơ quan Hành chính Nhà nước cao nhất, thực hiện quyền lập pháp, hành pháp, tư pháp",
-    d: "Là cơ quan chấp hành của Quốc hội, cơ quan Hành chính Nhà nước cao nhất, thực hiện quyền hành pháp",
-    ans: "d"
-  },
-  {
-    num: 239,
-    q: "Chủ thể nào dưới đây sẽ đảm bảo cho pháp luật được thực hiện nghiêm minh?",
-    a: "Đảng cộng sản",
-    b: "Cơ quan",
-    c: "Cá nhân",
-    d: "Nhà nước",
-    ans: "d"
-  },
-  {
-    num: 240,
-    q: "Để xử lý người có hành vi xâm hại đến lợi ích của giai cấp cầm quyền, Nhà nước sẽ sử dụng quyền lực có tính cưỡng chế, khẳng định này là nội dung nào dưới đây của pháp luật?",
-    a: "Đặc trưng của pháp luật",
-    b: "Bản chất của pháp luật",
-    c: "Vai trò của pháp luật",
-    d: "Chức năng của pháp luật",
-    ans: "b"
-  },
-  {
-    num: 241,
-    q: "Phương pháp điều chỉnh của Luật Hành chính là?",
-    a: "Phương pháp bình đẳng, thỏa thuận",
-    b: "Phương pháp độc lập, tự định đoạt",
-    c: "Phương pháp mệnh lệnh đơn phương",
-    d: "Phương pháp quyền uy và phương pháp thông qua hoạt động của tổ chức công đoàn",
-    ans: "c"
-  },
-  {
-    num: 242,
-    q: "Tìm đáp án Sai trong nhận định sau: Các cơ quan Hành chính nhà nước ở Trung ương bao gồm?",
-    a: "Chính phủ",
-    b: "Ủy ban Thường vụ Quốc hội",
-    c: "Cơ quan ngang Bộ",
-    d: "Bộ",
-    ans: "b"
-  },
-  {
-    num: 243,
-    q: "Chọn phương án đúng nhất: Cơ quan Hành chính Nhà nước cấp tỉnh bao gồm?",
-    a: "Ủy ban nhân dân tỉnh, các Sở, phòng, ban thuộc Ủy ban nhân dân tỉnh",
-    b: "Ủy ban nhân dân tỉnh, Hội đồng nhân dân tỉnh",
-    c: "Hội đồng nhân dân, Ủy ban nhân dân, các Sở, phòng, ban cấp tỉnh",
-    d: "Ủy ban nhân dân, Hội đồng nhân dân, các tổ chức Đảng, đoàn thể cấp tỉnh",
-    ans: "a"
-  },
-  {
-    num: 244,
-    q: "Thực hiện pháp luật là quá trình hoạt động có mục đích, làm cho các quy định của pháp luật đi vào cuộc sống, trở thành hành vi…",
-    a: "có ích của công dân",
-    b: "cơ bản của cá nhân",
-    c: "cốt lõi của cá nhân",
-    d: "hợp pháp của công dân",
-    ans: "d"
-  },
-  {
-    num: 245,
-    q: "Độ tuổi bắt đầu chịu trách nhiệm hành chính là đủ?",
-    a: "14 tuổi",
-    b: "15 tuổi",
-    c: "16 tuổi",
-    d: "18 tuổi",
-    ans: "a"
-  },
-  {
-    num: 246,
-    q: "A đã 15 tuổi thực hiện hành vi vi phạm hành chính với lỗi cố ý. Trách nhiệm hành chính đối với A như thế nào?",
-    a: "Có thể phạt cảnh cáo hoặc phạt tiền theo quy định của pháp luật",
-    b: "Chỉ có thể phạt cảnh cáo theo quy định của pháp luật",
-    c: "Cha mẹ hoặc người giám hộ của A phải chịu trách nhiệm thay vì A chưa thành niên",
-    d: "A dưới 16 tuổi nên chưa phải chịu trách nhiệm hành chính",
-    ans: "b"
-  },
-  {
-    num: 247,
-    q: "Tìm đáp án đúng trong nhận định sau: C là người chưa thành niên thực hiện hành vi vi phạm hành chính?",
-    a: "C sẽ phải chịu trách nhiệm hành chính do lỗi cố ý nếu tuổi C từ đủ 14 đến dưới 16. Nếu C từ đủ 16 tuổi trở lên, có thể phải chịu trách nhiệm hành chính trong mọi trường hợp vi phạm",
-    b: "C không phải chịu trách nhiệm hành chính",
-    c: "C phải chịu trách nhiệm hành chính trong mọi trường hợp vi phạm",
-    d: "C chỉ phải chịu trách nhiệm hành chính khi C đủ 16 tuổi trở lên",
-    ans: "a"
-  },
-  {
-    num: 248,
-    q: "Tìm đáp án đúng trong nhận định sau: T 17 tuổi thực hiện hành vi vi phạm hành chính và bị xử phạt tiền?",
-    a: "Mức tiền phạt đối với T giống như mức phạt đối với người thành niên",
-    b: "Mức tiền phạt đối với T không được quá 1/2 mức phạt đối với người thành niên. Trường hợp T không có tiền nộp phạt thì cha mẹ hoặc người giám hộ T phải nộp phạt thay",
-    c: "Trong mọi trường hợp, cha mẹ hoặc người giám hộ T phải nộp thay",
-    d: "Trường hợp T không có tiền nộp phạt thì áp dụng hình thức phạt cảnh cáo với T",
-    ans: "b"
-  },
-  {
-    num: 249,
-    q: "Việc làm là…?",
-    a: "Mọi hoạt động lao động trong cơ quan Nhà nước",
-    b: "Mọi hoạt động lao động tạo ra thu nhập",
-    c: "Mọi hoạt động lao động tạo ra nguồn thu nhập không bị pháp luật cấm",
-    d: "Tất cả đều đúng",
-    ans: "c"
-  },
-  {
-    num: 250,
-    q: "Nội dung nào dưới đây là một trong những nghĩa vụ của nhà sản xuất, kinh doanh phải thực hiện…?",
-    a: "Giải quyết tình trạng thất nghiệp",
-    b: "Xóa đói giảm nghèo",
-    c: "Nộp thuế đầy đủ theo quy định của pháp luật",
-    d: "Đảm bảo đầy đủ đời sống của người lao động",
-    ans: "c"
-  },
-  {
-    num: 251,
-    q: "Tiền lương là một chế định của ngành luật?",
-    a: "Dân sự",
-    b: "Hành chính",
-    c: "Bảo hiểm xã hội",
-    d: "Lao động",
-    ans: "d"
-  },
-  {
-    num: 252,
-    q: "Hợp đồng lao động phải có nội dung chủ yếu nào sau đây?",
-    a: "Công việc phải làm, thời giờ làm việc, nghỉ ngơi",
-    b: "Tiền lương, địa điểm làm việc, thời hạn hợp đồng",
-    c: "Điều kiện về an toàn lao động, vệ sinh lao động và bảo hiểm xã hội đối với người lao động",
-    d: "Tất cả đều đúng",
-    ans: "d"
-  },
-  {
-    num: 253,
-    q: "Hợp đồng lao động loại nào có lợi nhất cho người lao động?",
-    a: "Hợp đồng có xác định thời hạn",
-    b: "Hợp đồng không xác định thời hạn",
-    c: "Hợp đồng theo mùa vụ",
-    d: "Các hợp đồng đều như nhau",
-    ans: "b"
-  },
-  {
-    num: 254,
-    q: "Thời giờ làm việc theo quy định của Bộ luật Lao động là?",
-    a: "Không quá 10 giờ trong một ngày",
-    b: "Từ 8 đến 10 giờ trong một ngày",
-    c: "Tùy thỏa thuận giữa người lao động và người sử dụng lao động",
-    d: "Không quá 8 giờ trong một ngày hoặc 48 giờ trong một tuần",
-    ans: "d"
-  },
-  {
-    num: 255,
-    q: "Thời giờ làm việc ban đêm theo quy định của Bộ luật Lao động được tính từ?",
-    a: "21 giờ đến 4 giờ sáng",
-    b: "22 giờ đến 5 giờ sáng",
-    c: "22 giờ đến 6 giờ sáng hoặc từ 21 giờ đến 5 giờ sáng tùy theo vùng khí hậu",
-    d: "tùy sự thỏa thuận giữa người lao động và người sử dụng lao động",
-    ans: "c"
-  },
-  {
-    num: 256,
-    q: "Nguyên tắc giao kết hợp đồng lao động là?",
-    a: "Tự nguyện",
-    b: "Thỏa thuận",
-    c: "Bình đẳng",
-    d: "Tất cả đều đúng",
-    ans: "d"
-  },
-  {
-    num: 257,
-    q: "Luật Lao động quy định: Đối với hợp đồng lao động không xác định thời hạn, người lao động có quyền đơn phương chấm dứt hợp đồng khi?",
-    a: "Báo cho người sử dụng lao động biết trước ít nhất 45 ngày",
-    b: "Do ốm đau, đã điều trị 6 tháng nhưng chưa khỏi",
-    c: "Do tai nạn, đã điều trị 6 tháng nhưng chưa khỏi",
-    d: "Tất cả đều đúng",
-    ans: "a"
-  },
-  {
-    num: 258,
-    q: "Thủ tục kết hôn theo quy định của Luật Hôn nhân - gia đình Việt Nam là…?",
-    a: "Chỉ cần tổ chức tiệc cưới",
-    b: "Phải đăng ký kết hôn ở Ủy ban nhân dân nơi bên nam thường trú",
-    c: "Phải đăng ký kết hôn tại Tòa án",
-    d: "Phải đăng ký tại Ủy ban nhân dân nơi bên nam hoặc bên nữ thường trú",
-    ans: "d"
-  },
-  {
-    num: 259,
-    q: "Luật Lao động quy định: Tranh chấp lao động là tranh chấp về quyền và lợi ích phát sinh trong quan hệ lao động giữa?",
-    a: "Người lao động với tập thể lao động",
-    b: "Tổ chức Công đoàn với người sử dụng lao động",
-    c: "Người lao động, tập thể lao động với người sử dụng lao động",
-    d: "Người lao động, tập thể lao động với tổ chức Công đoàn",
-    ans: "c"
-  },
-  {
-    num: 260,
-    q: "Khi nghiên cứu về quyền của người sử dụng lao động thì khẳng định nào sau đây là sai?",
-    a: "Được tuyển chọn người lao động, bố trí công việc theo quy định của pháp luật",
-    b: "Được khen thưởng, xử lí người lao động vi phạm kỉ luật theo quy định của pháp luật",
-    c: "Được đơn phương chấm dứt hợp đồng lao động trong mọi trường hợp",
-    d: "Được cử đại diện để kí kết thỏa ước lao động tập thể",
-    ans: "c"
-  },
-  {
-    num: 261,
-    q: "Người lao động có nghĩa vụ?",
-    a: "Chấp hành đúng quy định về an toàn lao động",
-    b: "Hoàn thành những công việc được giao trong mọi trường hợp",
-    c: "Tuân theo sự điều động của người sử dụng lao động trong mọi trường hợp",
-    d: "Tất cả đều đúng",
-    ans: "a"
-  },
-  {
-    num: 262,
-    q: "Tìm đáp án sai trong nhận định sau: Người có quyền chiếm hữu hợp pháp đối với tài sản là?",
-    a: "Chủ sở hữu đối với tài sản đó",
-    b: "Chỉ có thể là chủ sở hữu đối với tài sản đó",
-    c: "Người được ủy quyền hợp pháp",
-    d: "Tất cả đều đúng",
-    ans: "b"
-  },
-  {
-    num: 263,
-    q: "Người sử dụng lao động có nghĩa vụ?",
-    a: "Thực hiện đúng hợp đồng lao động",
-    b: "Bảo đảm an toàn lao động cho người lao động",
-    c: "Tôn trọng nhân phẩm của người lao động",
-    d: "Tất cả đều đúng",
-    ans: "d"
-  },
-  {
-    num: 264,
-    q: "Sự thỏa thuận nào làm phát sinh hợp đồng dân sự?",
-    a: "Mọi sự thỏa thuận",
-    b: "Mọi sự thỏa thuận đuợc lập thành văn bản",
-    c: "Mọi sự thỏa thuận nhằm làm phát sinh, thay đổi, chấm dứt quyền và nghĩa vụ dân sự",
-    d: "Tất cả đều đúng",
-    ans: "c"
-  },
-  {
-    num: 265,
-    q: "Chọn đáp án đúng: Chủ thể của pháp luật dân sự là cá nhân, có thể là?",
-    a: "Công dân Việt Nam",
-    b: "Người nước ngoài",
-    c: "Người không quốc tịch",
-    d: "Tất cả đều đúng",
-    ans: "d"
-  },
-  {
-    num: 266,
-    q: "Quyền chiếm hữu, sử dụng và định đoạt tài sản chung phải do…",
-    a: "Vợ là người nắm giữ kinh tế nên quyết định",
-    b: "Vợ và chồng cùng nhau thỏa thuận",
-    c: "Chồng là người làm ra kinh tế nên quyết định",
-    d: "Vợ chồng nhờ cha mẹ quyết định hộ",
-    ans: "b"
-  },
-  {
-    num: 267,
-    q: "Quyền sử dụng đối với tài sản là một loại quyền năng của?",
-    a: "Quyền chiếm hữu",
-    b: "Quyền định đoạt",
-    c: "Quyền sở hữu",
-    d: "Quyền khai thác lợi ích tài sản",
-    ans: "c"
-  },
-  {
-    num: 268,
-    q: "Quyền sở hữu đối với tài sản bao gồm?",
-    a: "Quyền quyết định số phận của tài sản",
-    b: "Quyền nắm giữ, quản lý tài sản",
-    c: "Quyền khai thác lợi ích tài sản",
-    d: "Tất cả đều đúng",
-    ans: "d"
-  },
-  {
-    num: 269,
-    q: "Khẳng định nào dưới đây không đúng khi các doanh nghiệp thực hiện bình đẳng trong kinh doanh?",
-    a: "Có quyền chủ động mở rộng quy mô sản xuất",
-    b: "Có quyền chủ động tìm kiếm thị trường đầu tư",
-    c: "Có quyền tự chủ đăng kí kinh doanh",
-    d: "Có quyền tự ý chấm dứt hợp đồng",
-    ans: "d"
-  },
-  {
-    num: 270,
-    q: "Tìm đáp án đúng trong tình huống sau: A mua của B một máy vi tính xách tay và không biết đó là đồ do B trộm cắp mà có?",
-    a: "A là người chiếm hữu hợp pháp",
-    b: "A là người chiếm hữu bất hợp pháp ngay tình",
-    c: "A là người chiếm hữu bất hợp pháp không ngay tình",
-    d: "Tất cả đều sai",
-    ans: "b"
-  },
-  {
-    num: 271,
-    q: "Việc chiếm hữu của một người với đối với một tài sản nhưng không biết đó là chiếm hữu bất hợp pháp thì?",
-    a: "Đều là chiếm hữu hợp pháp",
-    b: "Có thể là chiếm hữu bất hợp pháp ngay tình hoặc chiếm hữu bất hợp pháp không ngay tình",
-    c: "Đều là chiếm hữu bất hợp pháp ngay tình",
-    d: "Đều là chiếm hữu bất hợp pháp không ngay tình",
-    ans: "c"
-  },
-  {
-    num: 272,
-    q: "Quyền nào sau đây KHÔNG phải là quyền nhân thân quy định trong Luật Dân sự năm 2015?",
-    a: "Quyền được thông tin",
-    b: "Quyền xác định lại giới tính",
-    c: "Quyền được bảo vệ danh dự, nhân phẩm",
-    d: "Quyền được khai sinh",
-    ans: "a"
-  },
-  {
-    num: 273,
-    q: "A ủy quyền cho B bán một ngôi nhà?",
-    a: "B có quyền định đoạt đối với ngôi nhà đó",
-    b: "B có quyền chiếm hữu đối với ngôi nhà đó",
-    c: "B có quyền sở hữu đối với ngôi nhà đó",
-    d: "Tất cả các đáp án đều sai",
-    ans: "d"
-  },
-  {
-    num: 274,
-    q: "Tìm đáp án đúng trong các nhận định sau?",
-    a: "Mọi hợp đồng dân sự đều phải được lập thành văn bản",
-    b: "Mọi hợp đồng dân sự đều phải được lập thành văn bản có công chứng, chứng thực",
-    c: "Hợp đồng dân sự về mua bán nhà cửa, đất đai bắt buộc phải có công chứng, chứng thực",
-    d: "Tất cả đều đúng",
-    ans: "c"
-  },
-  {
-    num: 275,
-    q: "Chọn đáp án đúng: Luật Dân sự điều chỉnh những quan hệ nào?",
-    a: "Quan hệ nhân thân và quan hệ kinh tế",
-    b: "Quan hệ nhân thân và quan hệ tài sản",
-    c: "Quan hệ tài sản và quan hệ gia đình",
-    d: "Tất cả các quan hệ xã hội có liên quan đến tài sản",
-    ans: "b"
-  },
-  {
-    num: 276,
-    q: "Nội dung của quyền sở hữu bao gồm?",
-    a: "Quyền chiếm hữu",
-    b: "Quyền sử dụng",
-    c: "Quyền định đoạt",
-    d: "Tất cả đều đúng",
-    ans: "d"
-  },
-  {
-    num: 277,
-    q: "Khách thể của quyền sở hữu bao gồm?",
-    a: "Tài sản là vật có thực",
-    b: "Tiền và giấy tờ trị giá được bằng tiền",
-    c: "Các quyền về tài sản",
-    d: "Tất cả đều đúng",
-    ans: "d"
-  },
-  {
-    num: 278,
-    q: "Theo quy định của pháp luật, bình đẳng trong kinh doanh được thực hiện trong quan hệ nào dười đây?",
-    a: "Sản xuất",
-    b: "Cạnh tranh",
-    c: "Kinh tế",
-    d: "Chính trị",
-    ans: "c"
-  },
-  {
-    num: 279,
-    q: "Việc giao kết hợp đồng lao động giữa người lao động và người sử dụng lao động nhằm mục tiêu nào dưới đây trong thực hiện quyền và nghĩa vụ của hai bên?",
-    a: "Tạo khung pháp lý",
-    b: "Tạo cơ sở pháp lý",
-    c: "Tạo hành lang pháp lý",
-    d: "Tạo điều kiện pháp lý",
-    ans: "b"
-  },
-  {
-    num: 280,
-    q: "Theo quy định của Luật Hôn nhân - gia đình thì những trường hợp nào sau đây không bị cấm kết hôn?",
-    a: "Có quan hệ trong phạm vi ba đời, có cùng dòng máu về trực hệ",
-    b: "Kết hôn với người bị nhiễm HIV/AIDS",
-    c: "Người mất năng lực hành vi dân sự",
-    d: "Những người cùng giới tính",
-    ans: "b"
-  },
-  {
-    num: 281,
-    q: "Thủ tục kết hôn theo quy định của Luật Hôn nhân - gia đình Việt Nam là?",
-    a: "Chỉ cần tổ chức tiệc cưới",
-    b: "Phải đăng ký kết hôn ở Ủy ban nhân dân nơi bên nam thường trú",
-    c: "Phải đăng ký kết hôn tại Tòa án",
-    d: "Phải đăng ký tại Ủy ban nhân dân nơi bên nam hoặc bên nữ thường trú",
-    ans: "d"
-  },
-  {
-    num: 282,
-    q: "Khi tìm hiểu về quyền và nghĩa vụ tài sản của vợ chồng thì khẳng định nào sau đây là đúng?",
-    a: "Vợ, chồng có trách nhiệm ngang nhau đối với tài sản chung và tài sản riêng của vợ, chồng",
-    b: "Vợ chồng có quyền ủy quyền cho nhau trong mọi vấn đề",
-    c: "Vợ, chồng có quyền có tài sản riêng",
-    d: "Khi ly hôn thì toàn bộ tài sản của vợ, chồng phải chia đôi",
-    ans: "c"
-  },
-  {
-    num: 283,
-    q: "Năng lực hành vi đầy đủ của công dân khi tham gia quan hệ tố tụng dân sự là?",
-    a: "Người không mắc bệnh tâm thần, chưa thành niên",
-    b: "Người không mắc bệnh tâm thần, đủ 16 tuổi trở lên",
-    c: "Người không mắc bệnh tâm thần, đủ 18 tuổi trở lên",
-    d: "Người không mắc bệnh tâm thần, đủ 21 tuổi trở lên",
-    ans: "c"
-  },
-  {
-    num: 284,
-    q: "Tìm đáp án đúng trong các nhân định sau: A 17 tuổi được hưởng thừa kế một ngôi nhà của cha mẹ?",
-    a: "A không thể tự mình ký hợp đồng để bán ngôi nhà mà phải được người giám hộ thay mặt ký",
-    b: "A có thể tự mình ký hợp đồng để bán ngôi nhà",
-    c: "A chỉ được ký hợp đồng bán ngôi nhà nếu họ hàng của A đồng ý",
-    d: "A được bán ngôi nhà khi vì đã 17 tuổi",
-    ans: "a"
-  },
-  {
-    num: 285,
-    q: "Trình tự, thủ tục giải quyết một vụ án dân sự nói chung là?",
-    a: "Thụ lý vụ án - hòa giải - xét xử - thi hành án dân sự",
-    b: "Xét xử sơ thẩm - xét xử phúc thẩm - xét lại bản án theo thủ tục giám đốc thẩm, tái thẩm",
-    c: "Hòa giải - xét xử sơ thẩm - xét xử phúc thẩm",
-    d: "Xét xử sơ thẩm - xét xử phúc thẩm",
-    ans: "a"
-  },
-  {
-    num: 286,
-    q: "Thừa kế là?",
-    a: "Sự chuyển quyền sở hữu đối với tài sản của cha mẹ, ông bà cho con, cháu",
-    b: "Sự chuyển quyền sở hữu đối với tài sản của người chết cho người thừa kế thông qua ý nguyện cá nhân bằng di chúc hoặc căn cứ vào quy định của pháp luật",
-    c: "Sự chuyển quyền sở hữu đối với tài sản của người chết cho con cháu và được lập thành văn bản theo quy định của pháp luật",
-    d: "Tất cả đều không đúng",
-    ans: "b"
-  },
-  {
-    num: 287,
-    q: "Theo quy định của pháp luật hình sự, hành vi nguy hiểm cho xã hội là hành vi:",
-    a: "Gây thiệt hại cho xã hội hoặc đe dọa gây thiệt hại đáng kể cho xã hội",
-    b: "Gây thiệt hại lợi ích của xã hội",
-    c: "Gây hoảng loạn về tinh thần cho mọi người",
-    d: "Trái với quy định của pháp luật",
-    ans: "a"
-  },
-  {
-    num: 288,
-    q: "Tội phạm là:",
-    a: "Hành vi vi phạm pháp luật",
-    b: "Hành vi vi phạm pháp luật hình sự, dân sự hoặc hành chính",
-    c: "Người có hành vi gây hại cho xã hộ",
-    d: "Hành vi nguy hiểm cho xã hội, trái pháp luật hình sự và theo quy định của Bộ luật hình sự phải bị xử lý hình sự",
-    ans: "d"
-  },
-  {
-    num: 289,
-    q: "Theo quy định của pháp luật Việt Nam, hình phạt được quy định trong:",
-    a: "Bộ luật Hình sự",
-    b: "Luật xử lý vi phạm hành chính",
-    c: "Luật giao thông đường bộ",
-    d: "Bộ luật Dân sự",
-    ans: "a"
-  },
-  {
-    num: 290,
-    q: "Yếu tố nào sau đây là một trong những dấu hiệu cơ bản (đặc điểm) của tội phạm?",
-    a: "Trái với đạo đức xã hội",
-    b: "Vi phạm pháp luật",
-    c: "Phải đươc quy định trong Bộ luật Hình sự",
-    d: "Phải được quy định trong các văn bản quy phạm pháp luật",
-    ans: "c"
-  },
-  {
-    num: 291,
-    q: "Luật Hình sự quy định về vấn đề nào sau đây?",
-    a: "Quy định về tội phạm",
-    b: "Quy định về hình phạt",
-    c: "Quy định về xử phạt vi phạm hành chính",
-    d: "Quy định về tội phạm, hình phạt và những vấn đề liên quan khác",
-    ans: "d"
-  },
-  {
-    num: 292,
-    q: "Hình phạt nào sau đây chỉ được áp dụng đối với người phạm tội là người nước ngoài…",
-    a: "Phạt tiền",
-    b: "Cảnh cáo",
-    c: "Trục xuất",
-    d: "Cấm cư trú",
-    ans: "c"
-  },
-  {
-    num: 293,
-    q: "Doanh nghiệp nhà nước bao gồm các doanh nghiệp do nhà nước nắm giữ ít nhất trên bao nhiêu phần trăm vốn điều lệ:",
-    a: "33%",
-    b: "50%",
-    c: "65%",
-    d: "75%",
-    ans: "b"
-  },
-  {
-    num: 294,
-    q: "Chọn 1 nhận định đúng:",
-    a: "Sĩ quan, hạ sĩ quan chuyên nghiệp trong các đơn vị thuộc công an nhân dân Việt Nam có quyền thành lập và quản lý công ty tại Việt Nam",
-    b: "Công ty TNHH 2 thành viên trở lên được quyền phát hành cổ phần",
-    c: "Công ty TNHH 2 thành viên trở lên có từ 2 đến 70 thành viên",
-    d: "Doanh nghiệp tư nhân không phải là một pháp nhân",
-    ans: "d"
-  },
-  {
-    num: 295,
-    q: "Căn cứ theo hình thức pháp lý, các loại hình doanh nghiệp ở Việt Nam hiện nay bao gồm:",
-    a: "Công ty cổ phần, công ty TNHH, công ty hợp danh, doanh nghiệp tư nhân, hộ kinh doanh.",
-    b: "Công ty cổ phần, công ty TNHH, công ty hợp danh",
-    c: "Công ty cổ phần, công ty TNHH, công ty hợp danh, doanh nghiệp tư nhân",
-    d: "Công ty cổ phần, công ty TNHH, doanh nghiệp tư nhân",
-    ans: "c"
-  },
-  {
-    num: 296,
-    q: "Hành vi nào của người sử dụng đất không bị Luật Đất đai cấm?",
-    a: "Lấn, chiếm, hủy hoại đất",
-    b: "Sử dụng đất không đúng mục đích",
-    c: "Thực hiện giao dịch về quyền sử dụng đất mà không đăng ký với cơ quan nhà nước có thẩm quyền",
-    d: "Hưởng thành quả lao động, kết quả đầu tư trên đất",
-    ans: "d"
-  },
-  {
-    num: 297,
-    q: "Theo Luật Đất đai 2013, trường hợp nào Nhà nước giao đất không thu tiền sử dụng đất?",
-    a: "Hộ gia đình, cá nhân được giao đất ở",
-    b: "Hộ gia đình, cá nhân trực tiếp sản xuất nông nghiệp, lâm nghiệp, nuôi trồng thủy sản, làm muối được giao đất nông nghiệp trong hạn mức quy định",
-    c: "Tổ chức kinh tế được giao đất để thực hiện dự án đầu tư xây dựng nhà ở để bán hoặc để bán kết hợp cho thuê",
-    d: "Tổ chức kinh tế được giao đất thực hiện dự án đầu tư hạ tầng nghĩa trang, nghĩa địa để chuyển nhượng quyền sử dụng đất gắn với hạ tầng",
-    ans: "b"
-  },
-  {
-    num: 298,
-    q: "Người sử dụng đất không có quyền nào?",
-    a: "Được Nhà nước bảo hộ khi người khác xâm phạm quyền, lợi ích hợp pháp về đất đai của mình",
-    b: "Được cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu nhà ở và tài sản khác gắn liền với đất",
-    c: "Được nhận chuyển quyền sử dụng đất nông nghiệp vượt hạn mức",
-    d: "Được bồi thường khi Nhà nước thu hồi đất theo quy định của Luật Đất đai",
-    ans: "c"
-  },
-  {
-    num: 299,
-    q: "Hạn mức giao đất trồng cây hàng năm, đất nuôi trồng thủy sản, đất làm muối cho mỗi hộ gia đình, cá nhân trực tiếp sản xuất nông nghiệp là bao nhiêu?",
-    a: "Không quá 03 héc ta cho mỗi loại đất đối với tỉnh, thành phố trực thuộc trung ương thuộc khu vực Đông Nam Bộ và khu vực đồng bằng sông Cửu Long; Không quá 02 héc ta cho mỗi loại đất đối với tỉnh, thành phố trực thuộc trung ương khác",
-    b: "Không quá 02 héc ta cho mỗi loại đất đối với tỉnh, thành phố trực thuộc trung ương thuộc khu vực Đông Nam Bộ và khu vực đồng bằng sông Cửu Long; Không quá 03 héc ta cho mỗi loại đất đối với tỉnh, thành phố trực thuộc trung ương khác",
-    c: "Không quá 03 héc ta cho mỗi loại đất",
-    d: "Không quá 02 héc ta cho mỗi loại đất",
-    ans: "a"
-  },
-  {
-    num: 300,
-    q: "Theo Luật Đất đai 2013, trường hợp nào Nhà nước cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu nhà ở và tài sản khác gắn liền với đất?",
-    a: "Người đang quản lý, sử dụng đất nông nghiệp thuộc quỹ đất công ích của xã, phường, thị trấn",
-    b: "Người mua nhà ở, tài sản khác gắn liền với đất",
-    c: "Người nhận khoán đất trong các nông trường, lâm trường, doanh nghiệp nông, lâm nghiệp, ban quản lý rừng phòng hộ, ban quản lý rừng đặc dụng",
-    d: "Người thuê, thuê lại đất của người sử dụng đất, trừ trường hợp thuê, thuê lại đất của nhà đầu tư xây dựng, kinh doanh kết cấu hạ tầng trong khu công nghiệp, cụm công nghiệp, khu chế xuất, khu công nghệ cao, khu kinh tế",
-    ans: "b"
-  },
-  {
-    num: 301,
-    q: "Theo Luật Đất đai 2013, trường hợp nào Nhà nước giao đất có thu tiền sử dụng đất, cho thuê đất theo hình thức đấu giá quyền sử dụng đất?",
-    a: "Sử dụng đất để thực hiện dự án đầu tư xây dựng nhà ở tái định cư",
-    b: "Sử dụng đất được miễn tiền sử dụng đất, tiền thuê đất theo quy định",
-    c: "Cho thuê đất thuộc quỹ đất nông nghiệp sử dụng vào mục đích công ích để sản xuất nông nghiệp, lâm nghiệp, nuôi trồng thủy sản, làm muối",
-    d: "Sử dụng đất vào mục đích hoạt động khoáng sản",
-    ans: "c"
-  },
-  {
-    num: 302,
-    q: "Kể từ ngày nhận được đơn yêu cầu giải quyết tranh chấp đất đai, trong thời hạn bao lâu Ủy ban nhân dân cấp xã phải tiến hành hòa giải tranh chấp đất đai?",
-    a: "Không quá 15 ngày",
-    b: "Không quá 20 ngày",
-    c: "Không quá 30 ngày",
-    d: "Không quá 45 ngày",
-    ans: "d"
-  },
-  {
-    num: 303,
-    q: "Tranh chấp đất đai mà đương sự có Giấy chứng nhận quyền sử dụng đất và đã được hòa giải tại Ủy ban nhân dân cấp xã mà không thành thuộc thẩm quyền giải quyết của cơ quan nào?",
-    a: "Ủy ban nhân dân",
-    b: "Tòa án nhân dân",
-    c: "Cơ quan Thanh tra",
-    d: "Phòng Tài nguyên và môi trường",
-    ans: "b"
-  },
-  {
-    num: 304,
-    q: "Ông A đang sử dụng một thửa đất (từ năm 2006) nhưng không có giấy tờ gì về đất. Hiện ông có hộ khẩu thường trú tại địa phương (nơi có thửa đất) và trực tiếp sản xuất nông nghiệp tại vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn, nay được Ủy ban nhân dân cấp xã nơi có đất xác nhận là người đã sử dụng đất ổn định, không có tranh chấp. Ông A muốn được cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu nhà ở và tài sản khác gắn liền với đất thì ông A thuộc trường hợp nào dưới đây?",
-    a: "Không được cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu nhà ở và tài sản khác gắn liền với đất",
-    b: "Được cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu nhà ở và tài sản khác gắn liền với đất và phải nộp tiền sử dụng đất",
-    c: "Được cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu nhà ở và tài sản khác gắn liền với đất và không phải nộp tiền sử dụng đất",
-    d: "Không được cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu nhà ở và tài sản khác gắn liền với đất mà phải chuyển sang hình thức thuê đất",
-    ans: "c"
-  },
-  {
-    num: 305,
-    q: "Thế nào là tham nhũng?",
-    a: "Tham nhũng là hành vi của cán bộ, công chức nhà nước đã lợi dụng chức vụ, quyền hạn đó vì vụ lợi.",
-    b: "Tham nhũnglà hành vi lợi dụng chức vụ, quyền hạn để vụ lợi.",
-    c: "Tham nhũng là hành vi của người có chức vụ, quyền hạn đã lợi dụng chức vụ, quyền hạn đó vì vụ lợi.",
-    d: "Tham nhũnglà hành vi cửa quyền, hách dịch, đòi hỏi, gây khó khăn, phiền hà của người có chức vụ, quyền hạn trong khi thực hiện nhiệm vụ, công vụ.",
-    ans: "c"
-  },
-  {
-    num: 306,
-    q: "Công dân có quyền gì trong công tác phòng, chống tham nhũng?",
-    a: "Công dân chỉ có quyền phát hiện và báo tin về hành vi tham nhũng",
-    b: "Công dân chỉ có quyền giám sát việc thực hiện pháp luật về phòng, chống tham nhũng",
-    c: "Công dân chỉ có quyền phát hiện, kiến nghị với cơ quan nhà nước hoàn thiện pháp luật về phòng, chống tham nhũng và giám sát việc thực hiện pháp luật về phòng, chống tham nhũng",
-    d: "Công dân có quyền phát hiện, phản ánh, tố cáo, tố giác, báo tin về hành vi tham nhũng và được bảo vệ, khen thưởng theo quy định của pháp luật; có quyền kiến nghị với cơ quan nhà nước hoàn thiện pháp luật về phòng, chống tham nhũng và giám sát việc thực hiện pháp luật về phòng, chống tham nhũng",
-    ans: "d"
-  },
-  {
-    num: 307,
-    q: "Thời hạn định kỳ chuyển đổi vị trí công tác là bao nhiêu năm?",
-    a: "Từ đủ 02 năm đến 05 năm theo đặc thù của từng ngành, lĩnh vực",
-    b: "Từ đủ 03 năm đến 06 năm theo đặc thù của từng ngành, lĩnh vực",
-    c: "Từ đủ 02 năm đến 04 năm theo đặc thù của từng ngành, lĩnh vực",
-    d: "Từ đủ 04 năm đến 05 năm theo đặc thù của từng ngành, lĩnh vực",
-    ans: "a"
-  },
-  {
-    num: 308,
-    q: "Những người nào có nghĩa vụ kê khai tài sản?’",
-    a: "Cán bộ, công chức nhà nước",
-    b: "Sĩ quan Công an nhân dân; sĩ quan Quân đội nhân dân, quân nhân chuyên nghiệp",
-    c: "Người giữ chức vụ từ Phó trưởng phòng và tương đương trở lên công tác tại đơn vị sự nghiệp công lập, doanh nghiệp nhà nước, người được cử làm đại diện phần vốn nhà nước tại doanh nghiệp; Người ứng cử đại biểu Quốc hội, người ứng cử đại biểu Hội đồng nhân dân",
-    d: "Tất cả đều đúng",
-    ans: "d"
-  },
-  {
-    num: 309,
-    q: "Chọn phương án đúng nhất: Theo Luật Phòng, chống tham nhũng, người đứng đầu, cấp phó của người đứng đầu cơ quan, tổ chức, đơn vị không được bố trí những người nào dưới đây giữ chức vụ quản lý về tổ chức nhân sự, kế toán, làm thủ quỹ, thủ kho trong cơ quan, tổ chức, đơn vị hoặc giao dịch, mua bán hàng hóa, dịch vụ, ký kết hợp đồng cho cơ quan, tổ chức, đơn vị đó.",
-    a: "Vợ hoặc chồng",
-    b: "Vợ hoặc chồng, bố, mẹ, con, anh, chị, em ruột",
-    c: "Bố, mẹ, con, anh, chị, em ruột",
-    d: "Con, anh, chị, em ruột",
-    ans: "b"
-  },
-  {
-    num: 310,
-    q: "Có bao nhiêu hình thức công khai về tổ chức và hoạt động của cơ quan, tổ chức, đơn vị?",
-    a: "5 hình thức",
-    b: "6 hình thức",
-    c: "7 hình thức",
-    d: "8 hình thức",
-    ans: "d"
-  },
-  {
-    num: 311,
-    q: "Chọn đáp án đúng:",
-    a: "Cá nhân, tổ chức có quyền phản ánh, tố cáo về hành vi tham nhũng",
-    b: "Cá nhân, tổ chức có quyền phản ánh về hành vi tham nhũng, cá nhân có quyền tố cáo về hành vi tham nhũng theo quy định của pháp luật",
-    c: "Tổ chức có quyền phản ánh về hành vi tham nhũng, cá nhân có quyền tố cáo về hành vi tham nhũng theo quy định của pháp luật",
-    d: "Tất cả đáp án đều sai",
-    ans: "b"
-  },
-  {
-    num: 312,
-    q: "Thế nào là vụ lợi?",
-    a: "Vụ lợi là hành vi của người có chức vụ, quyền hạn đã lợi dụng chức vụ, quyền hạn đó để tham nhũng",
-    b: "Vụ lợi là việc công chức lợi dụng chức vụ, quyền hạn nhằm đạt được lợi ích vật chất hoặc lợi ích phi vật chất không chính đáng",
-    c: "Vụ lợi là việc người có chức vụ, quyền hạn đã lợi dụng chức vụ, quyền hạn nhằm đạt được lợi ích vật chất hoặc lợi ích phi vật chất không chính đáng",
-    d: "Vụ lợi là hành vi lợi dụng chức vụ, quyền hạn đó để tham nhũng",
-    ans: "c"
-  },
-  {
-    num: 313,
-    q: "Luật Phòng chống tham nhũng quy định việc tặng quà của cơ quan, tổ chức, đơn vị, người có chức vụ, quyền hạn như thế nào?",
-    a: "Cơ quan, tổ chức, đơn vị, người có chức vụ, quyền hạn không được sử dụng tài chính công, tài sản công làm quà tặng, trừ trường hợp tặng quà vì mục đích từ thiện, đối ngoại và trong trường hợp cần thiết khác theo quy định của pháp luật.",
-    b: "Cơ quan, tổ chức, đơn vị, người có chức vụ, quyền hạn tuyệt đối không được sử dụng tài chính công, tài sản công làm quà tặng",
-    c: "Cơ quan, tổ chức, đơn vị, người có chức vụ, quyền hạn được sử dụng tài chính công, tài sản công làm quà tặng",
-    d: "Cơ quan, tổ chức, đơn vị, người có chức vụ, quyền hạn chỉ được sử dụng tài chính công, tài sản công làm quà tặng, vì mục đích từ thiện",
-    ans: "a"
-  },
-  {
-    num: 314,
-    q: "Luật Phòng chống tham nhũng quy định việc nhận quà tặng của cơ quan, tổ chức, đơn vị, người có chức vụ, quyền hạn như thế nào?",
-    a: "Cơ quan, tổ chức, đơn vị, người có chức vụ, quyền hạn được trực tiếp hoặc gián tiếp nhận quà tặng dưới mọi hình thức của cơ quan, tổ chức, đơn vị, cá nhân có liên quan đến công việc do mình giải quyết hoặc thuộc phạm vi quản lý của mình",
-    b: "Cơ quan, tổ chức, đơn vị, người có chức vụ, quyền hạn được trực tiếp nhận quà tặng dưới mọi hình thức của cơ quan, tổ chức, đơn vị, cá nhân có liên quan đến công việc do mình giải quyết hoặc thuộc phạm vi quản lý của mình",
-    c: "Cơ quan, tổ chức, đơn vị, người có chức vụ, quyền hạn được gián tiếp nhận quà tặng dưới mọi hình thức của cơ quan, tổ chức, đơn vị, cá nhân có liên quan đến công việc do mình giải quyết hoặc thuộc phạm vi quản lý của mình",
-    d: "Cơ quan, tổ chức, đơn vị, người có chức vụ, quyền hạn không được trực tiếp hoặc gián tiếp nhận quà tặng dưới mọi hình thức của cơ quan, tổ chức, đơn vị, cá nhân có liên quan đến công việc do mình giải quyết hoặc thuộc phạm vi quản lý của mình",
-    ans: "d"
-  },
-  {
-    num: 315,
-    q: "Luật Phòng chống tham nhũng năm 2018 quy định việc xử lý tài sản tham nhũng như thế nào?",
-    a: "Tài sản tham nhũng phải được thu hồ theo quy định của pháp luật",
-    b: "Tài sản tham nhũng phải được trả lại cho chủ sở hữu, người quản lý hợp pháp theo quy định của pháp luật",
-    c: "Tài sản tham nhũng phải được tịch thu theo quy định của pháp luật",
-    d: "Tài sản tham nhũng phải được thu hồi, trả lại cho chủ sở hữu, người quản lý hợp pháp hoặc tịch thu theo quy định của pháp luật",
-    ans: "d"
-  },
-  {
-    num: 316,
-    q: "Người kê khai tài sản, thu nhập phải có nghĩa vụ gì?",
-    a: "Người có nghĩa vụ kê khai phải kê khai tài sản, thu nhập và biến động về tài sản, thu nhập của mình",
-    b: "Người có nghĩa vụ kê khai phải kê khai tài sản, thu nhập và biến động về tài sản, thu nhập của mình, của vợ hoặc chồng",
-    c: "Người có nghĩa vụ kê khai phải kê khai tài sản, thu nhập và biến động về tài sản, thu nhập của mình, của vợ hoặc chồng, con chưa thành niên theo quy định của Luật này",
-    d: "Người có nghĩa vụ kê khai phải kê khai tài sản, thu nhập và biến động về tài sản, thu nhập của mình, con chưa thành niên",
-    ans: "c"
-  },
-  {
-    num: 317,
-    q: "Trong phòng chống tham nhũng công tác kiểm tra của cơ quan, tổ chức, đơn vị bao gồm những hình thức nào?",
-    a: "Kiểm tra thường xuyên được tiến hành theo chương trình, kế hoạch và tập trung vào lĩnh vực, hoạt động dễ phát sinh tham nhũng",
-    b: "Chỉ kiểm tra đột xuất được tiến hành khi phát hiện có dấu hiệu tham nhũng",
-    c: "Kiểm tra thường xuyên được tiến hành theo chương trình, kế hoạch và tập trung vào lĩnh vực, hoạt động dễ phát sinh tham nhũng; kiểm tra đột xuất được tiến hành khi phát hiện có dấu hiệu tham nhũng",
-    d: "Kiểm tra thường xuyên và kiểm tra đột xuất",
-    ans: "c"
-  },
-  {
-    num: 318,
-    q: "Khi phát hiện có hành vi tham nhũng, người đứng đầu cơ quan quản lý nhà nước phải làm gì?",
-    a: "kịp thời xử lý theo thẩm quyền hoặc báo cho cơ quan có thẩm quyền xử lý theo quy định của pháp luật",
-    b: "kịp thời xử lý theo thẩm quyền",
-    c: "báo cho cơ quan có thẩm quyền xử lý theo quy định của pháp luật",
-    d: "Họp cơ quan và xử lý nội bộ",
-    ans: "a"
-  },
-  {
-    num: 319,
-    q: "Chọn đáp án đúng:",
-    a: "Người có hành vi tham nhũng giữ bất kì chức vụ, vị trí công tác nào đều phải bị xử lý nghiêm minh theo quy định của pháp luật, kể cả người đã nghỉ hưu, thôi việc, chuyển công tác",
-    b: "Người có hành vi tham nhũng giữ bất kì chức vụ, vị trí công tác nào đều phải bị xử lý nghiêm minh theo quy định của pháp luật, kể cả người đã thôi việc, chuyển công tác",
-    c: "Người có hành vi tham nhũng giữ bất kì chức vụ, vị trí công tác nào đều phải bị xử lý nghiêm minh theo quy định của pháp luật",
-    d: "Người có hành vi tham nhũng giữ bất kì chức vụ, vị trí công tác nào đều phải bị xử lý nghiêm minh theo quy định của pháp luật, kể cả người đã nghỉ hưu, chuyển công tác",
-    ans: "a"
-  },
-  {
-    num: 320,
-    q: "Vi phạm hình sự ở mức độ tội phạm ít nghiêm trọng, khung hình cao nhất là…",
-    a: "7 năm",
-    b: "5 năm",
-    c: "3 năm",
-    d: "8 năm",
-    ans: "c"
-  },
-  {
-    num: 321,
-    q: "Vi phạm hình sự ở mức độ tội phạm rất nghiêm trọng, khung hình cao nhất là…",
-    a: "7 năm",
-    b: "15 năm",
-    c: "3 năm",
-    d: "18 năm",
-    ans: "b"
-  },
-  {
-    num: 322,
-    q: "Vi phạm hình sự ở mức độ tội phạm đặc biệt nghiêm trọng, khung hình cao nhất là…",
-    a: "20 năm",
-    b: "18 năm",
-    c: "15 năm",
-    d: "Tử hình",
-    ans: "d"
-  },
-  {
-    num: 323,
-    q: "Những người có hành vi trái pháp luật sẽ bị cơ quan nhà nước có thẩm quyền xử lý theo quy định của pháp luật là thể hiện…?",
-    a: "mục đích và pháp luật",
-    b: "đặc trưng của pháp luật",
-    c: "bản chất của pháp luật",
-    d: "vai trò của pháp luật",
-    ans: "b"
-  },
-  {
-    num: 324,
-    q: "Bạn A thắc mắc tại sao cả Hiến pháp và luật giáo dục đều quy định công dân có quyền và nghĩa vụ học tập? Em sẽ sử dụng đặc trưng nào dưới đây của pháp luật để giải thích cho bạn A?",
-    a: "tính quyền lực của pháp luật",
-    b: "tính xác định chặt chẽ về hình thức",
-    c: "tính quy phạm phổ biến của pháp luật",
-    d: "Tính bắt buộc chung của pháp luật",
-    ans: "b"
-  },
-  {
-    num: 325,
-    q: "Để xử lý người có hành vi xâm hại đến các lợi ích của giai cấp cầm quyền, Nhà nước sẽ sử dụng quyền lực có tính cưỡng chế. Khẳng định này là nội dung nào dưới đây của pháp luật?",
-    a: "đặc trưng của pháp luật",
-    b: "bản chất của pháp luật",
-    c: "vai trò của pháp luật",
-    d: "chức năng của pháp luật",
-    ans: "b"
-  },
-  {
-    num: 326,
-    q: "Pháp luật do nhà nước ban hành phù hợp với ý chí của giai cấp cầm quyền là thể hiện bản chất nào dưới đây của pháp luật?",
-    a: "chính trị",
-    b: "kinh tế",
-    c: "xã hội",
-    d: "giai cấp",
-    ans: "d"
-  },
-  {
-    num: 327,
-    q: "Khi đạo đức trở thành nội dung của quy phạm pháp luật thì các giá trị đạo đức được nhà nước bảo đảm thực hiện bằng…",
-    a: "sức ép của dư luận xã hội",
-    b: "lương tâm của mỗi cá nhân",
-    c: "niềm tin của mọi người",
-    d: "sức mạnh quyền lực của nhà nước",
-    ans: "d"
-  },
-  {
-    num: 328,
-    q: "Dựa vào nội dung nào dưới đây của pháp luật mà nhà nước có thể kiểm tra, kiểm soát được các hoạt động của mọi công dân?",
-    a: "đặc trưng của pháp luật",
-    b: "bản chất của pháp luật",
-    c: "chức năng của pháp luật",
-    d: "vai trò của pháp luật",
-    ans: "d"
-  },
-  {
-    num: 329,
-    q: "Công dân có thể thực hiện quyền kinh doanh phù hợp với khả năng điều kiện của mình là biểu hiện vai trò nào dưới đây của pháp luật?",
-    a: "là phương tiện để nhà nước quản lý xã hội",
-    b: "là phương tiện để nhà nước phát huy quyền lực của mình",
-    c: "là phương tiện để công dân bảo vệ quyền và nghĩa vụ của mình",
-    d: "là phương tiện để công dân bảo vệ quyền và lợi ích hợp pháp của mình",
-    ans: "d"
-  },
-  {
-    num: 330,
-    q: "Nhờ có luật sư tư vấn nên việc khiếu nại của gia đình ông B đã được giải quyết, trường hợp này đã thể hiện pháp luật là phương tiện để công dân bảo vệ quyền và…",
-    a: "nghĩa vụ của mình",
-    b: "trách nhiệm của mình",
-    c: "lợi ích hợp pháp của mình",
-    d: "nghĩa vụ hợp pháp của mình",
-    ans: "c"
-  },
-  {
-    num: 331,
-    q: "Nhờ chị S có hiểu biết về pháp luật nên tranh chấp về đất đai giữa gia đình chị với gia đình anh B được giải quyết ổn thỏa, trường hợp này đã thể hiện vai trò nào dưới đây của pháp luật?",
-    a: "bảo vệ quyền và lợi ích hợp pháp của công dân",
-    b: "bảo vệ tự do ngôn luận và khiếu nại của công dân",
-    c: "bảo vệ quyền tự do dân chủ của công dân",
-    d: "bảo vệ quyền tham gia quản lý xã hội của công dân",
-    ans: "a"
-  },
-  {
-    num: 332,
-    q: "Cửa hàng nhà A bị quản lý thị trường lập biên bản xử lý vì tiêu thụ thực phẩm bẩn, bạn X cho rằng, đặc trưng của pháp luật trong trường hợp này là tính quy phạm phổ biến; H thì khẳng định là tính quyền lực bắt buộc chung; Y nghe được liền nói đó vừa là tính quyền lực bắt buộc chung, vừa là tính xác định chặt chẽ về hình thức. Ý kiến của những ai dưới đây là đúng?",
-    a: "H và Y",
-    b: "Chỉ H đúng",
-    c: "X và H",
-    d: "X và Y",
-    ans: "c"
-  },
-  {
-    num: 333,
-    q: "Hệ thống quy tắc xử sự chung do nhà nước ban hành và được bảo đảm thực hiện bằng…",
-    a: "quy định của nhà nước",
-    b: "quyền lực của nhà nước",
-    c: "chủ trương của nhà nước",
-    d: "chính sách của nhà nước",
-    ans: "b"
-  },
-  {
-    num: 334,
-    q: "Mỗi quy tắc xử sự thường được thể hiện thành…",
-    a: "nhiều quy định pháp luật",
-    b: "một số quy định pháp luật",
-    c: "quy phạm pháp luật",
-    d: "nhiều quy phạm pháp luật",
-    ans: "c"
-  },
-  {
-    num: 335,
-    q: "Giá trị công bằng bình đẳng của pháp luật được thể hiện rõ nhất ở đặc trưng nào dưới đây?",
-    a: "Tính chặt chẽ, cụ thể về nội dung",
-    b: "Tính xác định chặt chẽ về hình thức",
-    c: "Tính quyền lực, bắt buộc chung",
-    d: "Tính quy phạm phổ biến",
-    ans: "d"
-  },
-  {
-    num: 336,
-    q: "Những người thực hiện không đúng quy định của pháp luật sẽ bị cơ quan có thẩm quyền áp dụng các biện pháp cần thiết để buộc họ phải tuân theo là thể hiện đặc trưng nào dưới đây của pháp luật?",
-    a: "Tính quy phạm phổ biến",
-    b: "Tính quyền lực bắt buộc chung",
-    c: "Tính hiệu lực tuyệt đối",
-    d: "Tính thực tiễn khả thi cao",
-    ans: "b"
-  },
-  {
-    num: 337,
-    q: "Hình thức thể hiện của pháp luật là các văn bản có chứa…?",
-    a: "quy định chung",
-    b: "quy định bắt buộc",
-    c: "chuẩn mực chung",
-    d: "quy phạm pháp luật",
-    ans: "d"
-  },
-  {
-    num: 338,
-    q: "Pháp luật mang bản chất giai cấp vì pháp luật do nhà nước ban hành…",
-    a: "phù hợp với ý chí của giai cấp cầm quyền",
-    b: "phù hợp với lợi ích của tất cả mọi người",
-    c: "bắt nguồn từ nhu cầu và lợi ích của nhân dân",
-    d: "bắt nguồn từ thực tiễn đời sống xã hội",
-    ans: "a"
-  },
-  {
-    num: 339,
-    q: "Nội dung của văn bản do cơ quan cấp dưới ban hành trái với nội dung của văn bản do cơ quan cấp trên ban hành là vi phạm đặc trưng nào dưới đây của pháp luật?",
-    a: "trình tự ban hành quy phạm pháp luật",
-    b: "khả năng đảm bảo việc thi hành pháp luật",
-    c: "tính xác định chặt chẽ về mặt hình thức",
-    d: "hiệu lực tuyệt đối của văn bản pháp luật",
-    ans: "c"
-  },
-  {
-    num: 340,
-    q: "Nội dung của tất cả các văn bản pháp luật đều phải phù hợp không được trái Hiến pháp đề cập đến đặc trưng nào dưới đây của pháp luật?",
-    a: "Tính xác định chặt chẽ về mặt hình thức",
-    b: "Tính xác định chi tiết về nội dung",
-    c: "Tính quyền lực bắt buộc chung",
-    d: "Tính khuôn mẫu, thuyết phục",
-    ans: "a"
-  },
-  {
-    num: 341,
-    q: "Các quy phạm pháp luật do nhà nước ban hành phải phù hợp với…",
-    a: "nguyện vọng của mọi tầng lớp trong xã hội",
-    b: "nguyện vọng của giai cấp cầm quyền mà Nhà nước đại diện",
-    c: "Ý chí của giai cấp cầm quyền mà nhà nước là đại diện",
-    d: "Ý chí của mọi giai cấp và tầng lớp trong xã hội",
-    ans: "c"
-  },
-  {
-    num: 342,
-    q: "Tại các thành phố, thị trấn nhiều người đi bộ ngang nhiên băng qua đường đi xuống lòng đường bất chấp quy tắc an toàn giao thông gây ra nhiều vụ tai nạn giao thông nghiêm trọng. Từ thực tế này, pháp luật tăng mức xử phạt đối với người đi bộ nếu vi phạm quy định khi tham gia giao thông đường bộ, quy định này thể hiện bản chất nào dưới đây của pháp luật?",
-    a: "bản chất văn hóa",
-    b: "bản chất xã hội",
-    c: "bản chất chính trị",
-    d: "bản chất giai cấp",
-    ans: "b"
-  },
-  {
-    num: 343,
-    q: "Khẳng định nào dưới đây là không đúng khi nói về quan hệ giữa pháp luật với đạo đức?",
-    a: "quy phạm pháp luật chủ yếu thể hiện quan niệm về đạo đức",
-    b: "pháp luật là phương tiện đặc thù để thể hiện các giá trị đạo đức",
-    c: "pháp luật là phương tiện đặc thù để bảo vệ các giá trị đạo đức",
-    d: "pháp luật và đạo đức được thực hiện bằng quyền lực nhà nước",
-    ans: "d"
-  },
-  {
-    num: 344,
-    q: "Điểm giống nhau cơ bản giữa pháp luật và đạo đức là…",
-    a: "điều chỉnh hành vi để hướng tới các giá trị xã hội",
-    b: "thể hiện những quy tắc mang tính bắt buộc chung",
-    c: "được tuân thủ bằng niềm tin, lương tâm của cá nhân",
-    d: "điều chỉnh hành vi dựa trên tính tự giác của công dân",
-    ans: "a"
-  },
-  {
-    num: 345,
-    q: "Quyền tự do kinh doanh của công dân và nghĩa vụ của công dân khi thực hiện các hoạt động kinh doanh là nội dung cơ bản của pháp luật về….",
-    a: "phát triển kinh tế",
-    b: "phát triển văn hóa",
-    c: "phát triển các lĩnh vực xã hội",
-    d: "quốc phòng và an ninh",
-    ans: "a"
-  },
-  {
-    num: 346,
-    q: "Quyền tự do kinh doanh được hiểu là mọi người được tự do…",
-    a: "kinh doanh khi có đủ các điều kiện vật chất",
-    b: "kinh doanh trong những ngành nghề pháp luật không cấm",
-    c: "quyết định thực hiện kinh doanh bất kỳ mặt hàng nào",
-    d: "quyết định mở rộng quy mô và hình thức kinh doanh",
-    ans: "b"
-  },
-  {
-    num: 347,
-    q: "Quyền tự do kinh doanh có nghĩa là mọi công dân khi có đủ điều kiện do pháp luật quy định đều có quyền tiến hành hoạt động kinh doanh sau khi được cơ quan nhà nước có thẩm quyền…",
-    a: "tiếp nhận đăng ký kinh doanh",
-    b: "chấp nhận đăng ký kinh doanh",
-    c: "trả lại đăng ký kinh doanh",
-    d: "phản hồi về đăng ký kinh doanh",
-    ans: "b"
-  },
-  {
-    num: 348,
-    q: "Nội dung nào dưới đây là điều kiện để công dân tiến hành hoạt động kinh doanh…",
-    a: "có đủ năng lực đăng ký kinh doanh",
-    b: "được cơ quan nhà nước có thẩm quyền chấp nhận đăng ký kinh doanh",
-    c: "có đủ điều kiện kinh tế để kinh doanh",
-    d: "có đủ tiềm lực kinh tế năng lực kinh doanh",
-    ans: "b"
-  },
-  {
-    num: 349,
-    q: "Chủ thể nào dưới đây không được đăng ký kinh doanh…",
-    a: "người chưa thành niên",
-    b: "người thành niên",
-    c: "người có đủ điều kiện theo quy định của pháp luật",
-    d: "cán bộ công chức về hưu",
-    ans: "a"
-  },
-  {
-    num: 350,
-    q: "Nội dung nào dưới đây là một trong những nghĩa vụ mà người sản xuất kinh doanh phải thực hiện…",
-    a: "giải quyết việc làm cho lao động tại địa phương",
-    b: "bảo vệ môi trường",
-    c: "xóa đói giảm nghèo tại địa phương",
-    d: "đảm bảo đầy đủ điều kiện vật chất cho người lao động",
-    ans: "b"
-  },
-  {
-    num: 351,
-    q: "Nội dung nào dưới đây là một trong những nghĩa vụ của nhà sản xuất kinh doanh phải thực hiện…",
-    a: "giải quyết tình trạng thất nghiệp tại địa phương",
-    b: "xóa đói giảm nghèo tại địa phương",
-    c: "nộp thuế đầy đủ theo quy định của pháp luật",
-    d: "đảm bảo đầy đủ điều kiện vật chất cho người lao động",
-    ans: "c"
-  },
-  {
-    num: 352,
-    q: "Nội dung nào dưới đây là một trong những nghĩa vụ của nhà sản xuất kinh doanh….",
-    a: "kinh doanh đúng ngành nghề ghi trong giấy phép kinh doanh",
-    b: "xóa đói giảm nghèo tại địa phương",
-    c: "giải quyết việc làm cho lao động tại địa phương",
-    d: "đảm bảo đầy đủ điều kiện vật chất và tinh thần cho người lao động",
-    ans: "a"
-  },
-  {
-    num: 353,
-    q: "Nội dung nào dưới đây là một trong những nghĩa vụ của nhà sản xuất kinh doanh…",
-    a: "đảm bảo đầy đủ điều kiện vật chất cho người lao động",
-    b: "xóa đói giảm nghèo tại địa phương và vùng phụ cận",
-    c: "giải quyết việc làm cho lao động tại địa phương",
-    d: "bảo vệ quyền lợi người tiêu dùng",
-    ans: "d"
-  },
-  {
-    num: 354,
-    q: "Nội dung nào dưới đây là một trong những nghĩa vụ của nhà sản xuất kinh doanh…",
-    a: "đảm bảo đầy đủ điều kiện vật chất cho người lao động",
-    b: "xóa đói giảm nghèo tại địa phương",
-    c: "tuân thủ các quy định về quốc phòng, an ninh",
-    d: "giải quyết việc làm cho lao động tại địa phương",
-    ans: "c"
-  },
-  {
-    num: 355,
-    q: "Nghĩa vụ nào dưới đây rất quan trọng cần được nhà sản xuất kinh doanh thực hiện nghiêm chỉnh…",
-    a: "kinh doanh đúng ngành nghề ghi trong giấy phép",
-    b: "bảo vệ quyền lợi của nhân dân",
-    c: "nộp thuế đầy đủ theo quy định của pháp luật",
-    d: "tuân thủ các quy định về giao thông phòng chống tệ nạn xã hội",
-    ans: "a"
-  },
-  {
-    num: 356,
-    q: "Các quy định pháp luật về giải quyết việc làm xóa đói giảm nghèo là nội dung của pháp luật về lĩnh vực…",
-    a: "chính trị",
-    b: "kinh tế",
-    c: "xã hội",
-    d: "văn hóa",
-    ans: "c"
-  },
-  {
-    num: 357,
-    q: "Các quy định pháp luật nhằm kiềm chế sự gia tăng dân số và phòng chống tệ nạn xã hội là nội dung của pháp luật về lĩnh vực…",
-    a: "chính trị",
-    b: "kinh tế",
-    c: "xã hội",
-    d: "văn hóa",
-    ans: "c"
-  },
-  {
-    num: 358,
-    q: "Biện pháp nào dưới đây được nhà nước sử dụng để xóa đói giảm nghèo…",
-    a: "chăm sóc sức khỏe cho nhân dân",
-    b: "tạo ra nhiều việc làm mới",
-    c: "mở rộng các hình thức trợ giúp người nghèo",
-    d: "phòng chống tệ nạn xã hội",
-    ans: "c"
-  },
-  {
-    num: 359,
-    q: "Công dân có nghĩa vụ thực hiện kế hoạch hóa gia đình xây dựng gia đình ít con, no ấm, bình đẳng, tiến bộ hạnh phúc bền vững là nội dung được quy định trong…",
-    a: "Hiến pháp, Luật hôn nhân và gia đình",
-    b: "Hiến pháp, Pháp lệnh dân số",
-    c: "luật Hôn nhân và gia đình, Pháp lệnh dân số",
-    d: "pháp lệnh dân số",
-    ans: "c"
-  },
-  {
-    num: 360,
-    q: "Đấu tranh phòng chống tội phạm, giữ gìn trật tự kỷ cương xã hội, ngăn chặn và bài trừ các tệ nạn xã hội nhất là nạn mại dâm, ma túy là nội dung được quy định trong…",
-    a: "Hiến pháp, Luật phòng chống ma túy",
-    b: "Hiến pháp, Pháp lệnh phòng chống mại dâm",
-    c: "Luật phòng chống ma túy, Pháp lệnh phòng chống mại dâm",
-    d: "Pháp lệnh phòng chống ma túy",
-    ans: "c"
-  },
-  {
-    num: 361,
-    q: "Để bảo vệ môi trường những hành vi nào dưới đây bị pháp luật nghiêm cấm…",
-    a: "phá hoại, khai thác trái phép rừng, các nguồn tài nguyên thiên nhiên",
-    b: "bảo tồn và sử dụng hợp lý tài nguyên thiên nhiên",
-    c: "bảo vệ môi trường rừng và các tài nguyên thiên nhiên",
-    d: "không săn bắt động vật quý hiếm",
-    ans: "a"
-  },
-  {
-    num: 362,
-    q: "Quá trình hoạt động có mục đích, làm cho các quy định của pháp luật đi vào cuộc sống và trở thành những hành vi hợp pháp của các cá nhân, tổ chức là nội dung của khái niệm nào dưới đây?",
-    a: "ban hành pháp luật",
-    b: "xây dựng pháp luật",
-    c: "thực hiện pháp luật",
-    d: "phổ biến pháp luật",
-    ans: "c"
-  },
-  {
-    num: 363,
-    q: "Mục đích của việc ban hành pháp luật là điều chỉnh cách xử sự của công dân theo các quy tắc, cách thức phù hợp với yêu cầu của chủ thể nào dưới đây?",
-    a: "tổ chức",
-    b: "cộng đồng",
-    c: "nhà nước",
-    d: "xã hội",
-    ans: "c"
-  },
-  {
-    num: 364,
-    q: "Thực hiện pháp luật là quá trình hoạt động có mục đích, làm cho các quy định của pháp luật đi vào cuộc sống trở thành hành vi…",
-    a: "có ích của công dân",
-    b: "cơ bản của cá nhân",
-    c: "hợp pháp của công dân",
-    d: "cốt lõi của cá nhân",
-    ans: "c"
-  },
-  {
-    num: 365,
-    q: "Nội dung nào dưới đây không phải là biểu hiện của thực hiện pháp luật…",
-    a: "làm những việc mà pháp luật cho phép làm",
-    b: "làm những việc mà pháp luật quy định phải làm",
-    c: "không làm những việc mà pháp luật cấm",
-    d: "làm những việc mà pháp luật cấm",
-    ans: "d"
-  },
-  {
-    num: 366,
-    q: "Các cá nhân, tổ chức sử dụng đúng đắn các quyền của mình làm những gì mà pháp luật cho phép làm là nội dung của hình thức thực hiện pháp luật nào dưới đây?",
-    a: "Sử dụng pháp luật",
-    b: "Thi hành pháp luật",
-    c: "Tuân thủ pháp luật",
-    d: "Áp dụng pháp luật",
-    ans: "a"
-  },
-  {
-    num: 367,
-    q: "Công dân chủ động làm những gì mà pháp luật quy định phải làm là hình thức thực hiện pháp luật nào dưới đây?",
-    a: "Sử dụng pháp luật",
-    b: "Thi hành pháp luật",
-    c: "Tuân thủ pháp luật",
-    d: "Áp dụng pháp luật",
-    ans: "b"
-  },
-  {
-    num: 368,
-    q: "Hình thức thực hiện pháp luật nào dưới đây mà chủ thể có quyền lựa chọn làm hoặc không làm?",
-    a: "Sử dụng pháp luật",
-    b: "Thi hành pháp luật",
-    c: "Tuân thủ pháp luật",
-    d: "Áp dụng pháp luật",
-    ans: "a"
-  },
-  {
-    num: 369,
-    q: "Công dân được làm những gì mà pháp luật cho phép làm là nội dung của hình thức thực hiện pháp luật nào dưới đây?",
-    a: "Sử dụng pháp luật",
-    b: "Thi hành pháp luật",
-    c: "Tuân thủ pháp luật",
-    d: "Áp dụng pháp luật",
-    ans: "a"
-  },
-  {
-    num: 370,
-    q: "Các cá nhân, tổ chức thực hiện đầy đủ những nghĩa vụ, chủ động làm những gì mà pháp luật quy định phải làm là hình thức thực hiện pháp luật nào dưới đây?",
-    a: "Sử dụng pháp luật",
-    b: "Thi hành pháp luật",
-    c: "Tuân thủ pháp luật",
-    d: "Áp dụng pháp luật",
-    ans: "b"
-  },
-  {
-    num: 371,
-    q: "Sử dụng pháp luật được hiểu là công dân sử dụng đúng đắn các quyền của mình làm những gì mà pháp luật…",
-    a: "không cho phép làm",
-    b: "cho phép làm",
-    c: "quy định cấm làm",
-    d: "quy định phải làm",
-    ans: "b"
-  },
-  {
-    num: 372,
-    q: "Thi hành pháp luật là việc các cá nhân tổ chức…",
-    a: "chủ động làm những gì mà pháp luật quy định phải làm",
-    b: "chủ động không làm những gì mà pháp luật cấm",
-    c: "tự giác làm những gì mà pháp luật cho phép làm",
-    d: "tự giác thực hiện những gì mà pháp luật quy định nên làm",
-    ans: "a"
-  },
-  {
-    num: 373,
-    q: "Thi hành pháp luật được hiểu là các cá nhân tổ chức thực hiện đầy đủ những nghĩa vụ, chủ động làm những gì mà pháp luật…",
-    a: "quy định nên làm",
-    b: "không cấm",
-    c: "Quy định phải làm",
-    d: "cho phép làm",
-    ans: "c"
-  },
-  {
-    num: 374,
-    q: "Tuân thủ pháp luật được hiểu là việc các cá nhân tổ chức…",
-    a: "làm những điều mà pháp luật cho phép",
-    b: "làm những điều mà pháp luật bắt buộc",
-    c: "không làm những điều mà pháp luật cấm",
-    d: "không làm những điều mà pháp luật ràng buộc",
-    ans: "c"
-  },
-  {
-    num: 375,
-    q: "Việc các cá nhân tổ chức không làm những điều mà pháp luật cấm là biểu hiện của hình thức thực hiện pháp luật nào dưới đây?",
-    a: "Sử dụng pháp luật",
-    b: "Thi hành pháp luật",
-    c: "Tuân thủ pháp luật",
-    d: "Áp dụng pháp luật",
-    ans: "c"
-  },
-  {
-    num: 376,
-    q: "Áp dụng pháp luật được hiểu là các cơ quan công chức nhà nước có thẩm quyền ra các quyết định làm phát sinh chấm dứt hoặc thay đổi việc thực hiện…",
-    a: "quyền và trách nhiệm cụ thể của công dân",
-    b: "quyền và nghĩa vụ cụ thể của công dân",
-    c: "nghĩa vụ và lợi ích cụ thể của công dân",
-    d: "nghĩa vụ và quyền lợi cụ thể của công dân",
-    ans: "b"
-  },
-  {
-    num: 377,
-    q: "Cơ quan công chức nhà nước có thẩm quyền ban hành các quyết định trong quản lý điều hành là biểu hiện của hình thức thực hiện pháp luật nào dưới đây?",
-    a: "Sử dụng pháp luật",
-    b: "Thi hành pháp luật",
-    c: "Tuân thủ pháp luật",
-    d: "Áp dụng pháp luật",
-    ans: "d"
-  },
-  {
-    num: 378,
-    q: "Hình thức thực hiện pháp luật nào dưới đây có chủ thể thực hiện khác với các hình thức còn lại?",
-    a: "Sử dụng pháp luật",
-    b: "Thi hành pháp luật",
-    c: "Tuân thủ pháp luật",
-    d: "Áp dụng pháp luật",
-    ans: "d"
-  },
-  {
-    num: 379,
-    q: "Việc các cơ quan công chức nhà nước có thẩm quyền ra quyết định làm phát sinh chấm dứt hoặc thay đổi việc thực hiện các quyền, nghĩa vụ cụ thể của công dân là nội dung của hình thức thực hiện pháp luật nào dưới đây?",
-    a: "Tuân thủ pháp luật",
-    b: "Thi hành pháp luật",
-    c: "Sử dụng pháp luật",
-    d: "Áp dụng pháp luật",
-    ans: "d"
-  },
-  {
-    num: 380,
-    q: "Tuân thủ pháp luật là hình thức thực hiện pháp luật trong đó các cá nhân tổ chức không làm những điều mà pháp luật…?",
-    a: "cho phép làm",
-    b: "quy định cấm",
-    c: "quy định phải làm",
-    d: "không bắt buộc",
-    ans: "b"
-  },
-  {
-    num: 381,
-    q: "Hành vi trái pháp luật, có lỗi do người có năng lực trách nhiệm pháp lý thực hiện xâm hại các quan hệ xã hội được pháp luật bảo vệ là nội dung của khái niệm nào dưới đây?",
-    a: "Thực hiện pháp luật",
-    b: "Vi phạm pháp luật",
-    c: "Tuân thủ pháp luật",
-    d: "Trách nhiệm pháp lý",
-    ans: "b"
-  },
-  {
-    num: 382,
-    q: "Dấu hiệu nào dưới đây không phải là một trong những căn cứ để xác định một hành vi vi phạm pháp luật…?",
-    a: "hành vi chứa đựng lỗi của chủ thể thực hiện",
-    b: "hành vi do người có năng lực trách nhiệm pháp lý thực hiện",
-    c: "hành vi do người có thẩm quyền thực hiện theo quy định của pháp luật",
-    d: "hành vi xâm hại các quan hệ xã hội được pháp luật bảo vệ",
-    ans: "c"
-  },
-  {
-    num: 383,
-    q: "Một trong những căn cứ để xác định một hành vi vi phạm pháp luật là hành vi do người…",
-    a: "có năng lực trách nhiệm pháp lý thực hiện",
-    b: "có thẩm quyền trong cơ quan nhà nước thực hiện",
-    c: "trên 18 tuổi thực hiện",
-    d: "từ trên 16 tuổi đến 18 tuổi thực hiện",
-    ans: "a"
-  },
-  {
-    num: 384,
-    q: "Dấu hiệu nào dưới đây là một trong những căn cứ để xác định hành vi trái pháp luật?",
-    a: "hành vi xâm hại các chuẩn mực xã hội",
-    b: "hành vi xâm hại các phong tục tập quán",
-    c: "hành vi xâm hại các quy định của xã hội",
-    d: "hành vi xâm hại quan hệ xã hội pháp luật bảo vệ",
-    ans: "d"
-  },
-  {
-    num: 385,
-    q: "Năng lực trách nhiệm pháp lý của cá nhân bao gồm…?",
-    a: "độ tuổi và nhận thức",
-    b: "độ tuổi và trình độ",
-    c: "độ tuổi và hành vi",
-    d: "trình độ và hành vi",
-    ans: "d"
-  },
-  {
-    num: 386,
-    q: "Dấu hiệu nào dưới đây là biểu hiện của hành vi trái pháp luật?",
-    a: "công dân làm những việc pháp luật quy định không được làm",
-    b: "công dân không làm những việc mà pháp luật cấm",
-    c: "công dân làm những việc mà pháp luật cho phép làm",
-    d: "công dân làm những việc phải làm theo quy định pháp luật",
-    ans: "a"
-  },
-  {
-    num: 387,
-    q: "Hành vi trái pháp luật nào dưới đây do người có năng lực trách nhiệm pháp lý thực hiện?",
-    a: "Anh A trong lúc say rượu đánh bạn mình bị thương nặng",
-    b: "Em H bị tâm thần nên đã lấy đồ của cửa hàng mà không trả tiền",
-    c: "Chị A bị trầm cảm nên đã sát hại con đẻ của mình",
-    d: "Anh T trong lúc lên cơn động kinh đã đập vỡ cửa kính nhà hang",
-    ans: "a"
-  },
-  {
-    num: 388,
-    q: "Trường hợp nào dưới đây chủ thể không vi phạm pháp luật?",
-    a: "cháu hát bị trói tay và bị đổ ma túy đá vào miệng",
-    b: "anh B phát hiện kẻ móc túi nhưng không báo với ai",
-    c: "chị L che dấu hành vi buôn bán ma túy của người thân trong gia đình",
-    d: "cảnh sát giao thông không xử phạt vi phạm của anh T vì quen biết",
-    ans: "a"
-  },
-  {
-    num: 389,
-    q: "Nghĩa vụ mà các cá nhân hoặc tổ chức phải gánh chịu hậu quả bất lợi từ hành vi vi phạm pháp luật của mình là nội dung của khái niệm nào dưới đây?",
-    a: "trách nhiệm pháp lý",
-    b: "nghĩa vụ pháp lý",
-    c: "vi phạm pháp luật",
-    d: "thực hiện pháp luật",
-    ans: "a"
-  },
-  {
-    num: 390,
-    q: "Anh A đi xe máy phóng nhanh vượt ẩu nên đâm vào người đi đường làm họ bị chấn thương, tổn hại sức khỏe là 31% và xe máy bị hỏng nặng, trường hợp này anh A phải chịu những loại trách nhiệm pháp lý nào dưới đây?",
-    a: "Hình sự và hành chính",
-    b: "Dân sự và hành chính",
-    c: "Hình sự và dân sự",
-    d: "Kỷ luật và dân sự",
-    ans: "c"
-  },
-  {
-    num: 391,
-    q: "Hành vi nào dưới đây phải chịu trách nhiệm hình sự?",
-    a: "cố ý lây truyền HIV cho người khác",
-    b: "điều khiển xe máy đi ngược chiều của của đường một chiều",
-    c: "không thực hiện chia tài sản theo di chúc của người mất",
-    d: "lấy trộm ví tiền giá trị 450.000 đồng",
-    ans: "a"
-  },
-  {
-    num: 392,
-    q: "Người từ đủ 14 tuổi đến dưới 16 tuổi phải chịu trách nhiệm hình sự về…",
-    a: "mọi tội phạm",
-    b: "tội phạm nghiêm trọng do vô ý",
-    c: "tội phạm đặc biệt nghiêm trọng",
-    d: "tội phạm do lỗi cố ý",
-    ans: "c"
-  },
-  {
-    num: 393,
-    q: "Người có hành vi vi phạm hình sự trước hết phải chịu trách nhiệm…",
-    a: "Hình sự",
-    b: "Hành chính",
-    c: "Dân sự",
-    d: "Kỷ luật",
-    ans: "a"
-  },
-  {
-    num: 394,
-    q: "Vi phạm hành chính là những hành vi xâm phạm…",
-    a: "kỷ luật lao động",
-    b: "kỷ luật của tổ chức",
-    c: "quy tắc quản lý nhà nước",
-    d: "quy tắc quản lý hành chính",
-    ans: "c"
-  },
-  {
-    num: 395,
-    q: "Hình thức khiển trách cảnh cáo chuyển công tác khác khi xâm phạm các quan hệ công vụ nhà nước do pháp luật hành chính bảo vệ được áp dụng với người có hành vi nào dưới đây?",
-    a: "vi phạm hành chính",
-    b: "vi phạm dân sự",
-    c: "vi phạm hình sự",
-    d: "vi phạm kỷ luật",
-    ans: "d"
-  },
-  {
-    num: 396,
-    q: "Vi phạm dân sự là những hành vi vi phạm pháp luật xâm phạm tới quan hệ nào dưới đây?",
-    a: "quan hệ sở hữu và quan hệ nhân thân",
-    b: "quan hệ sở hữu và quan hệ tình cảm",
-    c: "quan hệ tài sản và quan hệ tình cảm",
-    d: "quan hệ tài sản và quan hệ nhân thân",
-    ans: "d"
-  },
-  {
-    num: 397,
-    q: "Bồi thường thiệt hại về vật chất khi có các hành vi xâm phạm tới các quan hệ tài sản và quan hệ nhân thân được áp dụng với những hành vi vi phạm…?",
-    a: "hành chính",
-    b: "dân sự",
-    c: "hình sự",
-    d: "kỷ luật",
-    ans: "b"
-  },
-  {
-    num: 398,
-    q: "Vi phạm hành chính là những hành vi vi phạm quy định của pháp luật về quản lý Nhà nước do…?",
-    a: "tổ chức kinh tế thực hiện",
-    b: "tổ chức chính trị thực hiện",
-    c: "cá nhân thực hiện",
-    d: "cá nhân hoặc tổ chức thực hiện",
-    ans: "d"
-  },
-  {
-    num: 399,
-    q: "Cơ quan X bị mất một số tài sản do bảo vệ cơ quan quên không khóa cổng, vậy bảo vệ cơ quan này phải chịu trách nhiệm pháp lý nào dưới đây?",
-    a: "trách nhiệm hình sự",
-    b: "trách nhiệm dân sự",
-    c: "trách nhiệm hành chính",
-    d: "trách nhiệm kỷ luật",
-    ans: "d"
-  },
-  {
-    num: 400,
-    q: "Hành vi không lạng lách đánh võng khi đi xe máy trên đường của anh A là biểu hiện hình thức thực hiện pháp luật nào dưới đây?",
-    a: "Sử dụng pháp luật",
-    b: "Tuân thủ pháp luật",
-    c: "Thi hành pháp luật",
-    d: "Áp dụng pháp luật",
-    ans: "b"
-  },
-  {
-    num: 401,
-    q: "Cảnh sát giao thông xử phạt người chở hàng cồng kềnh khi tham gia giao thông là biểu hiện của hình thức thực hiện pháp luật nào dưới đây?",
-    a: "Sử dụng pháp luật",
-    b: "Thi hành pháp luật",
-    c: "Tuân thủ pháp luật",
-    d: "Áp dụng pháp luật",
-    ans: "d"
-  },
-  {
-    num: 402,
-    q: "Anh M sử dụng điện thoại di động khi đang điều khiển xe máy. Công an đã xử phạt hành chính anh M việc làm của công an là biểu hiện của hình thức thực hiện pháp luật nào dưới đây?",
-    a: "Tuân thủ pháp luật",
-    b: "Sử dụng pháp luật",
-    c: "Thi hành pháp luật",
-    d: "Áp dụng pháp luật",
-    ans: "d"
-  },
-  {
-    num: 403,
-    q: "Hành vi không đội mũ bảo hiểm khi tham gia giao thông trên đường của người điều khiển người ngồi trên xe mô tô là vi phạm hình thức thực hiện pháp luật nào dưới đây?",
-    a: "Tuân thủ pháp luật",
-    b: "Thi hành pháp luật",
-    c: "Sử dụng pháp luật",
-    d: "Áp dụng pháp luật",
-    ans: "a"
-  },
-  {
-    num: 404,
-    q: "Chị M điều khiển xe máy vượt quá tốc độ cho phép nên đã bị cảnh sát giao thông X lập biên bản và xử phạt hành chính, hành vi của cảnh sát giao thông X là biểu hiện của hình thức thực hiện pháp luật nào dưới đây?",
-    a: "Sử dụng pháp luật",
-    b: "Áp dụng pháp luật",
-    c: "Thi hành pháp luật",
-    d: "Tuân thủ pháp luật",
-    ans: "b"
-  },
-  {
-    num: 405,
-    q: "Hành vi phạm tội nào không phải xảy ra trên lãnh thổ Việt Nam sau đây?",
-    a: "Hành vi phạm tội bắt đầu trên lãnh thổ Việt Nam",
-    b: "Hành vi phạm tội diễn ra trên lãnh thổ Việt Nam",
-    c: "Hành vi phạm tội kết thúc trên lãnh thổ Việt Nam",
-    d: "Hành vi phạm tội không thuộc một trong các trường hợp đã nêu",
-    ans: "d"
-  },
-  {
-    num: 406,
-    q: "Nhận định nào dưới đây về luật hình sự không đúng?",
-    a: "Là một văn bản trong hệ thống pháp luật của nước Cộng hoà xã hội chủ nghĩa Việt Nam",
-    b: "Là một ngành luật trong hệ thống pháp luật của nước Cộng hoà xã hội chủ nghĩa Việt Nam",
-    c: "Bao gồm hệ thống những quy phạm pháp luật do Nhà nước ban hành",
-    d: "Xác định những hành vi nguy hiểm nào cho xã hội là tội phạm, đồng thời quy định hình phạt đối với những tội phạm ấy",
-    ans: "a"
-  },
-  {
-    num: 407,
-    q: "Luật hình sự có những nguyên tắc nào dưới đây?",
-    a: "Nguyên tắc pháp chế XHCN",
-    b: "Nguyên tắc dân chủ XHCN",
-    c: "Nguyên tắc phân hóa trách nhiệm hình sự",
-    d: "Tất cả đều đúng",
-    ans: "d"
-  },
-  {
-    num: 408,
-    q: "Đâu là loại tội phạm nghiêm trọng?",
-    a: "là tội phạm có tính chất và mức độ nguy hiểm cho xã hội không lớn mà mức cao nhất của khung hình phạt do Bộ luật này quy định đối với tội ấy là phạt tiền, phạt cải tạo không giam giữ hoặc phạt tù đến 03 năm",
-    b: "là tội phạm có tính chất và mức độ nguy hiểm cho xã hội lớn mà mức cao nhất của khung hình phạt do Bộ luật này quy định đối với tội ấy là từ trên 03 năm tù đến 07 năm tù",
-    c: "là tội phạm có tính chất và mức độ nguy hiểm cho xã hội rất lớn mà mức cao nhất của khung hình phạt do Bộ luật này quy định đối với tội ấy là từ trên 07 năm tù đến 15 năm tù",
-    d: "là tội phạm có tính chất và mức độ nguy hiểm cho xã hội đặc biệt lớn mà mức cao nhất của khung hình phạt do Bộ luật này quy định đối với tội ấy là từ trên 15 năm tù đến 20 năm tù, tù chung thân hoặc tử hình",
-    ans: "b"
-  },
-  {
-    num: 409,
-    q: "Đâu là loại tội phạm rất nghiêm trọng?",
-    a: "là tội phạm có tính chất và mức độ nguy hiểm cho xã hội không lớn mà mức cao nhất của khung hình phạt do Bộ luật này quy định đối với tội ấy là phạt tiền, phạt cải tạo không giam giữ hoặc phạt tù đến 03 năm",
-    b: "là tội phạm có tính chất và mức độ nguy hiểm cho xã hội lớn mà mức cao nhất của khung hình phạt do Bộ luật này quy định đối với tội ấy là từ trên 03 năm tù đến 07 năm tù",
-    c: "là tội phạm có tính chất và mức độ nguy hiểm cho xã hội rất lớn mà mức cao nhất của khung hình phạt do Bộ luật này quy định đối với tội ấy là từ trên 07 năm tù đến 15 năm tù",
-    d: "là tội phạm có tính chất và mức độ nguy hiểm cho xã hội đặc biệt lớn mà mức cao nhất của khung hình phạt do Bộ luật này quy định đối với tội ấy là từ trên 15 năm tù đến 20 năm tù, tù chung thân hoặc tử hình",
-    ans: "c"
-  },
-  {
-    num: 410,
-    q: "Cố ý phạm tội là phạm tội trong những trường hợp sau đây?",
-    a: "Người phạm tội tuy thấy trước hành vi của mình có thể gây ra hậu quả nguy hại cho xã hội nhưng cho rằng hậu quả đó sẽ không xảy ra hoặc có thể ngăn ngừa được",
-    b: "Người phạm tội không thấy trước hành vi của mình có thể gây ra hậu quả nguy hại cho xã hội, mặc dù phải thấy trước và có thể thấy trước hậu quả đó",
-    c: "Người phạm tội nhận thức rõ hành vi của mình là nguy hiểm cho xã hội, không thấy trước hậu quả của hành vi đó có thể xảy ra, tuy không mong muốn nhưng vẫn có ý thức để mặc cho hậu quả xảy ra",
-    d: "Người phạm tội nhận thức rõ hành vi của mình là nguy hiểm cho xã hội, thấy trước hậu quả của hành vi đó và mong muốn hậu quả xảy ra",
-    ans: "d"
-  },
-  {
-    num: 411,
-    q: "Vô ý phạm tội là phạm tội trong những trường hợp sau đây?",
-    a: "Người phạm tội không thấy trước hành vi của mình có thể gây ra hậu quả nguy hại cho xã hội vì vậy cho rằng hậu quả đó sẽ không xảy ra hoặc có thể ngăn ngừa được",
-    b: "Người phạm tội không thấy trước hành vi của mình có thể gây ra hậu quả nguy hại cho xã hội, mặc dù phải thấy trước và có thể thấy trước hậu quả đó",
-    c: "Người phạm tội nhận thức rõ hành vi của mình là nguy hiểm cho xã hội, thấy trước hậu quả của hành vi đó có thể xảy ra, tuy không mong muốn nhưng vẫn có ý thức để mặc cho hậu quả xảy ra",
-    d: "Người phạm tội nhận thức rõ hành vi của mình là nguy hiểm cho xã hội, thấy trước hậu quả của hành vi đó và mong muốn hậu quả xảy ra",
-    ans: "b"
-  },
-  {
-    num: 412,
-    q: "Cơ sở của trách nhiệm hình sự là:",
-    a: "Hành vi được Viện kiểm sát cho phạm tội thì phải chịu trách nhiệm sự",
-    b: "Có hành vi gây nguy hiểm thì phải chịu trách nhiệm hình sự",
-    c: "Phạm tội gây thiệt hại vật chất cho người khác phải chịu trách nhiệm hình sự",
-    d: "Người nào phạm một tội đã được Bộ luật Hình sự quy định mới phải chịu trách nhiệm hình sự",
-    ans: "d"
-  },
-  {
-    num: 413,
-    q: "Đâu là dấu hiệu của tội phạm?",
-    a: "hành vi nguy hiểm cho xã hội được quy định trong Bộ luật Hình sự",
-    b: "hành vi tuy có dấu hiệu của tội phạm nhưng tính chất nguy hiểm cho xã hội không đáng kể",
-    c: "hành vi nguy hiểm do người có năng lực hành vi dân sự thực hiện một cách cố ý hoặc vô ý",
-    d: "Có hành vi nguy hiểm",
-    ans: "a"
-  },
-  {
-    num: 414,
-    q: "Căn cứ vào tính chất và mức độ nguy hiểm cho xã hội của hành vi phạm tội được quy định trong Bộ luật Hình sự, tội phạm được phân thành mấy loại?",
-    a: "03 loại",
-    b: "04 loại",
-    c: "05 loại",
-    d: "06 loại",
-    ans: "b"
-  },
-  {
-    num: 415,
-    q: "Nghĩa vụ người lao động, người sử dụng lao động trong việc giải quyết tranh chấp lao động:",
-    a: "Cung cấp đầy đủ tài liệu cho cơ quan có thẩm quyền và thi hành mọi quyết định giải quyết tranh chấp của các cơ quan, tổ chức có thẩm quyền",
-    b: "Cung cấp đầy đủ tài liệu, thi hành mọi quyết định của cơ quan, tổ chức có thẩm quyền giải quyết tranh chấp",
-    c: "Cung cấp đầy đủ tài liệu chứng cứ cho cơ quan giải quyết tranh chấp. Thi hành mọi thoả thuận đã đạt, biên bản hoà giải có kết quả, quyết định, bản án đã có hiệu lực",
-    d: "Cung cấp đầy đủ mọi chứng cứ, tài liệu cho các cơ quan có thẩm quyền, thi hành tốt mọi quyết định giải quyết tranh chấp của cơ quan có thẩm quyền",
-    ans: "c"
-  },
-  {
-    num: 416,
-    q: "Quyền của người lao động, người sử dụng lao động trong việc giải quyết tranh chấp lao động:",
-    a: "Tham gia trực tiếp hoặc rút đơn không tham gia giải quyết tranh chấp. Có thể cử người đại diện thay mình tham gia quá trình giải quyết tranh chấp",
-    b: "Trực tiếp hoặc cử đại diện tham gia giải quyết tranh chấp – Rút đơn, thay đổi nội dung tranh chấp, thay người đại diện",
-    c: "Trực tiếp tham gia giải quyết tranh chấp hoặc cử đại diện tham giA. Rút đơn không tham gia giải quyết tranh chấp nữa",
-    d: "Trực tiếp tham gia hoặc cử đại diện tham gia hoặc thay đổi người đại diện hoặc rút đơn không tham gia giải quyết tranh chấp nữa",
-    ans: "b"
-  },
-  {
-    num: 417,
-    q: "Hình thức sa thải người lao động chỉ được áp dụng trong trường hợp nào?",
-    a: "Người lao động tự ý bỏ việc không có lý do chính đáng, đang bị xử một hình thức kỷ luật mà tái phạm, trộm cắp, tham ô tài sản của doanh nghiệp",
-    b: "Trộm cắp, tham ô, tiết lộ bí mật công nghệ – kinh doanh của doanh nghiệp, đang bị kỷ luật chuyển làm việc khác lại tái phạm, tự ý bỏ việc",
-    c: "Người lao động tự ý bỏ việc 7 ngày 1 tháng, 20 ngày 1 năm không có lý do chính đáng, trộm cắp tham ô, tiết lộ bí mật của doanh nghiệp, đang bị kỷ luật chuyển làm việc khác lại tái phạm",
-    d: "Người lao động tự ý bỏ việc từ 7 đến 20 ngày không có lý do chính đáng, trộm cắp, tiết lộ bí mật, tái phạm nhiều lần mà không xử",
-    ans: "c"
-  },
-  {
-    num: 418,
-    q: "Người sử dụng lao động có nghĩa vụ gì đối với người lao động cao tuổi làm việc tại cơ sở của mình?",
-    a: "Áp dụng chế độ làm việc mềm dẻo trong một năm trước khi nghỉ hưu. Nếu hưu vẫn tiếp tục làm hợp đồng thì ngoài chế độ hợp đồng mới, vẫn hưởng mọi chế độ như khi chưa hưu (trừ lương)",
-    b: "Áp dụng thì giờ làm việc mềm dẻo trong một năm trước khi nghỉ hưu. Có thể tiếp tục sử dụng những người lưu theo chế độ hợp đồng lao động mới",
-    c: "Áp dụng chế độ và thời giờ làm việc mềm dẻo, một ngày không làm trọn 8 tiếng, một tuần không làm quá 35 tiếng",
-    d: "Áp dụng thời giờ làm việc mềm dẻo, một ngày không làm quá 7 tiếng, 1 tuần không làm trọn 5 ngày",
-    ans: "a"
-  },
-  {
-    num: 419,
-    q: "Người sử dụng lao động có nghĩa vụ gì đối với lao động chưa thành niên làm việc ở cơ sở mình?",
-    a: "Giao việc phù hợp với sức khoẻ, có sổ theo dõi riêng, một ngày làm việc không quá 7 tiếng",
-    b: "Lao động chưa thành niên là người chưa đến 18 tuổi nên chỉ được giao 1 số việc theo quy định của Bộ Lao động",
-    c: "Giao việc phù hợp với sức khoẻ, chỉ giao 1 số việc theo quy định của Bộ Lao động, có sổ theo dõi riêng",
-    d: "Chỉ được giao công việc theo đúng quy định của Bộ Lao động và có sổ theo dõi riêng",
-    ans: "a"
-  },
-  {
-    num: 420,
-    q: "Theo Luật Lao động, tiền lương của người lao động được trả như thế nào?",
-    a: "Do hai bên thoả thuận trong hợp đồng, mức lương không được thấp hơn mức lương tối thiểu do Nhà nước quy định",
-    b: "Trả theo năng suất lao động, chất lượng, hiệu quả công việc, do hai bên thoả thuận",
-    c: "Trả theo năng suất, chất lượng, hiệu quả công việc, mức lương không thể thấp hơn mức tối thiểu do Nhà nước quy định",
-    d: "Theo năng suất, chất lượng, hiệu quả công việc do hai bên thoả thuận trong hợp đồng nhưng không được thấp hơn mức tối thiểu do Nhà nước quy định",
-    ans: "d"
-  },
-  {
-    num: 421,
-    q: "Cách thức giải quyết tranh chấp lao động:",
-    a: "Hai bên tự dàn xếp, thương lượng trực tiếp, thông qua trọng tài hoà giải",
-    b: "Thương lượng trực tiếp, thông qua trọng tài hoà giải, tham gia của công đoàn",
-    c: "Thương lượng trực tiếp, tham gia của công đoàn, thông qua trọng tài hoà giải",
-    d: "Thương lượng trực tiếp, tham gia của công đoàn, công khai, khách quan, kịp thời, thông qua trọng tài hoà giải",
-    ans: "d"
+    "num": 1,
+    "chapter": 1,
+    "chapterNum": 1,
+    "q": "Một trong những nguồn gốc mà Hồ Chí Minh tiếp thu là…",
+    "a": "Lòng nhân ái và đức hy sinh của Hồi giáo",
+    "b": "Triết học Hy Lạp",
+    "c": "Giá trị truyền thống của dân tộc",
+    "d": "Văn hóa Hy Lạp và La Mã cổ đại",
+    "ans": "c"
+  },
+  {
+    "num": 2,
+    "chapter": 1,
+    "chapterNum": 2,
+    "q": "Chọn đáp án trả lời đúng cho câu hỏi: Truyền thống quý báu nhất của dân tộc Việt Nam được Hồ Chí Minh kế thừa và phát triển là gì?",
+    "a": "Lòng nhân ái",
+    "b": "Chủ nghĩa yêu nước",
+    "c": "Tinh thần hiếu học",
+    "d": "Cần cù lao động",
+    "ans": "b"
+  },
+  {
+    "num": 3,
+    "chapter": 1,
+    "chapterNum": 3,
+    "q": "Giai đoạn hình thành Tư tưởng yêu nước, thương nòi của Nguyễn Ái Quốc được tính từ…",
+    "a": "Trước năm 1911",
+    "b": "Năm 1911->1920",
+    "c": "Năm 1921->1930",
+    "d": "Năm 1945 -> 1969",
+    "ans": "a"
+  },
+  {
+    "num": 4,
+    "chapter": 1,
+    "chapterNum": 4,
+    "q": "Giai đoạn tìm tòi con đường cứu nước, giải phóng dân tộc của Nguyễn Ái Quốc được tính từ:",
+    "a": "1890 ->1911",
+    "b": "1911 ->1920",
+    "c": "1921 ->1930",
+    "d": "1945 -> 1969",
+    "ans": "b"
+  },
+  {
+    "num": 5,
+    "chapter": 1,
+    "chapterNum": 5,
+    "q": "Giai đoạn hình thành cơ bản Tư tưởng về cách mạng Việt Nam của Nguyễn Ái Quốc được tính từ…",
+    "a": "1911->1920",
+    "b": "1921->1930",
+    "c": "1930->1941",
+    "d": "1945 -> 1969",
+    "ans": "b"
+  },
+  {
+    "num": 6,
+    "chapter": 1,
+    "chapterNum": 6,
+    "q": "Chọn đáp án trả lời đúng cho câu hỏi: Tác phẩm Đường kách mệnh của Nguyễn Ái Quốc được xuất bản lần đầu tiên vào năm nào?",
+    "a": "1920",
+    "b": "1925",
+    "c": "1927",
+    "d": "1930",
+    "ans": "c"
+  },
+  {
+    "num": 7,
+    "chapter": 1,
+    "chapterNum": 7,
+    "q": "Chọn đáp án trả lời đúng cho câu hỏi: Thuật ngữ Tư tưởng Hồ Chí Minh được Đảng ta chính thức sử dụng bắt đầu từ bao giờ?",
+    "a": "Từ năm 1969",
+    "b": "Từ năm 1990",
+    "c": "Từ năm 1986",
+    "d": "Từ năm 1991",
+    "ans": "d"
+  },
+  {
+    "num": 8,
+    "chapter": 1,
+    "chapterNum": 8,
+    "q": "Hãy lựa chọn câu trả lời đúng nhất:",
+    "a": "Hồ Chí Minh là anh hùng giải phóng dân tộc và là nhà văn hóa lớn",
+    "b": "Hồ Chí Minh là anh hùng giải phóng của dân tộc Việt Nam và là danh nhân văn hóa kiệt xuất của thế giới",
+    "c": "Hồ Chí Minh là anh hùng giải phóng dân tộc và là nhà văn hóa kiệt xuất của Việt Nam",
+    "d": "Hồ Chí Minh là anh hùng giải phóng dân tộc của dân tộc Việt Nam và là nhà văn hoá lỗi lạc",
+    "ans": "c"
+  },
+  {
+    "num": 9,
+    "chapter": 1,
+    "chapterNum": 9,
+    "q": "Chọn đáp án trả lời đúng nhất:",
+    "a": "Chủ nghĩa Mác - Lênin là nền tảng tư tưởng, kim chỉ nam cho hành động của Đảng ta",
+    "b": "Tư tưởng Hồ Chí Minh là nền tảng tư tưởng, kim chỉ nam cho hành động của Đảng ta",
+    "c": "Cùng với chủ nghĩa Mác - Lênin, tư tưởng Hồ Chí Minh là nền tảng tư tưởng và kim chỉ nam cho hành động cách mạng của Đảng ta",
+    "d": "Cả ba đáp án đều đúng",
+    "ans": "c"
+  },
+  {
+    "num": 10,
+    "chapter": 1,
+    "chapterNum": 10,
+    "q": "Chọn phương án đúng nhất: “Dân tộc ta, nhân dân ta, non sông đất nước ta đã sinh ra Hồ Chủ tịch, người anh hùng dân tộc vĩ đại, và chính Người đã làm rạng rỡ dân tộc ta, nhân dân ta và non sông đất nước ta”. Câu nói trên ở trong văn kiện nào?",
+    "a": "Lời kêu gọi Ban chấp hành Trung ương Đảng Lao động Việt Nam ngày 3/9/1969",
+    "b": "Điếu văn của Ban Chấp hành Trung ương Đảng lao động Việt Nam đọc tại lễ truy điệu Chủ tịch Hồ Chí Minh ngày 9/9/1969",
+    "c": "Diễn văn của Ban Chấp hành Trung ương Đảng LĐVN đọc tại lễ kỷ niệm 80 năm ngày sinh của Hồ Chí Minh",
+    "d": "Diễn văn của Ban Chấp hành Trung ương Đảng CSVN đọc tại lễ kỷ niệm 100 năm ngày sinh của Hồ Chí Minh",
+    "ans": "b"
+  },
+  {
+    "num": 11,
+    "chapter": 1,
+    "chapterNum": 11,
+    "q": "Chọn đáp án trả lời đúng cho câu hỏi: Theo Hồ Chí Minh, ưu điểm lớn nhất của học thuyết Khổng Tử là gì?",
+    "a": "Tinh thần hiếu học",
+    "b": "Quản lý xã hội bằng đạo đức",
+    "c": "Sự tu dưỡng đạo đức cá nhân",
+    "d": "Đề cao văn hoá, lễ giáo",
+    "ans": "c"
+  },
+  {
+    "num": 12,
+    "chapter": 1,
+    "chapterNum": 12,
+    "q": "Chọn đáp án trả lời đúng cho câu hỏi: Hồ Chí Minh đã tiếp thu những yếu tố tích cực nào của Phật giáo?",
+    "a": "Tư tưởng vị tha",
+    "b": "Tinh thần từ bi, bác ái",
+    "c": "Tinh thần cứu khổ, cứu nạn",
+    "d": "Cả ba đáp án còn lại đều đúng",
+    "ans": "d"
+  },
+  {
+    "num": 13,
+    "chapter": 1,
+    "chapterNum": 13,
+    "q": "Chọn đáp án trả lời đúng cho câu hỏi: Theo Hồ Chí Minh, ưu điểm lớn nhất của chủ nghĩa Mác là gì?",
+    "a": "Bản chất cách mạng",
+    "b": "Bản chất khoa học",
+    "c": "Chủ nghĩa nhân đạo cộng sản",
+    "d": "Phương pháp làm việc biện chứng",
+    "ans": "d"
+  },
+  {
+    "num": 14,
+    "chapter": 1,
+    "chapterNum": 14,
+    "q": "Tìm một điểm nhầm lẫn trong đoạn viết dưới đây: Một trong những nguồn gốc của tư tưởng Hồ Chí Minh là tiếp thu văn hóa phương Đông, cụ thể là:",
+    "a": "Những mặt tích cực của Nho giáo",
+    "b": "Triết học Hy Lạp cổ đại",
+    "c": "Tư tưởng vị tha của Phật giáo",
+    "d": "Tư tưởng Tam dân của Tôn Trung Sơn",
+    "ans": "b"
+  },
+  {
+    "num": 15,
+    "chapter": 1,
+    "chapterNum": 15,
+    "q": "Tìm một điểm nhầm lẫn trong đoạn viết dưới đây: Một trong những nguồn gốc của tư tưởng Hồ Chí Minh là tiếp văn hóa phương Đông, cụ thể là:",
+    "a": "Những mặt tích cực của Nho giáo",
+    "b": "Tư tưởng vị tha của Phật giáo",
+    "c": "Tư tưởng của các nhà Khai sáng Pháp",
+    "d": "Tư tưởng Tam dân của Tôn Trung Sơn",
+    "ans": "c"
+  },
+  {
+    "num": 16,
+    "chapter": 1,
+    "chapterNum": 16,
+    "q": "Chọn đáp án trả lời đúng nhất: Hồ Chí Minh đã từng dạy học ở ngôi trường nào?",
+    "a": "Trường tiểu học Pháp – Việt ở Vinh",
+    "b": "Trường tiểu học Đông Ba ở Huế",
+    "c": "Trường Quốc học Huế",
+    "d": "Trường Dục Thanh ở Phan Thiết",
+    "ans": "d"
+  },
+  {
+    "num": 17,
+    "chapter": 1,
+    "chapterNum": 17,
+    "q": "Chọn đáp án trả lời đúng nhất: Tư tưởng Hồ Chí Minh là hệ thống quan điểm toàn diện và sâu sắc về những vấn đề cơ bản của cách mạng Việt Nam. Những vấn đề đó thuộc phạm vi nào?",
+    "a": "Trong cách mạng dân tộc dân chủ nhân dân",
+    "b": "Trong cách mạng xã hội chủ nghĩa",
+    "c": "Cả trong cách mạng dân tộc dân chủ nhân dân và cách mạng xã hội chủ nghĩa",
+    "d": "Trong thế kỷ XXI",
+    "ans": "c"
+  },
+  {
+    "num": 18,
+    "chapter": 1,
+    "chapterNum": 18,
+    "q": "Chọn đáp án trả lời đúng: “Đảng lấy chủ nghĩa Mác - Lênin và tư tưởng Hồ Chí Minh làm nền tảng tư tưởng và kim chỉ nam cho mọi hành động cách mạng”. Câu nói trên được Đảng ta khẳng định lần đầu tiên tại Đại hội đại biểu toàn quốc lần thứ mấy?",
+    "a": "Đại hội lần thứ V",
+    "b": "Đại hội lần thứ VI",
+    "c": "Đại hội lần thứ VII",
+    "d": "Đại hội lần thứ VIII",
+    "ans": "c"
+  },
+  {
+    "num": 19,
+    "chapter": 1,
+    "chapterNum": 19,
+    "q": "Chọn đáp án trả lời đúng cho câu hỏi: Hồ Chí Minh được Đại hội đồng UNESCO ra Nghị quyết công nhận là Anh hùng giải phóng dân tộc và Nhà văn hóa kiệt xuất của Việt Nam vào năm nào?",
+    "a": "1969",
+    "b": "1987",
+    "c": "1975",
+    "d": "1990",
+    "ans": "b"
+  },
+  {
+    "num": 20,
+    "chapter": 1,
+    "chapterNum": 20,
+    "q": "Chọn đáp án đúng nhất: Cơ sở hình thành tư tưởng Hồ Chí Minh về đại đoàn kết dân tộc là…",
+    "a": "Truyền thống yêu nước, đoàn kết, nhân nghĩa, tương thân, tương ái của dân tộc ta",
+    "b": "Tổng kết những kinh nghiệm của phong trào cách mạng Việt Nam và phong trào cách mạng thế giới cuối thế kỉ XIX – đầu thế kỉ XX",
+    "c": "Chủ nghĩa Mác - Lênin",
+    "d": "Cả A, B, C",
+    "ans": "d"
+  },
+  {
+    "num": 21,
+    "chapter": 1,
+    "chapterNum": 21,
+    "q": "Tìm 1 câu có nội dung bị nhầm lẫn trong các câu sau: một trong những nguồn gốc của tư tưởng Hồ Chí Minh là tiếp thu tư tưởng và văn hoá phương Tây, cụ thể là:",
+    "a": "Tiếp thu giá trị tư tưởng nhân quyền của cuộc cách mạng Mỹ, được ghi trong tuyên Ngôn Độc Lập năm 1776 của Mỹ",
+    "b": "Ở nước Anh, Nguyễn Ái Quốc đã tiếp nhận được lý tưởng tự do, bình đẳng, bác ái và tư tưởng dân chủ của các nhà khai sáng Anh",
+    "c": "Khi hoạt động ở Pari, thủ đô nước Pháp, Nguyễn Ái Quốc đã hấp thu được tư tưởng dân chủ và hình thành được phong cách dân chủ trong hoạt động chính trị",
+    "d": "Trong sinh hoạt khoa học, chính trị với Đảng xã hội Pháp, Nguyễn Ái Quốc đã học được cách làm việc dân chủ trong tranh luận, trình bày ý kiến",
+    "ans": "b"
+  },
+  {
+    "num": 22,
+    "chapter": 1,
+    "chapterNum": 22,
+    "q": "Nguyễn Ái Quốc viết 1 bức thư gửi cho 1 cán bộ của Quốc tế Cộng sản có đoạn viết “đồng chí có thể hình dung nơi tôi đang sống trong một tình trạng tinh thần và vật chất như thế nào không: biết là có nhiều công việc nhưng không thể làm gì được, ăn không ngồi rồi, không có tiến, sống ngày nào hay ngày ấy mà không được phép hoạt động, vv..” bức thư đó Nguyễn Ái Quốc viết khi nào?",
+    "a": "4-1925",
+    "b": "4-1928",
+    "c": "4-1930",
+    "d": "4-1937",
+    "ans": "b"
+  },
+  {
+    "num": 23,
+    "chapter": 1,
+    "chapterNum": 23,
+    "q": "Nguyễn Ái Quốc được Ban chấp hành Trung ương Quốc tế Cộng sản ra Quyết định đồng ý để Người trở về Đông Dương theo nguyện vọng vào thời gian nào?",
+    "a": "4-1924",
+    "b": "4-1928",
+    "c": "4-1929",
+    "d": "4-1937",
+    "ans": "b"
+  },
+  {
+    "num": 24,
+    "chapter": 1,
+    "chapterNum": 24,
+    "q": "Điền vào chỗ trống để hoàn thiện định nghĩa Tư tưởng Hồ Chí Minh: “Tư tưởng Hồ Chí Minh là một hệ thống quan điểm toàn diện và sâu sắc về những vấn đề cơ bản của […..] , là kết quả của sự vận dụng và phát triển sáng tạo […..] vào điều kiện cụ thể của nước ta, đồng thời là kết tinh tinh hoa dân tộc và trí tuệ thời đại, giải phóng dân tộc, giải phóng giai cấp, giải phóng con người”.",
+    "a": "Cách mạng Việt Nam, chủ nghĩa Mác - Lênin",
+    "b": "Cách mạng vô sản, chủ nghĩa Mác - Lênin",
+    "c": "Cách mạng hội chủ nghĩa, chủ nghĩa Mác – Lênin",
+    "d": "Chủ Nghĩa Mác - Lênin, cách mạng Việt Nam",
+    "ans": "a"
+  },
+  {
+    "num": 25,
+    "chapter": 1,
+    "chapterNum": 25,
+    "q": "Chọn câu trả lời đúng nhất: Mục đích tư tưởng Hồ Chí Minh là gì?",
+    "a": "Giải phóng dân tộc",
+    "b": "Giải phóng dân tộc, giải phóng giai cấp và giải phóng con người",
+    "c": "Giải phóng các dân tộc phương Đông",
+    "d": "Giải phóng giai cấp và giải phóng con người",
+    "ans": "b"
+  },
+  {
+    "num": 26,
+    "chapter": 1,
+    "chapterNum": 26,
+    "q": "Tư tưởng Hồ Chí Minh được hình thành từ những nguồn gốc nào?",
+    "a": "Những điều kiện lịch sử - xã hội trong nước và thế giới",
+    "b": "Những tiền đề tư tưởng – lý luận",
+    "c": "Những phẩm chất chủ quan Hồ Chí Minh",
+    "d": "Cả A, B, C",
+    "ans": "d"
+  },
+  {
+    "num": 27,
+    "chapter": 1,
+    "chapterNum": 27,
+    "q": "Nhờ tiếp thu yếu tố nào mà Nguyễn Ái Quốc đã từ một nhà yêu nước trở thành một người cộng sản?",
+    "a": "Chủ nghĩa Mác – Lênin",
+    "b": "Chủ nghĩa yêu nước",
+    "c": "Chủ nghĩa Tam dân",
+    "d": "Văn hóa Phục hưng",
+    "ans": "a"
+  },
+  {
+    "num": 28,
+    "chapter": 1,
+    "chapterNum": 28,
+    "q": "Chọn cụm từ đúng điền vào chỗ trống: Tháng 7/1920, Hồ Chí Minh đọc tác phẩm … của Lênin.",
+    "a": "“Làm gì”",
+    "b": "Sơ thảo lần thứ hai Luận cương về các vấn đề dân tộc",
+    "c": "Sơ thảo lần thứ nhất về các vấn đề dân tộc và thuộc địa",
+    "d": "Nhà nước và cách mạng",
+    "ans": "c"
+  },
+  {
+    "num": 29,
+    "chapter": 1,
+    "chapterNum": 29,
+    "q": "Chọn từ điền vào chỗ trống để hoàn thiện câu: Văn kiện Đại hội XI của Đảng đã chỉ rõ: Tư tưởng Hồ Chí Minh… cho cuộc đấu tranh của nhân dân ta giành thắng lợi, là … to lớn của Đảng và của dân tộc ta.",
+    "a": "Mở đường; tài sản tinh thần",
+    "b": "Soi đường; tài sản tinh thần",
+    "c": "Chỉ đường; tài sản tinh thần",
+    "d": "Dẫn đường; tài sản tinh thần",
+    "ans": "b"
+  },
+  {
+    "num": 30,
+    "chapter": 1,
+    "chapterNum": 30,
+    "q": "Theo Hồ Chí Minh, học chủ nghĩa Mác - Lênin để làm gì?",
+    "a": "Học thuộc các luận điểm lí luận",
+    "b": "Để chứng tỏ trình độ lí luận",
+    "c": "Để sống với nhau có nghĩa, có tình",
+    "d": "Cả A, B, C đều sai",
+    "ans": "c"
+  },
+  {
+    "num": 31,
+    "chapter": 1,
+    "chapterNum": 31,
+    "q": "Điều mong muốn cuối cùng của Hồ Chí Minh là gì?",
+    "a": "Xây dựng một nước Việt Nam phồn vinh và cường thịnh",
+    "b": "Xây dựng một nước Việt Nam hòa bình, thống nhất, độc lập, dân chủ, giàu mạnh",
+    "c": "Xây dựng một nước Việt Nam dân chủ, giàu mạnh, văn minh.",
+    "d": "Làm cho mọi người hạnh phúc.",
+    "ans": "b"
+  },
+  {
+    "num": 32,
+    "chapter": 1,
+    "chapterNum": 32,
+    "q": "Nguyễn Tất Thành lên con tàu amiral Latusơ Tơrơvil để tìm đường cứu nước vào thời gian nào và tại đâu?",
+    "a": "Ngày 6/5/1911 tại Bến cảng Nhà Rồng",
+    "b": "Ngày 2/6/1911 tại Sài Gòn",
+    "c": "Ngày 5/6/1911 tại Bến cảng Nhà Rồng",
+    "d": "Ngày 4/6/1911 tại Bến Nhà Rồng",
+    "ans": "c"
+  },
+  {
+    "num": 33,
+    "chapter": 1,
+    "chapterNum": 33,
+    "q": "Nguyễn Tất Thành ra đi tìm đường cứu nước lúc bao nhiêu tuổi?",
+    "a": "19 tuổi",
+    "b": "20 tuổi",
+    "c": "21 tuổi",
+    "d": "24 tuổi",
+    "ans": "c"
+  },
+  {
+    "num": 34,
+    "chapter": 1,
+    "chapterNum": 34,
+    "q": "Nguyễn Tất Thành nói: “Tôi muốn đi ra nước ngoài xem nước Pháp và các các nước khác làm như thế nào, tôi sẽ trở về giúp đồng bào chúng ta”. Câu nói trên vào thời gian nào?",
+    "a": "Tháng 6/1911",
+    "b": "Tháng 6/1912",
+    "c": "Tháng 6/1909",
+    "d": "Tháng 6/1910",
+    "ans": "a"
+  },
+  {
+    "num": 35,
+    "chapter": 1,
+    "chapterNum": 35,
+    "q": "Nguyễn Ái Quốc sáng lập “Hội Việt Nam cách mạng Thanh Niên” vào thời gian nào?",
+    "a": "Tháng 6/1925",
+    "b": "Tháng 5/11926",
+    "c": "Tháng 6/1926",
+    "d": "Tháng 5/1927",
+    "ans": "a"
+  },
+  {
+    "num": 36,
+    "chapter": 1,
+    "chapterNum": 36,
+    "q": "Nguyễn Tất Thành đã tham dự cuộc biểu tình chống thuế của nông dân tỉnh Thừa Thiên Huế vào thời gian nào?",
+    "a": "Tháng 5/1905",
+    "b": "Tháng 5/1908",
+    "c": "Tháng 5/1906",
+    "d": "Tháng 6/1908",
+    "ans": "b"
+  },
+  {
+    "num": 37,
+    "chapter": 1,
+    "chapterNum": 37,
+    "q": "Nguyễn Tất Thành dạy học ở trường Dục Thanh vào thời gian nào?",
+    "a": "Tháng 9/1908 đến tháng 9/1909",
+    "b": "Tháng 9/1910 đến tháng 4/1911",
+    "c": "Tháng 9/1910 đến tháng 2/1911",
+    "d": "Tháng 1/1910 đến 5/1911",
+    "ans": "c"
+  },
+  {
+    "num": 38,
+    "chapter": 1,
+    "chapterNum": 38,
+    "q": "Nguyễn Tất Thành ở nước Mỹ vào thời gian nào?",
+    "a": "1911 – 1912",
+    "b": "1912- 1913",
+    "c": "1912 – 1914",
+    "d": "1913- 1914",
+    "ans": "b"
+  },
+  {
+    "num": 39,
+    "chapter": 1,
+    "chapterNum": 39,
+    "q": "Nguyễn Tất Thành ở nước Anh vào thời gian nào?",
+    "a": "1913- 1914",
+    "b": "1914- 1915",
+    "c": "1913- 1917",
+    "d": "1914 – 1917",
+    "ans": "d"
+  },
+  {
+    "num": 40,
+    "chapter": 1,
+    "chapterNum": 40,
+    "q": "“Luận cương của V.I. Lênin làm cho tôi rất cảm động, phấn khởi, sáng tỏ, tin tưởng biết bao. Tôi vui mừng đến phát khóc lên. Ngồi một minh trong buồng tối mà tôi nói to lên nhhư đang nói trước quần chúng đông đảo: hỡi đồng bào bị đọa đày đau khổ? Đây là cái cần thiết cho chung ta, đây là con đường giải phóng của chúng ta”. Câu nói này của Nguyễn Ái Quốc được trích từ tác phẩm nào?",
+    "a": "Đời hoạt động của Hồ Chủ tịch",
+    "b": "Con đường dẫn tôi đến với chủ nghĩa Mác - Lênin",
+    "c": "Lênin vĩ đại",
+    "d": "Cách mạng Tháng Mười và con đường vĩ đại",
+    "ans": "b"
+  },
+  {
+    "num": 41,
+    "chapter": 1,
+    "chapterNum": 41,
+    "q": "Trong thời gian ở nước ngoài, Nguyễn Tất Thành làm những công việc gì?",
+    "a": "Phụ bếp, cào tuyết",
+    "b": "Thợ ảnh, làm bánh",
+    "c": "Đốt lò, bán báo",
+    "d": "Tất cả các công việc trên",
+    "ans": "d"
+  },
+  {
+    "num": 42,
+    "chapter": 1,
+    "chapterNum": 42,
+    "q": "Hồ Chí Minh viết tác phẩm “Đường Kách Mệnh” vào năm nào?",
+    "a": "Năm 1926",
+    "b": "Năm 1927",
+    "c": "Năm 1928",
+    "d": "Năm 1927",
+    "ans": "b"
+  },
+  {
+    "num": 43,
+    "chapter": 1,
+    "chapterNum": 43,
+    "q": "Tác phẩm “Bản án chế độ thực dân Pháp” của Nguyễn Ái Quốc được xuất bản lần đầu tiên vào năm nào?",
+    "a": "Năm 1923",
+    "b": "Năm 1925",
+    "c": "Năm 1926",
+    "d": "Năm 1924",
+    "ans": "b"
+  },
+  {
+    "num": 44,
+    "chapter": 1,
+    "chapterNum": 44,
+    "q": "Hồ Chí Minh lấy tên Nguyễn Ái Quốc vào thời gian nào?",
+    "a": "Khi Bác lên tàu từ bến Nhà Rồng 1911",
+    "b": "Khi Bác tham gia sáng lâp Đảng Cộng Sản Pháp tại Đại Hội Tua tháng 12/1920.",
+    "c": "Tại Hội Nghị Vécxay (Pháp) ngày 18/6/1919",
+    "d": "Khi Bác sang Liên Xô làm việc ở Ban Phương Đông của Quốc tế Cộng sản tháng 6/1923",
+    "ans": "c"
+  },
+  {
+    "num": 45,
+    "chapter": 1,
+    "chapterNum": 45,
+    "q": "“Đưa hổ cửa trước, rước beo cửa sau” là câu Nguyễn Ái Quốc nói về chủ trương cứu nước của ai?",
+    "a": "Nguyễn Thái học",
+    "b": "Hoàng Hoa Thám",
+    "c": "Phan Chu Trinh",
+    "d": "Phan Bội Châu",
+    "ans": "d"
+  },
+  {
+    "num": 46,
+    "chapter": 1,
+    "chapterNum": 46,
+    "q": "“Ỷ Pháp cầu tiến bộ chẳng khác nào xin giặc rủ lòng thương” là câu Nguyễn Ái Quốc nói về chủ trương cứu nước của ai?",
+    "a": "Nguyễn Thái học",
+    "b": "Hoàng Hoa Thám",
+    "c": "Phan Chu Trinh",
+    "d": "Phan Bội Châu",
+    "ans": "c"
+  },
+  {
+    "num": 47,
+    "chapter": 1,
+    "chapterNum": 47,
+    "q": "Chọn phương án trả lời đúng nhất:",
+    "a": "Tư tưởng Hồ Chí Minh là kết quả của sự vận dụng phát triển sáng tạo chủ nghĩa Mác – Lênin vào điều kiện thực tế nước ta",
+    "b": "Tư tưởng Hồ Chí Minh là kết quả của sự vận dụng và phát triển sáng tạo chủ nghĩa Mác – Lênin vào điều kiện cụ thể của nước ta",
+    "c": "Tư tưởng Hồ Chí Minh là kết quả của sự vận dụng phát triển sáng tạo chủ nghĩa Mác – Lênin vào điều kiện thực tế nước ta",
+    "d": "Tư tưởng Hồ Chí Minh là kết quả của sự sáng tạo chủ nghĩa Mác – Lênin vào điều kiện thực tế của nước ta",
+    "ans": "b"
+  },
+  {
+    "num": 48,
+    "chapter": 1,
+    "chapterNum": 48,
+    "q": "Nguyễn Ái quốc gửi bản “Yêu sách của nhân dân Việt Nam” tới Hội nghị Vécxay vào ngày, tháng, năm nào?",
+    "a": "18/6/1917",
+    "b": "18/6/1918",
+    "c": "18/6/1919",
+    "d": "18/6/1920",
+    "ans": "c"
+  },
+  {
+    "num": 49,
+    "chapter": 1,
+    "chapterNum": 49,
+    "q": "Nguyễn Ái Quốc đọc “Sơ thảo lần thứ nhất về vấn đề dân tộc và thuộc địa của Lênin vào thời gian nào?",
+    "a": "7/1917",
+    "b": "7/1918",
+    "c": "7/1920",
+    "d": "7/1922",
+    "ans": "c"
+  },
+  {
+    "num": 50,
+    "chapter": 1,
+    "chapterNum": 50,
+    "q": "Nguyễn Ái Quốc tán thành Quốc tế III, tham gia thành lập Đảng Cộng sản Pháp khi nào?",
+    "a": "12/1918",
+    "b": "12/1919",
+    "c": "12/1920",
+    "d": "12/1923",
+    "ans": "c"
+  },
+  {
+    "num": 51,
+    "chapter": 1,
+    "chapterNum": 51,
+    "q": "Thay mặt Hội những người Việt Nam yêu nước tại Pháp, Nguyễn Ái Quốc gửi bản “Yêu sách của nhân dân Việt Nam” tới Hội Nghị Vécxay. Bản Yêu sách gồm mấy điểm?",
+    "a": "6 điểm",
+    "b": "8 điểm",
+    "c": "9 điểm",
+    "d": "12 điểm",
+    "ans": "b"
+  },
+  {
+    "num": 52,
+    "chapter": 1,
+    "chapterNum": 52,
+    "q": "Theo Hồ Chí Minh, ưu điểm lớn nhất của Khổng Tử là gì?",
+    "a": "Tinh thần hiếu học",
+    "b": "Sự tu dưỡng đạo đức cá nhân",
+    "c": "Quản lý xã hội bằng đạo đức",
+    "d": "Tinh thần lễ nghĩa",
+    "ans": "b"
+  },
+  {
+    "num": 53,
+    "chapter": 1,
+    "chapterNum": 53,
+    "q": "Một trong những nội dung cơ bản của bản yêu sách gồm 8 điểm mà Nguyễn Ái Quốc gửi đến Hội nghị Vécxay (Pháp) là:",
+    "a": "Đòi quyền tự trị của dân tộc",
+    "b": "Đòi quyền độc lập của dân tộc",
+    "c": "Đòi quyền tự do, dân chủ tối thiểu cho nhân dân",
+    "d": "Đòi quyền giải phóng dân tộc",
+    "ans": "b"
+  },
+  {
+    "num": 54,
+    "chapter": 1,
+    "chapterNum": 54,
+    "q": "Các bài giảng của Nguyễn Ái Quốc tại các lớp huấn luyện cán bộ tuyên truyền của hội Liên hiệp các dân tộc bị áp bóc lột tập hợp lại và xuất bản thành tác phẩm gì?",
+    "a": "Con Rồng tre",
+    "b": "Bản án chế dộ thực dân Pháp",
+    "c": "Lênin và Phương Đông",
+    "d": "Đường cách mệnh",
+    "ans": "d"
+  },
+  {
+    "num": 55,
+    "chapter": 1,
+    "chapterNum": 55,
+    "q": "Hồ Chí Minh đã tiếp thu những yếu tố nào của Phật Giáo?",
+    "a": "Lòng thương người",
+    "b": "Tinh thần cứu khổ, cứu nạn",
+    "c": "Tinh thần từ bi, bác ái",
+    "d": "Cả ba phương án trên",
+    "ans": "d"
+  },
+  {
+    "num": 56,
+    "chapter": 1,
+    "chapterNum": 56,
+    "q": "Theo Hồ Chí Minh, ưu điểm lớn nhất của chủ nghĩa Mác - Lênin là gì?",
+    "a": "Bản chất cách mạng",
+    "b": "Bản chất khoa học",
+    "c": "Phương pháp làm việc biện chứng",
+    "d": "Chủ nghĩa nhân đạo chiến đấu",
+    "ans": "c"
+  },
+  {
+    "num": 57,
+    "chapter": 1,
+    "chapterNum": 57,
+    "q": "Theo Hồ chí Minh, ưu điểm lớn nhất cú tôn giáo Giêsu là gì?",
+    "a": "Đức hy sinh",
+    "b": "Lòng cao thượng",
+    "c": "Lòng từ bi, bác ái",
+    "d": "Lòng nhân ái cao cả",
+    "ans": "d"
+  },
+  {
+    "num": 58,
+    "chapter": 1,
+    "chapterNum": 58,
+    "q": "Theo Hồ Chí Minh, ưu điểm lớn nhất của chủ nghĩa tam dân của Tôn Trung Sơn đối với nước ta là:",
+    "a": "Chống phong kiến",
+    "b": "Đấu tranh vì tự do, dân chủ",
+    "c": "Phù hợp với điều kiện thực tế nước ta",
+    "d": "Đem lại độc lập, tự do",
+    "ans": "c"
+  },
+  {
+    "num": 59,
+    "chapter": 1,
+    "chapterNum": 59,
+    "q": "Tư tưởng Hồ Chí Minh được hình thành từ những tiền đề tư tưởng - lý luận nào?",
+    "a": "Chủ nghĩa Mác – Lênin",
+    "b": "Những giá trị truyền thống tốt đẹp của dân tộc",
+    "c": "Tinh hoa văn hóa nhân loại",
+    "d": "Tất cả phương án trên",
+    "ans": "d"
+  },
+  {
+    "num": 60,
+    "chapter": 1,
+    "chapterNum": 60,
+    "q": "Tư tưởng Hồ Chí Minh được hình thành từ những nguồn gốc nào?",
+    "a": "Những điều kiện lịch sử - xã hội trong nước và thế giới",
+    "b": "Những tiền đề tư tưởng – lý luận",
+    "c": "Những phẩm chất chủ quan Hồ Chí Minh",
+    "d": "Cả A, B, C",
+    "ans": "d"
+  },
+  {
+    "num": 61,
+    "chapter": 1,
+    "chapterNum": 61,
+    "q": "Trong những tiền đề tư tưởng – lý luận, tiền đề nào quyết định bản chất cách mạng và khoa học của tư tưởng Hồ Chí Minh?",
+    "a": "Chủ nghĩa Mác – Lênin",
+    "b": "Tinh hoa văn hóa dân tộc",
+    "c": "Tinh hoa văn hoa nhân loại",
+    "d": "Chủ nghĩa tam dân của Tôn Trung Sơn",
+    "ans": "a"
+  },
+  {
+    "num": 62,
+    "chapter": 1,
+    "chapterNum": 62,
+    "q": "Hồ Chí Minh viết: “Tất cả các dân tộc trên thế giới sinh ra đều bình đẳng, dân tộc nào cũng có quyền sống, quyền sung sướng và quyền tự do”. Câu này được trích trong tác phẩm nào?",
+    "a": "Đường cách mệnh",
+    "b": "Bản án chế độ thực dân Pháp",
+    "c": "Tuyên ngôn đọc lập",
+    "d": "Tuyên ngôn của Đảng Cộng sản",
+    "ans": "c"
+  },
+  {
+    "num": 63,
+    "chapter": 1,
+    "chapterNum": 63,
+    "q": "Nền tảng tư tưởng và kim chỉ nam cho hành động của Đảng và cách mạng Việt Nam là?",
+    "a": "Chủ nghĩa yêu nước",
+    "b": "Chủ nghĩa Mác – Lênin",
+    "c": "Tư tưởng Hồ Chí Minh",
+    "d": "Chủ nghĩa Mác – Lênin, tư tưởng Hồ Chí Minh",
+    "ans": "d"
+  },
+  {
+    "num": 64,
+    "chapter": 1,
+    "chapterNum": 64,
+    "q": "Theo Hồ Chí Minh, ở đời và làm người thì phải làm gì?",
+    "a": "Yêu nước",
+    "b": "Thương dân",
+    "c": "Thương nhân loại bị áp bức",
+    "d": "Cả A, B, C đều đúng",
+    "ans": "d"
+  },
+  {
+    "num": 65,
+    "chapter": 1,
+    "chapterNum": 65,
+    "q": "Hồ Chí Minh tiếp thu tinh hoa văn hóa phương Đông chủ yếu từ:",
+    "a": "Nho giáo và Thiên chúa giáo",
+    "b": "Nho giáo và Phật giáo",
+    "c": "Nho Giáo và Thiên chúa giáo",
+    "d": "Cả a, b, c đều sai",
+    "ans": "b"
+  },
+  {
+    "num": 66,
+    "chapter": 1,
+    "chapterNum": 66,
+    "q": "Chọn cụm từ thích hợp điền vào chỗ trống theo tư tưởng Hồ Chí Minh: “Muốn người ta giúp cho thì trước hết mình phải…”",
+    "a": "Giúp người ta trước",
+    "b": "Tự cố gắng đứng dậy",
+    "c": "Tự giúp lấy mình đã",
+    "d": "Kêu gọi sự giúp đỡ",
+    "ans": "c"
+  },
+  {
+    "num": 67,
+    "chapter": 1,
+    "chapterNum": 67,
+    "q": "Chọn cụm từ đúng điền vào chỗ trống: Tháng 7/1920, Hồ Chí Minh đọc tác phẩm … của Lênin",
+    "a": "“Làm gì”",
+    "b": "Sơ thảo lần thứ nhất Luận cương về các vấn đề dân tộc",
+    "c": "Sơ thảo lần thứ nhất về các vấn đề dân tộc và thuộc địa",
+    "d": "Sơ thảo lần thứ nhất Luận cương về các vấn đề dân tộc và thuộc địa",
+    "ans": "c"
+  },
+  {
+    "num": 68,
+    "chapter": 1,
+    "chapterNum": 68,
+    "q": "Chọn cụm từ đúng điền vào chỗ trống: Trong Cương lĩnh chính trị đầu tiên của Đảng do Nguyễn Ái Quốc soạn thảo đã xác định phương hướng chiến lược là: “làm tư sản dân quyền cách mạng và thổ địa cách mạng để đi tới….",
+    "a": "Chủ nghĩa tư bản",
+    "b": "Chủ nghĩa xã hội",
+    "c": "Xã hội Cộng sản",
+    "d": "Thời kỳ quá độ lên chủ nghĩa xã hội",
+    "ans": "c"
+  },
+  {
+    "num": 69,
+    "chapter": 1,
+    "chapterNum": 69,
+    "q": "Chọn cụm từ đúng điền vào chỗ trống: Theo Hồ Chí Minh, “Muốn cứu nước và … không có con đường nào khác con đường…”",
+    "a": "Giải phóng dân tộc; cách mạng vô sản",
+    "b": "Giải phóng dân tộc; cách mạng tư sản",
+    "c": "Giành độc lập; cách mạng vô sản",
+    "d": "Giành độc lập, tự do; cách mạng văn hóa",
+    "ans": "a"
+  },
+  {
+    "num": 70,
+    "chapter": 1,
+    "chapterNum": 70,
+    "q": "Năm 1941, Nguyễn Ái Quốc viết một tác phẩm có câu mở đầu: “Dân ta phải biết sử ta; Cho tường gốc tích nước nhà Việt Nam”. Đó là tác phẩm… ?",
+    "a": "“Đường cách mệnh”",
+    "b": "“Lịch sử nước ta”",
+    "c": "“Bài ca du kích",
+    "d": "“Di chúc”",
+    "ans": "b"
+  },
+  {
+    "num": 71,
+    "chapter": 1,
+    "chapterNum": 71,
+    "q": "Chọn từ điền vào chỗ trống để hoàn thiện câu: Văn kiện Đại hội XI của Đảng chỉ rõ: Tư tưởng Hồ Chí Minh… cho cuộc đấu tranh của nhân dân ta giành thắng lợi, là …to lớn của Đảng và của dân tộc ta.",
+    "a": "Mở đường; tài sản tinh thần",
+    "b": "Soi đường; tài sản tinh thần",
+    "c": "Chỉ đường; tài sản tinh thần",
+    "d": "Dẫn đường; tài sản tinh thần",
+    "ans": "b"
+  },
+  {
+    "num": 72,
+    "chapter": 2,
+    "chapterNum": 1,
+    "q": "Hồ Chí Minh là người đấu tranh đòi quyền độc lập cho:",
+    "a": "Cả thế giới",
+    "b": "Dân tộc Việt Nam và tất cả các dân tộc bị áp bức trên thế giới",
+    "c": "Dân tộc Việt Nam",
+    "d": "Các dân tộc thuộc địa ở Đông Dương",
+    "ans": "b"
+  },
+  {
+    "num": 73,
+    "chapter": 2,
+    "chapterNum": 2,
+    "q": "Hồ Chí Minh khẳng định chủ nghĩa dân tộc là một động lực lớn ở các nước đang đấu tranh giành độc lập dân tộc. Đó là chủ nghĩa dân tộc:",
+    "a": "Chân chính",
+    "b": "Trong sáng",
+    "c": "Sôvanh nước lớn",
+    "d": "Hẹp hòi",
+    "ans": "a"
+  },
+  {
+    "num": 74,
+    "chapter": 2,
+    "chapterNum": 3,
+    "q": "Hồ Chí Minh chủ yếu bàn đến vấn đề dân tộc:",
+    "a": "Phong kiến",
+    "b": "Độc lập",
+    "c": "Tư sản",
+    "d": "Thuộc địa",
+    "ans": "d"
+  },
+  {
+    "num": 75,
+    "chapter": 2,
+    "chapterNum": 4,
+    "q": "Theo Hồ Chí Minh, cách mạng giải phóng dân tộc muốn thắng lợi phải:",
+    "a": "Có tiềm lực mạnh",
+    "b": "Có tổ chức đoàn thể Lãnh đạo",
+    "c": "Có một cá nhân xuất săc lãnh đạo",
+    "d": "Có Đảng của giai cấp công nhân lãnh đạo",
+    "ans": "d"
+  },
+  {
+    "num": 76,
+    "chapter": 2,
+    "chapterNum": 5,
+    "q": "Muốn phát huy động lực của chủ nghĩa xã hội, theo Hồ Chí Minh cần phải chống?",
+    "a": "Chia rẽ, bè phái, mất đoàn kết, vô kỷ luật",
+    "b": "Chủ nghĩa cá nhân; tham ô, lãng phí, quan liêu; chia rẽ, bè phái, vô kỷ luật",
+    "c": "Tham ô, lãng phí, quan liêu",
+    "d": "Chủ nghĩa cá nhân",
+    "ans": "b"
+  },
+  {
+    "num": 77,
+    "chapter": 2,
+    "chapterNum": 6,
+    "q": "Hồ Chí Minh nói: “Chủ nghĩa xã hội cộng với khoa học sẽ đưa loài người đến ….”. Hãy điền vào chỗ trống để hoàn thiện câu trên.",
+    "a": "Hạnh phúc vô tận",
+    "b": "Tương lai xán lạn",
+    "c": "Tự do",
+    "d": "sự phát triển toàn diện",
+    "ans": "c"
+  },
+  {
+    "num": 78,
+    "chapter": 2,
+    "chapterNum": 7,
+    "q": "Tìm luận điểm không đúng với tư tưởng Hồ Chí Minh:",
+    "a": "Công nghiệp hóa là con đường tất yếu phải đi của chúng ta",
+    "b": "Công ngiệp hóa phải bắt đầu từ xây dựng và phát trển công nghiệp nặng",
+    "c": "Công nghiệp hóa phải trên cơ sở xây dựng, phát triển một nền nông nghiệp toàn diện",
+    "d": "Công nghiệp hóa phải trên cơ sở phát triển công nghiệp nhẹ, tiểu thủ công nghiệp",
+    "ans": "b"
+  },
+  {
+    "num": 79,
+    "chapter": 2,
+    "chapterNum": 8,
+    "q": "Theo Hồ Chí Minh, biện pháp nào quan trọng nhất trong xây dựng chủ nghĩa xã hội?",
+    "a": "Tranh thủ tối đa sự viện trợ, giúp đỡ của quốc tế",
+    "b": "Kết hợp cải tạo xã hội cũ, xây dựng xã hội mới",
+    "c": "Huy động các nguồn lực sẵn có trong dân",
+    "d": "Kết hợp xây dựng và bảo vệ Tổ quốc",
+    "ans": "b"
+  },
+  {
+    "num": 80,
+    "chapter": 2,
+    "chapterNum": 9,
+    "q": "Thành tựu nổi bật nhất của Việt Nam về chính trị trong những năm đổi mới là:",
+    "a": "Chính trị ổn định",
+    "b": "Giữ vững độc lập, tự chủ, kinh tế phát triển",
+    "c": "Phát triển theo định hướng xã hội chủ nghĩa",
+    "d": "Không có xung đột sắc tộc, tôn giáo",
+    "ans": "a"
+  },
+  {
+    "num": 81,
+    "chapter": 2,
+    "chapterNum": 10,
+    "q": "Theo Hồ Chí Minh, để xác định bước đi trong thời kỳ quá độ, chúng ta phải:",
+    "a": "Theo bước đi của các nước xã hội chủ nghĩa",
+    "b": "Căn cứ vào đặc điểm lịch sử cụ thể của nước ta từ đó có bước đi phù hợp",
+    "c": "Căn cứ vào đặc điểm lịch sử cụ thể của nước ta từ đó có bước đi phù hợp, đi bước nào vững bước ấy",
+    "d": "Theo bước đi và cách làm của Liên Xô",
+    "ans": "c"
+  },
+  {
+    "num": 82,
+    "chapter": 2,
+    "chapterNum": 11,
+    "q": "Trong những luận điểm sau đây của Hồ Chí Minh, luận điểm nào thể hiện Tư tưởng dựa vào sức mình là chính?",
+    "a": "Công cuộc giải phóng anh em chỉ có thể thực hiện được bằng sự nỗ lực của bản thân anh em",
+    "b": "Đem sức ta mà tự giải phóng cho ta",
+    "c": "Muốn cứu nước, giải phóng dân tộc, không có con đường nào khác, con đường cách mạng vô sản",
+    "d": "Cả A và B",
+    "ans": "d"
+  },
+  {
+    "num": 83,
+    "chapter": 2,
+    "chapterNum": 12,
+    "q": "Vấn đề dân tộc trong Tư tưởng Hồ Chí Minh trong thời đại cách mạng vô sản là vấn đề…",
+    "a": "Dân tộc nói chung",
+    "b": "Dân tộc học",
+    "c": "Dân tộc thuộc địa",
+    "d": "Cả A, B, C",
+    "ans": "c"
+  },
+  {
+    "num": 84,
+    "chapter": 2,
+    "chapterNum": 13,
+    "q": "Thực chất vấn đề dân tộc thuộc địa trong Tư tưởng Hồ Chí Minh là:",
+    "a": "Đấu tranh giải phóng dân tộc khỏi sự áp bức, thống trị của nước ngoài, giành độc lập dân tộc, thành lập nhà nước dân tộc độc lập, và đưa đất nước phát triển theo xu thế thời đại",
+    "b": "Đòi quyền tự do, dân chủ tối thiểu cho nhân dân",
+    "c": "Bình đẳng dân tộc",
+    "d": "Công bằng",
+    "ans": "a"
+  },
+  {
+    "num": 85,
+    "chapter": 2,
+    "chapterNum": 14,
+    "q": "Chọn phương án đúng nhất: Theo tư tưởng Hồ Chí Minh độc lập tự do là…",
+    "a": "Quyền thiêng liêng của tất cả các dân tộc",
+    "b": "Quyền bất khả xâm phạm của tất cả các dân tộc",
+    "c": "Quyền thiêng liêng và bất khả xâm phạm của tất cả các dân tộc",
+    "d": "Quyền tối thiểu của mọi dân tộc",
+    "ans": "c"
+  },
+  {
+    "num": 86,
+    "chapter": 2,
+    "chapterNum": 15,
+    "q": "Vấn đề dân tộc trong tư tưởng Hồ Chí Minh là sự kết hợp nhuần nhuyễn:",
+    "a": "Dân tộc với giai cấp",
+    "b": "Độc lập dân tộc và chủ nghĩa xã hội",
+    "c": "Chủ nghĩa yêu nước với chủ nghĩa quốc tế",
+    "d": "Cả A, B, C",
+    "ans": "d"
+  },
+  {
+    "num": 87,
+    "chapter": 2,
+    "chapterNum": 16,
+    "q": "Hồ Chí Minh là người đấu tranh đòi quyền độc lập cho:",
+    "a": "Dân tộc Việt Nam",
+    "b": "Các dân tộc thuộc địa phương Đông",
+    "c": "Dân tộc Việt Nam và tất cả các dân tộc bị áp bức trên thế giới",
+    "d": "Dân tộc Đông Dương",
+    "ans": "c"
+  },
+  {
+    "num": 88,
+    "chapter": 2,
+    "chapterNum": 17,
+    "q": "Theo Hồ Chí Minh, cách mạng giải phóng dân tộc phải…",
+    "a": "Đi theo con đường của các bậc tiền bối",
+    "b": "Đi theo con đường cách mạng tư sản",
+    "c": "Đi theo con đường cách mạng vô sản",
+    "d": "Đi theo con đường phong kiến",
+    "ans": "c"
+  },
+  {
+    "num": 89,
+    "chapter": 2,
+    "chapterNum": 18,
+    "q": "Theo Hồ Chí Minh, cách mạng giải phóng dân tộc muốn thắng lợi phải:",
+    "a": "Có tổ chức đoàn thể lãnh đạo",
+    "b": "Có Đảng của giai cấp công nhân lãnh đạo",
+    "c": "Có một cá nhân xuất sắc lãnh đạo",
+    "d": "Có sự giúp đỡ của các nước lớn",
+    "ans": "b"
+  },
+  {
+    "num": 90,
+    "chapter": 2,
+    "chapterNum": 19,
+    "q": "Theo Hồ Chí Minh, cách mạng giải phóng dân tộc là sự nghiệp đoàn kết của…",
+    "a": "Giai cấp công nhân",
+    "b": "Giai cấp công nhân và nông dân",
+    "c": "Các đoàn thể trong nước",
+    "d": "Toàn dân trên cơ sở liên minh công - nông – trí thức",
+    "ans": "d"
+  },
+  {
+    "num": 91,
+    "chapter": 2,
+    "chapterNum": 20,
+    "q": "Theo Hồ Chí Minh, cách mạng giải phóng dân tộc muốn giành được thắng lợi phải...",
+    "a": "Tiến hành chủ động và sáng tạo",
+    "b": "Dựa vào sự thắng lợi của cách mạng ở các nước thuộc địa khác",
+    "c": "Dựa vào sự thắng lợi của cách mạng vô sản ở chính quốc",
+    "d": "Dựa vào các nước đế quốc",
+    "ans": "a"
+  },
+  {
+    "num": 92,
+    "chapter": 2,
+    "chapterNum": 21,
+    "q": "Theo Hồ Chí Minh, cách mạng giải phóng dân tộc muốn giành được thắng lợi phải...",
+    "a": "Thực hiện bằng con đường bạo lực",
+    "b": "Kết hợp lực lượng chính trị của quần chúng với lực lượng vũ trang của nhân dân",
+    "c": "Thực hiện bằng con đường bạo lực, kết hợp lực lượng chính trị của quần chúng với lực lượng vũ trang của nhân dân",
+    "d": "Thông qua thuyết phục, vận động",
+    "ans": "c"
+  },
+  {
+    "num": 93,
+    "chapter": 2,
+    "chapterNum": 22,
+    "q": "Trong Tư tưởng Hồ Chí Minh, nhiệm vụ hàng đầu, trên hết, trước hết của cách mạng Việt Nam là:",
+    "a": "Giải phóng dân tộc",
+    "b": "Giải phóng giai cấp",
+    "c": "Giải phóng con người",
+    "d": "Giải phóng cá nhân",
+    "ans": "a"
+  },
+  {
+    "num": 94,
+    "chapter": 2,
+    "chapterNum": 23,
+    "q": "Thực chất của giải phóng giai cấp theo Tư tưởng Hồ Chí Minh là...",
+    "a": "Xóa hết các giai cấp bóc lột với tính cách là giai cấp thống trị xã hội",
+    "b": "Tiêu diệt giai cấp bóc lột",
+    "c": "Giải phóng con người",
+    "d": "Giải phóng cá nhân",
+    "ans": "a"
+  },
+  {
+    "num": 95,
+    "chapter": 2,
+    "chapterNum": 24,
+    "q": "Trong Tư tưởng Hồ Chí Minh, giải phóng con người trước hết là...",
+    "a": "Giải phóng quần chúng lao động",
+    "b": "Giải phóng giai cấp công nhân",
+    "c": "Giải phóng giai cấp nông dân",
+    "d": "Giải phóng năng lực",
+    "ans": "a"
+  },
+  {
+    "num": 96,
+    "chapter": 2,
+    "chapterNum": 25,
+    "q": "Giải phóng dân tộc theo Tư tưởng Hồ Chí Minh, xét về thực chất là:",
+    "a": "Đánh đổ ách áp bức, thống trị của đế quốc, thực dân giành độc lập dân tộc",
+    "b": "Giành độc lập dân tộc, hình thành nhà nước dân tộc độc lập",
+    "c": "Đánh đổ ách áp bức thống trị của đế quốc, thực dân giành độc lập dân tộc, hình thành nhà nước dân tộc độc lập và tự do lựa chọn con đường phát triển của dân tộc phù hợp với phát triển của xu thế thời đại",
+    "d": "Cả A, B, C",
+    "ans": "c"
+  },
+  {
+    "num": 97,
+    "chapter": 2,
+    "chapterNum": 26,
+    "q": "Chọn phương án đúng nhất: Nội dung cốt lõi của Tư tưởng Hồ Chí Minh là…",
+    "a": "Độc lập dân tộc",
+    "b": "Chủ nghĩa xã hội",
+    "c": "Độc lập dân tộc gắn liền với chủ nghĩa xã hội",
+    "d": "Tự do, bình đẳng",
+    "ans": "c"
+  },
+  {
+    "num": 98,
+    "chapter": 2,
+    "chapterNum": 27,
+    "q": "Mục đích của Tư tưởng Hồ Chí Minh là…",
+    "a": "Giải phóng dân tộc",
+    "b": "Giải phóng giai cấp và giải phóng con người",
+    "c": "Giải phóng tinh thần",
+    "d": "Cả A và B",
+    "ans": "d"
+  },
+  {
+    "num": 99,
+    "chapter": 2,
+    "chapterNum": 28,
+    "q": "Theo Tư tưởng Hồ Chí Minh, chế độ chính trị mà chúng ta xây dựng là chế độ…",
+    "a": "Do giai cấp công nhân làm chủ",
+    "b": "Giai cấp nông dân làm chủ",
+    "c": "Do nhân dân làm chủ",
+    "d": "Do trí thức làm chủ",
+    "ans": "c"
+  },
+  {
+    "num": 100,
+    "chapter": 2,
+    "chapterNum": 29,
+    "q": "Theo Hồ Chí Minh, nền kinh tế mà chúng ta xây dựng phải được tạo lập trên cơ sở:",
+    "a": "Nền công nghiệp cơ khí",
+    "b": "Nền nông nghiệp hiện đại",
+    "c": "Chế độ công hữu về tư liệu sản xuất",
+    "d": "Công – nông nghiệp hợp lý",
+    "ans": "c"
+  },
+  {
+    "num": 101,
+    "chapter": 2,
+    "chapterNum": 30,
+    "q": "Chọn phương án đúng nhất: Theo Hồ Chí Minh trong thời kì quá độ lên CNXH, nền kinh tế phải đảm bảo cho phát triển ưu tiên là…",
+    "a": "Kinh tế hợp tác xã",
+    "b": "Kinh tế tư bản tư nhân",
+    "c": "Kinh tế quốc doanh",
+    "d": "Kinh tế cá thể",
+    "ans": "c"
+  },
+  {
+    "num": 102,
+    "chapter": 2,
+    "chapterNum": 31,
+    "q": "Theo Hồ Chí Minh, muốn xây dựng chủ nghĩa xã hội, trước hết cần có…",
+    "a": "Cơ sở vật chất vững chắc",
+    "b": "Con người năng động sáng tạo",
+    "c": "Con người xã hội chủ nghĩa",
+    "d": "văn hóa xã hội chủ nghĩa",
+    "ans": "c"
+  },
+  {
+    "num": 103,
+    "chapter": 2,
+    "chapterNum": 32,
+    "q": "Theo Hồ Chí Minh, động lực quan trọng và bao trùm nhất để xây dựng đất nước là…",
+    "a": "Vốn",
+    "b": "Tài nguyên thiên nhiên",
+    "c": "Con người",
+    "d": "Công cụ sản xuất",
+    "ans": "c"
+  },
+  {
+    "num": 104,
+    "chapter": 2,
+    "chapterNum": 33,
+    "q": "Theo Hồ Chí Minh, biện pháp quan trọng nhất trong xây dựng chủ nghĩa xã hội là gì?",
+    "a": "Tranh thủ tối đa sự viện trợ, giúp đỡ của quốc tế",
+    "b": "Kết hợp cải tạo xã hội cũ, xây dựng xã hội mới",
+    "c": "Huy động các nguồn lực sẵn có trong dân",
+    "d": "Kết hợp xây dựng và bảo vệ Tổ quốc",
+    "ans": "b"
+  },
+  {
+    "num": 105,
+    "chapter": 2,
+    "chapterNum": 34,
+    "q": "Theo Hồ Chí Minh, để xác định bước đi trong thời kỳ quá độ, chúng ta phải…",
+    "a": "Theo bước đi của các nước xã hội chủ nghĩa",
+    "b": "Căn cứ vào đặc điểm lịch sử cụ thể của nước ta từ đó có bước đi phù hợp",
+    "c": "Căn cứ vào đặc điểm lịch sử cụ thể của nước ta từ đó có bước đi phù hợp, đi bước nào vững bước ấy",
+    "d": "Theo bước đi và cách làm của Liên Xô",
+    "ans": "c"
+  },
+  {
+    "num": 106,
+    "chapter": 2,
+    "chapterNum": 35,
+    "q": "Theo Hồ Chí Minh, để xác định bước đi trong thời kỳ quá độ, chúng ta phải…",
+    "a": "Quán triệt các nguyên lý cơ bản của chủ nghĩa Mác – Lênin về xây dựng chế độ mới, có thể tham khảo, học tập kinh nghiệm của các nước anh em",
+    "b": "Xuất phát từ điều kiện thực tế, đặc điểm dân tộc",
+    "c": "Xuất phát từ nhu cầu và khả năng thực tế của nhân dân",
+    "d": "Cả A, B, C",
+    "ans": "d"
+  },
+  {
+    "num": 107,
+    "chapter": 2,
+    "chapterNum": 36,
+    "q": "Để phát huy sức mạnh của cá nhân người lao động, theo Hồ Chí Minh cần phải:",
+    "a": "Tác động vào nhu cầu và lợi ích của con người",
+    "b": "Tác động vào các động lực chính trị - tinh thần",
+    "c": "Có công cụ sản xuất hiện đại",
+    "d": "Cả A và B",
+    "ans": "d"
+  },
+  {
+    "num": 108,
+    "chapter": 2,
+    "chapterNum": 37,
+    "q": "Muốn phát huy động lực của chủ nghĩa xã hội, theo Hồ Chí Minh cần phải chống…",
+    "a": "Chủ nghĩa cá nhân",
+    "b": "Tham ô lãng phí, quan liêu",
+    "c": "Chia rẽ, bè phái, mất đoàn kết, vô kỷ luật, chủ quan bảo thủ, giáo điều, lười biếng",
+    "d": "Cả A, B, C",
+    "ans": "d"
+  },
+  {
+    "num": 109,
+    "chapter": 2,
+    "chapterNum": 38,
+    "q": "Để đi lên chủ nghĩa xã hội, theo Hồ Chí Minh nước ta phải trải qua…",
+    "a": "Phương thức quá độ trực tiếp (từ CNTB phát triển lên CNXH)",
+    "b": "Phương thức quá độ gián tiếp (từ một nước tiền TBCN đi lên CNXH)",
+    "c": "Quá độ tuần tự TBCN lên XHCN",
+    "d": "Cả A, B, C",
+    "ans": "b"
+  },
+  {
+    "num": 110,
+    "chapter": 2,
+    "chapterNum": 39,
+    "q": "Theo Hồ Chí Minh, chế độ chính trị mà chúng ta xây dựng là chế độ…",
+    "a": "Do nhân dân lao động làm chủ",
+    "b": "Do giai cấp công nhân làm chủ",
+    "c": "Do nhân dân làm chủ",
+    "d": "Do giai cấp nông dân làm chủ",
+    "ans": "a"
+  },
+  {
+    "num": 111,
+    "chapter": 2,
+    "chapterNum": 40,
+    "q": "Theo Hồ Chí Minh, đặc điểm cơ bản nhất của nước ta trong thời kỳ quá độ là…",
+    "a": "Từ một nước nông nghiệp lạc hậu tiến thẳng lên CNXH không phải trải qua giai đoạn phát triển TBCN",
+    "b": "Bị chiến tranh tàn phá nặng nề",
+    "c": "Nền kinh tế kém phát triển",
+    "d": "Nền kinh tế bị phụ thuộc vào CNTB",
+    "ans": "a"
+  },
+  {
+    "num": 112,
+    "chapter": 2,
+    "chapterNum": 41,
+    "q": "Căn cứ vào thực tiễn xây dựng CNXH ở VN, theo Hồ Chí Minh, độ dài của thời kỳ quá độ lên CNXH ở nước ta là…",
+    "a": "15 năm",
+    "b": "20 năm",
+    "c": "50 năm",
+    "d": "Lâu dài",
+    "ans": "d"
+  },
+  {
+    "num": 113,
+    "chapter": 2,
+    "chapterNum": 42,
+    "q": "Theo Hồ Chí Minh, nhân tố chủ quan quyết định hàng đầu để đưa cách mạng Việt Nam đến thắng lợi là:",
+    "a": "Đoàn kết dân tộc",
+    "b": "Đoàn kết giai cấp",
+    "c": "Phải có Đảng cộng sản",
+    "d": "Có đội ngũ trí thức",
+    "ans": "c"
+  },
+  {
+    "num": 114,
+    "chapter": 2,
+    "chapterNum": 43,
+    "q": "Luận điểm “công cuộc giải phóng anh em chỉ có thể thực hiện bằng sự nỗ lực của bản thân anh em” là của ai?",
+    "a": "C. Mác",
+    "b": "Ph. Ăngghen",
+    "c": "V.I Lênin",
+    "d": "Hồ Chí Minh",
+    "ans": "d"
+  },
+  {
+    "num": 115,
+    "chapter": 2,
+    "chapterNum": 44,
+    "q": "Luận điểm “Chủ nghĩa tư bản là một con đĩa có 1 cái vòi bám vào giai cấp vô sản ở chính quốc và 1 cái vòi khác bám vào giai cấp vô sản ở các nước thuộc địa. Nếu muốn giết con vật ấy, người ta phải đồng thời cắt cả 2 vòi” của Hồ Chí Minh được trích từ tác phẩm nào?",
+    "a": "Bản án chế độ thực dân pháp",
+    "b": "Đường cách mệnh",
+    "c": "Báo Người cùng khổ",
+    "d": "Cả A, B, C",
+    "ans": "a"
+  },
+  {
+    "num": 116,
+    "chapter": 2,
+    "chapterNum": 45,
+    "q": "Giải phóng con người theo Tư tưởng Hồ Chí Minh là…",
+    "a": "Giải phóng con người với tư cách từng cá nhân",
+    "b": "Giải phóng con với tư cách là cả loài người",
+    "c": "Giải phóng con người với tư cách từng cá nhân và cả loài người",
+    "d": "Giải phóng giai cấp công nhân",
+    "ans": "c"
+  },
+  {
+    "num": 117,
+    "chapter": 2,
+    "chapterNum": 46,
+    "q": "Chọn phương án đúng nhất: Nội dung cốt lõi của Tư tưởng Hồ Chí Minh là…",
+    "a": "Độc lập dân tộc gắn liền với CNXH",
+    "b": "Giải phóng dân tộc",
+    "c": "Giải phóng giai cấp",
+    "d": "Giải phóng con người",
+    "ans": "a"
+  },
+  {
+    "num": 118,
+    "chapter": 2,
+    "chapterNum": 47,
+    "q": "Theo Hồ Chí Minh trong thời kỳ quá độ còn tồn tại hình thức…",
+    "a": "Sở hữu của nhà nước và sở hữu của hợp tác xã",
+    "b": "Sở hữu của người lao động riêng lẻ",
+    "c": "một ít tư liệu sản xuất thuộc về sở hữu của nhà tư bản",
+    "d": "Cả A, B, C",
+    "ans": "d"
+  },
+  {
+    "num": 119,
+    "chapter": 2,
+    "chapterNum": 48,
+    "q": "Tìm một điểm nhầm lẫn trong đoạn viết dưới đây: Một trong những nguồn gốc của tư tưởng Hồ Chí Minh là tiếp thu văn hóa phương Đông, cụ thể là…",
+    "a": "Những mặt tích cực của Nho giáo",
+    "b": "Tư tưởng vị tha của Phật giáo",
+    "c": "Kế thừa lòng nhân ái, đức hy sinh của Hồi giáo",
+    "d": "Tư tưởng Tam dân của Tôn Trung Sơn",
+    "ans": "c"
+  },
+  {
+    "num": 120,
+    "chapter": 2,
+    "chapterNum": 49,
+    "q": "Chọn cụm từ đúng điền vào chỗ trống trong câu viết sau đây của Hồ Chí Minh: “Toàn quốc đồng bào hãy đứng dậy…. mà tự giải phóng cho ta”.",
+    "a": "dựa vào sự giúp đỡ quốc tế",
+    "b": "đem sức ta",
+    "c": "dựa vào sự đoàn kết toàn dân",
+    "d": "dưới sự lãnh đạo của Đảng",
+    "ans": "b"
+  },
+  {
+    "num": 121,
+    "chapter": 2,
+    "chapterNum": 50,
+    "q": "Chọn cụm từ đúng điền vào chỗ trống trong câu viết sau đây của Hồ Chí Minh: “Toàn thể dân tộc Việt Nam quyết đem…… để giữ vững quyền tự do, độc lập ấy”.",
+    "a": "Lòng dũng cảm và sự hy sinh",
+    "b": "Toàn bộ sức lực",
+    "c": "Tất cả tinh thần và lực lượng",
+    "d": "Tất cả tinh thần và lực lượng, tính mạng và của cải",
+    "ans": "d"
+  },
+  {
+    "num": 122,
+    "chapter": 2,
+    "chapterNum": 51,
+    "q": "Chọn đáp án trả lời đúng nhất: Hồ Chí Minh khẳng định chủ nghĩa dân tộc là một động lực lớn ở các nước đang đấu tranh giành độc lập. Đó là chủ nghĩa dân tộc nào?",
+    "a": "Chủ nghĩa nhân đạo cộng sản",
+    "b": "Chủ nghĩa dân tộc chân chính",
+    "c": "Chủ nghĩa sô vanh, nước lớn",
+    "d": "Chủ nghĩa dân tộc hẹp hòi",
+    "ans": "b"
+  },
+  {
+    "num": 123,
+    "chapter": 2,
+    "chapterNum": 52,
+    "q": "Chọn đáp án trả lời đúng nhất: Cách mạng giải phóng dân tộc trong thời đại mới phải do Đảng Cộng sản lãnh đạo, để…",
+    "a": "Giác ngộ dân chúng",
+    "b": "Tổ chức, tập hợp dân chúng",
+    "c": "Đoàn kết với giai cấp vô sản và các dân tộc bị áp bức trên thế giới",
+    "d": "Cả A, B, C",
+    "ans": "d"
+  },
+  {
+    "num": 124,
+    "chapter": 2,
+    "chapterNum": 53,
+    "q": "Chọn đáp án đúng nhất: Kiên trì con đường Hồ Chí Minh đã lựa chọn nghĩa là:",
+    "a": "Giữ vững nền độc lập dân tộc",
+    "b": "Thực hiện triệt để cuộc cách mạng dân tộc dân chủ nhân dân",
+    "c": "Thực hiện mục tiêu độc lập dân tộc gắn liền với chủ nghĩa xã hội",
+    "d": "Hội nhập với nền kinh tế thế giới",
+    "ans": "c"
+  },
+  {
+    "num": 125,
+    "chapter": 2,
+    "chapterNum": 54,
+    "q": "Chọn đáp án đúng nhất: Những câu sau đây, câu nào là của Hồ Chí Minh?",
+    "a": "Sự tàn bạo của chủ nghĩa tư bản đã chuẩn bị đất rồi, CNXH chỉ còn phải làm cái việc là gieo hạt giống của công cuộc giải phóng nữa thôi",
+    "b": "Xem xét lại chủ nghĩa Mác về cơ sở lịch sử của nó, củng cố nó bằng dân tộc học phương Đông",
+    "c": "Chủ nghĩa dân tộc là động lực lớn của đất nước",
+    "d": "Cả A, B, C",
+    "ans": "d"
+  },
+  {
+    "num": 126,
+    "chapter": 2,
+    "chapterNum": 55,
+    "q": "Chọn đáp án trả lời đúng nhất: “… Chủ trương làm tư sản dân quyền cách mạng và thổ địa cách mạng để đi tới xã hội cộng sản” được trích từ bài viết nào của Hồ Chí Minh?",
+    "a": "Đường cách mệnh",
+    "b": "Chính cương vắn tắt của Đảng",
+    "c": "Sách lược vắn tắt của Đảng",
+    "d": "Chương trình tóm tắt của Đảng",
+    "ans": "b"
+  },
+  {
+    "num": 127,
+    "chapter": 2,
+    "chapterNum": 56,
+    "q": "Chọn đáp án trả lời đúng nhất: Trong lời kêu gọi của Hồ Chí Minh có câu “Toàn quốc đồng bào hãy đứng dậy đem sức ta mà tự giải phóng cho ta” lời kêu gọi đó của Người vào thời gian nào?",
+    "a": "3/1945",
+    "b": "8/1945",
+    "c": "9/1945",
+    "d": "12/1946",
+    "ans": "b"
+  },
+  {
+    "num": 128,
+    "chapter": 2,
+    "chapterNum": 57,
+    "q": "Chọn đáp án đúng nhất: Hội nghị Ban Chấp hành Trung ương Đảng lần thứ 8 được khai mạc ngày 10 – 5 – 1941 do ai làm chủ tọa?",
+    "a": "Nguyễn Ái Quốc",
+    "b": "Trường Chinh",
+    "c": "Hoàng Quốc Việt",
+    "d": "Hoàng Văn Thụ",
+    "ans": "a"
+  },
+  {
+    "num": 129,
+    "chapter": 2,
+    "chapterNum": 58,
+    "q": "Chọn đáp án trả lời đúng nhất cho câu hỏi: Theo quan điểm của Hồ Chí Minh, nền kinh tế XHCN là nền kinh tế như thế nào?",
+    "a": "Có công nghiệp hiện đại",
+    "b": "Có nông nghiệp hiện đại",
+    "c": "Có khoa học, kỹ thuật tiên tiến",
+    "d": "Có công nghiệp, nông nghiệp hiện đại, có khoa học – kỹ thuật tiên tiến",
+    "ans": "d"
+  },
+  {
+    "num": 130,
+    "chapter": 2,
+    "chapterNum": 59,
+    "q": "Chọn đáp án đúng nhất: Những trở lực kìm hãm sự phát triển của CNXH là…",
+    "a": "Chủ nghĩa cá nhân",
+    "b": "Bệnh tham ô, lãng phí, quan liêu",
+    "c": "Sự chia rẽ, bè phái, mất đoàn kết",
+    "d": "Cả A, B, C",
+    "ans": "d"
+  },
+  {
+    "num": 131,
+    "chapter": 2,
+    "chapterNum": 60,
+    "q": "Chọn đáp án trả lời đúng cho câu hỏi: Theo Hồ Chí Minh, chủ nghĩa cộng sản thích ứng ở đâu dễ hơn?",
+    "a": "Ở các nước châu Âu",
+    "b": "Ở các nước châu Á, phương Đông",
+    "c": "Ở các nước tư bản phát triển nhất",
+    "d": "Ở châu Phi",
+    "ans": "b"
+  },
+  {
+    "num": 132,
+    "chapter": 2,
+    "chapterNum": 61,
+    "q": "Chọn đáp án trả lời đúng cho câu hỏi: Theo Hồ Chí Minh, tại sao cần thực hiện chế độ làm khoán dưới chủ nghĩa xã hội?",
+    "a": "Khuyến khích được lợi ích của người lao động",
+    "b": "Có lợi tập thể.",
+    "c": "Có lợi cho Nhà nước",
+    "d": "Cả A, B, C",
+    "ans": "d"
+  },
+  {
+    "num": 133,
+    "chapter": 2,
+    "chapterNum": 62,
+    "q": "Chọn đáp án đúng nhất: Theo Hồ Chí Minh, mục tiêu cao nhất của CNXH là…",
+    "a": "Khoa học – kỹ thuật tiên tiến",
+    "b": "Kinh tế phát triển",
+    "c": "Nâng cao đời sống nhân dân",
+    "d": "Xã hội bình đẳng",
+    "ans": "c"
+  },
+  {
+    "num": 134,
+    "chapter": 2,
+    "chapterNum": 63,
+    "q": "Luận điểm: “Cách mệnh trước hết phải có cái gì? Trước hết phải có đảng cách mệnh, để trong thì vận động và tổ chức dân chúng, ngoài thì liên lạc với dân tộc bị áp bức và vô sản giai cấp mọi nơi. Đảng có vững cách mệnh mới thành công, cũng như người cầm lái có vững thuyền mới chạy” được trích từ tác phẩm nào của Hồ Chí Minh?",
+    "a": "Bản án chế độ thực dân Pháp",
+    "b": "Đường Cách mệnh",
+    "c": "Chánh cương vắn tắt của Đảng",
+    "d": "Thường thức chính trị",
+    "ans": "b"
+  },
+  {
+    "num": 135,
+    "chapter": 2,
+    "chapterNum": 64,
+    "q": "Trong những câu nói dưới đây, câu nào của Hồ Chí Minh khác mà Người đã sử dụng lại?",
+    "a": "“Lúc bấy giờ tôi ủng hộ cách mạng Tháng Mười chỉ theo cảm tính tự nhiên”",
+    "b": "“Tôi tham gia Đảng xã hội Pháp chẳng qua là vì các “ông, bà” ấy đã tỏ đồng tình với tôi, với cuộc đấu tranh của các dân tộc bị áp bức”",
+    "c": "“Còn Đảng là gì, công đoàn là gì, CNXH và chủ nghĩa cộng sản là gì, thì tôi chưa hiểu”",
+    "d": "“Dân tộc độc lập, dân quyền tự do, dân sinh hạnh phúc”",
+    "ans": "d"
+  },
+  {
+    "num": 136,
+    "chapter": 2,
+    "chapterNum": 65,
+    "q": "“Tất cả các dân tộc trên thế giới đều sinh ra bình đẳng , dân tộc nào cũng có quyền sống, quyền sung sướng và quyền tự do”. Câu nói được trích từ tác phẩm nào của Hồ Chí Minh?",
+    "a": "Bản án chế độ thực dân Pháp",
+    "b": "Chính cương sách lược vắn tắt",
+    "c": "Tuyên ngôn độc lập",
+    "d": "Đường cách mệnh",
+    "ans": "c"
+  },
+  {
+    "num": 137,
+    "chapter": 2,
+    "chapterNum": 66,
+    "q": "Theo Nguyễn Ái Quốc, cách mạng giải phóng dân tộc trong thời đại mới muốn giành được thắng lợi phải đi theo…",
+    "a": "Con đường cứu nước mà những bậc tiền bối đã đi",
+    "b": "Con đường giành độc lập của người Mỹ",
+    "c": "Con đường giành độc lập của nhân dân Ấn Độ",
+    "d": "Con đường cách mạng vô sản",
+    "ans": "d"
+  },
+  {
+    "num": 138,
+    "chapter": 2,
+    "chapterNum": 67,
+    "q": "Cách mạng giải phóng dân tộc trong thời đại mới muốn giành được thắng lợi phải do…",
+    "a": "Giai cấp tư sản lãnh đạo",
+    "b": "Một cá nhân xuất chúng lãnh đạo",
+    "c": "Tầng lớp trí thức lãnh đạo",
+    "d": "Đảng Cộng sản lãnh đạo",
+    "ans": "d"
+  },
+  {
+    "num": 139,
+    "chapter": 2,
+    "chapterNum": 68,
+    "q": "Đường lối kháng chiến chống thực dân Pháp xâm lược mà chủ tịch Hồ Chí Minh và Đảng ta đã vạch ra là gì?",
+    "a": "Vừa kháng chiến, vừa kiến quốc",
+    "b": "Kháng chiến toàn dân, toàn diện",
+    "c": "Kháng chiến trường kỳ và tự lực cánh sinh",
+    "d": "Cả A, B, C",
+    "ans": "d"
+  },
+  {
+    "num": 140,
+    "chapter": 2,
+    "chapterNum": 69,
+    "q": "Thực chất của vấn đề dân tộc thuộc địa trong tư tưởng Hồ Chí Minh là gì?",
+    "a": "Đòi quyền bình đẳng giữa các dân tộc",
+    "b": "Đòi quyền tự do dân chủ cho nhân dân",
+    "c": "Đòi quyền tự trị dân tộc dưới sự bảo hộ của ngoại bang",
+    "d": "Đấu tranh giải phóng dân tộc, thành lập nhà nước dân tộc độc lập, trong đó nhân dân là chủ thể tối cao của quyền lực nhà nước",
+    "ans": "d"
+  },
+  {
+    "num": 141,
+    "chapter": 2,
+    "chapterNum": 70,
+    "q": "Cách mạng giải phóng dân tộc là sự nghiệp đoàn kết của….",
+    "a": "Giai cấp công nhân với tầng lớp giai cấp nông dân",
+    "b": "Giai cấp công nhân với tầng lớp trí thức",
+    "c": "Toàn dân trên cơ sở lien minh của giai cấp công nhân với giai cấp nông dân và trí thức",
+    "d": "Giai cấp công nhân với tư sản",
+    "ans": "c"
+  },
+  {
+    "num": 142,
+    "chapter": 2,
+    "chapterNum": 71,
+    "q": "Cách mạng giải phóng dân tộc muốn giành được thắng lợi, cần phải…",
+    "a": "Được tiến hành 1 cách chủ động và sáng tạo",
+    "b": "Dựa vào các nước có nền kinh tế phát triển cao",
+    "c": "Dựa vào thắng lợi của cách mạng ở “chính quốc”",
+    "d": "Dựa vào thắng lợi của cách mạng ở các nước thuộc địa khác",
+    "ans": "a"
+  },
+  {
+    "num": 143,
+    "chapter": 2,
+    "chapterNum": 72,
+    "q": "Theo tư tưởng Hồ Chí Minh, lực lượng giải phóng dân tộc, giải phóng giai cấp, giải phóng con người là:",
+    "a": "Đảng Cộng sản",
+    "b": "Các lực lượng cách mạng thế giới",
+    "c": "Khối đại đoàn kết dân tộc mà nòng cốt là liên minh công, nông, trí thức",
+    "d": "Tất cả các lực lượng trên",
+    "ans": "d"
+  },
+  {
+    "num": 144,
+    "chapter": 2,
+    "chapterNum": 73,
+    "q": "Theo Hồ Chí Minh, ai là người đầu tiên đã đặt cơ sở cho một thời đại mới, thật sự cách mạng trong các nước thuộc địa…",
+    "a": "C. Mác",
+    "b": "V.I. Lênin",
+    "c": "Stalin",
+    "d": "Mao Trạch Đông",
+    "ans": "b"
+  },
+  {
+    "num": 145,
+    "chapter": 2,
+    "chapterNum": 74,
+    "q": "“Chủ trương làm tư sản dân quyền cách mạng và thổ địa cách mạng để đi tới một xã hội cộng sản” trích từ văn kiện nào?",
+    "a": "Đường Cách mệnh",
+    "b": "Chánh cương, sách lược vắn tắt",
+    "c": "Chương trình tóm tắt của Đảng",
+    "d": "Chương trình của mặt trận Việt minh",
+    "ans": "b"
+  },
+  {
+    "num": 146,
+    "chapter": 2,
+    "chapterNum": 75,
+    "q": "“Trong lúc này, quyền lợi của dân tộc là cao hơn hết thẩy”. Kết luận trên là nội dung của hội nghị nào của ban chấp hành TW Đảng Cộng sản Đông Dương do Nguyễn Ái Quốc chủ trì?",
+    "a": "Hội nghị TW 6 (11/1939)",
+    "b": "Hội nghị TW 7 (11/1940)",
+    "c": "Hội nghị TW 8 (11/1941)",
+    "d": "Hội nghị toàn quốc của Đảng (8/1945)",
+    "ans": "c"
+  },
+  {
+    "num": 147,
+    "chapter": 2,
+    "chapterNum": 76,
+    "q": "Chọn phương án trả lời đúng với tư tưởng Hồ Chí Minh…",
+    "a": "Cách mạng giải phóng dân tộc giành thắng lợi đồng thời với cách mạng vô sản ở chính quốc",
+    "b": "Cách mạng giải phóng dân tộc giành thắng lợi sau cách mạng vô sản ở chính quốc",
+    "c": "Cách mạng giải phóng dân tộc có khả năng giành thắng lợi trước cách mạng vô sản ở chính quốc",
+    "d": "Thắng lợi của cách mạng giải phóng dân tộc phụ thuộc vào thắng lợi của cách mạng vô sản ở chính quốc",
+    "ans": "c"
+  },
+  {
+    "num": 148,
+    "chapter": 2,
+    "chapterNum": 77,
+    "q": "Xác định đúng quan điểm của Hồ Chí Minh…",
+    "a": "Giải phóng giai cấp là tiền đề để giải phóng dân tộc",
+    "b": "Giải phóng con người là tiền đề để giải phóng dân tộc",
+    "c": "Giải phóng dân tộc là tiền đề để giải phóng giai cấp",
+    "d": "Giải phóng xã hội là tiền đề giải phóng giai cấp",
+    "ans": "c"
+  },
+  {
+    "num": 149,
+    "chapter": 2,
+    "chapterNum": 78,
+    "q": "Theo Hồ Chí Minh, mâu thuẫn chủ yếu trong xã hội thuộc địa phương Đông là gì?",
+    "a": "Mâu thuẫn giữa giai cấp công nhân với giai cấp tư sản dân tộc",
+    "b": "Mâu thuẫn giữa giai cấp nông nhân với địa chủ phong kiến",
+    "c": "Mâu thuẫn giữa giai cấp công nhân, nông dân, trí thức với địa chủ phong kiến",
+    "d": "Mâu thuẫn giữa dân tộc bị áp bức với chủ nghĩa thực dân",
+    "ans": "d"
+  },
+  {
+    "num": 150,
+    "chapter": 2,
+    "chapterNum": 79,
+    "q": "Hãy chỉ ra một luận điểm SAI so với quan điểm của Hồ Chí Minh trong các câu sau “Hồ Chí Minh cho rằng để được giải phóng, mỗi dân tộc, mỗi giai cấp, mỗi con người phải đánh thắng các loại kẻ thù” sau đây…",
+    "a": "Thực dân, đế quốc và bọn tay sai của chúng",
+    "b": "Nghèo nàn, lạc hậu tức là giặc đói và giặc dốt",
+    "c": "Tất cả địa chủ, tư sản",
+    "d": "Chủ nghĩa cá nhân",
+    "ans": "c"
+  },
+  {
+    "num": 151,
+    "chapter": 2,
+    "chapterNum": 80,
+    "q": "Dưới đây là tóm tắt một số luận điểm của Hồ Chí Minh về mối quan hệ dân tộc và giai cấp. Luận điểm nào chứng tỏ từ rất sớm, Hồ Chí Minh đã có quan điểm hội nhập kinh tế quốc tế?",
+    "a": "Chủ nghĩa dân tộc là một động lực lớn của đất nước",
+    "b": "Chúng tôi không chủ trương giai cấp đấu tranh vì một lẽ tầng lớp tư sản Việt Nam đã bị kinh tế thực dân đè nén không cất đầu lên được",
+    "c": "Trái lại chúng tôi chủ trương làm cho tư bản Việt Nam phát triển mà chỉ có thống nhất và độc lập thì tư bản Việt Nam mới có thể phát triển",
+    "d": "Đồng thời chúng tôi rất hoan nghênh tư bản Pháp và tư bản các nước khác thật thà cộng tác với chúng tôi. Một là để xây dựng lại Việt Nam sau lúc chiến tranh tàn phá, hai là để điều hoà kinh tế thế giới và giữ gìn hoà bình",
+    "ans": "d"
+  },
+  {
+    "num": 152,
+    "chapter": 2,
+    "chapterNum": 81,
+    "q": "Tìm câu có nội dung ghi sai tư tưởng Hồ Chí Minh trong những câu sau…",
+    "a": "Vô sản tất cả các nước, đoàn kết lại",
+    "b": "Vô sản tất cả các nước và các dân tộc bị áp bức, đoàn kết lại",
+    "c": "Sự phát triển tự do của mỗi người là điều kiện cho sự phát triển tự do của tất cả mọi người",
+    "d": "Đối với phương Đông, trong đó có Việt Nam, giải phóng giai cấp là nhiệm vụ trên hết, trước hết",
+    "ans": "d"
+  },
+  {
+    "num": 153,
+    "chapter": 2,
+    "chapterNum": 82,
+    "q": "Trong các luận điểm dưới đây, luận điểm nào của Hồ Chí Minh?",
+    "a": "Hãy xoá bỏ tình trạng người bóc lột người thì tình trạng dân tộc này bóc lột dân tộc khác sẽ bị xoá bỏ",
+    "b": "Khi mà sự đối kháng giữa các giai cấp trong nội bộ dân tộc không còn nữa thì sự thù địch giữa các dân tộc cũng đồng thời mất theo",
+    "c": "Giải phóng giai cấp là nhiệm vụ trung tâm, là điều kiện để giải phóng dân tộc",
+    "d": "Cần xem xét lại chủ nghĩa Mác về cơ sở lịch sử của nó, củng cố nó bằng dân tộc học phương Đông",
+    "ans": "d"
+  },
+  {
+    "num": 154,
+    "chapter": 2,
+    "chapterNum": 83,
+    "q": "Theo Hồ Chí Minh, đâu là mâu thuẫn chủ yếu nhất trong thời kì quá độ ở nước ta?",
+    "a": "Mâu thuẫn giai cấp xã hội",
+    "b": "Mâu thuẫn giữa cách mạng và phản cách mạng",
+    "c": "Mâu thuẫn giữa yêu cầu phát triển cao đất nước với thực trạng nghèo nàn, lạc hậu",
+    "d": "Cả A, B, C",
+    "ans": "c"
+  },
+  {
+    "num": 155,
+    "chapter": 2,
+    "chapterNum": 84,
+    "q": "Theo Hồ Chí Minh, nguyên tắc phân phối chủ yếu trong chủ nghĩa xã hội là gì?",
+    "a": "Làm theo năng lực, hưởng theo nhu cầu",
+    "b": "Làm theo năng lực, hưởng theo lao động",
+    "c": "Phân phối bình quân",
+    "d": "Phân phối theo vốn và tài sản đóng góp",
+    "ans": "b"
+  },
+  {
+    "num": 156,
+    "chapter": 2,
+    "chapterNum": 85,
+    "q": "Chọn phương án đúng nhất: “Chủ nghĩa xã hội là lấy nhà máy, xe lửa, ngân hàng… làm của chung. Ai làm nhiều thì ăn nhiều, ai làm ít thì ăn ít, ai không làm thì không ăn, tất nhiên là trừ những người già cả, đau yếu và trẻ con”. Định nghĩa này nhấn mạnh lĩnh vực nào?",
+    "a": "Chính trị",
+    "b": "Xã hội",
+    "c": "Kinh tế",
+    "d": "Văn hoá",
+    "ans": "c"
+  },
+  {
+    "num": 157,
+    "chapter": 2,
+    "chapterNum": 86,
+    "q": "Quan niệm khái quát của chủ tịch Hồ Chí Minh về CNXH là gì?",
+    "a": "Là chế độ chính trị do nhân dân làm chủ",
+    "b": "Là chế độ xã hội có nền kinh tế phát triển gắn với sự phát triển của khoa học, kĩ thuật",
+    "c": "Là chế độ không còn áp bức bóc lột, văn hoá, đạo đức phát triển cao",
+    "d": "Cả A, B, C",
+    "ans": "d"
+  },
+  {
+    "num": 158,
+    "chapter": 2,
+    "chapterNum": 87,
+    "q": "Trong cải tạo xã hội chủ nghĩa, Hồ Chí Minh chủ trương đối xử với giai cấp tư sản dân tộc như thế nào?",
+    "a": "Xử bắn, xử tù họ",
+    "b": "Cải tạo họ thành người lao động mới",
+    "c": "Tịch thu tài sản của họ",
+    "d": "Coi họ là đối tượng nguy hiểm",
+    "ans": "b"
+  },
+  {
+    "num": 159,
+    "chapter": 2,
+    "chapterNum": 88,
+    "q": "Phát hiện một luận điểm bị viết thiếu nội dung quan trọng trong những câu tóm tắt quan niệm của Hồ Chí Minh về độc lập dân tộc gắn với chủ nghĩa xã hội…",
+    "a": "Muốn cứu nước và giải phóng dân tộc không có con đường nào khác con đường nào khác con đường tư sản dân quyền cách mạng và thổ địa cách mạng",
+    "b": "Nếu nước độc lập mà người dân không hưởng hạnh phúc tự do, thì độc lập chẳng có ý nghĩa gì",
+    "c": "Thắng đế quốc phong kiến là tương đối dễ, thắng bần cùng lạc hậu khó khăn hơn",
+    "d": "Đánh đổ giai cấp địch đã khó, đấu tranh xây dựng chủ nghĩa xã hội còn gian khổ, khó khăn hơn nhiều",
+    "ans": "a"
+  },
+  {
+    "num": 160,
+    "chapter": 2,
+    "chapterNum": 89,
+    "q": "Theo Bác, lực lượng của cách mạng giải phóng dân tộc bao gồm cộng đồng nào?",
+    "a": "Toàn dân tộc",
+    "b": "Liên minh công – nông",
+    "c": "Giai cấp vô sản toàn thế giới",
+    "d": "Cả A, B, C",
+    "ans": "a"
+  },
+  {
+    "num": 161,
+    "chapter": 2,
+    "chapterNum": 90,
+    "q": "Vì sao Hồ Chí Minh xác định phương pháp bạo lực cách mạng trong cách mạng giải phóng dân tộc?",
+    "a": "Đánh giá đúng bản chất cực kỳ phản động của đế quốc, tay sai",
+    "b": "Cách mạng là sự nghiệp của quần chúng lao động",
+    "c": "Muốn đè bẹp ý chí xâm lược của thực dân",
+    "d": "Muốn nhanh chóng giành thắng lợi trong cách mạng",
+    "ans": "a"
+  },
+  {
+    "num": 162,
+    "chapter": 2,
+    "chapterNum": 91,
+    "q": "Chọn phương án đúng nhất: Hình thức của bạo lực cách mạng bao gồm…",
+    "a": "Đấu tranh kinh tế và đấu tranh chính trị",
+    "b": "Đấu tranh chính trị và đấu tranh tư tưởng",
+    "c": "Đấu tranh quân sự và đấu tranh vũ trang",
+    "d": "Đấu tranh chính trị và đấu tranh vũ trang",
+    "ans": "d"
+  },
+  {
+    "num": 163,
+    "chapter": 2,
+    "chapterNum": 92,
+    "q": "Hồ Chí Minh luôn tìm mọi cách để ngăn chặn xung đột vũ trang, tận dụng mọi khả năng giải quyết xung đột bằng biện pháp hòa bình, việc tiến hành chiến tranh là giải pháp bắt buộc cuối cùng. Đây là tư tưởng…",
+    "a": "Tư tưởng bạo lực cách mạng gắn với tư tưởng nhân ái",
+    "b": "Tư tưởng bạo lực cách mạng gắn bó hữu cơ với tư tưởng nhân đạo và hòa bình",
+    "c": "Tư tưởng bạo lực cách mạng gắn bó hữu cơ với tư tưởng trọng nhân nghĩa",
+    "d": "Tư tưởng bạo lực cách mạng với tư tưởng yêu nước thương dân",
+    "ans": "b"
+  },
+  {
+    "num": 164,
+    "chapter": 2,
+    "chapterNum": 93,
+    "q": "Loại hình quá độ lên chủ nghĩa xã hội của Việt Nam theo tư tưởng Hồ Chí Minh là…",
+    "a": "Quá độ trực tiếp",
+    "b": "Quá độ gián tiếp",
+    "c": "Bỏ qua một chế độ xã hội",
+    "d": "Quá độ nhảy vọt",
+    "ans": "b"
+  },
+  {
+    "num": 165,
+    "chapter": 2,
+    "chapterNum": 94,
+    "q": "Quá độ gián tiếp theo tư tưởng Hồ Chí Minh là…",
+    "a": "Phải qua chế độ tư bản chủ nghĩa rồi mới tiến lên chủ nghĩa xã hội",
+    "b": "Không qua chế độ tư bản chủ nghĩa",
+    "c": "Từ một nước thuộc địa nửa phong kiến, nông nghiệp lạc hậu sau khi giành độc lập dân tộc đi lên chủ nghĩa xã hội",
+    "d": "Từ một nước thuộc địa nửa phong kiến, bỏ qua chế độ tư bản chủ nghĩa tiến lên chủ nghĩa xã hội",
+    "ans": "c"
+  },
+  {
+    "num": 166,
+    "chapter": 2,
+    "chapterNum": 95,
+    "q": "Theo Hồ Chí Minh, do những đặc điểm và tính chất qui định, quá độ lên chủ nghĩa xã hội ở Việt Nam là một quá trình…",
+    "a": "Gay go, phức tạp, lâu dài, khó khăn",
+    "b": "Phức tạp, lâu dài",
+    "c": "Dần dần, phức tạp, lâu dài",
+    "d": "Dần dần, khó khăn, phức tạp, lâu dài",
+    "ans": "d"
+  },
+  {
+    "num": 167,
+    "chapter": 2,
+    "chapterNum": 96,
+    "q": "Hồ Chí Minh đã tiếp cận CNXH từ những phương diện nào?",
+    "a": "Khát vọng giải phóng dân tộc, đạo đức, truyền thống văn hóa Việt Nam",
+    "b": "Lập trường yêu nước, đạo đức, văn hóa thế giới",
+    "c": "Tinh thần yêu nước, đạo đức, tinh hoa văn hóa nhân loại",
+    "d": "Chủ nghĩa yêu nước, đạo đức, văn hóa phương Đông",
+    "ans": "a"
+  },
+  {
+    "num": 168,
+    "chapter": 2,
+    "chapterNum": 97,
+    "q": "Hồ Chí Minh tâm đắc nhất ở Lênin điều gì?",
+    "a": "Lênin đã giải phóng cho dân tộc mình",
+    "b": "Lênin là người thầy của cách mạng vô sản thế giới",
+    "c": "Lênin sáng lập quốc tế cộng sản",
+    "d": "Lênin đã tiếp thu chủ nghĩa Mác",
+    "ans": "a"
+  },
+  {
+    "num": 169,
+    "chapter": 2,
+    "chapterNum": 98,
+    "q": "Trong chế độ xã hội chủ nghĩa, theo Hồ Chí Minh: “Chủ nghĩa xã hội là lấy nhà máy, xe lửa, ngân hàng làm…",
+    "a": "Của riêng",
+    "b": "Sở hữu chung",
+    "c": "Của chung",
+    "d": "Tư hữu",
+    "ans": "c"
+  },
+  {
+    "num": 170,
+    "chapter": 2,
+    "chapterNum": 99,
+    "q": "Theo Hồ Chí Minh, đấu tranh chống chủ nghĩa cá nhân là:",
+    "a": "Chỉ bảo vệ lợi ích của tập thể",
+    "b": "Loại bỏ lợi ích cá nhân",
+    "c": "Bảo vệ lợi ích cá nhân",
+    "d": "Không dày xéo lên lợi ích cá nhân",
+    "ans": "d"
+  },
+  {
+    "num": 171,
+    "chapter": 2,
+    "chapterNum": 100,
+    "q": "Theo Hồ Chí Minh, chế độ chính trị mà chúng ta xây dựng là chế độ…",
+    "a": "Do nhân dân lao động làm chủ",
+    "b": "Do giai cấp công nhân làm chủ",
+    "c": "Do nhân dân làm chủ",
+    "d": "Do giai cấp nông dân làm chủ",
+    "ans": "a"
+  },
+  {
+    "num": 172,
+    "chapter": 2,
+    "chapterNum": 101,
+    "q": "Theo Hồ Chí Minh, nền kinh tế mà chúng ta xây dựng phải được tạo lập trên cơ sở:",
+    "a": "Nền nông nghiệp hiện đại",
+    "b": "Nền công nghiệp hiện đại",
+    "c": "Nền khoa học kỹ thuật phát triển",
+    "d": "Chế độ công hữu về tư liệu sản xuất",
+    "ans": "d"
+  },
+  {
+    "num": 173,
+    "chapter": 2,
+    "chapterNum": 102,
+    "q": "Điều mong muốn cuối cùng của Hồ Chí Minh là gì?",
+    "a": "Xây dựng một nước Việt Nam phồn vinh và cường thịnh",
+    "b": "Xây dựng một nước Việt Nam hòa bình, thống nhất, độc lập, dân chủ, giàu mạnh",
+    "c": "Xây dựng một nước Việt Nam dân chủ, giàu mạnh, văn minh",
+    "d": "Làm cho mọi người hạnh phúc",
+    "ans": "b"
+  },
+  {
+    "num": 174,
+    "chapter": 2,
+    "chapterNum": 103,
+    "q": "Trong tư tưởng Hồ Chí Minh về giải phóng dân tộc, giải phóng giai cấp, giải phóng con người. Hồ Chí Minh đặt lên hàng đầu nhiệm vụ gì?",
+    "a": "Giải phóng dân tộc",
+    "b": "Giải phóng con người",
+    "c": "Giải phóng giai cấp",
+    "d": "Giải phóng cá nhân",
+    "ans": "a"
+  },
+  {
+    "num": 175,
+    "chapter": 2,
+    "chapterNum": 104,
+    "q": "Chọn cụm từ đúng điền vào chỗ trống: Theo Hồ Chí Minh, “Muốn cứu nước và … không có con đường nào khác con đường…”",
+    "a": "Giải phóng dân tộc; cách mạng vô sản",
+    "b": "Giải phóng dân tộc; cách mạng tư sản",
+    "c": "Giành độc lập; cách mạng vô sản",
+    "d": "Giành độc lập, tự do; cách mạng khoa học",
+    "ans": "a"
+  },
+  {
+    "num": 176,
+    "chapter": 2,
+    "chapterNum": 105,
+    "q": "Năm 1941, Nguyễn Ái Quốc viết một tác phẩm có câu mở đầu: “Dân ta phải biết sử ta; Cho tường gốc tích nước nhà Việt Nam”. Đó là tác phẩm… ?",
+    "a": "“Đường cách mệnh”",
+    "b": "“Lịch sử nước ta”",
+    "c": "“Bài ca du kích",
+    "d": "“Di chúc”",
+    "ans": "b"
+  },
+  {
+    "num": 177,
+    "chapter": 2,
+    "chapterNum": 106,
+    "q": "Chủ tịch Hồ chí Minh xác định, cách mạng Việt nam phải trải qua những thời kỳ nào?",
+    "a": "Cách mạng tư sản và cách mạng vô sản",
+    "b": "Cách mạng giải phóng dân tộc và cách mạng xã hội chủ nghĩa",
+    "c": "Cách mạng ruộng đất và cách mạng tư sản",
+    "d": "Cách mạng phong kiến và cách mạng vô sản",
+    "ans": "b"
+  },
+  {
+    "num": 178,
+    "chapter": 2,
+    "chapterNum": 107,
+    "q": "Hồ Chí Minh đã dùng hình tượng nào dưới đây để mô tả mối quan hệ giữa cách mạng giải phóng các dân tộc ở các nước thuộc địa và cách mạng vô sản ở chính quốc?",
+    "a": "Con bạch tuộc",
+    "b": "Hai cánh của con chim",
+    "c": "Hai con chim đại bàng",
+    "d": "Con đỉa hai vòi",
+    "ans": "b"
+  },
+  {
+    "num": 179,
+    "chapter": 2,
+    "chapterNum": 108,
+    "q": "Hồ Chí Minh dùng hình tượng gì để chỉ chủ nghĩa tư bản?",
+    "a": "Con bạch tuộc",
+    "b": "Hai cánh của con chim",
+    "c": "Hai con chim đại bàng",
+    "d": "Con đỉa hai vòi",
+    "ans": "d"
+  },
+  {
+    "num": 180,
+    "chapter": 2,
+    "chapterNum": 109,
+    "q": "Theo Hồ Chí Minh, vấn đề dân tộc và vấn đề giai cấp có mối quan hệ với nhau như thế nào?",
+    "a": "Giải phóng dân tộc và giải phóng giai cấp cần được tiến hành song song với nhau",
+    "b": "Giải phóng dân tộc không liên quan tới giải phóng giai cấp",
+    "c": "Giải phóng dân tộc là tiền đề để giải phóng giai cấp",
+    "d": "Giải phóng giai cấp là tiền đề để giải phóng dân tộc",
+    "ans": "c"
+  },
+  {
+    "num": 181,
+    "chapter": 2,
+    "chapterNum": 110,
+    "q": "Thực chất của vấn đề dân tộc thuộc địa trong tư tưởng Hồ Chí Minh là…",
+    "a": "Đòi quyền bình đẳng giữa các dân tộc",
+    "b": "Đòi quyền tự do dân chủ cho nhân dân",
+    "c": "Đòi quyền tự trị dân tộc dưới sự bảo hộ của ngoại bang",
+    "d": "Đấu tranh giải phóng dân tộc, thành lập nhà nước dân tộc đọc lập, trong đó nhân dân là chủ thể tối cao của quyền lực nhà nước",
+    "ans": "d"
+  },
+  {
+    "num": 182,
+    "chapter": 2,
+    "chapterNum": 111,
+    "q": "Theo tư tưởng Hồ Chí Minh, các loại kẻ thù cần phải đánh đổ trong quá trình giải phóng dân tộc, giải phóng giai cấp, giải phóng con người là:",
+    "a": "Nghèo nàn, dốt nát, lạc hậu và chủ nghĩa cá nhân dưới mọi hình thức",
+    "b": "Đế quốc, thực dân và tay sai của chúng",
+    "c": "Đế quốc và phong kiến",
+    "d": "Đế quốc, thực dân và tay sai của chúng cùng với nghèo nàn, lạc hậu và chủ nghĩa cá nhân dưới mọi hình thức",
+    "ans": "d"
+  },
+  {
+    "num": 183,
+    "chapter": 2,
+    "chapterNum": 112,
+    "q": "Điền từ vào chỗ trống: Trong Lời kêu gọi toàn quốc kháng chiến, Hồ Chí Minh xác định: “Chúng ta thà hy sinh tất cả, chứ nhất định …, nhất định không chịu làm nô lệ”.",
+    "a": "Không chịu mất nước",
+    "b": "Không chịu làm nô lệ",
+    "c": "Không chịu khuất phục",
+    "d": "Phải kháng chiến",
+    "ans": "a"
+  },
+  {
+    "num": 184,
+    "chapter": 2,
+    "chapterNum": 113,
+    "q": "Khi nghiên cứu về cách mạng tư sản Mỹ (1776) và cách mạng tư sản Pháp (1789), Hồ Chí Minh xác định đó là những cuộc cách mạng như thế nào?",
+    "a": "Chưa trọn vẹn",
+    "b": "Không thành công",
+    "c": "Đến nơi",
+    "d": "Không đến nơi",
+    "ans": "d"
+  },
+  {
+    "num": 185,
+    "chapter": 2,
+    "chapterNum": 114,
+    "q": "Trong luận điểm sau: “Công - nông là gốc cách mạng, còn học trò, nhà buôn nhỏ, điền chủ nhỏ là bầu bạn cách mệnh công - nông”, Nguyễn Ái Quốc đề cập đến điều gì?",
+    "a": "Phương pháp cách mạng",
+    "b": "Lực lượng cách mạng",
+    "c": "Nhiệm vụ của cách mạng",
+    "d": "Mục tiêu của cách mạng",
+    "ans": "b"
+  },
+  {
+    "num": 186,
+    "chapter": 2,
+    "chapterNum": 115,
+    "q": "Chọn phương án đúng nhất: Theo Hồ chí Minh, độc lập, tự do là:",
+    "a": "Quyền thiêng liêng của tất cả các dân tộc",
+    "b": "Quyền bất khả xâm phạm của các dân tộc",
+    "c": "Quyền tự quyết dân tộc",
+    "d": "Quyền thiêng liêng và bất khả xâm phạm của tất cả các dân tộc",
+    "ans": "d"
+  },
+  {
+    "num": 187,
+    "chapter": 2,
+    "chapterNum": 116,
+    "q": "Theo Hồ Chí Minh, vận dụng chủ nghĩa Mác – Lênin cần phải:",
+    "a": "Phù hợp với từng hoàn cảnh, từng đối tượng",
+    "b": "Tuyệt đối trung thành với chủ nghĩa Mác – Lênin",
+    "c": "Làm y nguyên chủ nghĩa Mác",
+    "d": "Kế thừa chủ nghĩa Mác – Lênin",
+    "ans": "a"
+  },
+  {
+    "num": 188,
+    "chapter": 2,
+    "chapterNum": 117,
+    "q": "Kiên trì con đường Hồ Chí Minh đã lựa chọn nghĩa là…",
+    "a": "Hội nhập với kinh tế thế giới",
+    "b": "Thực hiện mục tiêu độc lập dân tộc gắn liền với chủ nghĩa xã hội",
+    "c": "Giữ vững nền độc lập dân tộc",
+    "d": "Thực hiện triệt để cuộc cách mạng dân tộc dân chủ nhân dân",
+    "ans": "b"
+  },
+  {
+    "num": 189,
+    "chapter": 2,
+    "chapterNum": 118,
+    "q": "Chọn đáp án trả lời đúng cho câu hỏi: Ai là người đã có công lớn trong việc cứu Hồ Chí Minh thoát khỏi nhà tù của thực dân Anh ở Hồng Kông…?",
+    "a": "Tô mát Xautôn (phó Thống đốc Hồng Kông)",
+    "b": "Luật sư Lôdơbai (Lôdơbi)",
+    "c": "Luật sư Nôoen Pri",
+    "d": "Đồng chí Hồ Tùng Mậu",
+    "ans": "b"
+  },
+  {
+    "num": 190,
+    "chapter": 2,
+    "chapterNum": 119,
+    "q": "Chọn đáp án trả lời đúng cho câu hỏi: Hội nghị Ban Chấp hành Trung ương Đảng lần thứ 8 được khai mạc ngày 10 – 5 – 1941 do ai làm chủ tọa?",
+    "a": "Nguyễn Ái Quốc",
+    "b": "Trường Chinh",
+    "c": "Hoàng Quốc Việt",
+    "d": "Hoàng Văn Thụ",
+    "ans": "a"
+  },
+  {
+    "num": 191,
+    "chapter": 2,
+    "chapterNum": 120,
+    "q": "Chọn đáp án trả lời đúng cho câu hỏi: Tại một Hội nghị Trung ương, Đảng ta khẳng định: Trong lúc này, quyền lợi của dân tộc phải đặt lên trên hết, trước hết. Đó là khẳng định của Hội nghị nào của Đảng?",
+    "a": "Hội nghị TW6 (11/1939)",
+    "b": "Hội nghị TW7 (11/1940)",
+    "c": "Hội nghị TW8 (5/1941)",
+    "d": "Hội nghị toàn quốc của Đảng (8/1945)",
+    "ans": "c"
+  },
+  {
+    "num": 192,
+    "chapter": 2,
+    "chapterNum": 121,
+    "q": "Chọn đáp án trả lời đúng cho câu hỏi: \"Toàn thể dân tộc Việt Nam quyết đem tất cả tinh thần và lực lượng, tính mạng và của cải để giữ vững quyền tự do, độc lập ấy\". Đoạn văn trên trích từ bài viết nào của Hồ Chí Minh?",
+    "a": "Thư kêu gọi Tổng khởi nghĩa.",
+    "b": "Tuyên ngôn Độc lập.",
+    "c": "Lời kêu gọi Toàn quốc kháng chiến.",
+    "d": "Thư gửi đồng bào Nam bộ.",
+    "ans": "b"
+  },
+  {
+    "num": 193,
+    "chapter": 2,
+    "chapterNum": 122,
+    "q": "Chọn đáp án trả lời đúng cho câu hỏi: Trong những câu dưới đây, câu nào không phải là của Hồ Chí Minh?",
+    "a": "Không có gì quý hơn độc lập, tự do",
+    "b": "Không có gì quý bằng độc lập, tự do",
+    "c": "Cay đắng chi bằng mất tự do.",
+    "d": "“Chúng ta thà hy sinh tất cả, chứ nhất định không chịu mất nước, nhất định không chịu làm nô lệ”",
+    "ans": "b"
+  },
+  {
+    "num": 194,
+    "chapter": 2,
+    "chapterNum": 123,
+    "q": "Theo Hồ Chí Minh, chủ nghĩa cộng sản dễ thích ứng ở đâu hơn?",
+    "a": "Ở các nước tư bản phát triển nhất",
+    "b": "Ở các nước châu Á, phương Đông",
+    "c": "Ở các nước châu Âu",
+    "d": "Ở các nước thuộc địa",
+    "ans": "b"
+  },
+  {
+    "num": 195,
+    "chapter": 2,
+    "chapterNum": 124,
+    "q": "Theo Hồ Chí Minh, khát vọng lớn nhất của các dân tộc thuộc địa là gì?",
+    "a": "Cơm áo và ruộng đất",
+    "b": "Hòa bình và ruộng đất",
+    "c": "Quyền bình đẳng",
+    "d": "Độc lập, tự do",
+    "ans": "d"
+  },
+  {
+    "num": 196,
+    "chapter": 2,
+    "chapterNum": 125,
+    "q": "Ham muốn tột bậc của Hồ Chí Minh là gì?",
+    "a": "Nước được độc lập",
+    "b": "Đồng bào ai cũng có cơm ăn, áo mặc, ai cũng được học hành",
+    "c": "Dân được tự do",
+    "d": "Cả A, B, C",
+    "ans": "d"
+  },
+  {
+    "num": 197,
+    "chapter": 2,
+    "chapterNum": 126,
+    "q": "Theo Hồ Chí Minh, đặc trưng nổi bật của chủ nghĩa xã hội là gì?",
+    "a": "Khoa học – kỹ thuật phát triển",
+    "b": "Cơ cấu công – nông nghiệp hợp lý",
+    "c": "Sở hữu xã hội về tư liệu sản xuất",
+    "d": "Sở hữu tư nhân về tư liệu sản xuất",
+    "ans": "c"
+  },
+  {
+    "num": 198,
+    "chapter": 2,
+    "chapterNum": 127,
+    "q": "Bàn về tổ chức hợp tác xã, Chủ tịch Hồ Chí Minh nhấn mạnh nguyên tắc…",
+    "a": "Làm đồng loạt",
+    "b": "Làm dần dần, từ thấp đến cao, tự nguyện, cùng có lợi, chống chủ quan, gò ép, hình thức",
+    "c": "Khẩn trương xây dựng cho được các hợp tác xã",
+    "d": "Làm naanh chóng",
+    "ans": "b"
+  },
+  {
+    "num": 199,
+    "chapter": 2,
+    "chapterNum": 128,
+    "q": "Chọn cụm từ điền vào chỗ trống đúng với tư tưởng Hồ Chí Minh: “Nông dân giàu thì nước ta giàu, … thịnh thì nước ta thịnh”.",
+    "a": "Công nghiệp",
+    "b": "Nông nghiệp",
+    "c": "Thương nghiệp",
+    "d": "Nông dân",
+    "ans": "b"
+  },
+  {
+    "num": 200,
+    "chapter": 2,
+    "chapterNum": 129,
+    "q": "Theo Hồ Chí Minh, muốn xây dựng chủ nghĩa xã hội , trước hết cần có cái gì?",
+    "a": "Tư tưởng xã hội chủ nghĩa",
+    "b": "Con người xã hội chủ nghĩa",
+    "c": "Có cơ sở vật chất",
+    "d": "Có kinh tế",
+    "ans": "b"
+  },
+  {
+    "num": 201,
+    "chapter": 2,
+    "chapterNum": 130,
+    "q": "Theo Hồ Chí Minh, tại sao cần thực hiện chế độ làm khoán dưới chủ nghĩa xã hội?",
+    "a": "Khuyến khích được lợi ích của người lao động",
+    "b": "Có lợi cho nhà nước",
+    "c": "Kết hợp được lợi ích của người lao động, lợi ích tập thể và lợi ích nhà nước",
+    "d": "Khuyến khích được lợi ích tập thể và xã hội",
+    "ans": "c"
+  },
+  {
+    "num": 202,
+    "chapter": 2,
+    "chapterNum": 131,
+    "q": "Hồ Chí Minh đã khẳng định: “Chủ nghĩa xã hội cộng với khoa học sẽ đưa loài người đến ….”. Hãy điền vào chỗ trống để hoàn thiện câu trên.",
+    "a": "Hạnh phúc vô tận",
+    "b": "Tương lai xán lạn",
+    "c": "Tự do",
+    "d": "Sự phát triển toàn diện",
+    "ans": "a"
+  },
+  {
+    "num": 203,
+    "chapter": 2,
+    "chapterNum": 132,
+    "q": "Theo Hồ Chí Minh, để xác định bước đi trong thời kỳ quá độ, chúng ta phải:",
+    "a": "Theo bước đi của các nước xã hội chủ nghĩa",
+    "b": "Căn cứ vào đặc điểm lịch sử cụ thể của nước ta từ đó có bước đi phù hợp",
+    "c": "Căn cứ vào đặc điểm lịch sử cụ thể của nước ta từ đó có bước đi phù hợp, đi bước nào vững bước ấy",
+    "d": "Theo bước đi và cách làm của Liên Xô",
+    "ans": "c"
+  },
+  {
+    "num": 204,
+    "chapter": 2,
+    "chapterNum": 133,
+    "q": "Tìm luận điểm KHÔNG đúng với tư tưởng Hồ Chí Minh:",
+    "a": "Công nghiệp hóa là con đường tất yếu phải đi của chúng ta",
+    "b": "Công ngiệp hóa phải bắt đầu từ xây dựng và phát trển công nghiệp nặng",
+    "c": "Công nghiệp hóa phải trên cơ sở xây dựng, phát triển một nền nông nghiệp toàn diện",
+    "d": "Công nghiệp hóa phải trên cơ sở phát triển công nghiệp nhẹ, tiểu thủ công nghiệp",
+    "ans": "b"
+  },
+  {
+    "num": 205,
+    "chapter": 2,
+    "chapterNum": 134,
+    "q": "Bác Hồ viết: “Nay chúng ta đã giành được quyền độc lập, một trong những công việc phải thực hiện cấp tốc trong lúc này, là nâng cao dân trí…. Phụ nữ lại càng phải đi học, đã lâu chị em bị kìm hãm, đây là lúc chị em phải cố gắng để kịp nam giới”. Đoạn văn trên trích từ văn bản nào của Hồ Chí Minh?",
+    "a": "Chống nạn thất học",
+    "b": "Sắc lệnh thành lập Nha bình dân học vụ",
+    "c": "Đời sống mới",
+    "d": "Sắc lệnh thành lập Hội đồng cố vấn học chính",
+    "ans": "a"
+  },
+  {
+    "num": 206,
+    "chapter": 2,
+    "chapterNum": 135,
+    "q": "Trong chế độ xã hội chủ nghĩa, theo Hồ Chí Minh: “Chủ nghĩa xã hội là lấy nhà máy, xe lửa, ngân hàng làm … ».",
+    "a": "Của riêng",
+    "b": "Sở hữu chung",
+    "c": "Của chung",
+    "d": "Tư hữu",
+    "ans": "c"
+  },
+  {
+    "num": 207,
+    "chapter": 2,
+    "chapterNum": 136,
+    "q": "Theo Hồ Chí Minh, nền kinh tế mà chúng ta xây dựng phải được tạo lập trên cơ sở:",
+    "a": "Nền nông nghiệp hiện đại",
+    "b": "Nền công nghiệp hiện đại",
+    "c": "Nền khoa học kỹ thuật phát triển",
+    "d": "Chế độ công hữu về tư liệu sản xuất",
+    "ans": "d"
+  },
+  {
+    "num": 208,
+    "chapter": 2,
+    "chapterNum": 137,
+    "q": "“…Phải nhìn cho rộng, suy cho kỹ/ Kiên quyết, không ngừng thế tấn công/ Lạc nước, hai xe đành bỏ phí/ Gặp thời, một tốt cũng thành công…”. Ý trong bài thơ trên của Bác nói gì?",
+    "a": "Chiến lược, chiến thuật cách mạng",
+    "b": "Thế giới quan của người cách mạng",
+    "c": "Chiến thuật đánh cờ",
+    "d": "Cả 3 phương án trên",
+    "ans": "a"
+  },
+  {
+    "num": 209,
+    "chapter": 2,
+    "chapterNum": 138,
+    "q": "Tháng 2/1930, Bác chủ trì Hội nghị hợp nhất các tổ chức cộng sản trong nước để thành lập tổ chức chính trị nào?",
+    "a": "Đảng cộng sản Việt Nam",
+    "b": "Đảng cộng sản Đông Dương",
+    "c": "An Nam cộng sản Đảng",
+    "d": "Đông dương cộng sản Đảng",
+    "ans": "a"
+  },
+  {
+    "num": 210,
+    "chapter": 2,
+    "chapterNum": 139,
+    "q": "Thực chất vấn đề dân tộc trong tư tưởng Hồ Chí Minh?",
+    "a": "Đấu tranh giải phóng dân tộc",
+    "b": "Giành độc lập dân tộc",
+    "c": "Thành lập Nhà nước dân tộc độc lập",
+    "d": "Cả 3 phương án",
+    "ans": "d"
+  },
+  {
+    "num": 211,
+    "chapter": 2,
+    "chapterNum": 140,
+    "q": "“Trên đời ngàn vạn điều cay đắng, cay đắng chi bằng mất tự do” Câu thơ này Bác muốn nói luận điểm nào?",
+    "a": "Độc lập, tự do là quyền thiêng liêng, bất khả xâm phạm",
+    "b": "Độc lập, tự do là quyền của các dân tộc",
+    "c": "Quyền tự quyết của các dân tộc",
+    "d": "Cả 3 phương án",
+    "ans": "a"
+  },
+  {
+    "num": 212,
+    "chapter": 2,
+    "chapterNum": 141,
+    "q": "Trong “Chánh cương vắn tắt của Đảng” và Lời kêu gọi sau khi hành lập Đảng CSVN (1930) đã xác định mục tiêu chính trị của Đảng là gì?",
+    "a": "Đánh đổ đế quốc",
+    "b": "Đánh đổ phong kiến",
+    "c": "Làm cho nước Nam hoàn toàn độc lập",
+    "d": "Cả 3 phương án trên",
+    "ans": "d"
+  },
+  {
+    "num": 213,
+    "chapter": 2,
+    "chapterNum": 142,
+    "q": "Theo Hồ Chí Minh, kẻ thù hung ác của chủ nghĩa xã hội là gì?",
+    "a": "Giặc ngoại xâm",
+    "b": "Chủ nghĩa tư bản",
+    "c": "Chủ nghĩa đế quốc",
+    "d": "Chủ nghĩa cá nhân",
+    "ans": "d"
+  },
+  {
+    "num": 214,
+    "chapter": 2,
+    "chapterNum": 143,
+    "q": "Theo Hồ Chí Minh, ai làm chủ chế độ xã hội chủ nghĩa?",
+    "a": "Nhân dân",
+    "b": "Người lao động",
+    "c": "Đảng, nhà nước, chính phủ",
+    "d": "Cả 3 phương án",
+    "ans": "a"
+  },
+  {
+    "num": 215,
+    "chapter": 2,
+    "chapterNum": 144,
+    "q": "Hồ Chí Minh nêu đặc điểm lớn nhất của thời kỳ đi lên chủ nghĩa xã hội ở nước ta là?",
+    "a": "Không qua tư bản, tiến thẳng lên CNXH",
+    "b": "Nông nghiệp",
+    "c": "Nghèo nàn lạc hậu",
+    "d": "Cả 3 phương án",
+    "ans": "d"
+  },
+  {
+    "num": 216,
+    "chapter": 2,
+    "chapterNum": 145,
+    "q": "Theo Hồ Chí Minh, nhiệm vụ cơ bản của nước ta khi bước vào thời kỳ quá độ lên CNXH là gì?",
+    "a": "Xây dựng cơ sở vật chất của CNXH",
+    "b": "Xây dựng nền kinh tế mới XHCN",
+    "c": "Kết hợp cải tạo với xây dựng mà xây dựng lá chủ yếu",
+    "d": "Cả 3 phương án",
+    "ans": "a"
+  },
+  {
+    "num": 217,
+    "chapter": 2,
+    "chapterNum": 146,
+    "q": "“Dân ta phải thuộc sử ta; Cho tường gốc tích nước nhà Việt Nam”. Câu thơ trên của Hồ Chí Minh hàm ý gì?",
+    "a": "Khuyên dân phải học sử dân tộc",
+    "b": "Khuyên phải dân biết tự hào dân tộc",
+    "c": "Xác định nghĩa vụ của dân với nước",
+    "d": "Cả 3 phương án trên",
+    "ans": "d"
+  },
+  {
+    "num": 218,
+    "chapter": 2,
+    "chapterNum": 147,
+    "q": "Chọn đáp án trả lời đúng cho câu hỏi: Trong bản \"Yêu sách của nhân dân An Nam\" gửi đến Hội nghị Véc xây, lúc đó Hồ Chí Minh mang tên là gì?",
+    "a": "Nguyễn Tất Thành",
+    "b": "Nguyễn Ái Quốc",
+    "c": "Văn Ba",
+    "d": "Trần Vương",
+    "ans": "b"
+  },
+  {
+    "num": 219,
+    "chapter": 2,
+    "chapterNum": 148,
+    "q": "Chọn đáp án trả lời đúng cho câu hỏi: Những câu sau đây, câu nào là của Hồ Chí Minh?",
+    "a": "Sự tàn bạo của chủ nghĩa tư bản đã chuẩn bị đất rồi, CNXH chỉ còn phải làm cái việc là gieo hạt giống của công cuộc giải phóng nữa thôi.",
+    "b": "Xem xét lại chủ nghĩa Mác về cơ sở lịch sử của nó, củng cố nó bằng dân tộc học phương Đông.",
+    "c": "Chủ nghĩa dân tộc là động lực lớn của đất nước.",
+    "d": "Cả ba đáp án đều đúng",
+    "ans": "d"
+  },
+  {
+    "num": 220,
+    "chapter": 3,
+    "chapterNum": 1,
+    "q": "Chọn cụm từ điền vào chỗ trống: Trong Di chúc, Hồ Chí Minh khẳng định: “Đảng ta là một Đảng cầm quyền. Mỗi đảng viên phải thật sự thấm nhuần…”.",
+    "a": "Mục tiêu của Đảng",
+    "b": "Nền tảng tư tưởng của Đảng",
+    "c": "Đường lối của Đảng",
+    "d": "Đạo đức cách mạng",
+    "ans": "d"
+  },
+  {
+    "num": 221,
+    "chapter": 3,
+    "chapterNum": 2,
+    "q": "Theo tư tưởng Hồ Chí Minh, luận điểm: Đảng Cộng sản Việt Nam là sản phẩm của sự kết hợp chủ nghĩa Mác – Lênin với phong trào công nhân và phong trào yêu nước là..",
+    "a": "Xác định nhiệm vụ của Đảng",
+    "b": "Xác định bản chất của Đảng",
+    "c": "Xác định nguồn gốc ra đời của Đảng",
+    "d": "Xác định năng lực của Đảng",
+    "ans": "c"
+  },
+  {
+    "num": 222,
+    "chapter": 3,
+    "chapterNum": 3,
+    "q": "Theo tư tưởng Hồ Chí Minh, luận điểm: Đảng Cộng sản Việt Nam là nhân tố quyết định hàng đầu để đưa cách mạng Việt Nam đi đến thắng lợi là…",
+    "a": "Xác định vị thế cầm quyền của Đảng",
+    "b": "Xác định bản chất của Đảng",
+    "c": "Xác định vai trò lãnh đạo của Đảng",
+    "d": "Xác định năng lực của Đảng",
+    "ans": "c"
+  },
+  {
+    "num": 223,
+    "chapter": 3,
+    "chapterNum": 4,
+    "q": "Theo Hồ Chí Minh, Đảng cộng sản Việt Nam ra đời là sản phẩm kết hợp giữa…",
+    "a": "Chủ nghĩa Mác với phong trào công nhân",
+    "b": "Phong trào công nhân với phong trào yêu nước",
+    "c": "Chủ nghĩa Mác - Lênin với phong trào công nhân và phong trào yêu nước",
+    "d": "Tư tưởng Hồ Chí Minh với phong trào công nhân",
+    "ans": "c"
+  },
+  {
+    "num": 224,
+    "chapter": 3,
+    "chapterNum": 5,
+    "q": "Theo Hồ Chí Minh, Đảng cộng sản Việt Nam là Đảng của…",
+    "a": "Giai cấp công nhân",
+    "b": "Nhân dân lao động",
+    "c": "Giai cấp công nhân, của nhân dân lao động và của dân tộc Việt Nam",
+    "d": "Đội ngũ trí thức",
+    "ans": "c"
+  },
+  {
+    "num": 225,
+    "chapter": 3,
+    "chapterNum": 6,
+    "q": "Theo tư tưởng Hồ Chí Minh, luận điểm Đảng cộng sản là nhân tố quyết định hàng đầu để đưa cách mạng Việt Nam đi đến thắng lợi là…",
+    "a": "Xác định vị thế cầm quyền của Đảng",
+    "b": "Xác định vai trò lãnh đạo của Đảng",
+    "c": "Xác định mục đích của Đảng",
+    "d": "Xác định nhiệm vụ của Đảng",
+    "ans": "b"
+  },
+  {
+    "num": 226,
+    "chapter": 3,
+    "chapterNum": 7,
+    "q": "Bản chất giai cấp công nhân của Đảng cộng sản Việt Nam thể hiện ở…",
+    "a": "Số lượng đảng viên trong Đảng",
+    "b": "Trình độ đảng viên trong Đảng",
+    "c": "Nền tảng lý luận, mục tiêu, đường lối, nguyên tắc tổ chức của Đảng",
+    "d": "Cả A, B, C",
+    "ans": "c"
+  },
+  {
+    "num": 227,
+    "chapter": 3,
+    "chapterNum": 8,
+    "q": "Nguyên tắc xây dựng Đảng kiểu mới theo theo Tư tưởng Hồ Chí Minh là…",
+    "a": "Tập trung dân chủ; Tập thể lãnh đạo cá nhân phụ trách",
+    "b": "Tự phê bình và phê bình; Kỷ luật nghiêm minh và tự giác",
+    "c": "Đoàn kết thống nhất trong Đảng",
+    "d": "Cả A, B, C",
+    "ans": "d"
+  },
+  {
+    "num": 228,
+    "chapter": 3,
+    "chapterNum": 9,
+    "q": "Theo Tư tưởng Hồ Chí Minh, Đảng Cộng sản Việt Nam vừa là người lãnh đạo, vừa là đầy tớ trung thành của nhân dân, Đảng phải chăm lo mối quan hệ giữa Đảng với dân là nhằm…",
+    "a": "Xác định vị thế cầm quyền của Đảng",
+    "b": "Xác định phương thức cầm quyền của Đảng",
+    "c": "Xác định năng lực cầm quyền của Đảng",
+    "d": "Cả A, B, C",
+    "ans": "d"
+  },
+  {
+    "num": 229,
+    "chapter": 3,
+    "chapterNum": 10,
+    "q": "Nhà nước của Dân theo Tư tưởng Hồ Chí Minh nghĩa là…",
+    "a": "Mọi quyền lực trong nhà nước và trong xã hội đều thuộc về nhân dân",
+    "b": "Mọi công việc của nhà nước do dân quyết định",
+    "c": "Đại biểu nhà nước do nhân dân bầu ra",
+    "d": "Cả A, B, C",
+    "ans": "a"
+  },
+  {
+    "num": 230,
+    "chapter": 3,
+    "chapterNum": 11,
+    "q": "Nhà nước do dân theo tư tưởng Hồ Chí Minh….",
+    "a": "Đại biểu nhà nước do nhân dân lựa chọn",
+    "b": "Dân ủng hộ, giúp đỡ, đóng thuế để nhà nước chi tiêu hoạt động",
+    "c": "Dân có quyền kiểm soát, giám sát, bãi nhiễm nếu đại biểu không làm tròn sự ủy nhiệm của dân; Nhà nước phải liên hệ chặt chẽ với nhân dân",
+    "d": "Cả A, B, C",
+    "ans": "d"
+  },
+  {
+    "num": 231,
+    "chapter": 3,
+    "chapterNum": 12,
+    "q": "Nhà nước vì dân theo Tư tưởng Hồ Chí Minh là…",
+    "a": "Phục vụ vì lợi ích và nguyện vọng chính đáng của nhân dân; Dân là chủ chính phủ là đầy tớ của nhân dân",
+    "b": "Mọi chủ trương, chính sách, pháp luật đều xuất phát từ lợi ích của dân",
+    "c": "Nhà nước trong sạch, không có bất cứ một đặc quyền đặc lợi nào.",
+    "d": "Cả A, B, C",
+    "ans": "d"
+  },
+  {
+    "num": 232,
+    "chapter": 3,
+    "chapterNum": 13,
+    "q": "Chọn cụm từ điền vào chỗ trống: Theo tư tưởng Hồ Chí Minh: “Chế độ ta là chế độ dân chủ, nghĩa là …. làm chủ”.",
+    "a": "Công nhân",
+    "b": "Nông dân",
+    "c": "Nhân dân",
+    "d": "Công – nông",
+    "ans": "c"
+  },
+  {
+    "num": 233,
+    "chapter": 3,
+    "chapterNum": 14,
+    "q": "Theo Tư tưởng Hồ Chí Minh, bản chất của giai cấp công nhân của nhà nước ta quyết định ở chỗ…",
+    "a": "Nhà nước ta do đảng của giai cấp công nhân lãnh đạo",
+    "b": "Nhà nước ta định hướng đi lên xã hội chủ nghĩa",
+    "c": "Nguyên tắc tổ chức hoạt động của nhà nước ta là nguyên tắc tập trung dân chủ",
+    "d": "Cả A, B, C",
+    "ans": "d"
+  },
+  {
+    "num": 234,
+    "chapter": 3,
+    "chapterNum": 15,
+    "q": "Chọn cụm từ điền vào chỗ trống: Theo tư tưởng Hồ Chí Minh: “Nước ta là nước …, nghĩa là nhà nước do nhân dân… ».",
+    "a": "Cộng hòa, quản lý",
+    "b": "Vì dân, kiểm soát",
+    "c": "Dân chủ, làm chủ",
+    "d": "Dân chủ, quản lý",
+    "ans": "c"
+  },
+  {
+    "num": 235,
+    "chapter": 3,
+    "chapterNum": 16,
+    "q": "Chọn cụm từ đúng nhất để điền vào chỗ trống: Theo tư tưởng Hồ Chí Minh: “Chống … và bệnh quan liêu cũng quan trọng và cần kíp như việc đánh giặc trên mặt trận. Đây là mặt trận tư tưởng và chính trị”.",
+    "a": "Tham ô, lãng phí",
+    "b": "Tham nhũng",
+    "c": "Phá hoại của công",
+    "d": "Lãng phí",
+    "ans": "a"
+  },
+  {
+    "num": 236,
+    "chapter": 3,
+    "chapterNum": 17,
+    "q": "Chọn cụm từ điền vào chỗ trống: Theo tư tưởng Hồ Chí Minh: “Tất cả các cơ quan nhà nước đều phải dựa vào …, liên hệ chặt chẽ với…, lắng nghe ý kiến và chịu sự kiểm soát của…”.",
+    "a": "Công nhân",
+    "b": "Quốc hội",
+    "c": "Nhân dân",
+    "d": "Đảng Cộng sản",
+    "ans": "c"
+  },
+  {
+    "num": 237,
+    "chapter": 3,
+    "chapterNum": 18,
+    "q": "Một nhà nước pháp quyền có hiệu lực pháp lý mạnh mẽ theo Tư tưởng Hồ Chí Minh phải là…",
+    "a": "Một nhà nước hợp hiến",
+    "b": "Một nhà nước quản lý đất nước bằng pháp luật và chú trọng đưa pháp luật vào cuộc sống",
+    "c": "Một nhà nước có đội ngũ cán bộ, công chức có đủ sức, đủ tài",
+    "d": "Cả A, B, C",
+    "ans": "b"
+  },
+  {
+    "num": 238,
+    "chapter": 3,
+    "chapterNum": 19,
+    "q": "Một nhà nước pháp quyền có hiệu lực pháp lý mạnh mẽ theo tư tưởng Hồ Chí Minh phải là…",
+    "a": "Một nhà nước hợp Hiến",
+    "b": "Một nhà nước thống nhất, có quyền quốc gia",
+    "c": "Một nhà nước của dân, do dân, vì dân",
+    "d": "Một nhà nước đề phòng và khắc phục tiêu cực, không có tiêu cực, không có đặc quyền, đặc lợi",
+    "ans": "a"
+  },
+  {
+    "num": 239,
+    "chapter": 3,
+    "chapterNum": 20,
+    "q": "Chọn câu trả lời đúng nhất: Truyền thống quý báu nhất của dân tộc Việt Nam được Hồ Chí Minh kế thừa và phát triển là gì?",
+    "a": "Lòng nhân ái",
+    "b": "Chủ nghĩa yêu nước",
+    "c": "Tinh thần hiếu học",
+    "d": "Cần cù lao động",
+    "ans": "b"
+  },
+  {
+    "num": 240,
+    "chapter": 3,
+    "chapterNum": 21,
+    "q": "Chọn đáp án đúng nhất: Điều mong muốn cuối cùng của Hồ Chí Minh được nêu trong Di chúc của Người là gì?",
+    "a": "“… làm sao cho nước ta được hoàn toàn độc lập, dân ta được hoàn toàn tự do, đồng bào ta ai cũng có cơm ăn áo mặc, ai cũng được học hành”",
+    "b": "“Không có gì quý hơn độc lập tự do! Đến ngày thắng lợi, chúng ta sẽ xây dựng lại đất nước ta đàng hoàng hơn, to đẹp hơn”",
+    "c": "Đưa cuộc kháng chiến chống Mỹ cứu nước đến thắng lợi hoàn toàn.",
+    "d": "“Toàn Đảng, toàn dân ta đoàn kết phấn đấu xây dựng một nước Việt Nam hòa bình, thống nhất, độc lập, dân chủ, giàu mạnh và góp phần xứng đáng vào sự nghiệp cách mạng thế giới”",
+    "ans": "d"
+  },
+  {
+    "num": 241,
+    "chapter": 3,
+    "chapterNum": 22,
+    "q": "Chọn câu trả lời đúng nhất với tư tưởng Hồ Chí Minh…",
+    "a": "Đảng cộng sản Việt Nam là Đảng của giai cấp công nhân",
+    "b": "Đảng cộng sản Việt Nam là Đảng của nhân dân lao động",
+    "c": "Đảng cộng sản Việt Nam là Đảng của giai cấp công nhân, của nhân dân lao động và của dân tộc Việt Nam",
+    "d": "Đảng cộng sản Việt Nam là Đảng của giai cấp lao động, mà cũng là Đảng của toàn dân",
+    "ans": "c"
+  },
+  {
+    "num": 242,
+    "chapter": 3,
+    "chapterNum": 23,
+    "q": "Luận điểm: “Đảng muốn vững thì phải có chủ nghĩa làm cốt, trong đảng ai cũng phải hiểu, ai cũng phải theo chủ nghiã ấy. Đảng mà không có chủ nghĩa cũng như người không có trí khôn, tàu không có bàn chỉ nam” được trích từ tác phẩm nào của Hồ Chí Minh?",
+    "a": "Tuyên ngôn Độc lập",
+    "b": "Đường Cách mệnh",
+    "c": "Bản án chế độ thực dân Pháp",
+    "d": "Thường thức chính trị",
+    "ans": "b"
+  },
+  {
+    "num": 243,
+    "chapter": 3,
+    "chapterNum": 24,
+    "q": "Luận điểm: “Phải giữ gìn Đảng ta thật trong sạch, phải xứng đáng là người lãnh đạo, là người đầy tớ thật trung thành của nhân dân” được trích từ tác phẩm nào của Hồ chí Minh?",
+    "a": "Đường Cách mệnh",
+    "b": "Thường thức chính trị",
+    "c": "Sửa đổi lối làm việc",
+    "d": "Di chúc",
+    "ans": "d"
+  },
+  {
+    "num": 244,
+    "chapter": 3,
+    "chapterNum": 25,
+    "q": "Chọn phương án đúng nhất: Theo tư tưởng Hồ Chí Minh, việc đổi mới, chỉnh đốn Đảng được hiểu là…",
+    "a": "Một giải pháp tình thế",
+    "b": "Việc làm thường xuyên của Đảng",
+    "c": "Khi Đảng không còn vững mạnh",
+    "d": "Khi cách mạng ở vào thời kỳ khó khăn",
+    "ans": "b"
+  },
+  {
+    "num": 245,
+    "chapter": 3,
+    "chapterNum": 26,
+    "q": "Quan điểm: “Đảng ta là đạo đức, là văn minh” được Hồ Chí Minh trình bày trong tác phẩm nào?",
+    "a": "Sách lược vắn tắt của Đảng",
+    "b": "Báo cáo chính trị tại Đại hội đại biểu toàn quốc lần thứ II của Đảng",
+    "c": "Diễn văn đọc tại lễ kỷ niệm 30 năm ngày thành lập Đảng",
+    "d": "Diễn văn khai mạc Đại hội đại biểu toàn quốc lần thứ III của Đảng",
+    "ans": "c"
+  },
+  {
+    "num": 246,
+    "chapter": 3,
+    "chapterNum": 27,
+    "q": "“Đảng ta là một Đảng cầm quyền. Mỗi đảng viên và cán bộ phải thật sự thấm nhuần đạo đức cách mạng, thật sự cần kiệm liêm chính, chí công vô tư. Phải giữ gìn Đảng ta thật trong sạch, phải xứng đáng là người lãnh đạo, là người đầy tớ thật trung thành của nhân dân”. Câu viết trên của Hồ Chí Minh ở trong tác phẩm nào của Người?",
+    "a": "Đạo đức cách mạng",
+    "b": "Đường cách mệnh",
+    "c": "Di chúc",
+    "d": "Sửa đổi lối làm việc",
+    "ans": "c"
+  },
+  {
+    "num": 247,
+    "chapter": 3,
+    "chapterNum": 28,
+    "q": "Chọn phương án đúng nhất để điền vào chỗ trống hoàn thiện câu sau của Hồ Chí Minh: “Chống … và bệnh quan liêu cũng quan trọng và cần kíp như việc đánh giặc trên mặt trận”.",
+    "a": "Phá hoại của công",
+    "b": "Tham ô, lãng phí",
+    "c": "Vi phạm kỷ luật",
+    "d": "Thành tích",
+    "ans": "b"
+  },
+  {
+    "num": 248,
+    "chapter": 3,
+    "chapterNum": 29,
+    "q": "“Việc gì lợi cho dân, ta phải hết sức làm. Việc gì hại đến dân, ta phải hết sức tránh. Chúng ta phải yêu dân, kính dân thì dân mới yêu ta, kính ta”. Những câu trên trích từ bài viết nào của Hồ Chí Minh?",
+    "a": "Bài phát biểu tại kỳ họp đầu tiên của Quốc hội khoá I, năm 1946",
+    "b": "Thư gửi các đồng chí tỉnh nhà",
+    "c": "Thư gửi ủy ban nhân dân các kỳ, tỉnh, huyện và làng",
+    "d": "Thư gửi các đồng chí Bắc Bộ.",
+    "ans": "c"
+  },
+  {
+    "num": 249,
+    "chapter": 3,
+    "chapterNum": 30,
+    "q": "Chọn phương án đúng nhất: Theo Hồ Chí Minh, Đảng lãnh đạo Nhà nước bằng phương thức nào?",
+    "a": "Bằng đường lối, quan điểm, chủ trương, định hướng của Đảng",
+    "b": "Hoạt động của các tổ chức đảng và đảng viên trong bộ máy nhà nước",
+    "c": "Bằng công tác kiểm tra",
+    "d": "Cả A, B, C",
+    "ans": "d"
+  },
+  {
+    "num": 250,
+    "chapter": 3,
+    "chapterNum": 31,
+    "q": "“Đảng có vững cách mệnh mới thành công, cũng như người cầm lái có vững thuyền mới chạy”. Câu trên trích từ tác phẩm nào của Hồ Chí Minh?",
+    "a": "Bản án chế độ thực dân Pháp",
+    "b": "Chánh cương vắn tắt của Đảng",
+    "c": "Đường cách mệnh",
+    "d": "Lời kêu gọi nhân dịp thành lập Đảng",
+    "ans": "c"
+  },
+  {
+    "num": 251,
+    "chapter": 3,
+    "chapterNum": 32,
+    "q": "Chọn phương án đúng nhất: Những căn bệnh nào trong bộ máy nhà nước mà Hồ Chí Minh gọi là “giặc nội xâm”?",
+    "a": "Cậy thế, hủ hoá, tư túng",
+    "b": "Tham ô, lãng phí, quan liêu",
+    "c": "Trái phép, chia rẽ, kiêu ngạo",
+    "d": "Đặc quyền, đặc lợi",
+    "ans": "b"
+  },
+  {
+    "num": 252,
+    "chapter": 3,
+    "chapterNum": 33,
+    "q": "Theo Hồ Chí Minh, việc học phải được tiến hành như thế nào?",
+    "a": "Học ở mọi lúc, mọi nơi, suốt đời",
+    "b": "Học ở mọi người",
+    "c": "Tự học, tự đào tạo và đào tạo lại",
+    "d": "Cả A, B, C",
+    "ans": "d"
+  },
+  {
+    "num": 253,
+    "chapter": 3,
+    "chapterNum": 34,
+    "q": "Chủ nghĩa Mác - Lênin kết hợp với phong trào công nhân và phong trào yêu nước dẫn tới sự ra đời của Đảng Cộng sản Việt Nam. Câu trên trích từ tác phẩm nào của chủ tịch Hồ Chí Minh?",
+    "a": "Đường cách mệnh",
+    "b": "Ba mươi năm hoạt động của Đảng",
+    "c": "Thường thức chính trị",
+    "d": "Diễn văn chính trị đọc tại đại hội III",
+    "ans": "b"
+  },
+  {
+    "num": 254,
+    "chapter": 3,
+    "chapterNum": 35,
+    "q": "Đảng Cộng sản Việt Nam, do Hồ Chí Minh sáng lập và lãnh đạo, hoạt động vì lợi ích của ai?",
+    "a": "Vì lợi ích của bản thân Đảng",
+    "b": "Vì lợi ích của giai cấp công nhân",
+    "c": "Vì lợi ích của công nhân, nông dân, trí thức",
+    "d": "Vì lợi ích của dân tộc Việt Nam",
+    "ans": "d"
+  },
+  {
+    "num": 255,
+    "chapter": 3,
+    "chapterNum": 36,
+    "q": "Trong tư tưởng Hồ Chí Minh, là người lãnh đạo, Đảng phải có những phẩm chất gì?",
+    "a": "Tư cách, đạo đức, năng lực cần thiết",
+    "b": "Phải có khả năng làm cho dân tin, dân mến, dân phục, dân theo",
+    "c": "Đảng phải gắn bó mật thiết với nhân dân, nghe ý kiến của dân, học nhân dân, chịu sự kiểm soát của nhân dân…",
+    "d": "Cả A, B, C",
+    "ans": "d"
+  },
+  {
+    "num": 256,
+    "chapter": 3,
+    "chapterNum": 37,
+    "q": "Luận điểm “Đảng Cộng sản là Đảng của giai cấp công nhân, của nhân dân lao động và của dân tộc”, là nhằm…",
+    "a": "Xác định vai trò lãnh đạo của Đảng",
+    "b": "Xác định vị thế cầm quyền của Đảng",
+    "c": "Xác định bản chất của Đảng",
+    "d": "Xác định chức năng, nhiệm vụ của Đảng",
+    "ans": "c"
+  },
+  {
+    "num": 257,
+    "chapter": 3,
+    "chapterNum": 38,
+    "q": "“Đảng muốn vững, phải có chủ nghĩa làm cốt, trong Đảng ai cũng phải hiểu, ai cũng phải theo chủ nghĩa ấy. Đảng mà không có chủ nghĩa cũng như người không có trí khôn, tàu không có bàn chỉ nam”. Chủ nghĩa mà Hồ Chí Minh nói ở đây là gì?",
+    "a": "Chủ nghĩa quốc gia – dân tộc",
+    "b": "Chủ nghĩa Tam dân của Tôn Trung Sơn",
+    "c": "Chủ nghĩa quốc tế",
+    "d": "Chủ nghĩa Mác - Lênin",
+    "ans": "d"
+  },
+  {
+    "num": 258,
+    "chapter": 3,
+    "chapterNum": 39,
+    "q": "Đảng ta là một Đảng cầm quyền, các đồng chí từ chi bộ đến TW phải giữ gìn sự đoàn kết nhất trí trong Đảng như giữ gìn con ngươi của mắt mình. Câu trên trích từ tác phẩm nào của Hồ Chí Minh?",
+    "a": "Diễn văn chính trị tại Đại hội III của Đảng",
+    "b": "Bài nói chuyện tại trường Nguyễn Ái Quốc trung ương năm 1957",
+    "c": "Di chúc",
+    "d": "Bài nói chuyện với cán bộ cao cấp quân đội nhân dân Việt Nam",
+    "ans": "c"
+  },
+  {
+    "num": 259,
+    "chapter": 3,
+    "chapterNum": 40,
+    "q": "Trong những luận điểm dưới đây của Hồ Chí Minh về xây dựng Đảng Cộng sản, luận điểm nào được Hồ Chí Minh viết lần đầu trong tác phẩm “Đường cách mệnh”?",
+    "a": "Chủ nghĩa Mác - Lênin kết hợp với phong trào công nhân và phong trào yêu nước đã dẫn đến tới việc thành lập Đảng Cộng sản Đông Dương vào đầu năm 1930",
+    "b": "Đảng ta là Đảng của giai cấp công nhân, đồng thời là Đảng của dân tộc, không thiên tư, thiên vị",
+    "c": "Đảng muốn vững thì phải có chủ nghĩa làm cốt",
+    "d": "Phải giữ gìn Đảng ta thật trong sạch, phải xứng đáng là người lãnh đạo, là người đầy tớ trung thành của nhân dân",
+    "ans": "c"
+  },
+  {
+    "num": 260,
+    "chapter": 3,
+    "chapterNum": 41,
+    "q": "Trong những luận điểm về xây dựng Đảng Cộng sản của Hồ Chí Minh dưới đây, luận điểm nào được viết trong Di chúc?",
+    "a": "Chủ nghĩa Mác - Lênin kết hợp với phong trào công nhân và phong trào yêu nước đã dẫn đến tới việc thành lập Đảng Cộng sản Đông Dương vào đầu năm 1930",
+    "b": "Đảng ta là Đảng của giai cấp công nhân, đồng thời là Đảng của dân tộc, không thiên tư, thiên vị",
+    "c": "Đảng muốn vững thì phải có chủ nghĩa làm cốt, trong Đảng ai cũng phải hiểu, ai cũng phải theo chủ nghĩa ấy",
+    "d": "Phải giữ gìn Đảng ta thật trong sạch, phải xứng đáng là người lãnh đạo, là người đầy tớ trung thành của nhân dân",
+    "ans": "d"
+  },
+  {
+    "num": 261,
+    "chapter": 3,
+    "chapterNum": 42,
+    "q": "Trong Di chúc, phần nói về Đảng, lời căn dặn nào thể hiện sự mẫn cảm và tầm nhìn xa của Hồ Chí Minh đối với việc ngăn ngừa nguy cơ thoái hoá trong Đảng sau khi đất nước đạt được đỉnh cao thắng lợi?",
+    "a": "Đảng ta là một Đảng cầm quyền, mỗi Đảng viên và cán bộ phải thật sự thấm nhuần đạo đức cách mạng, thật sự cần kiệm, liêm chính, chí công vô tư",
+    "b": "Trong Đảng thực hành dân chủ rộng rãi để củng cố và phát triển sự đoàn kết và thống nhất của Đảng. Phải có tình đồng chí yêu thương lẫn nhau",
+    "c": "Phải giữ gìn Đảng ta thật trong sạch, phải xứng đáng là người lãnh đạo, là người đầy tớ trung thành của nhân dân",
+    "d": "Ngay sau khi cuộc chống Mỹ, cứu nước hoàn toàn thắng lợi, việc cần làm trước tiên là chỉnh đốn lại Đảng",
+    "ans": "d"
+  },
+  {
+    "num": 262,
+    "chapter": 3,
+    "chapterNum": 43,
+    "q": "“Mục đích của Đảng lao động Việt Nam có thể gồm trong 8 chữ là: đoàn kết toàn dân, phụng sự Tổ quốc”. Hồ Chí Minh nói câu trên nhân sự kiện chính trị nào?",
+    "a": "Đại hội I",
+    "b": "Đại hội II",
+    "c": "Đại hội III",
+    "d": "Hội nghị chính trị đặc biệt 1965",
+    "ans": "c"
+  },
+  {
+    "num": 263,
+    "chapter": 3,
+    "chapterNum": 44,
+    "q": "Trong tác phẩm “Đường Cách mệnh” khi nói về vai trò của Đảng Cộng sản, Hồ Chí Minh đã ví Đảng như là…",
+    "a": "Kim chỉ nam",
+    "b": "La bàn",
+    "c": "Người chèo thuyền",
+    "d": "Người cầm lái",
+    "ans": "d"
+  },
+  {
+    "num": 264,
+    "chapter": 3,
+    "chapterNum": 45,
+    "q": "Hồ Chí Minh cho rằng: “Muốn khỏi đi lạc phương hướng, quần chúng phải có Đảng lãnh đạo để nhận rõ…..”. Điền từ còn thiếu vào chỗ trống…",
+    "a": "Sự áp bức bóc lột của đế quốc, thực dân",
+    "b": "Tình hình, đường lối và định phương châm cho đúng",
+    "c": "Lực lượng của cách mạng và phương châm tác chiến",
+    "d": "Việc đánh đổ kẻ địch, giành lấy chính quyền",
+    "ans": "b"
+  },
+  {
+    "num": 265,
+    "chapter": 3,
+    "chapterNum": 46,
+    "q": "Tháng 2/1930, Nguyễn Ái Quốc đã chủ trì Hội nghị hợp nhất các tổ chức cộng sản trong nước để thành lập tổ chức chính trị nào?",
+    "a": "Đảng cộng sản Việt Nam",
+    "b": "Đảng cộng sản Đông Dương",
+    "c": "An Nam cộng sản Đảng",
+    "d": "Đông Dương cộng sản Đảng",
+    "ans": "a"
+  },
+  {
+    "num": 266,
+    "chapter": 3,
+    "chapterNum": 47,
+    "q": "Hồ Chí Minh nêu lên quan điểm nhà nước của dân là…",
+    "a": "Mọi quyền lực trong nhà nước và ngoài xã hội đều thuộc về nhân dân",
+    "b": "Nhân dân có quyền kiểm soát nhà nước",
+    "c": "Nhà nước bảo đảm quyền làm chủ của nhân dân",
+    "d": "Nhân dân có vai trò quyết định mọi công việc của nhà nước",
+    "ans": "a"
+  },
+  {
+    "num": 267,
+    "chapter": 3,
+    "chapterNum": 48,
+    "q": "Hồ Chí Minh nêu quan điểm nhà nước do dân là:",
+    "a": "Nhà nước do dân tạo ra và nhân dân tham gia quản lý",
+    "b": "Nhà nước do dân bầu ra, thực hiện ý chí của dân",
+    "c": "Nhà nước vì quyền lợi của nhân dân",
+    "d": "Quyền tối cao trong nhà nước thuộc về nhân dân",
+    "ans": "a"
+  },
+  {
+    "num": 268,
+    "chapter": 3,
+    "chapterNum": 49,
+    "q": "Hồ Chí Minh nêu quan điểm nhà nước vì dân là:",
+    "a": "Đặt lợi ích chính đáng của nhân dân lên hàng đầu",
+    "b": "Không có đặc quyền đặc lợi",
+    "c": "Nhà nước phải phục vụ nhân dân",
+    "d": "Mọi chính sách đều làm lợi cho dân",
+    "ans": "a"
+  },
+  {
+    "num": 269,
+    "chapter": 3,
+    "chapterNum": 50,
+    "q": "Chọn phương án đúng nhất: Quan điểm xây dựng nhà nước trong sạch, vững mạnh, hoạt động có hiệu quả, Hồ Chí Minh đã nhắc nhở đề phòng và khắc phục…",
+    "a": "Tham ô, hối lộ; Đặc quyền, đặc lợi; Kiêu ngạo",
+    "b": "Trịch thượng, tham nhũng; Đặc quyền, đặc lợi; Bè phái",
+    "c": "Tham ô, móc ngoặc, hối lộ; Đặc quyền, đặc lợi; Kết bè kết cánh",
+    "d": "Đặc quyền, đặc lợi; Tham ô, lãng phí, quan liêu; Tư túng, chia rẽ, kiêu ngạo",
+    "ans": "d"
+  },
+  {
+    "num": 270,
+    "chapter": 3,
+    "chapterNum": 51,
+    "q": "Tư tưởng Hồ Chí Minh có vị trí như thế nào trong hệ thống tư tưởng của Đảng Cộng sản Việt Nam?",
+    "a": "Là một bộ phận trong hệ thống tư tưởng của đảng ta",
+    "b": "Là một bộ phận quan trọng trong hệ thống tư tưởng của Đảng ta",
+    "c": "Là một bộ phận quan trọng trong hệ thống tư tưởng của Đảng ta",
+    "d": "Là nền tảng tư tưởng, kim chỉ nam cho hành động của Đảng ta",
+    "ans": "d"
+  },
+  {
+    "num": 271,
+    "chapter": 3,
+    "chapterNum": 52,
+    "q": "Theo Hồ Chí Minh, “căn bệnh” nào là “căn bệnh mẹ đẻ ra hàng trăm thứ căn bệnh con nguy hiểm khác”?",
+    "a": "Chủ nghĩa cá nhân",
+    "b": "Tham ô",
+    "c": "Lãng phí",
+    "d": "Quan liêu",
+    "ans": "a"
+  },
+  {
+    "num": 272,
+    "chapter": 3,
+    "chapterNum": 53,
+    "q": "Theo Hồ Chí Minh, Đảng Cộng sản Việt Nam ra đời dựa quy luật nào?",
+    "a": "Chủ nghĩa Mác – Lênin",
+    "b": "Phong trào công nhân",
+    "c": "Phong trào yêu nước",
+    "d": "Chủ nghĩa Mác – Lênin thâm nhập vào phong trào công nhân và phong trào yêu nước",
+    "ans": "d"
+  },
+  {
+    "num": 273,
+    "chapter": 3,
+    "chapterNum": 54,
+    "q": "Dưới đây là một số luận điểm của Hồ Chí Minh về nhà nước của dân, do dân, vì dân. Luận điểm nào trực tiếp thể hiện tư tưởng nhà nước vì dân?",
+    "a": "Nước ta là nước dân chủ",
+    "b": "Cách mệnh rồi thì quyền trao cho dân chúng số nhiều, chớ để trong tay một bọn ít người",
+    "c": "Hễ chính phủ nào mà có hại cho dân chúng thì dân chúng phải đạp đổ chính phủ ấy đi và gây nên chính phủ khác",
+    "d": "Việc gì có lợi cho dân ta phải hết sức làm. Việc gì có hại cho dân, ta phải hết sức tránh",
+    "ans": "d"
+  },
+  {
+    "num": 274,
+    "chapter": 3,
+    "chapterNum": 55,
+    "q": "Theo Hồ Chí Minh, mục tiêu, lý tưởng của Đảng Cộng sản Việt Nam là…",
+    "a": "Vì lợi ích của tất cả mọi người",
+    "b": "Phụng sự Tổ quốc, phụng sự nhân dân",
+    "c": "Xây dựng một nước Việt Nam giàu mạnh",
+    "d": "Giải phóng giai cấp",
+    "ans": "b"
+  },
+  {
+    "num": 275,
+    "chapter": 3,
+    "chapterNum": 56,
+    "q": "Theo Hồ Chí Minh, một trong những nguyên tắc tổ chức tổ chức và sinh hoạt Đảng cơ bản là gì?",
+    "a": "Thiểu số phục tùng đa số",
+    "b": "Biểu quyết hoặc bỏ phiếu kín",
+    "c": "Cấp dưới phục tùng cấp trên",
+    "d": "Tập trung dân chủ",
+    "ans": "d"
+  },
+  {
+    "num": 276,
+    "chapter": 3,
+    "chapterNum": 57,
+    "q": "Chọn phương án SAI theo tư tưởng Hồ Chí Minh về nguyên tắc xây dựng Đảng Cộng sản Việt Nam.",
+    "a": "Tập trung dân chủ",
+    "b": "Thiểu số phục tùng đa số",
+    "c": "Tự phê bình và phê bình",
+    "d": "Đoàn kết thống nhất trong Đảng",
+    "ans": "b"
+  },
+  {
+    "num": 277,
+    "chapter": 3,
+    "chapterNum": 58,
+    "q": "Theo Hồ Chí Minh, nguy cơ lớn nhất của một đảng cầm quyền là…",
+    "a": "Diễn biến hòa bình",
+    "b": "Chệch hướng",
+    "c": "Sai lầm về đường lối và suy thoái đạo đức của cán bộ, đảng viên",
+    "d": "Tụt hậu",
+    "ans": "c"
+  },
+  {
+    "num": 278,
+    "chapter": 3,
+    "chapterNum": 59,
+    "q": "Chọn cụm từ điền vào chỗ trống: Trong Di chúc,Hồ Chí Minh khẳng định: “Đảng ta là một Đảng cầm quyền. Mỗi đảng viên phải thật sự thấm nhuần…",
+    "a": "Mục tiêu của Đảng",
+    "b": "Nền tảng tư tưởng của Đảng",
+    "c": "Đường lối của Đảng",
+    "d": "Đạo đức cách mạng",
+    "ans": "d"
+  },
+  {
+    "num": 279,
+    "chapter": 3,
+    "chapterNum": 60,
+    "q": "Theo tư tưởng Hồ Chí Minh, nhà nước ta mang bản chất của…",
+    "a": "Toàn dân tộc",
+    "b": "Giai cấp công – nông",
+    "c": "Giai cấp công nhân",
+    "d": "Giai cấp nông dân",
+    "ans": "c"
+  },
+  {
+    "num": 280,
+    "chapter": 3,
+    "chapterNum": 61,
+    "q": "Theo tư tưởng Hồ Chí Minh, nhà nước vì dân là nhà nước?",
+    "a": "Tất cả đều vì lợi ích của nhân dân",
+    "b": "Do nhân dân làm chủ",
+    "c": "Phục vụ nhân dân",
+    "d": "Chăm lo mọi mặt đời sống nhân dân",
+    "ans": "a"
+  },
+  {
+    "num": 281,
+    "chapter": 3,
+    "chapterNum": 62,
+    "q": "Luận điểm nào sau đây là sai? Theo tư tưởng Hồ Chí Minh, nhà nước vì dân là nhà nước?",
+    "a": "Tất cả đều vì lợi ích của nhân dân",
+    "b": "Do nhân dân làm chủ",
+    "c": "Phục vụ nhân dân",
+    "d": "Chăm lo mọi mặt đời sống nhân dân",
+    "ans": "b"
+  },
+  {
+    "num": 282,
+    "chapter": 3,
+    "chapterNum": 63,
+    "q": "Theo tư tưởng Hồ Chí Minh, một trong những yêu cầu để xây dựng nhà nước pháp quyền có hiệu lực pháp lý mạnh mẽ là…",
+    "a": "Nhà nước phải chịu sự lãnh đạo của Đảng",
+    "b": "Nhà nước phải chịu sự giám sát của nhân dân",
+    "c": "Nhà nước phải quản lý đất nước bằng hiến pháp và pháp luật",
+    "d": "Đẩy mạnh quan hệ quốc tế",
+    "ans": "c"
+  },
+  {
+    "num": 283,
+    "chapter": 3,
+    "chapterNum": 64,
+    "q": "Một nhà nước pháp quyền có hiệu lực pháp lý mạnh mẽ theo Hồ Chí Minh phải là…",
+    "a": "Một nhà nước không có tiêu cực, không có đặc quyền, đặc lợi",
+    "b": "Một nhà nước hợp hiến",
+    "c": "Một nhà nước thống nhất, có chủ quyền",
+    "d": "Một nhà nước của dân, do dân, vì dân",
+    "ans": "b"
+  },
+  {
+    "num": 284,
+    "chapter": 3,
+    "chapterNum": 65,
+    "q": "Theo tư tưởng Hồ Chí Minh, cán bộ nhà nước là gì của dân?",
+    "a": "Là người lãnh đạo",
+    "b": "Là công bộc",
+    "c": "Là chủ",
+    "d": "Là người quản lý",
+    "ans": "b"
+  },
+  {
+    "num": 285,
+    "chapter": 3,
+    "chapterNum": 66,
+    "q": "Theo tư tưởng Hồ Chí Minh, luận điểm: Đảng Cộng sản Việt Nam là sản phẩm của sự kết hợp chủ nghĩa Mác – Lênin với phong trào công nhân và phong trào yêu nước là:",
+    "a": "Xác định nhiệm vụ của Đảng",
+    "b": "Xác định bản chất của Đảng",
+    "c": "Xác định nguồn gốc ra đời của Đảng",
+    "d": "Xác định năng lực của Đảng",
+    "ans": "c"
+  },
+  {
+    "num": 286,
+    "chapter": 3,
+    "chapterNum": 67,
+    "q": "Theo tư tưởng Hồ Chí Minh, luận điểm: Đảng Cộng sản Việt Nam là nhân tố quyết định hàng đầu để đưa cách mạng Việt Nam đi đến thắng lợi là:",
+    "a": "Xác định vị thế cầm quyền của Đảng",
+    "b": "Xác định bản chất của Đảng",
+    "c": "Xác định vai trò lãnh đạo của Đảng",
+    "d": "Xác định năng lực của Đảng",
+    "ans": "c"
+  },
+  {
+    "num": 287,
+    "chapter": 3,
+    "chapterNum": 68,
+    "q": "Chọn cụm từ đúng điền vào chỗ trống: Trong xây dựng Đảng, Hồ Chí Minh xác định: “Mục đích phê bình cốt để…, giúp nhau tiến bộ”.",
+    "a": "Sửa chữa sai lầm",
+    "b": "Giúp nhau sửa chữa",
+    "c": "Chỉ ra sai lầm",
+    "d": "Tìm ra khuyết điểm",
+    "ans": "b"
+  },
+  {
+    "num": 288,
+    "chapter": 3,
+    "chapterNum": 69,
+    "q": "Chọn cụm từ đúng điền vào chỗ trống: Theo Hồ Chí Minh, “Đảng có vững, … mới thành công, cũng như người cầm lái có vững thì …”.",
+    "a": "Giải phóng; thuyền chạy",
+    "b": "Đất nước; thuyền chạy",
+    "c": "Cách mạng; thuyền mới đi",
+    "d": "Cách mệnh; thuyền mới chạy",
+    "ans": "d"
+  },
+  {
+    "num": 289,
+    "chapter": 3,
+    "chapterNum": 70,
+    "q": "Theo Hồ Chí Minh: “Đảng Cộng sản Việt Nam ra đời là sản phẩm của sự kết hợp chủ nghĩa Mác – Lênin, với phong trào công nhân và … ở nước ta vào những năm cuối thập kỷ của của thế kỷ XX”",
+    "a": "Phong trào nông dân",
+    "b": "Phong trào yêu nước",
+    "c": "Phong trào trí thức",
+    "d": "Phong trào dân chủ",
+    "ans": "b"
+  },
+  {
+    "num": 290,
+    "chapter": 3,
+    "chapterNum": 71,
+    "q": "Theo Hồ Chí Minh, để Đảng trong sạch, vững mạnh thì Đảng phải thường xuyên tự đổi mới, tự chỉnh đốn về mặt…",
+    "a": "Chính trị",
+    "b": "Tư tưởng",
+    "c": "Tổ chức",
+    "d": "Cả chính trị, tư tưởng và tổ chức",
+    "ans": "d"
+  },
+  {
+    "num": 291,
+    "chapter": 3,
+    "chapterNum": 72,
+    "q": "Theo Hồ Chí Minh, nhân tố quyết định hàng đầu để đưa cách mạng Việt Nam đi đến thắng lợi là:",
+    "a": "Đại đoàn kết dân tộc",
+    "b": "Đoàn kết quốc tế",
+    "c": "Sự lãnh đạo của Đảng",
+    "d": "Sự giúp đỡ của Quốc tế Cộng sản",
+    "ans": "c"
+  },
+  {
+    "num": 292,
+    "chapter": 3,
+    "chapterNum": 73,
+    "q": "Theo Hồ Chí Minh, nền tảng tư tưởng của Đảng phải dựa trên:",
+    "a": "Chủ nghĩa Mác – Lênin",
+    "b": "nguyên tắc tập trung dân chủ",
+    "c": "Nguyên tắc tự phê bình và phê bình",
+    "d": "Đại đoàn kết dân tộc",
+    "ans": "a"
+  },
+  {
+    "num": 293,
+    "chapter": 3,
+    "chapterNum": 74,
+    "q": "Theo tư tưởng Hồ Chí Minh, một trong những yêu cầu về xây dựng đội ngũ cán bộ công chức nhà nước là…",
+    "a": "Phải có tố chất lãnh đạo",
+    "b": "Tuyệt đối trung thành với cách mạng",
+    "c": "Phải có chí tiến thủ",
+    "d": "Phải sáng tạo",
+    "ans": "b"
+  },
+  {
+    "num": 294,
+    "chapter": 3,
+    "chapterNum": 75,
+    "q": "Theo tư tưởng Hồ Chí Minh, mọi việc thành công hay thất bại là do…",
+    "a": "Đường lối lãnh đạo",
+    "b": "Cán bộ tốt hay kém",
+    "c": "Cán bộ lãnh đạo",
+    "d": "Lãnh đạo",
+    "ans": "b"
+  },
+  {
+    "num": 295,
+    "chapter": 3,
+    "chapterNum": 76,
+    "q": "Theo Hồ Chí Minh, chế độ chính trị mà chúng ta xây dựng là chế độ…",
+    "a": "Do nhân dân lao động làm chủ",
+    "b": "Do giai cấp công nhân làm chủ",
+    "c": "Do nhân dân làm chủ",
+    "d": "Do giai cấp nông dân làm chủ",
+    "ans": "a"
+  },
+  {
+    "num": 296,
+    "chapter": 3,
+    "chapterNum": 77,
+    "q": "Theo Hồ Chí Minh, Đảng Cộng sản Việt Nam ra đời dựa quy luật nào?",
+    "a": "Chủ nghĩa Mác – Lênin",
+    "b": "Phong trào công nhân",
+    "c": "Phong trào yêu nước",
+    "d": "Chủ nghĩa Mác – Lênin thâm nhập vào phong trào công nhân và phong trào yêu nước",
+    "ans": "d"
+  },
+  {
+    "num": 297,
+    "chapter": 3,
+    "chapterNum": 78,
+    "q": "Theo Hồ Chí Minh, mục tiêu, lý tưởng của Đảng Cộng sản Việt Nam là…",
+    "a": "Vì lợi ích của giai cấp công nhân",
+    "b": "Phụng sự Tổ quốc, phụng sự nhân dân",
+    "c": "Xây dựng một nước Việt Nam giàu mạnh",
+    "d": "Đảng ta không có mục đích, lý tưởng nào",
+    "ans": "b"
+  },
+  {
+    "num": 298,
+    "chapter": 3,
+    "chapterNum": 79,
+    "q": "Vì sao giai cấp nông dân không thể lãnh đạo được cuộc cách mạng xã hội chủ nghĩa?",
+    "a": "Họ đông nhưng không mạnh",
+    "b": "Họ không có tính Đảng",
+    "c": "Họ không đại diện cho phương thức sản xuất tiên tiến",
+    "d": "Họ không có hệ tư tưởng độc lập và không đại diện cho phương thức sản xuất tiên tiến",
+    "ans": "d"
+  },
+  {
+    "num": 299,
+    "chapter": 3,
+    "chapterNum": 80,
+    "q": "Theo Hồ Chí Minh, vai trò lãnh đạo của giai cấp công nhân trong cách mạng Việt Nam do yếu tố nào quyết định?",
+    "a": "Do ý muốn của Đảng Công sản",
+    "b": "Do đặc tính của giai cấp công nhân",
+    "c": "Do số lượng của giai cấp công nhân",
+    "d": "Do ý muốn của giai cấp công nhân",
+    "ans": "b"
+  },
+  {
+    "num": 300,
+    "chapter": 3,
+    "chapterNum": 81,
+    "q": "Ai là người chủ trì Hội nghị thành lập Đảng Cộng sản Việt Nam?",
+    "a": "Nguyễn Ái Quốc",
+    "b": "Trường Trinh",
+    "c": "Lê Hồng Phong",
+    "d": "Trần Phú",
+    "ans": "a"
+  },
+  {
+    "num": 301,
+    "chapter": 3,
+    "chapterNum": 82,
+    "q": "Đảng ta có tên gọi là Đảng Lao động Việt Nam vào năm nào?",
+    "a": "1941",
+    "b": "1945",
+    "c": "1951",
+    "d": "1955",
+    "ans": "c"
+  },
+  {
+    "num": 302,
+    "chapter": 3,
+    "chapterNum": 83,
+    "q": "Tháng 10/1930, Đảng ta đổi tên là gì?",
+    "a": "Đảng Cộng sản Việt Nam",
+    "b": "Đảng lao động Việt Nam",
+    "c": "Đảng Cộng sản Đông Dương",
+    "d": "An Nam Cộng sản Đảng",
+    "ans": "c"
+  },
+  {
+    "num": 303,
+    "chapter": 3,
+    "chapterNum": 84,
+    "q": "Khi mới thành lập, Đảng ta có tên gọi là gì?",
+    "a": "Đảng Cộng sản Việt Nam",
+    "b": "Đảng lao động Việt Nam",
+    "c": "Đảng Cộng sản Đông Dương",
+    "d": "An Nam Cộng sản Đảng",
+    "ans": "a"
+  },
+  {
+    "num": 304,
+    "chapter": 3,
+    "chapterNum": 85,
+    "q": "Theo Hồ Chí Minh, một trong những nguyên tắc tổ chức tổ chức và sinh hoạt Đảng cơ bản là gì?",
+    "a": "Thiểu số phục tùng đa số",
+    "b": "Biểu quyết hoặc bỏ phiếu kín",
+    "c": "Cấp dưới phục tùng cấp trên",
+    "d": "Tập trung dân chủ",
+    "ans": "d"
+  },
+  {
+    "num": 305,
+    "chapter": 3,
+    "chapterNum": 86,
+    "q": "Bản chất giai cấp công nhân của Đảng Cộng sản Việt Nam thể hiện ở…?",
+    "a": "Nền tảng lý luận, mục tiêu, nguyên tắc tổ chức của Đảng",
+    "b": "Mục tiêu của Đảng",
+    "c": "Số lượng đảng viên trong Đảng",
+    "d": "Trình độ đảng viên trong Đảng",
+    "ans": "a"
+  },
+  {
+    "num": 306,
+    "chapter": 3,
+    "chapterNum": 87,
+    "q": "Chọn câu trả lời đúng nhất theo tư tưởng Hồ Chí Minh.",
+    "a": "Đảng Cộng sản Việt Nam là Đảng của giai cấp công nhân",
+    "b": "Đảng Cộng sản Việt Nam là Đảng của Nhân dân lao động",
+    "c": "Đảng Cộng sản Việt Nam là Đảng của giai cấp công nhân, nhân dân lao động và của cả dân tộc Việt Nam",
+    "d": "Đảng Cộng sản Việt Nam là Đảng của giai cấp công – nông.",
+    "ans": "c"
+  },
+  {
+    "num": 307,
+    "chapter": 3,
+    "chapterNum": 88,
+    "q": "Chọn phương án sai theo tư tưởng Hồ Chí Minh về nguyên tắc xây dựng Đảng Cộng sản Việt Nam…",
+    "a": "Tập trung dân chủ",
+    "b": "Thiểu số phục tùng đa số",
+    "c": "Tự phê bình và phê bình",
+    "d": "Đoàn kết thống nhất trong Đảng",
+    "ans": "b"
+  },
+  {
+    "num": 308,
+    "chapter": 4,
+    "chapterNum": 1,
+    "q": "Tư tưởng đại đoàn kết dân tộc của Hồ Chí Minh hình thành trên cơ sở…",
+    "a": "Từ truyền thống yêu nước, nhân ái, tinh thần cố kết cộng đồng dân tộc Việt Nam",
+    "b": "Từ quan điểm của Chủ nghĩa Mác - Lênin về cách mạng giải phóng dân tộc, về vai trò của quần chúng nhân dân trong cách mạng",
+    "c": "Từ tổng kết kinh nghiệm thành công và thất bại của các phong trào yêu nước, phong trào cách mạng Việt Nam và thế giới",
+    "d": "Cả A, B, C đều đúng",
+    "ans": "d"
+  },
+  {
+    "num": 309,
+    "chapter": 4,
+    "chapterNum": 2,
+    "q": "Chọn phương án đúng nhất: Trong tư tưởng Hồ Chí Minh, đại đoàn kết dân tộc…",
+    "a": "Là vấn đề cơ bản có ý nghĩa chiến lược",
+    "b": "Là vấn đề quyết định thành công của cách mạng",
+    "c": "Là vấn đề cơ bản có ý nghĩa chiến lược, quyết định thành công của cách mạng",
+    "d": "Là vấn đề sách lược",
+    "ans": "c"
+  },
+  {
+    "num": 310,
+    "chapter": 4,
+    "chapterNum": 3,
+    "q": "Chọn phương án đúng nhất: Trong tư tưởng Hồ Chí Minh, nền tảng của khối đại đoàn kết dân tộc là…",
+    "a": "Liên minh công - nông",
+    "b": "Liên minh công - nông và lao động trí óc",
+    "c": "Liên minh công - nông và các tầng lớp lao động khác",
+    "d": "Liên minh công - nông và các lực lượng yêu nước khác",
+    "ans": "b"
+  },
+  {
+    "num": 311,
+    "chapter": 4,
+    "chapterNum": 4,
+    "q": "Chọn phương án đúng nhất: Luận điểm đoàn kết, đoàn kết, “thành công, thành công, đại thành công” của Hồ Chí Minh được trích từ tác phẩm nào?",
+    "a": "Bài nói chuyện trong Đại hội thành lập mặt trận Tổ quốc Việt Nam lần IV",
+    "b": "Bài nói chuyện tại Hội nghị mở rộng Uỷ ban Trung ương mặt trận tổ quốc Việt Nam",
+    "c": "Bài nói chuyện tại Đại hội đại biểu mặt trận Tổ quốc Việt Nam lần thứ III",
+    "d": "Bài nói chuyện tại Đại hội Đại biểu Mặt trận Tổ quốc Việt Nam lần thứ II",
+    "ans": "d"
+  },
+  {
+    "num": 312,
+    "chapter": 4,
+    "chapterNum": 5,
+    "q": "“Đoàn kết là một truyền thống cực kỳ quý báu của Đảng và của dân ta. Các đồng chí từ Trung ương đến các chi bộ cần phải giữ gìn sự đoàn kết nhất trí của Đảng như giữ gìn con ngươi của mắt mình”. Câu viết trên ở trong tác phẩm nào của Hồ Chí Minh?",
+    "a": "Đạo đức cách mạng",
+    "b": "Sửa đổi lối làm việc",
+    "c": "Thường thức chính trị",
+    "d": "Di chúc",
+    "ans": "d"
+  },
+  {
+    "num": 313,
+    "chapter": 4,
+    "chapterNum": 6,
+    "q": "Điền từ vào chỗ trống: Hồ Chí Minh đã nêu: “Bây giờ còn một điểm rất quan trọng, cũng là điểm mẹ. Điểm này mà thực hiện tốt thì đẻ ra con cháu đều tốt: Đó là…..”",
+    "a": "Khởi nghĩa",
+    "b": "Dân tộc",
+    "c": "Đoàn kết",
+    "d": "Cách mạng",
+    "ans": "c"
+  },
+  {
+    "num": 314,
+    "chapter": 4,
+    "chapterNum": 7,
+    "q": "Hồ Chí Minh cho rằng những lực lượng cần đoàn kết, gồm:",
+    "a": "Phong trào cộng sản và công nhân thế giới; Phong trào đấu tranh giải phóng dân tộc; Các lực lượng tiến bộ trên thế giới",
+    "b": "Phong trào cộng sản; Phong trào cách mạng giải phóng dân tộc; Những người yêu chuộng hòa bình, dân chủ, tự do, công lý",
+    "c": "Phong trào cộng sản và công nhân thế giới; Phong trào đấu tranh giải phóng dân tộc; Các lực lượng tiến bộ, những người yêu chuộng hòa bình, dân chủ, tự do, công lý",
+    "d": "Phong trào công nhân thế giới; Phong trào đấu tranh giải phóng dân tộc; Các lực lượng tiến bộ, những người yêu chuộng hòa bình, dân chủ, tự do, công lý",
+    "ans": "c"
+  },
+  {
+    "num": 315,
+    "chapter": 4,
+    "chapterNum": 8,
+    "q": "Hồ Chí Minh đã nêu lên nguyên tắc đoàn kết quốc tế là:",
+    "a": "Đoàn kết trên cơ sở thống nhất mục tiêu và lợi ích, có lý có tình; Giương cao ngọn cờ độc lập dân tộc gắn liền với chủ nghĩa xã hội",
+    "b": "Đoàn kết trên cơ sở thống nhất mục tiêu và lợi ích, có lý có tình; Đoàn kết trên cở sở độc lập, tự chủ, tự lực tự cường",
+    "c": "Đoàn kết trên cơ sở thống nhất mục tiêu và lợi ích, có lý có tình; Đoàn kết trên cơ sở độc lập tự chủ",
+    "d": "Đoàn kết trên cơ sở thống nhất mục tiêu và lợi ích, có lý có tình; Đoàn kết trên cở sở hòa bình độc lập tự do cho tất cả các dân tộc",
+    "ans": "b"
+  },
+  {
+    "num": 316,
+    "chapter": 4,
+    "chapterNum": 9,
+    "q": "Chọn cụm từ thích hợp điền vào chỗ trống theo tư tưởng Hồ Chí Minh: “Muốn người ta giúp cho thì trước hết mình phải…”",
+    "a": "Giúp người ta trước",
+    "b": "Tự cố gắng đứng dậy",
+    "c": "Tự giúp lấy mình đã",
+    "d": "Kêu gọi sự giúp đỡ",
+    "ans": "c"
+  },
+  {
+    "num": 317,
+    "chapter": 4,
+    "chapterNum": 10,
+    "q": "Luận điểm: “Chủ nghĩa dân tộc là một động lực lớn của đất nước” của Hồ Chí Minh được trích từ tác phẩm nào?",
+    "a": "Báo cáo Bắc kỳ, trung kỳ, Nam kỳ",
+    "b": "Lời kêu gọi toàn quốc kháng chiến",
+    "c": "Đường cách mệnh",
+    "d": "Tuyên ngôn độc lập",
+    "ans": "a"
+  },
+  {
+    "num": 318,
+    "chapter": 4,
+    "chapterNum": 11,
+    "q": "Trong tư tưởng Hồ Chí Minh, đại đoàn kết dân tộc là:",
+    "a": "Là nhiệm vụ hàng đầu của cách mạng",
+    "b": "Là nhiệm vụ quan trọng nhất của cách mạng",
+    "c": "Là mục tiêu, nhiệm vụ hàng đầu của cách mạng, của dân tộc",
+    "d": "Là mục tiêu của của cách mạng",
+    "ans": "c"
+  },
+  {
+    "num": 319,
+    "chapter": 4,
+    "chapterNum": 12,
+    "q": "Chọn phương án đúng nhất: Sức mạnh dân tộc trong tư tưởng Hồ Chí Minh bao gồm…",
+    "a": "Chủ nghĩa yêu nước",
+    "b": "Văn hóa truyền thống dân tộc Việt Nam",
+    "c": "Tinh thần đoàn kết, ý thức đấu tranh cho độc lập dân tộc",
+    "d": "Cả A, B, C",
+    "ans": "d"
+  },
+  {
+    "num": 320,
+    "chapter": 4,
+    "chapterNum": 13,
+    "q": "Chọn phương án đúng nhất: Theo tư tưởng Hồ Chí Minh, yếu tố nào được xác định là mục tiêu, nhiệm vụ hàng đầu của Đảng, của dân tộc?",
+    "a": "Đoàn kết dân tộc kết hợp với đoàn kết quốc tế",
+    "b": "Đoàn kết quốc tế",
+    "c": "Giải phóng dân tộc",
+    "d": "Đại đoàn kết dân tộc",
+    "ans": "d"
+  },
+  {
+    "num": 321,
+    "chapter": 4,
+    "chapterNum": 14,
+    "q": "Luận điểm: “Lao động tất cả các nước đoàn kết lại” là của ai?",
+    "a": "C. Mác",
+    "b": "Lê Duẩn",
+    "c": "V.I. Lênin",
+    "d": "Hồ Chí Minh",
+    "ans": "d"
+  },
+  {
+    "num": 322,
+    "chapter": 4,
+    "chapterNum": 15,
+    "q": "Trong các luận điểm sau, luận điểm nào của Hồ Chí Minh?",
+    "a": "Vô sản tất cả các nước, đoàn kết lại",
+    "b": "Lao động tất cả các nước đoàn kết lại",
+    "c": "Vô sản tất cả các nước và các dân tộc bị áp bức đoàn kết lại",
+    "d": "Vô sản tất cả các nước liên hiệp lại",
+    "ans": "b"
+  },
+  {
+    "num": 323,
+    "chapter": 4,
+    "chapterNum": 16,
+    "q": "Chọn câu trả lời đúng nhất với tư tưởng Hồ Chí Minh?",
+    "a": "Đại đoàn kết dân tộc là vấn đề sách lược",
+    "b": "Đại đoàn kết là vấn đề chiến lược",
+    "c": "Đại đoàn kết dân tộc là thủ đoạn chính trị",
+    "d": "Đại đoàn kết dân tộc là vấn đề thời sự",
+    "ans": "b"
+  },
+  {
+    "num": 324,
+    "chapter": 4,
+    "chapterNum": 17,
+    "q": "Chọn phương án đúng nhất đối với tư tưởng Hồ Chí Minh: Để tranh thủ sự giúp đỡ của các nước xã hội chủ nghĩa trong đấu tranh cách mạng, cần coi trọng nhân tố…",
+    "a": "Có sự lãnh đạo đúng đắn của Đảng",
+    "b": "Có đường lối độc lập tự chủ",
+    "c": "Tự lực cánh sinh, dựa vào sức mình là chính",
+    "d": "Dựa vào nguồn lực nội sinh",
+    "ans": "c"
+  },
+  {
+    "num": 325,
+    "chapter": 4,
+    "chapterNum": 18,
+    "q": "Chọn cụm từ đúng nhất điền vào chỗ trống theo tư tưởng Hồ Chí Minh: “Việt Nam muốn làm bạn với …., không gây thù oán với một ai”.",
+    "a": "Các nước xã hội chủ nghĩa",
+    "b": "Các dân tộc thuộc địa bị áp bức",
+    "c": "Mọi nước dân chủ",
+    "d": "Các nước tư bản",
+    "ans": "c"
+  },
+  {
+    "num": 326,
+    "chapter": 4,
+    "chapterNum": 19,
+    "q": "Chọn phương án trả lời đúng theo tư tưởng Hồ Chí Minh về nguyên tác ngoại giao:",
+    "a": "Phải cứng rắn về nguyên tắc",
+    "b": "Vừa cứng rắn về nguyên tắc, vừa mềm dẻo về sách lược",
+    "c": "Phải mềm dẻo về sách lược",
+    "d": "“Dĩ bất biến, ứng vạn biến”",
+    "ans": "b"
+  },
+  {
+    "num": 327,
+    "chapter": 4,
+    "chapterNum": 20,
+    "q": "Tư tưởng đại đoàn kết dân tộc của Hồ Chí Minh được hình thành dựa trên cơ sở:",
+    "a": "Từ truyền thống đoàn kết nhân ái, tinh thần cố kết cộng đồng dân tộc Việt Nam",
+    "b": "Từ quan điểm của chủ nghĩa Mác – Leenin về vai trò của quần chúng nhân dân",
+    "c": "Từ thực tiễn thành công và thất bại của phong trào cách mạng Việt Nam và thế giới",
+    "d": "Tất cả các phương án đều đúng",
+    "ans": "d"
+  },
+  {
+    "num": 328,
+    "chapter": 4,
+    "chapterNum": 21,
+    "q": "Trong tư tưởng Hồ Chí Minh, đại đoàn kết dân tộc là:",
+    "a": "Là nhiệm vụ hàng đầu của cách mạng",
+    "b": "Là nhiệm vụ quan trọng nhất của cách mạng",
+    "c": "Là mục tiêu, nhiệm vụ hàng đầu của cách mạng, của dân tộc",
+    "d": "Là mục tiêu của của cách mạng",
+    "ans": "c"
+  },
+  {
+    "num": 329,
+    "chapter": 4,
+    "chapterNum": 22,
+    "q": "Trong tư tưởng Hồ Chí Minh, nền tảng của khối đại đoàn kết dân tộc là:",
+    "a": "Liên minh công – nông",
+    "b": "Liên minh công – nông – lao động trí óc",
+    "c": "Liên minh công – nông và các lực lượng khác",
+    "d": "Liên minh công – nông và các tầng lớp khác",
+    "ans": "b"
+  },
+  {
+    "num": 330,
+    "chapter": 4,
+    "chapterNum": 23,
+    "q": "Trong tư tưởng Hồ Chí Minh, lực lượng chủ yếu của khối đại đoàn kết là:",
+    "a": "Công nhân",
+    "b": "Công nhân – nông dân",
+    "c": "Công nhân, nông dân, lao động trí óc",
+    "d": "Học trò, nhà buôn",
+    "ans": "d"
+  },
+  {
+    "num": 331,
+    "chapter": 4,
+    "chapterNum": 24,
+    "q": "Sức mạnh dân tộc trong tư tưởng Hồ Chí Minh bao gồm:",
+    "a": "Chủ nghĩa yêu nước",
+    "b": "Văn hóa truyền thống dân tộc Việt Nam",
+    "c": "Tinh thần đoàn kết, ý thức đấu tranh chô đọc lập dân tộc",
+    "d": "Tất cả các phương án đều đúng",
+    "ans": "d"
+  },
+  {
+    "num": 332,
+    "chapter": 4,
+    "chapterNum": 25,
+    "q": "Theo Hồ Chí Minh, Mặt trận dân tộc thống nhất phải dựa trên cơ sở:",
+    "a": "Đảm bảo lợi ích tối cao của dân tộc, quyền lợi cơ bản của các tầng lớp nhân dân",
+    "b": "Đảm bảo quyền lợi cơ bản của công – nông",
+    "c": "Đảm bảo lợi ích của nhân dân lao động",
+    "d": "Đảm bảo lợi ích tối cao của giai cấp công nhân",
+    "ans": "a"
+  },
+  {
+    "num": 333,
+    "chapter": 4,
+    "chapterNum": 26,
+    "q": "Sức mạnh đoàn kết quốc tế theo tư tưởng Hồ Chí Minh, bao gồm:",
+    "a": "Sức mạnh liên minh chiến đấu giữa lao động các nước thuộc địa và lao động thuộc địa với vô sản chính quốc",
+    "b": "Sức mạnh của giai cấp vô sản, cách mạng vô sản và Đảng Cộng sản",
+    "c": "Sức mạnh của ba dòng thác cách mạng và tiến bộ khoa học kỹ thuật",
+    "d": "Tất cả các phương án đều đúng",
+    "ans": "a"
+  },
+  {
+    "num": 334,
+    "chapter": 4,
+    "chapterNum": 27,
+    "q": "Tìm yếu tố KHÔNG nằm trong Mặt trận Dân tộc thống nhất?",
+    "a": "Đảng Cộng sản",
+    "b": "Nhà nước xã hội chủ nghĩa",
+    "c": "Các tổ chức chính trị - xã hội",
+    "d": "Tòa án nhân dân",
+    "ans": "b"
+  },
+  {
+    "num": 335,
+    "chapter": 4,
+    "chapterNum": 28,
+    "q": "Theo Hồ Chí Minh, đoàn kết quốc tế có vai trò như thế nào đối với thắng lợi của cách mạng?",
+    "a": "Là vấn đề có ý nghĩa chiến lược quyết định sự thắng lợi",
+    "b": "Quyết định",
+    "c": "Vừa quan trọng, vừa quyết định",
+    "d": "Quan trọng",
+    "ans": "a"
+  },
+  {
+    "num": 336,
+    "chapter": 4,
+    "chapterNum": 29,
+    "q": "Theo tư tưởng Hồ Chí Minh, một trong những nguyên tắc của đoàn kết quốc tế là…",
+    "a": "Không dùng vũ lực và đe dọa dùng vũ lực",
+    "b": "Các bên cùng có lợi",
+    "c": "Đoàn kết trên cơ sở thống nhất mục tiêu, lợi ích, có lý, có tình",
+    "d": "Có đi, có lại",
+    "ans": "c"
+  },
+  {
+    "num": 337,
+    "chapter": 4,
+    "chapterNum": 30,
+    "q": "Tên khối đoàn kết dân tộc do Hội nghị Trung ương Đảng lần thứ 6 (11/1939) xác định là mặt trận nào?",
+    "a": "Mặt trận dân tộc giải phóng",
+    "b": "Mặt trận dân chủ Đông Dương",
+    "c": "Mặt trận dân tộc thống nhất phản đế Đông Dương",
+    "d": "Mặt trận Việt Minh",
+    "ans": "c"
+  },
+  {
+    "num": 338,
+    "chapter": 4,
+    "chapterNum": 31,
+    "q": "Chọn cụm tư điền vào chỗ trống: “Cần phải giữ gìn sự đoàn kết nhất trí của Đảng như giữ gìn…”.",
+    "a": "Tài sản của mình",
+    "b": "Nhân cách của mình",
+    "c": "Tính mạng của mình",
+    "d": "Con ngươi mắt mình",
+    "ans": "d"
+  },
+  {
+    "num": 339,
+    "chapter": 4,
+    "chapterNum": 32,
+    "q": "Theo tư tưởng Hồ Chí Minh, một trong những nhân tố nhân tố đóng vai trò quyết định thắng lợi của cách mạng là:",
+    "a": "Đoàn kết quốc tế",
+    "b": "Sự giúp đỡ của các nước xã hội chủ nghĩa",
+    "c": "Đoàn kết dân tộc",
+    "d": "Đoàn kết dân tộc kết hợp với đoàn kết quốc tế",
+    "ans": "c"
+  },
+  {
+    "num": 340,
+    "chapter": 4,
+    "chapterNum": 33,
+    "q": "Theo tư tưởng Hồ Chí Minh, yếu tố nào được xác định là mục tiêu, nhiệm vụ hàng đầu của Đảng, của dân tộc?",
+    "a": "Đoàn kết dân tộc kết hợp với đoàn kết quốc tế",
+    "b": "Đoàn kết quốc tế",
+    "c": "Giải phóng dân tộc",
+    "d": "Đại đoàn kết dân tộc",
+    "ans": "d"
+  },
+  {
+    "num": 341,
+    "chapter": 4,
+    "chapterNum": 34,
+    "q": "Chọn câu trả lời đúng với tư tưởng Hồ Chí Minh.",
+    "a": "Đại đoàn kết dân tộc là vấn đề sách lược",
+    "b": "Đại đoàn kết là vấn đề chiến lược",
+    "c": "Đại đoàn kết dân tộc là thủ đoạn chính trị",
+    "d": "Đại đoàn kết dân tộc là vấn đề cấp bách",
+    "ans": "b"
+  },
+  {
+    "num": 342,
+    "chapter": 4,
+    "chapterNum": 35,
+    "q": "Mặt trận Việt Nam độc lập đồng minh độc lập đồng minh (Việt Minh) được thành lập vào thời gian nào?",
+    "a": "19/5/1940",
+    "b": "19/5/1941",
+    "c": "19/5/1942",
+    "d": "19/5/1943",
+    "ans": "b"
+  },
+  {
+    "num": 343,
+    "chapter": 4,
+    "chapterNum": 36,
+    "q": "Chọn cụm từ điền vào chỗ trống để hoàn thành câu thơ của Hồ Chí Minh “Rằng đây bốn bể một nhà….… đều là anh em”.",
+    "a": "Lao động thế giới",
+    "b": "Bốn phương vô sản",
+    "c": "Đông tây nam bắc",
+    "d": "Vàng đen trắng đỏ",
+    "ans": "d"
+  },
+  {
+    "num": 344,
+    "chapter": 4,
+    "chapterNum": 37,
+    "q": "Trong kháng chiến chống Mỹ, Hồ Chí Minh đã thành công trong việc xây dựng loại mặt trận nào?",
+    "a": "Mặt trận đại đoàn kết dân tộc",
+    "b": "Mặt trận đại đoàn kết ba nước Đông Dương",
+    "c": "Mặt trận nhân dân tiến bộ thế giới đoàn kết với Việt Nam",
+    "d": "Cả A, B, C đều đúng",
+    "ans": "d"
+  },
+  {
+    "num": 345,
+    "chapter": 4,
+    "chapterNum": 38,
+    "q": "Động lực chủ đạo của sự phát triển đất nước ta hiện nay là gì?",
+    "a": "Đại đoàn kết dân tộc",
+    "b": "Sự ủng hộ quốc tế",
+    "c": "Khoa học công nghệ",
+    "d": "Vốn đầu tư nước ngoài",
+    "ans": "a"
+  },
+  {
+    "num": 346,
+    "chapter": 4,
+    "chapterNum": 39,
+    "q": "Trong tư tưởng Hồ Chí Minh, lực lượng chủ yếu trong khối đại đoàn kết dân tộc là…",
+    "a": "Công nhân",
+    "b": "Công nhân – nông dân",
+    "c": "Công nhân, nông dân, lao động trí óc",
+    "d": "Học trò, nhà buôn",
+    "ans": "c"
+  },
+  {
+    "num": 347,
+    "chapter": 4,
+    "chapterNum": 40,
+    "q": "Chọn phương án đúng nhất đối với tư tưởng Hồ Chí Minh: Để tranh thủ sự giúp đỡ của các nước xã hội chủ nghĩa trong đấu tranh cách mạng, cần coi trọng nhân tố:",
+    "a": "Có sự lãnh đạo đúng đắn của Đảng",
+    "b": "Có đường lối độc lập tự chủ",
+    "c": "Tự lực cánh sinh, dựa vào sức mình là chính",
+    "d": "Dựa vào nguồn lực ngoại sinh",
+    "ans": "c"
+  },
+  {
+    "num": 348,
+    "chapter": 4,
+    "chapterNum": 41,
+    "q": "Mối quan hệ giữa nội lực và ngoại lực trong phát triển kinh tế là:",
+    "a": "Nội lực là chính",
+    "b": "Ngoại lực trong thời kỳ đầu là chính để phá vỡ “cái vòng luẩn quẩn”",
+    "c": "Nội lực là chính, ngoại lực là quan trọng",
+    "d": "Nội lực và ngoại lực quan trọng như nhau",
+    "ans": "c"
+  },
+  {
+    "num": 349,
+    "chapter": 4,
+    "chapterNum": 42,
+    "q": "Chọn cụm từ điền vào chỗ trống theo tư tưởng Hồ Chí Minh: “Việt Nam muốn làm bạn với …., không gây thù oán với một ai”.",
+    "a": "Các nước xã hội chủ nghĩa",
+    "b": "Các dân tộc thuộc địa bị áp bức",
+    "c": "Mọi nước dân chủ",
+    "d": "Các nước phát triển cao",
+    "ans": "c"
+  },
+  {
+    "num": 350,
+    "chapter": 4,
+    "chapterNum": 43,
+    "q": "Chọn phương án trả lời đúng theo tư tưởng Hồ Chí Minh về nguyên tắc ngoại giao:",
+    "a": "Phải cứng rắn về nguyên tắc",
+    "b": "Vừa cứng rắn về nguyên tắc, vừa mềm dẻo về sách lược",
+    "c": "Phải mềm dẻo về sách lược",
+    "d": "“Dĩ bất biến, ứng vạn biến”",
+    "ans": "b"
+  },
+  {
+    "num": 351,
+    "chapter": 4,
+    "chapterNum": 44,
+    "q": "Trong các luận điểm sau, luận điểm nào của Hồ Chí Minh?",
+    "a": "Vô sản tất cả các nước, đoàn kết lại",
+    "b": "Vô sản tất cả các nước và các dân tộc bị áp bức đoàn kết lại",
+    "c": "Vô sản tất cả các nước liên hiệp lại",
+    "d": "Lao động tất cả các nước đoàn kết lại",
+    "ans": "d"
+  },
+  {
+    "num": 352,
+    "chapter": 5,
+    "chapterNum": 1,
+    "q": "Theo Tư tưởng Hồ Chí Minh, đạo đức có vai trò…",
+    "a": "Là nền tảng lý luận của người cách mạng",
+    "b": "Là cái gốc, là nền tảng của người cách mạng",
+    "c": "Là định hướng lý tưởng của người cách mạng",
+    "d": "Là cơ sở tư tưởng của người cách mạng",
+    "ans": "b"
+  },
+  {
+    "num": 353,
+    "chapter": 5,
+    "chapterNum": 2,
+    "q": "Chuẩn mực đạo đức của người cách mạng theo Tư tưởng Hồ Chí Minh là…",
+    "a": "Trung với nước hiếu với dân; yêu thương con người",
+    "b": "Cần, kiệm, liêm, chính, chí công vô tư",
+    "c": "Có tinh thần quốc tế trong sáng",
+    "d": "Cả A, B, C",
+    "ans": "d"
+  },
+  {
+    "num": 354,
+    "chapter": 5,
+    "chapterNum": 3,
+    "q": "Theo Hồ Chí Minh, muốn xây dựng đạo đức mới phải…",
+    "a": "Nói đi đôi với làm",
+    "b": "Xây đi đôi với chống",
+    "c": "Tu dưỡng đạo đức suốt đời",
+    "d": "Cả A, B, C",
+    "ans": "d"
+  },
+  {
+    "num": 355,
+    "chapter": 5,
+    "chapterNum": 4,
+    "q": "Chọn câu trả lời đúng nhất: Con người theo quan niệm của Hồ Chí Minh là…",
+    "a": "Động lực của cách mạng",
+    "b": "Vốn quý của cách mạng",
+    "c": "Vốn quý nhất, nhân tố quyết định đến thành công của cách mạng",
+    "d": "Bộ phận quan trọng của cách mạng",
+    "ans": "c"
+  },
+  {
+    "num": 356,
+    "chapter": 5,
+    "chapterNum": 5,
+    "q": "Chọn phương án trả lời đúng nhất: Khái niệm con người trong Tư tưởng Hồ Chí Minh để chỉ…",
+    "a": "Một con người cụ thể",
+    "b": "Một cộng đồng người",
+    "c": "Con người cụ thể gắn với hoàn cảnh lịch sử cụ thể",
+    "d": "Con người nói chung",
+    "ans": "c"
+  },
+  {
+    "num": 357,
+    "chapter": 5,
+    "chapterNum": 6,
+    "q": "Theo Tư tưởng Hồ Chí Minh, văn hoá có chức năng…",
+    "a": "Bồi dưỡng tư tưởng đúng đắn và tình cảm cao đẹp cho con người",
+    "b": "Nâng cao dân trí",
+    "c": "Bồi dưỡng những phẩm chất tốt đẹp, những phong cách, lối sống lành mạnh, luôn hướng con người vươn tới cái thiện, cái mỹ, không ngừng hoàn thiện bản thân mình",
+    "d": "Cả A, B, C",
+    "ans": "d"
+  },
+  {
+    "num": 358,
+    "chapter": 5,
+    "chapterNum": 7,
+    "q": "Khi viết tác phẩm “Nâng cao đạo đức cách mạng, quét sạch chủ nghĩa cá nhân”, Hồ Chí Minh lấy bút danh là gì?",
+    "a": "Hồ Chí Minh",
+    "b": "Trần Lực",
+    "c": "Già Thu",
+    "d": "X.Y.Z",
+    "ans": "b"
+  },
+  {
+    "num": 359,
+    "chapter": 5,
+    "chapterNum": 8,
+    "q": "“Cũng như sông có nguồn thì mới có nước, không có nguồn thì sông cạn. Cây phải có gốc, không có gốc thì cây héo. Người cách mạng phải có đạo đức, không có đạo đức thì dù tài giỏi mấy cũng không lãnh đạo được nhân dân”. Câu nói trên được trích trong tác phẩm nào của Hồ Chí Minh?",
+    "a": "Đường Kách mệnh",
+    "b": "Sửa đổi lối làm việc",
+    "c": "Nhật ký trong tù",
+    "d": "Đạo đức cách mạng",
+    "ans": "b"
+  },
+  {
+    "num": 360,
+    "chapter": 5,
+    "chapterNum": 9,
+    "q": "Hãy cho biết câu nói dưới đây là của ai? “Việc học không bao giờ cùng, còn sống còn phải học”.",
+    "a": "V.I. Lênin",
+    "b": "Hồ Chí Minh",
+    "c": "Quản Trọng.",
+    "d": "Khổng Tử",
+    "ans": "b"
+  },
+  {
+    "num": 361,
+    "chapter": 5,
+    "chapterNum": 10,
+    "q": "Theo Hồ Chí Minh phẩm chất đạo đức cách mạng nào gắn với hoạt động hàng ngày của mọi người và là thước đo sự giàu có về mặt vật chất, vững mạnh về tinh thần và là nền tảng của đời sống mới, của phong trào thi đua yêu nước?",
+    "a": "Trung với nước, hiếu với dân",
+    "b": "Yêu thương con người",
+    "c": "Cần, kiệm, liêm, chính",
+    "d": "Tinh thần quốc tế trong sáng",
+    "ans": "c"
+  },
+  {
+    "num": 362,
+    "chapter": 5,
+    "chapterNum": 11,
+    "q": "“Người mà không liêm, không bằng súc vật”. Câu nói trên là của ai?",
+    "a": "Khổng Tử",
+    "b": "Mạnh Tử",
+    "c": "Các Mác",
+    "d": "Hồ Chí Minh",
+    "ans": "a"
+  },
+  {
+    "num": 363,
+    "chapter": 5,
+    "chapterNum": 12,
+    "q": "Luận điểm: “Đạo đức cách mạng không phải trên trời sa xuống. Nó do đấu tranh rèn luyện bền bỉ hằng ngày mà phát triển và củng cố. Cũng như ngọc càng mài càng sáng, vàng càng luyện càng trong” là của ai?",
+    "a": "C. Mác",
+    "b": "Khổng Tử",
+    "c": "Mạnh Tử",
+    "d": "Hồ Chí Minh",
+    "ans": "d"
+  },
+  {
+    "num": 364,
+    "chapter": 5,
+    "chapterNum": 13,
+    "q": "Ba thứ giặc nội xâm theo tư tưởng Hồ Chí Minh là gì?",
+    "a": "Tay sai, bù nhìn, bọn ăn bám",
+    "b": "Bè phái, a dua, nịnh hót",
+    "c": "Tham ô, lãng phí, quan liêu",
+    "d": "Giặc đói, giặc dốt, giặc ngoại xâm",
+    "ans": "c"
+  },
+  {
+    "num": 365,
+    "chapter": 5,
+    "chapterNum": 14,
+    "q": "“Cũng như ngọc càng mài càng sáng, vàng càng luyện càng trong”. Câu trên được trích trong tác phẩm nào của Hồ Chí Minh?",
+    "a": "Đường Kách mệnh",
+    "b": "Đạo đức cách mạng",
+    "c": "Nâng cao đạo đức cách mạng, quét sạch chủ nghĩa cá nhân",
+    "d": "Đời sống mới",
+    "ans": "b"
+  },
+  {
+    "num": 366,
+    "chapter": 5,
+    "chapterNum": 15,
+    "q": "Tác phẩm “Đạo đức cách mạng” của Hồ Chí Minh được in lần đầu tiên trên tạp chí nào?",
+    "a": "Tạp chí Quân đội nhân dân",
+    "b": "Tạp chí Học tập",
+    "c": "Tạp chí Những vấn đề hòa bình và chủ nghĩa xã hội",
+    "d": "Tạp chí Xây dựng Đảng",
+    "ans": "b"
+  },
+  {
+    "num": 367,
+    "chapter": 5,
+    "chapterNum": 16,
+    "q": "“Đảng ta là một Đảng cầm quyền. Mỗi đảng viên và cán bộ phải thật sự thấm nhuần đạo đức cách mạng, thật sự cần kiệm, liêm, chính, chí công vô tư. Phải giữ gìn Đảng ta thật trong sạch, phải xứng đáng là người lãnh đạo, là người đầy tớ thật trung thành của nhân dân”. Câu trên được trích trong tác phẩm nào của Hồ Chí Minh?",
+    "a": "Đạo đức cách mạng",
+    "b": "Đường Kách mệnh",
+    "c": "Di chúc",
+    "d": "Sửa đổi lối làm việc",
+    "ans": "c"
+  },
+  {
+    "num": 368,
+    "chapter": 5,
+    "chapterNum": 17,
+    "q": "Trong các phẩm chất đạo đức cơ bản của con người Việt Nam trong thời đại mới, phẩm chất đạo đức nào quan trọng nhất, bao trùm nhất?",
+    "a": "Yêu thương con người",
+    "b": "Cần, kiệm, liêm, chính, chí công vô tư",
+    "c": "Trung với nước, hiếu với dân",
+    "d": "Tinh thần quốc tế trong sáng",
+    "ans": "c"
+  },
+  {
+    "num": 369,
+    "chapter": 5,
+    "chapterNum": 18,
+    "q": "Chọn đáp án trả lời đúng nhất: Theo tư tưởng Hồ Chí Minh về đạo đức, Hiếu với dân được hiểu là:",
+    "a": "Yêu thương dân",
+    "b": "Phục vụ dân hết lòng",
+    "c": "Yêu thương dân và phục vụ dân hết lòng",
+    "d": "Trung thành với dân",
+    "ans": "c"
+  },
+  {
+    "num": 370,
+    "chapter": 5,
+    "chapterNum": 19,
+    "q": "Theo tư tưởng Hồ Chí Minh về đạo đức, tinh thần quốc tế trong sáng được hiểu là:",
+    "a": "Tinh thần đoàn kết quốc tế vô sản",
+    "b": "Tinh thần đoàn kết với các dân tộc bị áp bức, với nhân dân lao động các nước",
+    "c": "Tinh thần đoàn kết với tất cả những người tiến bộ trên thế giới",
+    "d": "Cả A, B, C",
+    "ans": "d"
+  },
+  {
+    "num": 371,
+    "chapter": 5,
+    "chapterNum": 20,
+    "q": "Chọn phương án đúng nhất: Để xây dựng những phẩm chất đạo đức tốt đẹp và chống lại những cái vô đạo đức có kết quả, theo quan điểm của Hồ Chí Minh phải…",
+    "a": "Tạo thành phong trào quần chúng rộng rãi",
+    "b": "Động viên từng cá nhân thực hiện",
+    "c": "Bắt buộc từng cá nhân thực hiện",
+    "d": "Chống chủ nghĩa cá nhân",
+    "ans": "a"
+  },
+  {
+    "num": 372,
+    "chapter": 5,
+    "chapterNum": 21,
+    "q": "Để xây dựng những phẩm chất đạo đức tốt đẹp và chống lại những cái vô đạo đức có kết quả, theo quan điểm của Hồ Chí Minh phải:",
+    "a": "Tạo thành phong trào quần chúng rộng rãi",
+    "b": "Động viên từng cá nhân thực hiện",
+    "c": "Bắt buộc từng cá nhân thực hiện",
+    "d": "Chống chủ nghĩa cá nhân",
+    "ans": "a"
+  },
+  {
+    "num": 373,
+    "chapter": 5,
+    "chapterNum": 22,
+    "q": "Chọn đáp án trả lời đúng nhất: Việc tu dưỡng đạo đức ở mỗi người phải được thực hiện trong:",
+    "a": "Mọi hoạt động thực tiễn",
+    "b": "Mọi mối quan hệ xã hội",
+    "c": "Mọi hoạt động thực tiễn, mọi mối quan hệ xã hội",
+    "d": "Trong đời tư và đời công",
+    "ans": "c"
+  },
+  {
+    "num": 374,
+    "chapter": 5,
+    "chapterNum": 23,
+    "q": "Hãy cho biết vai trò của người nghệ sỹ trong lĩnh vực văn hoá, văn nghệ theo tư tưởng Hồ Chí Minh?",
+    "a": "Là tác giả",
+    "b": "Là người chiến sĩ",
+    "c": "Vừa là người sáng tác, vừa là người phê bình",
+    "d": "Là người định hướng",
+    "ans": "b"
+  },
+  {
+    "num": 375,
+    "chapter": 5,
+    "chapterNum": 24,
+    "q": "Cho biết vai trò của tác phẩm văn nghệ trong lĩnh vực văn hoá văn nghệ theo tư tưởng Hồ Chí Minh?",
+    "a": "Kết tinh trí tuệ, tâm hồn của văn nghệ sĩ",
+    "b": "Là vũ khí sắc bén trong đấu tranh cách mạng, xây dựng xã hội mới, con người mới",
+    "c": "Là món ăn tinh thần của mọi người trong cuộc sống",
+    "d": "Là cơ sở để đánh giá tài năng của người nghệ sỹ",
+    "ans": "b"
+  },
+  {
+    "num": 376,
+    "chapter": 5,
+    "chapterNum": 25,
+    "q": "Hãy cho biết ý nghĩa của việc thực hiện phương châm của Hồ Chí Minh về giáo dục: Học đi đôi với hành, lý luận liên hệ với thực tế; học tập kết hợp với lao động; kết hợp gia đình – nhà trường – xã hội.",
+    "a": "Để có chất lượng và hiệu quả cao trong học tập",
+    "b": "Để tạo ra phong trào rộng rãi trong cả nước",
+    "c": "Tận dụng tất cả các điều kiện cho học tập",
+    "d": "Để mọi người đều có cơ hội học tập",
+    "ans": "a"
+  },
+  {
+    "num": 377,
+    "chapter": 5,
+    "chapterNum": 26,
+    "q": "Vấn đề xây dựng đời sống mới được Hồ Chí Minh đặt ra từ khi nào?",
+    "a": "Sau Cách mạng Tháng Tám năm 1945",
+    "b": "Sau khi miền Bắc được hoàn toàn giải phóng",
+    "c": "Trong cải tạo XHCN nền kinh tế miền Bắc",
+    "d": "Sau khi hoàn thành cuộc kháng chiến chống Mỹ cứu nước",
+    "ans": "a"
+  },
+  {
+    "num": 378,
+    "chapter": 5,
+    "chapterNum": 27,
+    "q": "Theo Chủ tịch Hồ Chí Minh, đạo đức là…",
+    "a": "Gốc của người cách mạng",
+    "b": "Phẩm chất của người cách mạng",
+    "c": "Yêu cầu của người cách mạng",
+    "d": "Tính cách của người cách mạng",
+    "ans": "a"
+  },
+  {
+    "num": 379,
+    "chapter": 5,
+    "chapterNum": 28,
+    "q": "Theo Hồ Chí Minh, tuổi trẻ như mùa nào trong năm?",
+    "a": "Mùa xuân",
+    "b": "Mùa hạ",
+    "c": "Mùa thu",
+    "d": "Mùa đông",
+    "ans": "a"
+  },
+  {
+    "num": 380,
+    "chapter": 5,
+    "chapterNum": 29,
+    "q": "Luận điểm: “Đạo đức cách mạng không phải trên trời sa xuống. Nó do đấu tranh, rèn luyện bền bỉ hàng ngày mà phát triển và củng cố, cũng như ngọc càng mài càng sáng, vàng càng luyện càng trong” là của ai?",
+    "a": "C. Mác",
+    "b": "Hồ Chí Minh",
+    "c": "Lê Duẩn",
+    "d": "V.I.Lênin",
+    "ans": "b"
+  },
+  {
+    "num": 381,
+    "chapter": 5,
+    "chapterNum": 30,
+    "q": "Theo tư tưởng Hồ Chí Minh, chữ Người là?",
+    "a": "Gia đình, anh em, họ hàng, bầu bạn.",
+    "b": "Loài người",
+    "c": "Đồng bào cả nước",
+    "d": "Cả A, B, C",
+    "ans": "d"
+  },
+  {
+    "num": 382,
+    "chapter": 5,
+    "chapterNum": 31,
+    "q": "Theo Hồ Chí Minh, muốn xây dựng đạo đức mới phải:",
+    "a": "Nói đi đôi với làm; xây đi đôi với chống; phải tu dưỡng đạo đức suốt đời",
+    "b": "Nói đi đôi với làm; xây đi đôi với chống; rèn luyện phẩm chất đạo đức",
+    "c": "Nói đi đôi với làm; chống chủ nghĩa cá nhân; tu dưỡng đạo đức cá nhân",
+    "d": "Nói trước, làm sau; xây đi đôi với chống; phải tu dưỡng đạo đức suốt đời",
+    "ans": "a"
+  },
+  {
+    "num": 383,
+    "chapter": 5,
+    "chapterNum": 32,
+    "q": "Chọn luận điểm đúng với tư tưởng Hồ Chí Minh:",
+    "a": "Muốn tiến lên chủ nghĩa xã hội thì phải phát triển văn hóa và kinh tế",
+    "b": "Muốn tiến lên chủ nghĩa xã hội thì phải phát triển kinh tế và văn hóa",
+    "c": "Muốn tiến lên chủ nghĩa xã hội thì chỉ cần phát triển kinh tế",
+    "d": "Muốn tiến lên chủ nghĩa xã hội thì phải phát triển văn hóa",
+    "ans": "b"
+  },
+  {
+    "num": 384,
+    "chapter": 5,
+    "chapterNum": 33,
+    "q": "Hãy cho biết vai trò của người nghệ sỹ trong lĩnh vực văn hoá văn nghệ theo tư tưởng Hồ Chí Minh?",
+    "a": "Là tác giả",
+    "b": "Là người chiến sĩ",
+    "c": "Vừa là người sáng tác, vừa là người phê bình",
+    "d": "Cả A, B, C",
+    "ans": "b"
+  },
+  {
+    "num": 385,
+    "chapter": 5,
+    "chapterNum": 34,
+    "q": "Cho biết vai trò của tác phẩm văn nghệ trong lĩnh vực văn hoá văn nghệ theo tư tưởng Hồ Chí Minh?",
+    "a": "Kết tinh trí tuệ, tâm hồn của văn nghệ sĩ",
+    "b": "Là vũ khí sắc bén trong đấu tranh cách mạng, xây dựng xã hội mới, con người mới",
+    "c": "Là món ăn tinh thần của mọi người trong cuộc sống",
+    "d": "Là cơ sở để đánh giá tài năng của người nghệ sỹ",
+    "ans": "b"
+  },
+  {
+    "num": 386,
+    "chapter": 5,
+    "chapterNum": 35,
+    "q": "Vấn đề xây dựng đời sống mới được Hồ Chí Minh đặt ra từ khi nào ?",
+    "a": "Sau Cách mạng Tháng Tám năm 1945",
+    "b": "Sau khi miền Bắc được hoàn toàn giải phóng",
+    "c": "Trong cải tạo XHCN nền kinh tế miền Bắc",
+    "d": "Sau khi hoàn thành cuộc kháng chiến chống Mỹ cứu nước",
+    "ans": "a"
+  },
+  {
+    "num": 387,
+    "chapter": 5,
+    "chapterNum": 36,
+    "q": "Tác phẩm “Đời sống mới” do Chủ tịch Hồ Chí Minh viết vào thời gian nào?",
+    "a": "Tháng 8/1945",
+    "b": "Tháng 3/1947",
+    "c": "Tháng 5/1954",
+    "d": "Tháng 10/1965",
+    "ans": "b"
+  },
+  {
+    "num": 388,
+    "chapter": 5,
+    "chapterNum": 37,
+    "q": "Theo Hồ Chí Minh, đời sống mới gồm nhưng lĩnh vực nào?",
+    "a": "Đạo đức mới, lối sống mới, nếp sống mới",
+    "b": "Đạo đức mới và lối sống mới",
+    "c": "Đạo đức mới, nếp sống mới và cách sống mới",
+    "d": "Nếp song mới, lối song mới và tư tưởng mới",
+    "ans": "a"
+  },
+  {
+    "num": 389,
+    "chapter": 5,
+    "chapterNum": 38,
+    "q": "Theo Hồ Chí Minh, nội dung của nền giáo dục mới là:",
+    "a": "Giáo dục toàn diện cả đức lẫn tài",
+    "b": "Giáo dục toàn diện cả đức, trí, thể, mỹ",
+    "c": "Giáo dục tư tưởng chính trị",
+    "d": "Giáo dục thái độ lao động",
+    "ans": "b"
+  },
+  {
+    "num": 390,
+    "chapter": 5,
+    "chapterNum": 39,
+    "q": "Nội hàm định nghĩa văn hóa mà Hồ Chí Minh nêu lên là:",
+    "a": "Văn hóa bao gồm toàn bộ những giá trị vật chất mà loài người tạo ra vì sự tồn tại của họ",
+    "b": "Văn hóa bao gồm những giá trị vật chất và phi vật chất mà loài người đã tạo ra để phục vụ nhu cầu sống của mình",
+    "c": "Văn hóa gồm toàn bộ những giá trị vật chất và tinh thần mà loài người đã sáng tạo ra, nhằm đáp ứng sự sinh tồn và mục đích cuộc sống của mình",
+    "d": "Văn hóa gồm toàn bộ giá trị vật chất và tinh thần qua quá trình lịch sử con người đã để lại cho loài người",
+    "ans": "c"
+  },
+  {
+    "num": 391,
+    "chapter": 5,
+    "chapterNum": 40,
+    "q": "Theo Hồ Chí Minh để xây dựng nền tảng đạo đức mới cần phải dựa trên những nguyên tắc?",
+    "a": "Lập trường dân chủ tư sản",
+    "b": "Lập trường dân tộc chủ nghĩa",
+    "c": "Lập trường giai cấp công nhân",
+    "d": "Lập trường yêu nước",
+    "ans": "c"
+  },
+  {
+    "num": 392,
+    "chapter": 5,
+    "chapterNum": 41,
+    "q": "Nguyên tắc cơ bản để xây dựng nền đạo đức mới theo tư tưởng Hồ Chí Minh là gì?",
+    "a": "Nói đi đôi với làm, nêu gương về đạo đức",
+    "b": "Xây đi đôi với chống",
+    "c": "Tu dưỡng đạo đức suốt đời",
+    "d": "A, B và C",
+    "ans": "d"
+  },
+  {
+    "num": 393,
+    "chapter": 5,
+    "chapterNum": 42,
+    "q": "Hãy cho biết động lực bao trùm của chủ nghĩa xã hội theo tư tưởng Hồ Chí Minh là gì?",
+    "a": "Con người",
+    "b": "Kinh tế",
+    "c": "Dân chủ",
+    "d": "Tiến bộ, công bằng",
+    "ans": "a"
+  },
+  {
+    "num": 394,
+    "chapter": 5,
+    "chapterNum": 43,
+    "q": "Hồ Chí Minh đặt văn hóa ngang hàng với các lĩnh vực nào?",
+    "a": "Chính trị",
+    "b": "Kinh tế",
+    "c": "Xã hội",
+    "d": "Kinh tế, chính trị, xã hội",
+    "ans": "d"
+  },
+  {
+    "num": 395,
+    "chapter": 5,
+    "chapterNum": 44,
+    "q": "Theo Hồ Chí Minh, văn hóa thuộc bộ phận nào của đời sống xã hội…",
+    "a": "Cơ sở hạ tầng",
+    "b": "Kiến trúc thượng tầng",
+    "c": "Tồn tại xã hội",
+    "d": "Ý thức xã hội",
+    "ans": "b"
+  },
+  {
+    "num": 396,
+    "chapter": 5,
+    "chapterNum": 45,
+    "q": "Quan điểm của Hồ Chí Minh về tính chất của nền văn hóa luôn bao hàm…",
+    "a": "Tính dân tộc và tính khoa học",
+    "b": "Tính dân tộc và tính quần chúng",
+    "c": "Tính dân tộc, tính khoa học, tính đại chúng",
+    "d": "Tính dân tộc, tính khoa học, tính cách mạng",
+    "ans": "c"
+  },
+  {
+    "num": 397,
+    "chapter": 5,
+    "chapterNum": 46,
+    "q": "Hồ Chí Minh đã kết hợp một cách nhuần nhuyễn giữa quản lý xã hội bằng pháp luật với phát huy những truyền thống tốt đẹp của dân tộc qua hàng nghìn năm lịch sử, thể hiện:",
+    "a": "Kết hợp tư tưởng phương Đông và phương Tây",
+    "b": "Kết hợp nhuần nhuyễn pháp trị và đức trị",
+    "c": "Kết hợp lý trí và tình cảm",
+    "d": "Kết hợp truyền thống và hiện đại",
+    "ans": "b"
+  },
+  {
+    "num": 398,
+    "chapter": 5,
+    "chapterNum": 47,
+    "q": "Theo Hồ Chí Minh, tính đại chúng của văn hóa thể hiện:",
+    "a": "Văn hóa từ quần chúng nhân dân mà ra",
+    "b": "Văn hóa phải phục vụ nhân dân và do nhân dân xây dựng nên",
+    "c": "Văn hóa dành cho quần chúng nhân dân",
+    "d": "Văn hóa phải hướng về đa số, phục tùng đa số",
+    "ans": "b"
+  },
+  {
+    "num": 399,
+    "chapter": 5,
+    "chapterNum": 48,
+    "q": "Bản chất con người theo Hồ Chí Minh là gì?",
+    "a": "Sản phẩm của sự tiến hóa tự nhiên",
+    "b": "Sự thống nhất cả hai mặt tự nhiên và xã hội",
+    "c": "Mang bản chất giai cấp công nhân",
+    "d": "Tổng hợp các quan hệ xã hội từ rộng đến hẹp",
+    "ans": "d"
+  },
+  {
+    "num": 400,
+    "chapter": 5,
+    "chapterNum": 49,
+    "q": "Hãy cho biết tác phẩm đầu tiên của Hồ Chí Minh đề cập đến đạo đức cách mạng.",
+    "a": "Bản án chế độ thực dân Pháp",
+    "b": "Đường Kách mệnh",
+    "c": "Sửa đổi lối làm việc",
+    "d": "Đạo đức cách mạng",
+    "ans": "b"
+  },
+  {
+    "num": 401,
+    "chapter": 5,
+    "chapterNum": 50,
+    "q": "“Không sợ thiếu, chỉ sợ không công bằng; Không sợ nghèo, chỉ sợ lòng dân không yên”. Câu nói trên của Hồ Chí Minh được ra đời năm nào?",
+    "a": "Năm 1944",
+    "b": "Năm 1966",
+    "c": "Năm 1967",
+    "d": "Năm 1969",
+    "ans": "b"
+  },
+  {
+    "num": 402,
+    "chapter": 5,
+    "chapterNum": 51,
+    "q": "Theo tư tưởng Hồ Chí Minh đạo đức có vai trò như thế nào trong đời sống xã hội?",
+    "a": "Đạo đức là gốc, là nền tảng của người cách mạng, vũ khí sắc bén trong cuộc đấu tranh cách mạng",
+    "b": "Đạo đức là thước đo lòng cao thượng của con người",
+    "c": "Đạo đức là nhân tố tạo nên sức hấp dẫn của chủ nghĩa xã hội",
+    "d": "A, B và C",
+    "ans": "d"
+  },
+  {
+    "num": 403,
+    "chapter": 5,
+    "chapterNum": 52,
+    "q": "Vấn đề đạo đức được Hồ Chí Minh xem xét như thế nào?",
+    "a": "Đối với mọi đối tượng",
+    "b": "Trên mọi lĩnh vực, mọi phạm vi",
+    "c": "Trong cả ba mối quan hệ chủ yếu của mỗi người - đối với mình, đối với người, đối với việc",
+    "d": "A, B và C",
+    "ans": "d"
+  },
+  {
+    "num": 404,
+    "chapter": 5,
+    "chapterNum": 53,
+    "q": "Theo tư tưởng Hồ Chí Minh, phẩm chất đạo đức quan trọng nhất, bao trùm nhất của con người Việt Nam mới là gì?",
+    "a": "Trung với nước, hiếu với dân",
+    "b": "Yêu thương con người",
+    "c": "Cần, kiệm, liêm, chính, chí công vô tư",
+    "d": "Tinh thần quốc tế trong sáng",
+    "ans": "a"
+  },
+  {
+    "num": 405,
+    "chapter": 5,
+    "chapterNum": 54,
+    "q": "Thế nào là “Trung với nước” theo tư tưởng Hồ Chí Minh?",
+    "a": "Tuyệt đối trung thành với sự nghiệp dựng nước và giữ nước",
+    "b": "Trung thành với con đường đi lên chủ nghĩa xã hội của đất nước",
+    "c": "Suốt đời phấn đấu cho Đảng, cho cách mạng.",
+    "d": "A, B và C",
+    "ans": "d"
+  },
+  {
+    "num": 406,
+    "chapter": 5,
+    "chapterNum": 55,
+    "q": "Biểu hiện của “Hiếu với dân” theo tư tưởng Hồ Chí Minh là gì?",
+    "a": "Thương dân, tin dân, phục vụ nhân dân hết lòng",
+    "b": "Phải làm theo tất cả những điều dạy bảo của dân",
+    "c": "Trước tiên phải phụng dưỡng tốt cho cha mẹ",
+    "d": "Hiểu dân, lấy dân làm gốc, làm theo dân",
+    "ans": "a"
+  },
+  {
+    "num": 407,
+    "chapter": 5,
+    "chapterNum": 56,
+    "q": "Theo Hồ Chí Minh “Chính” được thể hiện qua những mối quan hệ nào?",
+    "a": "Quan hệ gia đình, làng xã, quốc gia",
+    "b": "Quan hệ với mình, với người, với việc",
+    "c": "Quan hệ với đồng bào, đồng chí, anh em",
+    "d": "Quan hệ với mình, với việc",
+    "ans": "b"
+  },
+  {
+    "num": 408,
+    "chapter": 5,
+    "chapterNum": 57,
+    "q": "Theo Hồ Chí Minh, chức năng cơ bản của văn hóa là:",
+    "a": "Bồi dưỡng tư tưởng đúng đắn và tinh cảm cao đẹp của con người",
+    "b": "Bồi dưỡng những phẩm chất, phong cách và lối sống tốt đẹp, lành mạnh, hướng con người hoàn thiện bản thân",
+    "c": "Mở rộng hiểu biết, nâng cao dân trí",
+    "d": "Cả A, B, C",
+    "ans": "d"
+  },
+  {
+    "num": 409,
+    "chapter": 5,
+    "chapterNum": 58,
+    "q": "Con người theo quan điểm Hồ Chí Minh là:",
+    "a": "Vốn quý nhất, nhân tố quan trọng của cách mạng",
+    "b": "Vốn quý nhất, nhân tố quyết định thành công của cách mạng",
+    "c": "Vốn quý của cách mạng",
+    "d": "Động lực của cách mạng",
+    "ans": "b"
+  },
+  {
+    "num": 410,
+    "chapter": 5,
+    "chapterNum": 59,
+    "q": "Chọn cụm từ điền vào chỗ trống đúng với tư tưởng Hồ Chí Minh: “Người cách mạng phải có … thì mới gánh được nặng và đi được xa”.",
+    "a": "Trí tuệ",
+    "b": "Đạo đức cách mạng",
+    "c": "ý chí cách mạng",
+    "d": "Lập trường cách mạng",
+    "ans": "b"
+  },
+  {
+    "num": 411,
+    "chapter": 5,
+    "chapterNum": 60,
+    "q": "Theo tư tưởng Hồ Chí Minh, đạo đức có vai trò như thế nào?",
+    "a": "Là nền tảng lý luận của người cách mạng",
+    "b": "Là cái gốc, nền tảng của người cách mạng",
+    "c": "Là định hướng lý tưởng của người cách mạng",
+    "d": "Là cơ sở tư tưởng của người cách mạng",
+    "ans": "b"
+  },
+  {
+    "num": 412,
+    "chapter": 5,
+    "chapterNum": 61,
+    "q": "Trong Di chúc, Hồ Chí Minh xác định công việc đầu tiên là công việc gì?",
+    "a": "Tiếp tục phát triển kinh tế",
+    "b": "Công việc đối với con người",
+    "c": "Ra sức phát triển văn hóa",
+    "d": "Phát triển khoa học – kỹ thuật",
+    "ans": "b"
+  },
+  {
+    "num": 413,
+    "chapter": 5,
+    "chapterNum": 62,
+    "q": "Theo tư tưởng Hồ Chí Minh, trong mỗi con người bao giờ cũng có:",
+    "a": "Tốt – xấu, thiện – ác",
+    "b": "Không tốt, không xấu",
+    "c": "Phần lớn là mặt tốt",
+    "d": "Phần lớn là mặt xấu",
+    "ans": "a"
+  },
+  {
+    "num": 414,
+    "chapter": 5,
+    "chapterNum": 63,
+    "q": "Theo Hồ Chí Minh, đấu tranh chống chủ nghĩa cá nhân là:",
+    "a": "Chỉ bảo vệ lợi ích của tập thể",
+    "b": "Loại bỏ lợi ích cá nhân",
+    "c": "Bảo vệ lợi ích cá nhân",
+    "d": "Không dày xéo lên lợi ích cá nhân",
+    "ans": "d"
+  },
+  {
+    "num": 415,
+    "chapter": 5,
+    "chapterNum": 64,
+    "q": "Theo tư tưởng Hồ Chí Minh, muốn thức tỉnh một dân tộc, trước hết phải thức tỉnh bộ phận dân cư nào?",
+    "a": "Trí thức",
+    "b": "Thanh niên",
+    "c": "Thiếu niên, nhi đồng",
+    "d": "Công nhân và nông dân",
+    "ans": "b"
+  },
+  {
+    "num": 416,
+    "chapter": 5,
+    "chapterNum": 65,
+    "q": "Theo Hồ Chí Minh, kẻ thù hung ác của chủ nghĩa xã hội là gì?",
+    "a": "Giặc ngoại xâm",
+    "b": "Chủ nghĩa tư bản",
+    "c": "Chủ nghĩa đế quốc",
+    "d": "Chủ nghĩa cá nhân",
+    "ans": "d"
+  },
+  {
+    "num": 417,
+    "chapter": 5,
+    "chapterNum": 66,
+    "q": "Theo Hồ Chí Minh, ai làm chủ chế độ xã hội chủ nghĩa?",
+    "a": "Nhân dân",
+    "b": "Người lao động",
+    "c": "Đảng, nhà nước, chính phủ",
+    "d": "Cả 3 phương án",
+    "ans": "a"
+  },
+  {
+    "num": 418,
+    "chapter": 5,
+    "chapterNum": 67,
+    "q": "“Phê bình mình cũng như phê bình người phải ráo riết, triệt để, thật thà, không nể nang, không thêm bớt, phải vạch rõ ưu điểm và khuyết điểm. Đồng thời chớ dùng những lời mỉa mai, chua cay, đâm chọc. Phê bình việc làm, chứ không phê bình người”. Câu nói trên của Hồ Chí Minh chỉ cho chúng ta biết điều gì?",
+    "a": "Cách thức tự phê bình và phê bình",
+    "b": "Mục đích tự phê bình và phê bình",
+    "c": "Điều kiện để đoàn kết thống nhất",
+    "d": "A, B và C",
+    "ans": "d"
+  },
+  {
+    "num": 419,
+    "chapter": 5,
+    "chapterNum": 68,
+    "q": "Hồ Chí Minh xác định yếu tố nào là gốc của người cách mạng?",
+    "a": "Tài năng",
+    "b": "Đạo đức",
+    "c": "Chuyên môn",
+    "d": "Cả A, B, C đều đúng",
+    "ans": "b"
+  },
+  {
+    "num": 420,
+    "chapter": 5,
+    "chapterNum": 69,
+    "q": "“Đảng là trí tuệ, lương tâm, danh dự cả dân tộc và thời đại”. Hãy cho biết luận điểm trên là của ai?",
+    "a": "C. Mác",
+    "b": "V.I. Lênin",
+    "c": "J. Stalin",
+    "d": "Hồ Chí Minh",
+    "ans": "d"
+  },
+  {
+    "num": 421,
+    "chapter": 5,
+    "chapterNum": 70,
+    "q": "Theo Hồ Chí Minh, mục tiêu của giáo dục là gì?",
+    "a": "Xoá nạn mù chữ, làm cho mọi người dân biết đọc, biết viết",
+    "b": "Hình thành đội ngũ trí thức cách mạng",
+    "c": "Đào tạo những con người tốt, có ích cho xã hội",
+    "d": "Phát triển khoa học nước nhà",
+    "ans": "c"
+  },
+  {
+    "num": 422,
+    "chapter": 5,
+    "chapterNum": 71,
+    "q": "Theo Hồ Chí Minh, nội dung của nền giáo dục mới là gì?",
+    "a": "Giáo dục toàn diện cả đức, trí, thể, mỹ",
+    "b": "Giáo dục tư tưởng chính trị",
+    "c": "Giáo dục thái độ lao động",
+    "d": "Giáo dục tri thức văn hoá",
+    "ans": "a"
+  },
+  {
+    "num": 423,
+    "chapter": 5,
+    "chapterNum": 72,
+    "q": "Lựa chọn đáp án trả lời đúng nhất về vai trò của văn hoá:",
+    "a": "Phục vụ nhiệm vụ chính trị",
+    "b": "Thúc đẩy xây dựng và phát triển kinh tế",
+    "c": "Phục vụ nhiệm vụ chính trị, thúc đẩy xây dựng và phát triển kinh tế",
+    "d": "Không có ảnh hưởng gì đến kinh tế và chính trị",
+    "ans": "c"
+  },
+  {
+    "num": 424,
+    "chapter": 5,
+    "chapterNum": 73,
+    "q": "Phẩm chất đạo đức cơ bản của con người Việt Nam trong thời đại mới theo tư tưởng Hồ Chí Minh là:",
+    "a": "Trung với nước, hiếu với dân; Yêu thương con người",
+    "b": "Cần, kiệm, liêm, chính, chí công vô tư",
+    "c": "Có tinh thần quốc tế trong sáng",
+    "d": "Cả A, B, C đều đúng",
+    "ans": "d"
+  },
+  {
+    "num": 425,
+    "chapter": 5,
+    "chapterNum": 74,
+    "q": "Con người theo quan điểm Hồ Chí Minh là:",
+    "a": "Vốn quý nhất, nhân tố quan trọng của cách mạng",
+    "b": "Vốn quý nhất, nhân tố quyết định thành công của cách mạng",
+    "c": "Vốn quý của cách mạng",
+    "d": "Động lực của cách mạng",
+    "ans": "b"
+  },
+  {
+    "num": 426,
+    "chapter": 5,
+    "chapterNum": 75,
+    "q": "Khái niệm con người theo tư tưởng Hồ Chí Minh là:",
+    "a": "Một con người cụ thể",
+    "b": "Một cộng đồng người",
+    "c": "Con người cụ thể gắn với hoàn cảnh cụ thể",
+    "d": "Con người trừu tượng, chung chung",
+    "ans": "c"
+  },
+  {
+    "num": 427,
+    "chapter": 5,
+    "chapterNum": 76,
+    "q": "Theo Hồ Chí Minh: “… là gốc của người cách mạng”",
+    "a": "Tài năng",
+    "b": "Bản lĩnh chính trị",
+    "c": "Đạo đức",
+    "d": "Phẩm chất chính trị",
+    "ans": "c"
   }
 ];
